@@ -1,0 +1,28 @@
+//
+//  AFOPlaylist.pch
+//  AFOPlaylist
+//
+//  Created by xueguang xian on 2018/1/25.
+//  Copyright © 2018年 AFO. All rights reserved.
+//
+
+#ifndef AFOPlaylist_pch
+#define AFOPlaylist_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/*******************/
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+/*******************/
+#import <AFOFoundation/AFOFoundation.h>
+#import <AFOUIKit/AFOUIKit.h>
+#import <AFOGitHub/AFOGitHub.h>
+#import <AFORouter/AFORouter.h>
+#import <AFOSQLite/AFOSQLite.h>
+#import <AFOFFMpeg/AFOFFMpeg.h>
+/*******************/
+#import "AFOPLMainController+AFOPLMainManager.h"
+#import "AFOPLMainController+Aspects.h"
+/*******************/
+#endif /* AFOPlaylist_pch */

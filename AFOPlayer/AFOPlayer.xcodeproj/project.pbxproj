@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873B20083C0F00D369FB /* AVFoundation.framework */; };
+		2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873D20083C1A00D369FB /* AudioToolbox.framework */; };
+		2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873F20083C2F00D369FB /* CoreGraphics.framework */; };
+		2404874320083C2F00D369FB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874020083C2F00D369FB /* CoreMedia.framework */; };
+		2404874420083C2F00D369FB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874120083C2F00D369FB /* CoreImage.framework */; };
+		2404874620083C4400D369FB /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874520083C4400D369FB /* VideoToolbox.framework */; };
+		2404874820083C5F00D369FB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874720083C5F00D369FB /* OpenGLES.framework */; };
+		2404874A20083C6700D369FB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874920083C6700D369FB /* libz.tbd */; };
+		2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874B20083C6D00D369FB /* libbz2.tbd */; };
+		2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874D20083C7600D369FB /* libiconv.tbd */; };
+		2408BAE2200856870049060F /* AFOAppWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD4200856870049060F /* AFOAppWindow.m */; };
+		2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD7200856870049060F /* AFOAppTabBarController.m */; };
+		2408BAE4200856870049060F /* AFOAppWindowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BADB200856870049060F /* AFOAppWindowViewModel.m */; };
+		2408BAE8200856A90049060F /* AppDelegate+Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAE7200856A90049060F /* AppDelegate+Initialization.m */; };
+		2408BAEA20085BAF0049060F /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */; };
+		2408BAEB20085BAF0049060F /* AFOPlaylist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEF20085BAF0049060F /* AFOPlaylist.framework */; };
+		2408BAEC20085BAF0049060F /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF020085BAF0049060F /* AFORouter.framework */; };
+		2408BAED20085BAF0049060F /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF120085BAF0049060F /* AFOUIKit.framework */; };
+		2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB38200877410049060F /* libsqlite3.tbd */; };
+		2408BB44200885BD0049060F /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB45200885BD0049060F /* AFOSQLite.framework */; };
+		240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B10902007A5F70007F2F3 /* AppDelegate.m */; };
+		240B10942007A5F70007F2F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B10932007A5F70007F2F3 /* ViewController.m */; };
+		240B10972007A5F70007F2F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B10952007A5F70007F2F3 /* Main.storyboard */; };
+		240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B10982007A5F70007F2F3 /* Assets.xcassets */; };
+		240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */; };
+		240B109F2007A5F70007F2F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B109E2007A5F70007F2F3 /* main.m */; };
+		242A703C2021E4DD0064A1AC /* UIWindow+Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */; };
+		242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FAA98205FA38400C82B66 /* AFOSetting.framework */; };
+		24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */; };
+		24373E602012DE3800B7C9BD /* AFOHomePage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */; };
+		2446ED232019B0E500FD5012 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2446ED242019B0E500FD5012 /* AFOFoundation.framework */; };
+		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
+		24898147200F2DA3008FB71D /* AFOHomePage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24898148200F2DA3008FB71D /* AFOHomePage.framework */; };
+		24AF675F201B616500AB5537 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
+		24D8F827201CB34700E99AAF /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8F828201CB34700E99AAF /* AFOViews.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2404873B20083C0F00D369FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2404873D20083C1A00D369FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2404873F20083C2F00D369FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2404874020083C2F00D369FB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2404874120083C2F00D369FB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		2404874520083C4400D369FB /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		2404874720083C5F00D369FB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2404874920083C6700D369FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2404874B20083C6D00D369FB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		2404874D20083C7600D369FB /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		2408BAC6200855A50049060F /* AFOPlayer.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOPlayer.pch; sourceTree = "<group>"; };
+		2408BAC8200856870049060F /* AFOAppWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppWindow.h; sourceTree = "<group>"; };
+		2408BAD4200856870049060F /* AFOAppWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppWindow.m; sourceTree = "<group>"; };
+		2408BAD7200856870049060F /* AFOAppTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppTabBarController.m; sourceTree = "<group>"; };
+		2408BAD8200856870049060F /* AFOAppTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppTabBarController.h; sourceTree = "<group>"; };
+		2408BADA200856870049060F /* AFOAppModelsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppModelsHeader.h; sourceTree = "<group>"; };
+		2408BADB200856870049060F /* AFOAppWindowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppWindowViewModel.m; sourceTree = "<group>"; };
+		2408BADC200856870049060F /* AFOAppWindowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppWindowViewModel.h; sourceTree = "<group>"; };
+		2408BAE6200856A90049060F /* AppDelegate+Initialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Initialization.h"; sourceTree = "<group>"; };
+		2408BAE7200856A90049060F /* AppDelegate+Initialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Initialization.m"; sourceTree = "<group>"; };
+		2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFFMpeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2408BAEF20085BAF0049060F /* AFOPlaylist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOPlaylist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2408BAF020085BAF0049060F /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2408BAF120085BAF0049060F /* AFOUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2408BB38200877410049060F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2408BB45200885BD0049060F /* AFOSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B108C2007A5F70007F2F3 /* AFOPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFOPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B108F2007A5F70007F2F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		240B10902007A5F70007F2F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		240B10922007A5F70007F2F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		240B10932007A5F70007F2F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		240B10962007A5F70007F2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		240B10982007A5F70007F2F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		240B109B2007A5F70007F2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		240B109D2007A5F70007F2F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240B109E2007A5F70007F2F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		242A703A2021E4DD0064A1AC /* UIWindow+Initialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Initialization.h"; sourceTree = "<group>"; };
+		242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Initialization.m"; sourceTree = "<group>"; };
+		242FAA98205FA38400C82B66 /* AFOSetting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSetting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOHomePage.bundle; sourceTree = "<group>"; };
+		2446ED242019B0E500FD5012 /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppTabBarController+AFOAutoRotate.h"; sourceTree = "<group>"; };
+		2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppTabBarController+AFOAutoRotate.m"; sourceTree = "<group>"; };
+		24898148200F2DA3008FB71D /* AFOHomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOHomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
+		24D8F828201CB34700E99AAF /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		240B10892007A5F70007F2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */,
+				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
+				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
+				2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */,
+				242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */,
+				24D8F827201CB34700E99AAF /* AFOViews.framework in Frameworks */,
+				2446ED232019B0E500FD5012 /* AFOFoundation.framework in Frameworks */,
+				24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */,
+				24898147200F2DA3008FB71D /* AFOHomePage.framework in Frameworks */,
+				2408BB44200885BD0049060F /* AFOSQLite.framework in Frameworks */,
+				2408BAEA20085BAF0049060F /* AFOFFMpeg.framework in Frameworks */,
+				2408BAEB20085BAF0049060F /* AFOPlaylist.framework in Frameworks */,
+				2408BAEC20085BAF0049060F /* AFORouter.framework in Frameworks */,
+				2408BAED20085BAF0049060F /* AFOUIKit.framework in Frameworks */,
+				2404874820083C5F00D369FB /* OpenGLES.framework in Frameworks */,
+				2404874620083C4400D369FB /* VideoToolbox.framework in Frameworks */,
+				2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */,
+				2404874320083C2F00D369FB /* CoreMedia.framework in Frameworks */,
+				2404874420083C2F00D369FB /* CoreImage.framework in Frameworks */,
+				2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */,
+				2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2408BAC7200856870049060F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAC8200856870049060F /* AFOAppWindow.h */,
+				2408BAD4200856870049060F /* AFOAppWindow.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		2408BAD5200856870049060F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAD6200856870049060F /* TabBarController */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		2408BAD6200856870049060F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAD8200856870049060F /* AFOAppTabBarController.h */,
+				2408BAD7200856870049060F /* AFOAppTabBarController.m */,
+				2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */,
+				2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		2408BAD9200856870049060F /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2408BADA200856870049060F /* AFOAppModelsHeader.h */,
+				2408BADC200856870049060F /* AFOAppWindowViewModel.h */,
+				2408BADB200856870049060F /* AFOAppWindowViewModel.m */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		2408BAE5200856A90049060F /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAE6200856A90049060F /* AppDelegate+Initialization.h */,
+				2408BAE7200856A90049060F /* AppDelegate+Initialization.m */,
+				242A703A2021E4DD0064A1AC /* UIWindow+Initialization.h */,
+				242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		240B10832007A5F70007F2F3 = {
+			isa = PBXGroup;
+			children = (
+				240B108E2007A5F70007F2F3 /* AFOPlayer */,
+				240B108D2007A5F70007F2F3 /* Products */,
+				24404A5B2007A91300BAC996 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		240B108D2007A5F70007F2F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				240B108C2007A5F70007F2F3 /* AFOPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		240B108E2007A5F70007F2F3 /* AFOPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAD5200856870049060F /* controllers */,
+				2408BAD9200856870049060F /* viewModels */,
+				2408BAC7200856870049060F /* views */,
+				2408BAE5200856A90049060F /* category */,
+				240B108F2007A5F70007F2F3 /* AppDelegate.h */,
+				240B10902007A5F70007F2F3 /* AppDelegate.m */,
+				240B10922007A5F70007F2F3 /* ViewController.h */,
+				240B10932007A5F70007F2F3 /* ViewController.m */,
+				240B10952007A5F70007F2F3 /* Main.storyboard */,
+				240B10982007A5F70007F2F3 /* Assets.xcassets */,
+				240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */,
+				240B109D2007A5F70007F2F3 /* Info.plist */,
+				240B109E2007A5F70007F2F3 /* main.m */,
+				2408BAC6200855A50049060F /* AFOPlayer.pch */,
+				24AF675E201B616500AB5537 /* AFOPlayer.bundle */,
+				24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */,
+			);
+			path = AFOPlayer;
+			sourceTree = "<group>";
+		};
+		24404A5B2007A91300BAC996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242FAA98205FA38400C82B66 /* AFOSetting.framework */,
+				2404874D20083C7600D369FB /* libiconv.tbd */,
+				2404874B20083C6D00D369FB /* libbz2.tbd */,
+				2404874920083C6700D369FB /* libz.tbd */,
+				2408BB38200877410049060F /* libsqlite3.tbd */,
+				24D8F828201CB34700E99AAF /* AFOViews.framework */,
+				2446ED242019B0E500FD5012 /* AFOFoundation.framework */,
+				24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */,
+				24898148200F2DA3008FB71D /* AFOHomePage.framework */,
+				2408BB45200885BD0049060F /* AFOSQLite.framework */,
+				2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */,
+				2408BAEF20085BAF0049060F /* AFOPlaylist.framework */,
+				2408BAF020085BAF0049060F /* AFORouter.framework */,
+				2408BAF120085BAF0049060F /* AFOUIKit.framework */,
+				2404874720083C5F00D369FB /* OpenGLES.framework */,
+				2404874520083C4400D369FB /* VideoToolbox.framework */,
+				2404873F20083C2F00D369FB /* CoreGraphics.framework */,
+				2404874120083C2F00D369FB /* CoreImage.framework */,
+				2404874020083C2F00D369FB /* CoreMedia.framework */,
+				2404873D20083C1A00D369FB /* AudioToolbox.framework */,
+				2404873B20083C0F00D369FB /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		240B108B2007A5F70007F2F3 /* AFOPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240B10A22007A5F70007F2F3 /* Build configuration list for PBXNativeTarget "AFOPlayer" */;
+			buildPhases = (
+				240B10882007A5F70007F2F3 /* Sources */,
+				240B10892007A5F70007F2F3 /* Frameworks */,
+				240B108A2007A5F70007F2F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFOPlayer;
+			productName = AFOPlayer;
+			productReference = 240B108C2007A5F70007F2F3 /* AFOPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		240B10842007A5F70007F2F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "AFO Science Technology Ltd";
+				TargetAttributes = {
+					240B108B2007A5F70007F2F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 240B10872007A5F70007F2F3 /* Build configuration list for PBXProject "AFOPlayer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 240B10832007A5F70007F2F3;
+			productRefGroup = 240B108D2007A5F70007F2F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				240B108B2007A5F70007F2F3 /* AFOPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		240B108A2007A5F70007F2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */,
+				240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */,
+				24373E602012DE3800B7C9BD /* AFOHomePage.bundle in Resources */,
+				24AF675F201B616500AB5537 /* AFOPlayer.bundle in Resources */,
+				240B10972007A5F70007F2F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		240B10882007A5F70007F2F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */,
+				2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */,
+				2408BAE8200856A90049060F /* AppDelegate+Initialization.m in Sources */,
+				240B10942007A5F70007F2F3 /* ViewController.m in Sources */,
+				242A703C2021E4DD0064A1AC /* UIWindow+Initialization.m in Sources */,
+				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
+				240B109F2007A5F70007F2F3 /* main.m in Sources */,
+				2408BAE4200856870049060F /* AFOAppWindowViewModel.m in Sources */,
+				240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		240B10952007A5F70007F2F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240B10962007A5F70007F2F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240B109B2007A5F70007F2F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		240B10A02007A5F70007F2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		240B10A12007A5F70007F2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		240B10A32007A5F70007F2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7XP5ZBK9EN;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AFOPlayer",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AFOPlayer/AFOPlayer.pch";
+				GENERATE_PROFILING_CODE = NO;
+				INFOPLIST_FILE = AFOPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		240B10A42007A5F70007F2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7XP5ZBK9EN;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AFOPlayer",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AFOPlayer/AFOPlayer.pch";
+				GENERATE_PROFILING_CODE = NO;
+				INFOPLIST_FILE = AFOPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		240B10872007A5F70007F2F3 /* Build configuration list for PBXProject "AFOPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240B10A02007A5F70007F2F3 /* Debug */,
+				240B10A12007A5F70007F2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240B10A22007A5F70007F2F3 /* Build configuration list for PBXNativeTarget "AFOPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240B10A32007A5F70007F2F3 /* Debug */,
+				240B10A42007A5F70007F2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 240B10842007A5F70007F2F3 /* Project object */;
+}

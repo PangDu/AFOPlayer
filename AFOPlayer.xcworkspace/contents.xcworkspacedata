@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AFOPlaylist/AFOPlaylist.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOFoundation/AFOFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOViews/AFOViews.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOUIKit/AFOUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOSQLite/AFOSQLite.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOSandbox/AFOSandbox.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFORouter/AFORouter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOGitHub/AFOGitHub.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOSetting/AFOSetting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOHomePage/AFOHomePage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOFFMpeg/AFOFFMpeg.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AFOPlayer/AFOPlayer.xcodeproj">
+   </FileRef>
+</Workspace>

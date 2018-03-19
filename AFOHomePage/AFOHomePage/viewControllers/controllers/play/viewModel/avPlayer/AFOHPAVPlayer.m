@@ -1,0 +1,136 @@
+//
+//  AFOHPAVPlayer.m
+//  AFOHomePage
+//
+//  Created by xueguang xian on 2018/1/17.
+//  Copyright © 2018年 AFO. All rights reserved.
+//
+
+#import "AFOHPAVPlayer.h"
+#import "AFOHPAVPlayer+ChooseSong.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+#import "AFOMPMediaQuery.h"
+@interface AFOHPAVPlayer ()
+@property (nonatomic, strong) AVPlayer      *avPlayer;
+@property (nonatomic, strong) AVPlayerItem  *playerItem;
+@end
+
+@implementation AFOHPAVPlayer
+#pragma mark ------------ initialize
++ (void)initialize{
+    if (self == [AFOHPAVPlayer class]) {
+        [[AVAudioSession sharedInstance] setActive:YES error:nil];
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    }
+}
+#pragma mark ------------ initWithDelegate
+- (instancetype)initWithDelegate:(id)delegate{
+    if (self = [super init]) {
+        _delegate = delegate;
+    }
+    return self;
+}
+#pragma mark ------------ 播放音频
+- (void)audioPlayer{
+    if (self.avPlayer.rate == 1.0) {
+        [self.avPlayer pause];
+    }else{
+        [self.avPlayer play];
+    }
+}
+#pragma mark ------------ 
+- (void)settingAVPlayerPause{
+    [self.avPlayer pause];
+}
+#pragma mark ------------ 播放音乐
+- (void)selectMusicPlayer:(AFOHPAVPlayerSelectMusic)type{
+    __weak __typeof(self) weakSelf = self;
+    switch (type) {
+        case AFOHPAVPlayerSelectMusicPlay:
+            [self audioPlayer];
+            break;
+        default:
+            [self operationMusicPlayer:type block:^(id model) {
+                [weakSelf.avPlayer pause];
+                [weakSelf.delegate audioOperationPlay:model];
+            }];
+            break;
+    }
+}
+#pragma mark ------------ 添加AVPlayer
+- (void)addPlayerItem:(id)model{
+    AVAsset *asset = [AVAsset assetWithURL:[AFOMPMediaQuery mediaItemPropertyAssetURL:model]];
+    _playerItem = [AVPlayerItem playerItemWithAsset:asset];
+    //添加监听
+    [_playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
+    [_playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    _avPlayer = [AVPlayer playerWithPlayerItem:_playerItem];
+}
+#pragma mark------------ 监听回调
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+    AVPlayerItem *playerItem = (AVPlayerItem *)object;
+    
+    if ([keyPath isEqualToString:@"loadedTimeRanges"]){
+        [self.delegate audioTotalTime:[self formatPlayTime:CMTimeGetSeconds(playerItem.duration)]];
+    }else if ([keyPath isEqualToString:@"status"]){
+        if (playerItem.status == AVPlayerItemStatusReadyToPlay){
+            [self.delegate audioPlayWithEnter];
+            NSLog(@"playerItem is ready");
+        } else{
+            NSLog(@"load break");
+        }
+    }
+}
+#pragma mark ------
+- (void)changeSliderValue:(CGFloat)percent{
+    if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
+        NSTimeInterval duration = percent* CMTimeGetSeconds(self.avPlayer.currentItem.duration);
+        CMTime seekTime = CMTimeMake(duration, 1);
+        [self.avPlayer seekToTime:seekTime completionHandler:^(BOOL finished) {
+            
+        }];
+    }
+}
+#pragma mark ------
+- (void)updateProgressSlider:(void (^) (NSTimeInterval currentTime,
+                                        NSTimeInterval totalTime))block{
+    block(CMTimeGetSeconds(self.avPlayer.currentTime), CMTimeGetSeconds(self.avPlayer.currentItem.duration));
+}
+#pragma mark ------ 时间转换成字符串
+- (NSString *)formatPlayTime:(NSTimeInterval)duration{
+    int minute = 0, hour = 0, secend = duration;
+    minute = (secend % 3600)/60;
+    hour = secend / 3600;
+    secend = secend % 60;
+    return [NSString stringWithFormat:@"%02d:%02d:%02d", hour, minute, secend];
+}
+#pragma mark ------
+- (NSTimeInterval)availableDurationWithplayerItem:(AVPlayerItem *)playerItem{
+    NSArray *loadedTimeRanges = [playerItem loadedTimeRanges];
+    CMTimeRange timeRange = [loadedTimeRanges.firstObject CMTimeRangeValue];// 获取缓冲区域
+    NSTimeInterval startSeconds = CMTimeGetSeconds(timeRange.start);
+    NSTimeInterval durationSeconds = CMTimeGetSeconds(timeRange.duration);
+    NSTimeInterval result = startSeconds + durationSeconds;// 计算缓冲总进度
+    return result;
+}
+#pragma mark ------ 移除观察者
+- (void)removeAvPlayerObserver{
+    [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+    [self.playerItem removeObserver:self forKeyPath:@"status"];
+}
+#pragma mark ------------ dealloc
+- (void)dealloc{
+    [self removeAvPlayerObserver];
+    NSLog(@"dealloc %@",NSStringFromClass([AFOHPAVPlayer class]));
+}
+#pragma mark ------------ 获取专辑图片
++ (UIImage *)albumImageWithSize:(CGSize)size
+                         object:(id)object{
+    return [AFOMPMediaQuery albumImageWithSize:size object:object];
+}
+#pragma mark ------------ 获取歌曲名
++ (NSString *)songName:(id)object{
+    return [AFOMPMediaQuery songName:object];
+}
+@end

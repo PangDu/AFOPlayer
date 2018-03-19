@@ -1,0 +1,38 @@
+//
+//  AFOPlayer.pch
+//  AFOPlayer
+//
+//  Created by xueguang xian on 2017/12/13.
+//  Copyright © 2017年 AFO. All rights reserved.
+//
+
+#ifndef AFOPlayer_pch
+#define AFOPlayer_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/*------基础库------*/
+#import <AFOUIKit/AFOUIKit.h>
+#import <AFORouter/AFORouter.h>
+/*---------------------------------------------------------*/
+/*------首页------*/
+#import <AFOHomePage/AFOHomePage.h>
+/*----播放源------*/
+#import <AFOPlaylist/AFOPlaylist.h>
+/*------设置------*/
+#import <AFOSetting/AFOSetting.h>
+
+/*---------------------------------------------------------*/
+
+/*------ViewModels------*/
+#import "AFOAppModelsHeader.h"
+
+/*-----Views------*/
+#import "AFOAppWindow.h"
+
+/*------ViewController------*/
+#import "AFOAppTabBarController.h"
+
+/*------AppDelegate------*/
+#import "AppDelegate+Initialization.h"
+#endif /* AFOPlayer_pch */
