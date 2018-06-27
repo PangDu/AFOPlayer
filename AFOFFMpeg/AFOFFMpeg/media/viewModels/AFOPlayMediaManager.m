@@ -197,7 +197,9 @@
 #pragma mark ------------ property
 #pragma mark ------ duration
 - (int64_t)duration{
-    return [AFOMediaTimer totalSecondsDuration:avFormatContext -> duration];
+    AVStream *stream = avFormatContext -> streams[_videoStream];
+    return stream -> duration * av_q2d(stream -> time_base);
+//    return [AFOMediaTimer totalSecondsDuration:avFormatContext -> duration];
 }
 #pragma mark ------ currentTime
 - (int64_t)currentTime{

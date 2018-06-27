@@ -18,11 +18,11 @@
 #pragma mark ------ 
 - (void)loadLocalMediaIndex:(NSInteger)index
                       block:(localMPMediaBlock)block{
-    if (index == 1) {
+    if (index == 0) {
      self.mediaQuery.groupingType = MPMediaGroupingArtist;
-    }else if (index == 2){
+    }else if (index == 1){
      self.mediaQuery.groupingType = MPMediaGroupingAlbum;
-    }else if (index == 3){
+    }else if (index == 2){
      self.mediaQuery.groupingType = MPMediaGroupingTitle;
     }
     [self loadItemForGroupingTypeBlock:^(NSArray *array) {

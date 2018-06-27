@@ -185,6 +185,8 @@
 		24BAFECE1FF4BCF800D2EAB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BAFECD1FF4BCF800D2EAB9 /* CoreGraphics.framework */; };
 		24BAFED01FF4BD0700D2EAB9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BAFECF1FF4BD0700D2EAB9 /* CoreMedia.framework */; };
 		24BAFED21FF4BD1D00D2EAB9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BAFED11FF4BD1D00D2EAB9 /* VideoToolbox.framework */; };
+		24D1B0CD2061029B0028680A /* AFOAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D1B0CB2061029B0028680A /* AFOAudioManager.h */; };
+		24D1B0CE2061029B0028680A /* AFOAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D1B0CC2061029B0028680A /* AFOAudioManager.m */; };
 		24F928F6200CE940007ADAA4 /* AFOMediaThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F928F4200CE940007ADAA4 /* AFOMediaThumbnail.h */; };
 		24F928F7200CE940007ADAA4 /* AFOMediaThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F928F5200CE940007ADAA4 /* AFOMediaThumbnail.m */; };
 /* End PBXBuildFile section */
@@ -388,6 +390,8 @@
 		24BAFECD1FF4BCF800D2EAB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24BAFECF1FF4BD0700D2EAB9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		24BAFED11FF4BD1D00D2EAB9 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		24D1B0CB2061029B0028680A /* AFOAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAudioManager.h; sourceTree = "<group>"; };
+		24D1B0CC2061029B0028680A /* AFOAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAudioManager.m; sourceTree = "<group>"; };
 		24F928F4200CE940007ADAA4 /* AFOMediaThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOMediaThumbnail.h; sourceTree = "<group>"; };
 		24F928F5200CE940007ADAA4 /* AFOMediaThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOMediaThumbnail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -458,6 +462,7 @@
 				24048772200845A600D369FB /* time */,
 				2404877A200845A600D369FB /* errorCode */,
 				2404877E200845A600D369FB /* queue */,
+				24D1B0CA206102570028680A /* audio */,
 				24048781200845A600D369FB /* generateImages */,
 			);
 			path = viewModels;
@@ -875,6 +880,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		24D1B0CA206102570028680A /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				24D1B0CB2061029B0028680A /* AFOAudioManager.h */,
+				24D1B0CC2061029B0028680A /* AFOAudioManager.m */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -902,6 +916,7 @@
 				244E31C91FFE64340094C6BB /* opt.h in Headers */,
 				244E31FD1FFE64340094C6BB /* version.h in Headers */,
 				244E31E61FFE64340094C6BB /* avdevice.h in Headers */,
+				24D1B0CD2061029B0028680A /* AFOAudioManager.h in Headers */,
 				244E319C1FFE64340094C6BB /* hwcontext_cuda.h in Headers */,
 				244E31D61FFE64340094C6BB /* imgutils.h in Headers */,
 				244E31C31FFE64340094C6BB /* pixelutils.h in Headers */,
@@ -1113,6 +1128,7 @@
 				245C9FD9202491B200A8603C /* AFOVideoFrameRGB.m in Sources */,
 				245C9FD020248D3700A8603C /* AFOVideoFrame.m in Sources */,
 				240487A2200845A600D369FB /* AFOGenerateImages.m in Sources */,
+				24D1B0CE2061029B0028680A /* AFOAudioManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

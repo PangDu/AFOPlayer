@@ -44,7 +44,7 @@
 - (nullable AFOCardStackCollectionDataSource *)cardStackDataSource{
     if (!_cardStackDataSource) {
         _cardStackDataSource = [[AFOCardStackCollectionDataSource alloc]init];
-        _cardStackDataSource.cellCount = 5;
+        _cardStackDataSource.cellCount = 4;
     }
     return _cardStackDataSource;
 }

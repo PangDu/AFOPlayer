@@ -12,7 +12,9 @@
 - (void)tableViewdidSelectRowAtIndexPathExchange{
     [self aspect_hookSelector:@selector(tableView:didSelectRowAtIndexPath:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, UITableView *tableView, NSIndexPath *indexPath){
         NSURL *url = [self.viewModel settingRouterUrl:indexPath];
-        [[UIApplication sharedApplication] openURL:url];
+        if (url != nil) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
     } error:NULL];
 }
 @end

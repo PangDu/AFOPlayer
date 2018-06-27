@@ -334,14 +334,14 @@
 			path = category;
 			sourceTree = "<group>";
 		};
-		2497978E1FE5F74C009AB645 /* CardStacking */ = {
+		2497978E1FE5F74C009AB645 /* cardStacking */ = {
 			isa = PBXGroup;
 			children = (
 				2405E5FD1FEA498D00BAFF97 /* Models */,
 				2405E5FE1FEA4A5600BAFF97 /* ViewModels */,
 				249797921FE5F74C009AB645 /* Controllers */,
 			);
-			path = CardStacking;
+			path = cardStacking;
 			sourceTree = "<group>";
 		};
 		249797921FE5F74C009AB645 /* Controllers */ = {
@@ -426,17 +426,17 @@
 		24DC53AE1FE3A910005B4A4D /* views */ = {
 			isa = PBXGroup;
 			children = (
-				24DC53AF1FE3A920005B4A4D /* Animation */,
+				24DC53AF1FE3A920005B4A4D /* animation */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		24DC53AF1FE3A920005B4A4D /* Animation */ = {
+		24DC53AF1FE3A920005B4A4D /* animation */ = {
 			isa = PBXGroup;
 			children = (
-				2497978E1FE5F74C009AB645 /* CardStacking */,
+				2497978E1FE5F74C009AB645 /* cardStacking */,
 			);
-			path = Animation;
+			path = animation;
 			sourceTree = "<group>";
 		};
 		24E040FB1FE2116E00BE0B5B /* viewModels */ = {

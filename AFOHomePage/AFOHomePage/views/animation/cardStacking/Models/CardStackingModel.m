@@ -16,7 +16,7 @@
 #pragma mark ------ titleArray
 - (NSArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = @[@"电影",@"艺术家",@"专辑",@"所有音乐",@"播放列表"];
+        _titleArray = @[@"艺术家",@"专辑",@"所有音乐",@"播放列表"];
     }
     return _titleArray;
 }
