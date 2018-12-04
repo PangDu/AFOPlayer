@@ -11,9 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOAudioSampling : NSObject
-- (instancetype)shareAFOAudioSampling;
-- (void)audioSamping:(AVFormatContext *)avFormatContext
-        codecContext:(AVCodecContext *)avCodecContext;
++ (instancetype)shareAFOAudioSampling;
+- (void)audioSamping:(nonnull AVFormatContext *)avFormatContext
+        codecContext:(nonnull AVCodecContext *)avCodecContext
+               codec:(nonnull AVCodec *)codec
+               index:(NSInteger)index;
 @end
 
 NS_ASSUME_NONNULL_END

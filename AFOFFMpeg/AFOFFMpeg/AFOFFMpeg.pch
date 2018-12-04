@@ -19,6 +19,8 @@
 #import <OpenGLES/ES2/glext.h>
 #import <OpenGLES/EAGL.h>
 #include <sys/time.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 /*****************/
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOGitHub/AFOGitHub.h>

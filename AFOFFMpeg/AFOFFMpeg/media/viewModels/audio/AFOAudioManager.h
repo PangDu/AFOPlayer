@@ -10,6 +10,9 @@
 
 @interface AFOAudioManager : NSObject
 + (instancetype)shareAFOAudioManager;
-- (void)playAudioContent;
+- (void)playAudioCodec:(AVCodec *)codec
+         formatContext:(AVFormatContext *)formatContext
+          codecContext:(AVCodecContext *)codecContext
+                 index:(NSInteger)index;
 - (void)stopAudioContent;
 @end

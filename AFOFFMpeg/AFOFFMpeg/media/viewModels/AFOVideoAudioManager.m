@@ -12,9 +12,11 @@
 #import "AFOAudioManager.h"
 
 @interface AFOVideoAudioManager (){
-    AVCodec             *avcodec;
+    AVCodec             *avCodecVideo;
+    AVCodec             *avCodecAudio;
     AVFormatContext     *avFormatContext;
-    AVCodecContext      *avCodecContext;
+    AVCodecContext      *avCodecContextVideo;
+    AVCodecContext      *avCcodecContextAudio;
 }
 @property (nonatomic, assign)            NSInteger  videoStream;
 @property (nonatomic, assign)            NSInteger  audioStream;
@@ -46,14 +48,23 @@
 #pragma mark ------ add method
 - (void)registerBaseMethod:(NSString *)path{
     ///------
+    avFormatContext = avformat_alloc_context();
     avformat_open_input(&avFormatContext, [path UTF8String], NULL, NULL);
-    ///------ Get a pointer to the codec context for the video stream.
-    avCodecContext = avcodec_alloc_context3(NULL);
-    avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[self.videoStream] -> codecpar);
+    ///------------ video
+    avCodecContextVideo = avcodec_alloc_context3(NULL);
+    avcodec_parameters_to_context(avCodecContextVideo, avFormatContext -> streams[self.videoStream] -> codecpar);
     ///------ Find the decoder for the video stream.
-    avcodec = avcodec_find_decoder(avCodecContext -> codec_id);
+    avCodecVideo = avcodec_find_decoder(avCodecContextVideo -> codec_id);
     ///------ Open codec
-    avcodec_open2(avCodecContext, avcodec, NULL);
+    avcodec_open2(avCodecContextVideo, avCodecVideo, NULL);
+    
+    ///------------ audio
+    avCcodecContextAudio = avcodec_alloc_context3(NULL);
+    avcodec_parameters_to_context(avCcodecContextAudio, avFormatContext -> streams[self.audioStream] -> codecpar);
+    ///------ Find the decoder for the video stream.
+    avCodecAudio = avcodec_find_decoder(avCcodecContextAudio -> codec_id);
+    ///------ Open codec
+    avcodec_open2(avCcodecContextAudio, avCodecAudio, NULL);
 }
 - (void)displayVedioForPath:(NSString *)strPath
                       block:(displayVedioFrameBlock)block{
@@ -70,10 +81,11 @@
     ///------
     [self registerBaseMethod:strPath];
     ///------ display video
-    [[AFOPlayMediaManager shareAFOPlayMediaManager] displayVedioCodec:avcodec formatContext:avFormatContext codecContext:avCodecContext index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+    [[AFOPlayMediaManager shareAFOPlayMediaManager] displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
     }];
     ///------ play audio
+    [[AFOAudioManager shareAFOAudioManager] playAudioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

@@ -14,8 +14,8 @@
     AVFormatContext   *avFormatContext = NULL;
     AVCodecContext    *avCodecContext  = NULL;
     AVCodec           *avCodec         = NULL;
-    int videoStream = -1;
-    int audioStream = -1;
+   __block NSInteger videoStream = -1;
+   __block NSInteger audioStream = -1;
     
     ///------ Open video file.
     if(avformat_open_input(&avFormatContext, [path UTF8String], NULL, NULL) != 0){
@@ -32,28 +32,15 @@
 #if DEBUG
     av_dump_format(avFormatContext, 0, [path UTF8String], 0);
 #endif
-    ///------ Find the first audio stream.
-    audioStream = av_find_best_stream(avFormatContext,
-                                      AVMEDIA_TYPE_AUDIO,
-                                      -1,
-                                      -1,
-                                      NULL,
-                                      0);
-    if (audioStream == -1) {
-        return;
-    }
-    ///------ Find the first video stream.
-    videoStream = av_find_best_stream(avFormatContext,
-                                      AVMEDIA_TYPE_VIDEO,
-                                      -1,
-                                      -1,
-                                      NULL,
-                                      0);
-    //------ Didn't find a video stream.
-    if (videoStream == -1) {
-        block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeAllocateCodecContextFailure],0,0);
-        return ;
-    }
+    ///------
+    [self audioVideoStreamFormat:avFormatContext block:^(NSInteger video, NSInteger audio) {
+        if (video == -1 && audio == -1){
+            block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeAllocateCodecContextFailure],0,0);
+            return ;
+        }
+        videoStream = video;
+        audioStream = audio;
+    }];
     ///------ Get a pointer to the codec context for the video stream.
     avCodecContext = avcodec_alloc_context3(NULL);
     avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[videoStream] -> codecpar);
@@ -86,7 +73,31 @@
     ///------
     avCodec = NULL;
 }
-#pragma mark ------
+#pragma mark ------ first video or audio Fault tolerance
++ (NSInteger)audioVideoStream:(enum AVMediaType)type
+                       format:(AVFormatContext *)avFormatContext{
+    NSInteger result = av_find_best_stream(avFormatContext,
+                                            type,
+                                            -1,
+                                            -1,
+                                            NULL,
+                                            0);
+    return result;
+}
++ (void)audioVideoStreamFormat:(AVFormatContext *)avFormatContext
+                        block:(void(^)(NSInteger video, NSInteger audio))block{
+    NSInteger resultV = [self audioVideoStream:AVMEDIA_TYPE_VIDEO format:avFormatContext];
+    NSInteger resultA = [self audioVideoStream:AVMEDIA_TYPE_AUDIO format:avFormatContext];
+    block(resultV,resultA);
+}
+#pragma mark ------ codec context Fault tolerance
++ (AVCodec *)avCodecIsNULL:(AVCodecContext *)avCodecContext
+               format:(AVFormatContext *)avFormatContext
+                index:(NSInteger)index{
+    avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[index] -> codecpar);
+    return avcodec_find_decoder(avCodecContext -> codec_id);
+}
+#pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"dealloc AFOMediaConditional");
 }

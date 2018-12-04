@@ -8,6 +8,7 @@
 
 #import "AFOAudioManager.h"
 #import "AFOAudioSession.h"
+#import "AFOAudioSampling.h"
 
 @implementation AFOAudioManager
 #pragma mark ------ init
@@ -20,8 +21,16 @@
     return audioManager;
 }
 #pragma mark ------ add method
-- (void)playAudioContent{
-    [AFOAudioSession shareAFOAudioSession];
+- (void)playAudioCodec:(AVCodec *)codec
+           formatContext:(AVFormatContext *)formatContext
+            codecContext:(AVCodecContext *)codecContext
+                   index:(NSInteger)index{
+    ///---
+    [[AFOAudioSession shareAFOAudioSession] settingCategory:AVAudioSessionCategoryPlayback];
+    [[AFOAudioSession shareAFOAudioSession]settingSampleRate:codecContext ->sample_rate];
+    [[AFOAudioSession shareAFOAudioSession] settingActive:YES];
+    ///---
+    [[AFOAudioSampling shareAFOAudioSampling] audioSamping:formatContext codecContext:codecContext codec:codec index:index];
 }
 - (void)stopAudioContent{
     

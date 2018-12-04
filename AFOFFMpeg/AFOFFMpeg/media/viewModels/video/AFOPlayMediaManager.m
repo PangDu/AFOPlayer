@@ -20,31 +20,24 @@
 }
 /**视频宽*/
 @property (nonatomic, assign, readwrite) double         videoWidth;
-
 /**视频高*/
 @property (nonatomic, assign, readwrite) double         videoHight;
-
 /**输出视频Size*/
 @property (nonatomic, assign, readwrite) CGSize         outSize;
-
 /**视频的长度，秒为单位*/
 @property (nonatomic, assign, readwrite) int64_t        duration;
-
 /**视频的当前秒数*/
 @property (nonatomic, assign, readwrite) int64_t        currentTime;
-
 /**视频的当前秒数*/
 @property (nonatomic, assign, readwrite) int64_t        nowTime;
-
 /**视频的帧率*/
 @property (nonatomic, assign, readwrite) float           fps;
-
 /**视频长度*/
 @property (nonatomic, assign)            NSInteger       videoStream;
+/***/
 @property (nonatomic, assign)            BOOL            isRelease;
 /**queueManager*/
 @property (nonatomic, strong) AFOMediaQueueManager      *queueManager;
-
 /**generateImage*/
 @property (nonatomic, strong) AFOGenerateImages         *generateImage;
 @end
