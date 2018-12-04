@@ -8,9 +8,11 @@
 
 #import "AFOMediaPlayController.h"
 #import "AFOMediaPlayControllerCategory.h"
+#import "AFOVideoAudioManager.h"
 #import "AFOPlayMediaManager.h"
 #import "AFOMediaDecoder.h"
 #import "AFOMediaOpenGLView.h"
+#import "AFOAudioManager.h"
 @interface AFOMediaPlayController ()<AFORouterManagerDelegate>
 @property (nonatomic, strong) AFOPlayMediaManager        *mediaManager;
 @property (nonatomic, strong) AFOMediaDecoder            *mediaInstance;
@@ -59,11 +61,7 @@
 //    }];
     ///------
     WeakObject(self);
-    [self.mediaManager displayVedioFrameForPath:path block:^(
-                                                    NSError *error,
-                                                    UIImage *image,
-                                                    NSString *totalTime, NSString *currentTime, NSInteger totalSeconds,
-                                                     NSUInteger cuttentSeconds) {
+    [[AFOVideoAudioManager shareVideoAudioManager] displayVedioForPath:path block:^(NSError * _Nullable error, UIImage * _Nullable image, NSString * _Nullable totalTime, NSString * _Nullable currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         StrongObject(self);
         if (!error.code) {
             [self settingMeidaViewImage:image totalTime:totalTime currentTime:currentTime total:totalSeconds current:cuttentSeconds];

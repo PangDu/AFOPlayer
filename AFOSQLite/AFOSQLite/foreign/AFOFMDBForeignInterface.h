@@ -18,4 +18,5 @@
 + (void)selectSQLiteTableStatements:(NSString *)statements
                               model:(id)model
                               block:(void (^)(NSArray *array))block;
+
 @end

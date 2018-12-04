@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface AFOAudioManager : NSObject
-
++ (instancetype)shareAFOAudioManager;
+- (void)playAudioContent;
+- (void)stopAudioContent;
 @end

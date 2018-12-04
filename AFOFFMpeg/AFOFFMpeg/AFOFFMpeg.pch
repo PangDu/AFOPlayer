@@ -30,6 +30,7 @@
 #import <libavformat/avformat.h>
 #import <libswscale/swscale.h>
 #import <libavutil/imgutils.h>
+#import <libswresample/swresample.h>
 /*****************/
 #import "AFOMediaErrorString.h"
 #import "AFOMediaErrorCodeManager.h"
