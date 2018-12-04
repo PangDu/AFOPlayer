@@ -43,18 +43,17 @@
     }];
     ///------ Get a pointer to the codec context for the video stream.
     avCodecContext = avcodec_alloc_context3(NULL);
-    avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[videoStream] -> codecpar);
-    ///------ Find the decoder for the video stream.
-    avCodec = avcodec_find_decoder(avCodecContext -> codec_id);
-    if(avCodec == NULL){
-        block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeNoneDecoderFailure],0,0);
-        return;
-    }
-    ///------ Open codec
-    if(avcodec_open2(avCodecContext, avCodec, NULL) < 0){
-        block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeOpenDecoderFailure],0,0);
-        return;
-    }
+    ///------
+    [self avCodecDecoder:avCodecContext format:avFormatContext videoIndex:videoStream audioIndex:audioStream block:^(BOOL isTrue, BOOL isOpen) {
+        if (!isTrue && isOpen) {
+            block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeAllocateCodecContextFailure],videoStream,audioStream);
+            return;
+        }
+        if (isTrue && !isOpen) {
+            block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeOpenDecoderFailure],videoStream,audioStream);
+            return;
+        }
+    }];
     ///------- return ture
     block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone],videoStream,audioStream);
     //------ 关闭解码器
@@ -91,11 +90,53 @@
     block(resultV,resultA);
 }
 #pragma mark ------ codec context Fault tolerance
-+ (AVCodec *)avCodecIsNULL:(AVCodecContext *)avCodecContext
++ (AVCodec *)avCodec:(AVCodecContext *)avCodecContext
                format:(AVFormatContext *)avFormatContext
                 index:(NSInteger)index{
     avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[index] -> codecpar);
     return avcodec_find_decoder(avCodecContext -> codec_id);
+}
++ (void)avCodecDecoder:(AVCodecContext *)avCodecContext
+                format:(AVFormatContext *)avFormatContext
+            videoIndex:(NSInteger)video
+            audioIndex:(NSInteger)audio
+                 block:(void (^)(BOOL isTrue, BOOL isOpen))block{
+    AVCodec *avCodecV = NULL;
+    AVCodec *avCodecAu = NULL;
+    if (video != -1 && audio == -1) {
+        avCodecV = [self avCodec:avCodecContext format:avFormatContext index:video];
+        if (avCodecV == NULL) {
+            block(NO,YES);
+        }
+        ///------ Open codec
+        if(avcodec_open2(avCodecContext, avCodecV, NULL) < 0){
+            block(YES,NO);
+        }
+    }else if(video == -1 && audio != -1){
+        avCodecAu = [self avCodec:avCodecContext format:avFormatContext index:audio];
+        if (avCodecV == NULL) {
+            block(NO,YES);
+        }
+        ///------ Open codec
+        if(avcodec_open2(avCodecContext, avCodecV, NULL) < 0){
+            block(YES,NO);
+        }
+    }else if(video != -1 && audio != -1){
+        ///---
+        AVCodecContext *avCodecContextV = avcodec_alloc_context3(NULL);
+        avCodecV = [self avCodec:avCodecContextV format:avFormatContext index:video];
+        ///---
+        AVCodecContext *avCodecContextAu= avcodec_alloc_context3(NULL);
+        avCodecAu = [self avCodec:avCodecContextAu format:avFormatContext index:audio];
+        ///---
+        if (avCodecV == NULL && avCodecAu == NULL) {
+            block(NO,YES);
+        }
+        ///------ Open codec
+        if(avcodec_open2(avCodecContextV, avCodecV, NULL) < 0 && avcodec_open2(avCodecContextAu, avCodecAu, NULL) < 0){
+            block(YES,NO);
+        }
+    }
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
