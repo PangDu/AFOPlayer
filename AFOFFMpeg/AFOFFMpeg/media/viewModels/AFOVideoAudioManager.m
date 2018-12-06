@@ -32,12 +32,6 @@
     });
     return managerment;
 }
-- (instancetype)init{
-    if (self = [super init]) {
-        
-    }
-    return self;
-}
 + (void)initialize{
     if (self == [AFOVideoAudioManager class]) {
         avcodec_register_all();
@@ -89,6 +83,23 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
-    
+    NSLog(@"AFOVideoAudioManager dealloc");
+    //---
+    avformat_network_deinit();
+    //---
+    if (avFormatContext) {
+        avformat_close_input(&avFormatContext);
+        avFormatContext = NULL;
+    }
+    //---
+    if (avCodecContextVideo) {
+        avcodec_close(avCodecContextVideo);
+        avCodecContextVideo = NULL;
+    }
+    //---
+    if (avCcodecContextAudio) {
+        avcodec_close(avCcodecContextAudio);
+        avCcodecContextAudio = NULL;
+    }
 }
 @end

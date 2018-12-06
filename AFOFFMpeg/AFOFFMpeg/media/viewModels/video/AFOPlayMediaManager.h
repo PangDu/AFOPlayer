@@ -32,8 +32,8 @@ typedef void(^displayVedioFrameBlock)(NSError *error,
  <#Description#>
 
  @param codec <#codec description#>
- @param avFormatContext <#avFormatContext description#>
- @param CodecContext <#CodecContext description#>
+ @param formatContext <#avFormatContext description#>
+ @param codecContext <#CodecContext description#>
  @param index <#index description#>
  @param block <#block description#>
  */

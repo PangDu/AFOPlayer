@@ -13,9 +13,10 @@
 @interface AFOAudioSession()
 @property (nonnull, nonatomic, strong) AVAudioSession *audioSession;
 @property (nonnull, nonatomic, strong) NSString       *category;
-@property (nonatomic, assign) Float64 defaultSampleRate;
-@property (nonatomic, assign) Float64 currentSampleRate;
-@property (nonatomic, assign) BOOL active;
+@property (nonatomic, assign) NSTimeInterval preferredLatency;
+@property (nonatomic, assign) Float64        defaultSampleRate;
+@property (nonatomic, assign) Float64        currentSampleRate;
+@property (nonatomic, assign) BOOL           active;
 @end
 
 @implementation AFOAudioSession
@@ -53,6 +54,16 @@
     NSError *error = nil;
     if ( ![self.audioSession setCategory:_category error:&error] ) {
         NSLog(@"Could note set category on audio session: %@ ", error.localizedDescription);
+    }
+}
+- (void)settingPreferredLatency:(NSTimeInterval)preferredLatency{
+    
+    _preferredLatency = preferredLatency;
+    
+    NSError *error = nil;
+    
+    if ( ![self.audioSession setPreferredIOBufferDuration:_preferredLatency error:&error] ){
+        NSLog(@"Error when setting preferred I/O buffer duration");
     }
 }
 - (void)settingActive:(BOOL)active{

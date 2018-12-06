@@ -144,14 +144,6 @@
     av_free(avStream);
     ///------   packet
     av_packet_unref(&packet);
-    ///------   关闭解码器
-    if (avCodecContext){
-        avcodec_close(avCodecContext);
-    };
-    ///
-    avformat_network_deinit();
-    ///
-    avcodec_free_context(&avCodecContext);
     _isRelease = YES;
 }
 #pragma mark ------------ property

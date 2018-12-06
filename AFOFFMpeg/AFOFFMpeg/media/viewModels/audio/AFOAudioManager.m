@@ -9,6 +9,12 @@
 #import "AFOAudioManager.h"
 #import "AFOAudioSession.h"
 #import "AFOAudioSampling.h"
+#import "AFOAudioOutPut.h"
+
+@interface AFOAudioManager ()<AFOAudioFillDataDelegate>
+@property (nonatomic, assign)   NSInteger chanel;
+@property (nonnull, nonatomic, strong)  AFOAudioOutPut *audioOutPut;
+@end
 
 @implementation AFOAudioManager
 #pragma mark ------ init
@@ -20,21 +26,36 @@
     });
     return audioManager;
 }
-#pragma mark ------ add method
+#pragma mark ------  method
 - (void)playAudioCodec:(AVCodec *)codec
            formatContext:(AVFormatContext *)formatContext
             codecContext:(AVCodecContext *)codecContext
                    index:(NSInteger)index{
+    self.chanel = codecContext -> channels;
+    [self settingAudioSession:codecContext];
     ///---
+    [[AFOAudioSampling shareAFOAudioSampling] audioSamping:formatContext codecContext:codecContext codec:codec index:index];
+    ///---
+    _audioOutPut = [[AFOAudioOutPut alloc] initWithChannel:codecContext -> channels sampleRate:codecContext -> sample_rate bytesPerSample:2 delegate:self];
+}
+- (void)settingAudioSession:(AVCodecContext *)codecContext{
     [[AFOAudioSession shareAFOAudioSession] settingCategory:AVAudioSessionCategoryPlayback];
     [[AFOAudioSession shareAFOAudioSession]settingSampleRate:codecContext ->sample_rate];
     [[AFOAudioSession shareAFOAudioSession] settingActive:YES];
-    ///---
-    [[AFOAudioSampling shareAFOAudioSampling] audioSamping:formatContext codecContext:codecContext codec:codec index:index];
+    [[AFOAudioSession shareAFOAudioSession] settingPreferredLatency:1*1024.0/codecContext ->sample_rate];
 }
-- (void)stopAudioContent{
+#pragma mark ------ delegate
+- (NSInteger)fillAudioData:(SInt16 *_Nullable)sampleBuffer
+                    frames:(NSInteger)frame
+                  channels:(NSInteger)channel{
+    memset(sampleBuffer, 0, frame * self.chanel * sizeof(SInt16));
     
+//    if (_dec) {
+//        [_dec readSamples:sampleBuffer size:(int)(frame * self.channel)];
+//    }
+    return 1;
 }
+#pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"AFOAudioManager dealloc");
 }

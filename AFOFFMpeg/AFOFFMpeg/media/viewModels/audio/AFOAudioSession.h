@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareAFOAudioSession;
 - (void)settingSampleRate:(Float64)sampleRate;
 - (void)settingCategory:(NSString *)category;
+- (void)settingPreferredLatency:(NSTimeInterval)preferredLatency;
 - (void)settingActive:(BOOL)active;
 @end
 
