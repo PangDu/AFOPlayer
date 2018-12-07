@@ -6,12 +6,14 @@
 //  Copyright © 2018 AFO Science and technology Ltd. All rights reserved.
 //
 
-#import "AFOAudioSampling.h"
-
-@interface AFOAudioSampling (){
+#import "AFOAudioDecoder.h"
+#define STMAX(a, b)  (((a) > (b)) ? (a) : (b))
+#define STMIN(a, b)  (((a) < (b)) ? (a) : (b))
+@interface AFOAudioDecoder (){
     AVFormatContext     *formatContext;
     AVCodecContext      *codecContext;
     AVFrame             *avFrame;
+    AVCodec             *avCodec;
     SwrContext          *swrContext;
     void                *swrBuffer;
     short               *audioBuffer;
@@ -19,21 +21,14 @@
 }
 @property (nonatomic, assign)            NSInteger       audioStream;
 @property (nonatomic, assign)            CGFloat         audioTimeBase;
-@property (nonatomic, assign)            NSInteger       swrBufferSize;
-@property (nonatomic, assign)            NSInteger       audioBufferCursor;
+@property (nonatomic, assign)            int             swrBufferSize;
+@property (nonatomic, assign)            int             audioBufferCursor;
 @property (nonatomic, assign)            int             audioBufferSize;
+@property (nonatomic, assign)            int             packetBufferSize;
 @end
 
-@implementation AFOAudioSampling
+@implementation AFOAudioDecoder
 #pragma mark ------ init
-+ (instancetype)shareAFOAudioSampling{
-    static AFOAudioSampling *audioSampling;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        audioSampling = [[AFOAudioSampling alloc] init];
-    });
-    return audioSampling;
-}
 - (instancetype)init{
     if (self = [super init]) {
         avFrame = av_frame_alloc();
@@ -41,12 +36,14 @@
     return self;
 }
 #pragma mark ------ add method
-- (void)audioSamping:(nonnull AVFormatContext *)avFormatContext
+- (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
         codecContext:(nonnull AVCodecContext *)avCodecContext
                codec:(nonnull AVCodec *)codec
-               index:(NSInteger)index{
+               index:(NSInteger)index
+          packetSize:(int)packetSize{
     formatContext = avFormatContext;
     codecContext = avCodecContext;
+    avCodec = codec;
     self.audioStream = index;
     ///---
     AVStream *audioStream =formatContext -> streams[self.audioStream];
@@ -69,8 +66,27 @@
         AVStream *st = formatContext->streams[self.audioStream];
         avStreamFPSTimeBase(st, 0.025, 0, &_audioTimeBase);
     }
-    ///---
-    [self decodeAudioFrame];
+}
+- (int)readAudioSamples:(short *)samples size:(int)size{
+    int samplesSize = size;
+    while (size > 0) {
+        if (_audioBufferCursor < _audioBufferSize) {
+            int audioBufferDataSize = _audioBufferSize - _audioBufferCursor;
+            int copySize = STMIN(size, audioBufferDataSize);
+            memcpy(samples + (samplesSize - size), audioBuffer + _audioBufferCursor, copySize * 2);
+            size -= copySize;
+            _audioBufferCursor += copySize;
+        }else{
+            if ([self decodeAudioFrame] < 0) {
+                break;
+            }
+        }
+    }
+    int fillSize = samplesSize - size;
+    if (fillSize == 0) {
+        return -1;
+    }
+    return fillSize;
 }
 #pragma mark ------
 - (NSInteger)decodeAudioFrame{
@@ -82,9 +98,7 @@
     while (1) {
         readFrameCode = av_read_frame(formatContext, &packet);
         if (readFrameCode >= 0) {
-            
             if (packet.stream_index == self.audioStream) {
-                
                 int ret = avcodec_send_packet(codecContext, &packet);
                 if (ret < 0 && ret != AVERROR(EAGAIN) && ret != AVERROR_EOF){
                     return -1;
@@ -95,15 +109,12 @@
                 }else{
                     gotFrame = 1;
                 }
-                
+                ///---
                 if (gotFrame) {
-                    
                     int numChannels = 2;
                     int numFrames = 0;
                     void *audioData;
-                    
                     if (swrContext) {
-                        
                         const int ratio = 2;
                         const int bufSize = av_samples_get_buffer_size(NULL,
                                                                        numChannels,
@@ -111,11 +122,9 @@
                                                                        AV_SAMPLE_FMT_S16,
                                                                        1);
                         if (!swrBuffer || _swrBufferSize < bufSize) {
-                            
                             _swrBufferSize = bufSize;
                             swrBuffer = realloc(swrBuffer, _swrBufferSize);
                         }
-                        
                         Byte *outbuf[2] = {(Byte *) swrBuffer, NULL};
                         numFrames = swr_convert(swrContext,
                                                 outbuf,
@@ -123,7 +132,6 @@
                                                 (const uint8_t **)avFrame->data,
                                                 avFrame->nb_samples);
                         if (numFrames < 0) {
-                            
                             NSLog(@"fail resample audio");
                             ret = -1;
                             break;
@@ -131,7 +139,6 @@
                         audioData = swrBuffer;
                     }else{
                         if (codecContext->sample_fmt != AV_SAMPLE_FMT_S16) {
-                            
                             NSLog(@"bucheck, audio format is invalid");
                             ret = -1;
                             break;
@@ -180,14 +187,13 @@ static void avStreamFPSTimeBase(AVStream *st, CGFloat defaultTimeBase, CGFloat *
         *pTimeBase = timebase;
     }
 }
-
 #pragma mark ------ dealloc
 - (void)dealloc{
+    NSLog(@"AFAudioDecoder dealloc");
     if (swrContext) {
         swr_free(&swrContext);
         swrContext = NULL;
-    }
-    
+    } 
     if (avFrame) {
         av_free(avFrame);
         avFrame = NULL;

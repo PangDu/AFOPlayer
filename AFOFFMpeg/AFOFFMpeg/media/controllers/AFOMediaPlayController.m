@@ -67,6 +67,8 @@
             [self settingMeidaViewImage:image totalTime:totalTime currentTime:currentTime total:totalSeconds current:cuttentSeconds];
         }
     }];
+    ///
+    [[AFOVideoAudioManager shareVideoAudioManager] playAudio];
 }
 #pragma mark ------------ system
 #pragma mark ------

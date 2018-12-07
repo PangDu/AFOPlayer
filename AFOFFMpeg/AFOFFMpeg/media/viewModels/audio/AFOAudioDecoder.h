@@ -1,5 +1,5 @@
 //
-//  AFOAudioSampling.h
+//  AFOAudioDecoder.h
 //  AFOFFMpeg
 //
 //  Created by xueguang xian on 2018/12/3.
@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface AFOAudioSampling : NSObject
-+ (instancetype)shareAFOAudioSampling;
-- (void)audioSamping:(nonnull AVFormatContext *)avFormatContext
+@class AFOAudioAttribute;
+@interface AFOAudioDecoder : NSObject
+- (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
         codecContext:(nonnull AVCodecContext *)avCodecContext
                codec:(nonnull AVCodec *)codec
-               index:(NSInteger)index;
+               index:(NSInteger)index
+          packetSize:(int)packetSize;
+- (AFOAudioAttribute *)audioAttibute;
+- (int)readAudioSamples:(short *)samples size:(int)size;
 @end
 
 NS_ASSUME_NONNULL_END

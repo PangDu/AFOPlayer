@@ -20,6 +20,7 @@
 }
 @property (nonatomic, assign)            NSInteger  videoStream;
 @property (nonatomic, assign)            NSInteger  audioStream;
+@property (nonnull, nonatomic, strong)   AFOAudioManager    *audioManager;
 @end
 
 @implementation AFOVideoAudioManager
@@ -74,12 +75,25 @@
     }];
     ///------
     [self registerBaseMethod:strPath];
-    ///------ display video
-    [[AFOPlayMediaManager shareAFOPlayMediaManager] displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
-        block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
-    }];
+//    ///------ display video
+//    [[AFOPlayMediaManager shareAFOPlayMediaManager] displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+//        block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
+//    }];
     ///------ play audio
-    [[AFOAudioManager shareAFOAudioManager] playAudioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
+    [self.audioManager audioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
+}
+- (void)playAudio{
+    [self.audioManager playAudio];
+}
+- (void)stopAudio{
+    [self.audioManager stopAudio];
+}
+#pragma mark ------ attribute
+- (AFOAudioManager *)audioManager{
+    if (!_audioManager) {
+        _audioManager = [[AFOAudioManager alloc] init];
+    }
+    return _audioManager;
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

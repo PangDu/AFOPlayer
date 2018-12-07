@@ -7,34 +7,27 @@
 //
 
 #import "AFOAudioManager.h"
+#import "AFOAudioThreadDecoder.h"
 #import "AFOAudioSession.h"
-#import "AFOAudioSampling.h"
+#import "AFOAudioDecoder.h"
 #import "AFOAudioOutPut.h"
 
 @interface AFOAudioManager ()<AFOAudioFillDataDelegate>
-@property (nonatomic, assign)   NSInteger chanel;
-@property (nonnull, nonatomic, strong)  AFOAudioOutPut *audioOutPut;
+@property (nonatomic, assign)                NSInteger         channel;
+@property (nonnull, nonatomic, strong)  AFOAudioOutPut        *audioOutPut;
+@property (nonnull, nonatomic, strong)  AFOAudioThreadDecoder *threadDecoder;
 @end
-
 @implementation AFOAudioManager
-#pragma mark ------ init
-+ (instancetype)shareAFOAudioManager{
-    static AFOAudioManager *audioManager;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        audioManager = [[AFOAudioManager alloc] init];
-    });
-    return audioManager;
-}
 #pragma mark ------  method
-- (void)playAudioCodec:(AVCodec *)codec
+- (void)audioCodec:(AVCodec *)codec
            formatContext:(AVFormatContext *)formatContext
             codecContext:(AVCodecContext *)codecContext
                    index:(NSInteger)index{
-    self.chanel = codecContext -> channels;
+    self.channel = codecContext -> channels;
     [self settingAudioSession:codecContext];
     ///---
-    [[AFOAudioSampling shareAFOAudioSampling] audioSamping:formatContext codecContext:codecContext codec:codec index:index];
+    [self.threadDecoder packetBufferTimePercent:0.02f];
+    [self.threadDecoder audioDecoder:formatContext codecContext:codecContext codec:codec index:index];
     ///---
     _audioOutPut = [[AFOAudioOutPut alloc] initWithChannel:codecContext -> channels sampleRate:codecContext -> sample_rate bytesPerSample:2 delegate:self];
 }
@@ -44,16 +37,28 @@
     [[AFOAudioSession shareAFOAudioSession] settingActive:YES];
     [[AFOAudioSession shareAFOAudioSession] settingPreferredLatency:1*1024.0/codecContext ->sample_rate];
 }
+- (void)playAudio{
+    [self.audioOutPut audioPlay];
+}
+- (void)stopAudio{
+    [self.audioOutPut audioStop];
+}
 #pragma mark ------ delegate
 - (NSInteger)fillAudioData:(SInt16 *_Nullable)sampleBuffer
                     frames:(NSInteger)frame
                   channels:(NSInteger)channel{
-    memset(sampleBuffer, 0, frame * self.chanel * sizeof(SInt16));
-    
-//    if (_dec) {
-//        [_dec readSamples:sampleBuffer size:(int)(frame * self.channel)];
-//    }
+    memset(sampleBuffer, 0, frame * self.channel * sizeof(SInt16));
+    if (_threadDecoder) {
+        [_threadDecoder readAudioPacket:sampleBuffer size:(int)(frame * self.channel)];
+    }
     return 1;
+}
+#pragma mark ------ attribute
+- (AFOAudioThreadDecoder *)threadDecoder{
+    if (!_threadDecoder) {
+        _threadDecoder = [[AFOAudioThreadDecoder alloc] init];
+    }
+    return _threadDecoder;
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

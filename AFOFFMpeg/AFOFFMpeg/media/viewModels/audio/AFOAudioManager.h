@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface AFOAudioManager : NSObject
-+ (instancetype)shareAFOAudioManager;
-- (void)playAudioCodec:(AVCodec *)codec
-         formatContext:(AVFormatContext *)formatContext
-          codecContext:(AVCodecContext *)codecContext
-                 index:(NSInteger)index;
-- (void)stopAudioContent;
+- (void)audioCodec:(AVCodec *)codec
+     formatContext:(AVFormatContext *)formatContext
+      codecContext:(AVCodecContext *)codecContext
+             index:(NSInteger)index;
+- (void)playAudio;
+- (void)stopAudio;
 @end
