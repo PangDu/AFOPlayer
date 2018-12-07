@@ -8,6 +8,7 @@
 
 #import "AFOAudioThreadDecoder.h"
 #import "AFOAudioDecoder.h"
+#import "AFOAudioCache.h"
 #import "AFOAudioPacket.h"
 #define CHANNEL_PER_FRAME    2
 #define BITS_PER_CHANNEL     16
@@ -17,8 +18,9 @@
 @property (nonatomic, assign) int       packetBufferSize;
 @property (nonatomic, assign) float     playPosition;
 @property (nonatomic, assign) float     timePercent;
-@property (nonatomic, strong) AFOAudioDecoder           *audioDecoder;
+@property (nonnull, nonatomic, strong) AFOAudioDecoder  *audioDecoder;
 @property (nonnull, nonatomic, strong) AFOAudioPacket   *audioPacket;
+@property (nonnull, nonatomic, strong) AFOAudioCache    *audioCache;
 @end
 
 @implementation AFOAudioThreadDecoder
@@ -65,8 +67,14 @@
     }
     return _audioDecoder;
 }
+- (AFOAudioCache *)audioCache{
+    if (!_audioCache) {
+        _audioCache = [[AFOAudioCache alloc] initWithCap:self.audioSampleRate / 1024 markCap:0 timeout:1.0];
+    }
+    return _audioCache;
+}
 #pragma mark ------ dealloc
 - (void)dealloc{
-    
+    NSLog(@"AFOAudioThreadDecoder dealloc");
 }
 @end
