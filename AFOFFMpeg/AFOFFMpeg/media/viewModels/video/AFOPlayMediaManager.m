@@ -82,6 +82,8 @@
                   [AFOMediaTimer timeFormatShort:weakself.duration],[AFOMediaTimer currentTime:weakself.nowTime + 1],
                   weakself.duration,
                   weakself.nowTime + 1);
+            //
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaStopManager" object:nil];
             [weakself freeResources];
             return ;
         }else{

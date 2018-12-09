@@ -106,7 +106,7 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self correctionTime];
     });
-    [self playAudio];
+//    [self playAudio];
 }
 - (CGFloat)tickCorrection{
     const NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];

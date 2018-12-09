@@ -151,7 +151,7 @@
     return _patchQueue;
 }
 - (void)dealloc{
-    self.vedioImage = nil;
     NSLog(@"dealloc AFOGenerateImages");
 }
 @end
+
