@@ -7,7 +7,6 @@
 //
 
 #import "UIWindow+Initialization.h"
-
 @implementation UIWindow (Initialization)
 #pragma mark ------
 - (void)tabBarInitialization:(AFOAppTabBarController *)tabBarController{

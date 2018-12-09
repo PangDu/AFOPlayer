@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
                codec:(nonnull AVCodec *)codec
                index:(NSInteger)index;
 - (void)packetBufferTimePercent:(float)timePercent;
-- (void)readAudioPacket:(short *)samples size:(int)size;
+- (void)readAudioPacket:(short *)samples
+                   size:(int)size
+                  block:(void (^)(float timeStamp))block;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOAudioSession : NSObject
-+ (instancetype)shareAFOAudioSession;
 - (void)settingSampleRate:(Float64)sampleRate;
 - (void)settingCategory:(NSString *)category;
 - (void)settingPreferredLatency:(NSTimeInterval)preferredLatency;

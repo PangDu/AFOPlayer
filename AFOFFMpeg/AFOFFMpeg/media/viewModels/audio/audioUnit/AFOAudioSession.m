@@ -21,14 +21,6 @@
 
 @implementation AFOAudioSession
 #pragma mark ------ init
-+ (instancetype)shareAFOAudioSession{
-    static AFOAudioSession *afoSession;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        afoSession = [[self alloc] init];
-    });
-    return afoSession;
-}
 - (instancetype)init{
     if (self = [super init]) {
         _defaultSampleRate = 44100.0;
@@ -78,5 +70,8 @@
         NSLog(@"Error when setting active state of audio session: %@", error.localizedDescription);
     }
     _currentSampleRate = [self.audioSession sampleRate];
+}
+- (void)dealloc{
+    NSLog(@"AFOAudioSession dealloc");
 }
 @end

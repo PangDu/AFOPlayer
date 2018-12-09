@@ -9,16 +9,12 @@
 #import "AFOMediaPlayController.h"
 #import "AFOMediaPlayControllerCategory.h"
 #import "AFOVideoAudioManager.h"
-#import "AFOPlayMediaManager.h"
-#import "AFOMediaDecoder.h"
 #import "AFOMediaOpenGLView.h"
-#import "AFOAudioManager.h"
 @interface AFOMediaPlayController ()<AFORouterManagerDelegate>
-@property (nonatomic, strong) AFOPlayMediaManager        *mediaManager;
-@property (nonatomic, strong) AFOMediaDecoder            *mediaInstance;
+@property (nonatomic, strong) AFOVideoAudioManager       *mediaManager;
 @property (nonatomic, copy)   NSString                   *strPath;
-@property (nonatomic, assign) UIInterfaceOrientationMask  orientation;
 @property (nonatomic, strong) AFOMediaOpenGLView         *openGLView;
+@property (nonatomic, assign) UIInterfaceOrientationMask  orientation;
 @end
 
 @implementation AFOMediaPlayController
@@ -30,8 +26,7 @@
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaQueueManagerTimerCancel" object:nil];
-    ///---
-    [[AFOVideoAudioManager shareVideoAudioManager] stopAudio];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaStopManager" object:nil];
 }
 #pragma mark ------------ viewDidLoad
 - (void)viewDidLoad {
@@ -54,23 +49,14 @@
 }
 #pragma mark ------
 - (void)playerVedioWithPath:(NSString *)path{
-//    WeakObject(self);
-//    [self.mediaInstance displayVedioPath:path block:^(AFOVideoFrame *videoFrame) {
-//        StrongObject(self);
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-////            [self.opemGLView displayYUV420pData:data width:self.view.frame.size.width height:self.view.frame.size.height];
-//        }];
-//    }];
     ///------
     WeakObject(self);
-    [[AFOVideoAudioManager shareVideoAudioManager] displayVedioForPath:path block:^(NSError * _Nullable error, UIImage * _Nullable image, NSString * _Nullable totalTime, NSString * _Nullable currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+    [self.mediaManager displayVedioForPath:path block:^(NSError * _Nullable error, UIImage * _Nullable image, NSString * _Nullable totalTime, NSString * _Nullable currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         StrongObject(self);
         if (!error.code) {
             [self settingMeidaViewImage:image totalTime:totalTime currentTime:currentTime total:totalSeconds current:cuttentSeconds];
         }
     }];
-    ///
-    [[AFOVideoAudioManager shareVideoAudioManager] playAudio];
 }
 #pragma mark ------------ system
 #pragma mark ------
@@ -89,18 +75,11 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark ------------ property
-#pragma mark ------ viewModel
-- (AFOPlayMediaManager *)mediaManager{
+- (AFOVideoAudioManager *)mediaManager{
     if (!_mediaManager){
-        _mediaManager = [[AFOPlayMediaManager alloc] init];
+        _mediaManager = [[AFOVideoAudioManager alloc] init];
     }
     return _mediaManager;
-}
-- (AFOMediaDecoder *)mediaInstance{
-    if (!_mediaInstance) {
-        _mediaInstance = [[AFOMediaDecoder alloc] init];
-    }
-    return _mediaInstance;
 }
 - (AFOMediaOpenGLView *)openGLView{
     if (!_openGLView) {

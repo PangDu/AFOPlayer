@@ -7,7 +7,6 @@
 //
 
 #import "AFOSettingForeign.h"
-
 @interface AFOSettingForeign ()
 @property (nonatomic, strong) AFOSettingNavigationController *navigationController;
 @property (nonatomic, strong) AFOSettingMainController       *mainController;

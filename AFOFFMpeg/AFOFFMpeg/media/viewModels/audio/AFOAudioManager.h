@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AFOAudioManagerDelegate <NSObject>
+@optional
+- (void)audioTimeStamp:(float)audioTime;
+@end
 @interface AFOAudioManager : NSObject
+- (instancetype)initWithDelegate:(id<AFOAudioManagerDelegate>)delegate;
 - (void)audioCodec:(AVCodec *)codec
      formatContext:(AVFormatContext *)formatContext
       codecContext:(AVCodecContext *)codecContext

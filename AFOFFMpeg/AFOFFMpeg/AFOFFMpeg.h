@@ -19,4 +19,5 @@ FOUNDATION_EXPORT const unsigned char AFOFFMpegVersionString[];
 #import <AFOFFMpeg/AFOMediaForeignInterface.h>
 #import <AFOFFMpeg/AFOMediaForeignInterface+Dictionary.h>
 #import <AFOFFMpeg/AFOMediaForeignInterface+Array.h>
-
+#import <AFOFFMpeg/KxMovieViewController.h>
+#import <AFOFFMpeg/KxSuperController.h>

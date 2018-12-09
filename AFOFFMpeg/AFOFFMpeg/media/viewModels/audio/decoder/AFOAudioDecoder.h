@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void(^audioTimeStampBlock)(float timeStamp);
 NS_ASSUME_NONNULL_BEGIN
 @interface AFOAudioDecoder : NSObject
 - (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
                codec:(nonnull AVCodec *)codec
                index:(NSInteger)index
           packetSize:(int)packetSize;
-- (int)readAudioSamples:(short *)samples size:(int)size;
+- (int)readAudioSamples:(short *)samples
+                   size:(int)size
+                  block:(audioTimeStampBlock)block;
 @end
 NS_ASSUME_NONNULL_END

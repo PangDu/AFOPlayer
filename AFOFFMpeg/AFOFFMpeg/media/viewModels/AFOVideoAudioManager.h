@@ -27,7 +27,6 @@ typedef void(^displayVedioBlock)(NSError *_Nullable error,
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOVideoAudioManager : NSObject
-+ (instancetype)shareVideoAudioManager;
 /**
  <#Description#>
  
@@ -36,8 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)displayVedioForPath:(NSString *)strPath
                            block:(displayVedioBlock)block;
-- (void)playAudio;
-- (void)stopAudio;
 @end
 
 NS_ASSUME_NONNULL_END

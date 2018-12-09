@@ -10,8 +10,16 @@
 #import "AFOMediaConditional.h"
 #import "AFOPlayMediaManager.h"
 #import "AFOAudioManager.h"
+/* no AV sync correction is done if below the minimum AV sync threshold */
+#define AV_SYNC_THRESHOLD_MIN 0.04
+/* AV sync correction is done if above the maximum AV sync threshold */
+#define AV_SYNC_THRESHOLD_MAX 0.1
+/* If a frame duration is longer than this, it will not be duplicated to compensate AV sync */
+#define AV_SYNC_FRAMEDUP_THRESHOLD 0.1
+/* no AV correction is done if too big error */
+#define AV_NOSYNC_THRESHOLD 10.0
 
-@interface AFOVideoAudioManager (){
+@interface AFOVideoAudioManager ()<AFOAudioManagerDelegate,AFOPlayMediaManager>{
     AVCodec             *avCodecVideo;
     AVCodec             *avCodecAudio;
     AVFormatContext     *avFormatContext;
@@ -20,19 +28,18 @@
 }
 @property (nonatomic, assign)            NSInteger  videoStream;
 @property (nonatomic, assign)            NSInteger  audioStream;
-@property (nonnull, nonatomic, strong)   AFOAudioManager    *audioManager;
+@property (nonatomic, assign)            float      audioTimeStamp;
+@property (nonatomic, assign)            float      videoTimeStamp;
+@property (nonatomic, assign)            float      videoPosition;
+@property (nonatomic, assign)            CGFloat    tickCorrectionTime;
+@property (nonatomic, assign)            float      tickCorrectionPosition;
+@property (nonatomic, assign)            float      frameRate;
+@property (nonnull, nonatomic, strong)   AFOAudioManager      *audioManager;
+@property (nonnull, nonatomic, strong)   AFOPlayMediaManager  *videoManager;
 @end
 
 @implementation AFOVideoAudioManager
 #pragma mark ------ init
-+ (instancetype)shareVideoAudioManager{
-    static AFOVideoAudioManager *managerment;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        managerment = [[AFOVideoAudioManager alloc] init];
-    });
-    return managerment;
-}
 + (void)initialize{
     if (self == [AFOVideoAudioManager class]) {
         avcodec_register_all();
@@ -42,6 +49,7 @@
 }
 #pragma mark ------ add method
 - (void)registerBaseMethod:(NSString *)path{
+    [INTUAutoRemoveObserver addObserver:self selector:@selector(stopAudioNotifacation:) name:@"AFOMediaStopManager" object:nil];
     ///------
     avFormatContext = avformat_alloc_context();
     avformat_open_input(&avFormatContext, [path UTF8String], NULL, NULL);
@@ -75,10 +83,10 @@
     }];
     ///------
     [self registerBaseMethod:strPath];
-//    ///------ display video
-//    [[AFOPlayMediaManager shareAFOPlayMediaManager] displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
-//        block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
-//    }];
+    ///------ display video
+    [self.videoManager displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+        block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
+    }];
     ///------ play audio
     [self.audioManager audioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
 }
@@ -88,12 +96,68 @@
 - (void)stopAudio{
     [self.audioManager stopAudio];
 }
+- (void)stopAudioNotifacation:(NSNotification *)notification{
+    [self stopAudio];
+}
+- (void)correctionTime{
+    const NSTimeInterval correction = [self tickCorrection];
+    const NSTimeInterval time = MAX(self.videoPosition + correction, 0.01);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self correctionTime];
+    });
+    [self playAudio];
+}
+- (CGFloat)tickCorrection{
+    const NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];
+    if (!_tickCorrectionTime) {
+        _tickCorrectionTime = now;
+        _tickCorrectionPosition = _videoTimeStamp;
+        return 0;
+    }
+    NSTimeInterval dPosition = _videoTimeStamp - _tickCorrectionPosition;
+    NSTimeInterval dTime = now - _tickCorrectionTime;
+    NSTimeInterval correction = dPosition - dTime;
+    if (correction > 1.f || correction < -1.f) {
+        correction = 0;
+        _tickCorrectionTime = 0;
+    }
+    return correction;
+}
+#pragma mark ------ delegate
+- (void)audioTimeStamp:(float)audioTime{
+    self.audioTimeStamp = audioTime;
+}
+- (void)videoTimeStamp:(float)videoTime
+              position:(float)position
+             frameRate:(float)frameRate{
+    self.videoTimeStamp = videoTime;
+    self.videoPosition = position;
+    self.frameRate = frameRate;
+    [self correctionTime];
+//    ///
+//    if (self.audioTimeStamp > 0) {
+//        if (fabs(self.frameRate - self.audioTimeStamp) > AV_SYNC_THRESHOLD_MIN &&
+//            fabs(self.frameRate - self.audioTimeStamp) < AV_NOSYNC_THRESHOLD) {
+//            //如果视频比音频快，延迟差值播放，否则直接播放，这里没有做丢帧处理
+//            if (self.frameRate > self.audioTimeStamp) {
+//
+//            }
+//        }
+//    }
+}
 #pragma mark ------ attribute
 - (AFOAudioManager *)audioManager{
     if (!_audioManager) {
-        _audioManager = [[AFOAudioManager alloc] init];
+        _audioManager = [[AFOAudioManager alloc] initWithDelegate:self];
     }
     return _audioManager;
+}
+- (AFOPlayMediaManager *)videoManager{
+    if (!_videoManager) {
+        _videoManager = [[AFOPlayMediaManager alloc] initWithDelegate:self];
+    }
+    return _videoManager;
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

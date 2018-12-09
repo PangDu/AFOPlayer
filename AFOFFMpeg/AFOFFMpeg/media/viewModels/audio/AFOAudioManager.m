@@ -16,8 +16,17 @@
 @property (nonatomic, assign)                NSInteger         channel;
 @property (nonnull, nonatomic, strong)  AFOAudioOutPut        *audioOutPut;
 @property (nonnull, nonatomic, strong)  AFOAudioThreadDecoder *threadDecoder;
+@property (nonnull, nonatomic, strong)  AFOAudioSession       *audioSession;
+@property (nonatomic, weak) id<AFOAudioManagerDelegate> delegate;
 @end
 @implementation AFOAudioManager
+#pragma mark ------ init
+- (instancetype)initWithDelegate:(id<AFOAudioManagerDelegate>)delegate{
+    if (self = [super init]) {
+        _delegate = delegate;
+    }
+    return self;
+}
 #pragma mark ------  method
 - (void)audioCodec:(AVCodec *)codec
            formatContext:(AVFormatContext *)formatContext
@@ -32,10 +41,10 @@
     _audioOutPut = [[AFOAudioOutPut alloc] initWithChannel:codecContext -> channels sampleRate:codecContext -> sample_rate bytesPerSample:2 delegate:self];
 }
 - (void)settingAudioSession:(AVCodecContext *)codecContext{
-    [[AFOAudioSession shareAFOAudioSession] settingCategory:AVAudioSessionCategoryPlayback];
-    [[AFOAudioSession shareAFOAudioSession]settingSampleRate:codecContext ->sample_rate];
-    [[AFOAudioSession shareAFOAudioSession] settingActive:YES];
-    [[AFOAudioSession shareAFOAudioSession] settingPreferredLatency:1*1024.0/codecContext ->sample_rate];
+    [self.audioSession settingCategory:AVAudioSessionCategoryPlayback];
+    [self.audioSession settingSampleRate:codecContext ->sample_rate];
+    [self.audioSession settingActive:YES];
+    [self.audioSession settingPreferredLatency:1*1024.0/codecContext ->sample_rate];
 }
 - (void)playAudio{
     [self.audioOutPut audioPlay];
@@ -49,7 +58,10 @@
                   channels:(NSInteger)channel{
     memset(sampleBuffer, 0, frame * self.channel * sizeof(SInt16));
     if (_threadDecoder) {
-        [_threadDecoder readAudioPacket:sampleBuffer size:(int)(frame * self.channel)];
+        WeakObject(self);
+        [_threadDecoder readAudioPacket:sampleBuffer size:(int)(frame * self.channel) block:^(float timeStamp) {
+            [weakself.delegate audioTimeStamp:timeStamp];
+        }];
     }
     return 1;
 }
@@ -59,6 +71,12 @@
         _threadDecoder = [[AFOAudioThreadDecoder alloc] init];
     }
     return _threadDecoder;
+}
+- (AFOAudioSession *)audioSession{
+    if (!_audioSession) {
+        _audioSession = [[AFOAudioSession alloc] init];
+    }
+    return _audioSession;
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

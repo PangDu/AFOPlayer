@@ -57,8 +57,12 @@
 //        //        NSLog(@"🐲---------%lu", (unsigned long)self.audioCache.getQueueCount);
 //    }
 }
-- (void)readAudioPacket:(short *)samples size:(int)size{
-    [self.audioDecoder readAudioSamples:samples size:size];
+- (void)readAudioPacket:(short *)samples
+                   size:(int)size
+                  block:(void (^)(float timeStamp))block{
+    [self.audioDecoder readAudioSamples:samples size:size block:^(float timeStamp) {
+        block(timeStamp);
+    }];
 }
 #pragma mark ------ attribute
 - (AFOAudioDecoder *)audioDecoder{

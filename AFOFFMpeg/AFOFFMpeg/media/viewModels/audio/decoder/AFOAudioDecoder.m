@@ -21,6 +21,7 @@
 }
 @property (nonatomic, assign)            NSInteger       audioStream;
 @property (nonatomic, assign)            CGFloat         audioTimeBase;
+@property (nonatomic, assign)            float           audioClock;
 @property (nonatomic, assign)            int             swrBufferSize;
 @property (nonatomic, assign)            int             audioBufferCursor;
 @property (nonatomic, assign)            int             audioBufferSize;
@@ -64,10 +65,12 @@
             }
         }
         AVStream *st = formatContext->streams[self.audioStream];
-        avStreamFPSTimeBase(st, 0.025, 0, &_audioTimeBase);
+        avStreamFPSTimeBase(st, 0.04, 0, &_audioTimeBase);
     }
 }
-- (int)readAudioSamples:(short *)samples size:(int)size{
+- (int)readAudioSamples:(short *)samples
+                   size:(int)size
+                  block:(audioTimeStampBlock)block{
     int samplesSize = size;
     while (size > 0) {
         if (_audioBufferCursor < _audioBufferSize) {
@@ -77,7 +80,9 @@
             size -= copySize;
             _audioBufferCursor += copySize;
         }else{
-            if ([self decodeAudioFrame] < 0) {
+            if ([self decodeAudioFrame:^(float timeStamp) {
+                block(timeStamp);
+            }] < 0) {
                 break;
             }
         }
@@ -89,7 +94,7 @@
     return fillSize;
 }
 #pragma mark ------
-- (NSInteger)decodeAudioFrame{
+- (NSInteger)decodeAudioFrame:(audioTimeStampBlock)block{
     int ret = 1;
     av_init_packet(&packet);
     int gotFrame = 0;
@@ -149,6 +154,7 @@
                     _audioBufferSize = numFrames * numChannels;
                     audioBuffer = (short *)audioData;
                     _audioBufferCursor = 0;
+//                    self.audioClock = packet.pts * av_q2d(formatContext->streams[self.audioStream]->time_base);
                     break;
                 }
             }

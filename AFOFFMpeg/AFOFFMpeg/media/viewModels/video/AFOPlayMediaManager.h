@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@protocol AFOPlayMediaManager <NSObject>
+@optional
+- (void)videoTimeStamp:(float)videoTime
+              position:(float)position
+             frameRate:(float)frameRate;
+@end
 /**
  <#Description#>
 
@@ -27,7 +33,7 @@ typedef void(^displayVedioFrameBlock)(NSError *error,
                                       NSUInteger cuttentSeconds);
 
 @interface AFOPlayMediaManager : NSObject
-+ (instancetype)shareAFOPlayMediaManager;
+- (instancetype)initWithDelegate:(id<AFOPlayMediaManager>)delegate;
 /**
  <#Description#>
 

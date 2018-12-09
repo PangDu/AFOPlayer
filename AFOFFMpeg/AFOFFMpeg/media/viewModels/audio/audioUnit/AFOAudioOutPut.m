@@ -182,6 +182,8 @@ static OSStatus renderCallback(void * inRefCon,
 }
 - (void)audioStop{
     OSStatus status = AUGraphStop(_auGraph);
+    AudioOutputUnitStop(_ioUnit);
+    AudioOutputUnitStop(_convertUnit);
     CheckStatus(status, @"Could not stop AUGraph", YES);
 }
 #pragma mark ------ C language method

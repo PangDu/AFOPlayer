@@ -7,11 +7,8 @@
 //
 
 #import "AFOSettingMainController.h"
-
 @interface AFOSettingMainController ()
-
 @end
-
 @implementation AFOSettingMainController
 
 #pragma mark ------------------ viewDidLoad

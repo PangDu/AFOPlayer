@@ -31,30 +31,25 @@
 /**视频的当前秒数*/
 @property (nonatomic, assign, readwrite) int64_t        nowTime;
 /**视频的帧率*/
-@property (nonatomic, assign, readwrite) float           fps;
+@property (nonatomic, assign, readwrite) CGFloat         fps;
 /**视频长度*/
 @property (nonatomic, assign)            NSInteger       videoStream;
+@property (nonatomic, assign)            CGFloat         videoTimeBase;
 /***/
 @property (nonatomic, assign)            BOOL            isRelease;
 /**queueManager*/
 @property (nonatomic, strong) AFOMediaQueueManager      *queueManager;
 /**generateImage*/
 @property (nonatomic, strong) AFOGenerateImages         *generateImage;
+@property (nonatomic, weak) id<AFOPlayMediaManager>      delegate;
 @end
 
 @implementation AFOPlayMediaManager
 
 #pragma mark ------ init
-+ (instancetype)shareAFOPlayMediaManager{
-    static AFOPlayMediaManager *manager;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[AFOPlayMediaManager alloc] init];
-    });
-    return manager;
-}
-- (instancetype)init{
+- (instancetype)initWithDelegate:(id<AFOPlayMediaManager>)delegate{
     if (self = [super init]) {
+        _delegate = delegate;
         _isRelease = NO;
         [INTUAutoRemoveObserver addObserver:self selector:@selector(freeResources) name:@"AFOPlayMediaManagerFreeResources" object:nil];
     }
@@ -77,6 +72,7 @@
     self.outSize = CGSizeMake(avCodecContext -> width,avCodecContext -> height);
     ///------ 正常流程，分配视频帧
     avFrame = av_frame_alloc();
+    avStreamFPSTimeBase(avStream, 0.04, &_fps, &_videoTimeBase);
     WeakObject(self);
     ///------
     [self.queueManager addCountdownActionFps:self.fps duration:weakself.duration block:^(NSNumber *isEnd) {
@@ -121,6 +117,9 @@
             int ret = avcodec_send_packet(avCodecContext, &packet);
             if (ret == 0) {
                 while (!avcodec_receive_frame(avCodecContext, avFrame)) {
+                    double frameRate = av_q2d(avStream -> avg_frame_rate);
+                    frameRate += avFrame->repeat_pict * (frameRate * 0.5);
+                    [self.delegate videoTimeStamp:av_frame_get_best_effort_timestamp(avFrame) * av_q2d(avStream -> time_base) position:_videoTimeBase frameRate:frameRate];
                     self.nowTime = self.currentTime;
                     av_packet_unref(&packet);
                     return YES;
@@ -151,7 +150,6 @@
 - (int64_t)duration{
     AVStream *stream = avFormatContext -> streams[_videoStream];
     return stream -> duration * av_q2d(stream -> time_base);
-//    return [AFOMediaTimer totalSecondsDuration:avFormatContext -> duration];
 }
 #pragma mark ------ currentTime
 - (int64_t)currentTime{
@@ -159,7 +157,7 @@
     return packet.pts * (double)timeBase.num / timeBase.den;
 }
 #pragma mark ------ fps
-- (float)fps{
+- (CGFloat)fps{
     if(avStream ->avg_frame_rate.den && avStream ->avg_frame_rate.num){
        return av_q2d(avStream -> avg_frame_rate);
     }
@@ -183,5 +181,28 @@
 - (void)dealloc{
     [self freeResources];
     NSLog(@"dealloc AFOPlayMediaManager");
+}
+#pragma mark ------ C
+static void avStreamFPSTimeBase(AVStream *st, CGFloat defaultTimeBase, CGFloat *pFPS, CGFloat *pTimeBase){
+    CGFloat fps, timebase;
+    
+    if (st->time_base.den && st->time_base.num)
+        timebase = av_q2d(st->time_base);
+    else if(st->codecpar->sample_aspect_ratio.den && st->codecpar->sample_aspect_ratio.num)
+        timebase = av_q2d(st->codecpar->sample_aspect_ratio);
+    else
+        timebase = defaultTimeBase;
+    
+    if (st->avg_frame_rate.den && st->avg_frame_rate.num)
+        fps = av_q2d(st->avg_frame_rate);
+    else if (st->r_frame_rate.den && st->r_frame_rate.num)
+        fps = av_q2d(st->r_frame_rate);
+    else
+        fps = 1.0 / timebase;
+    
+    if (pFPS)
+        *pFPS = fps;
+    if (pTimeBase)
+        *pTimeBase = timebase;
 }
 @end

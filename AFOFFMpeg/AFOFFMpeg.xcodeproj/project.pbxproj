@@ -182,6 +182,9 @@
 		245C9FDB2024927500A8603C /* AFOMediaFrameImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 245C9FDA2024927500A8603C /* AFOMediaFrameImport.h */; };
 		245C9FDE20249A4500A8603C /* AFOMediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 245C9FDC20249A4500A8603C /* AFOMediaManager.h */; };
 		245C9FDF20249A4500A8603C /* AFOMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C9FDD20249A4500A8603C /* AFOMediaManager.m */; };
+		2474D07521BCC1D700A74F57 /* KxMovieDecoderStatic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2474D07421BCC1D700A74F57 /* KxMovieDecoderStatic.h */; };
+		2474D07821BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2474D07621BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h */; };
+		2474D07921BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474D07721BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m */; };
 		24814F6221B4FC06001B2388 /* aacdecoder_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5B21B4FC06001B2388 /* aacdecoder_lib.h */; };
 		24814F6321B4FC06001B2388 /* machine_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5C21B4FC06001B2388 /* machine_type.h */; };
 		24814F6421B4FC06001B2388 /* aacenc_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5D21B4FC06001B2388 /* aacenc_lib.h */; };
@@ -211,6 +214,22 @@
 		24BAFED21FF4BD1D00D2EAB9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BAFED11FF4BD1D00D2EAB9 /* VideoToolbox.framework */; };
 		24D1B0CD2061029B0028680A /* AFOAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D1B0CB2061029B0028680A /* AFOAudioManager.h */; };
 		24D1B0CE2061029B0028680A /* AFOAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D1B0CC2061029B0028680A /* AFOAudioManager.m */; };
+		24E8DACA21BBD7AA006F6579 /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DABF21BBD7A9006F6579 /* KxMovieViewController.m */; };
+		24E8DACB21BBD7AA006F6579 /* KxMovieDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAC021BBD7A9006F6579 /* KxMovieDecoder.h */; };
+		24E8DACC21BBD7AA006F6579 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DAC121BBD7A9006F6579 /* KxMovieGLView.m */; };
+		24E8DACD21BBD7AA006F6579 /* KxLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAC221BBD7A9006F6579 /* KxLogger.h */; };
+		24E8DACE21BBD7AA006F6579 /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24E8DAC321BBD7A9006F6579 /* kxmovie.bundle */; };
+		24E8DACF21BBD7AA006F6579 /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DAC421BBD7A9006F6579 /* KxAudioManager.m */; };
+		24E8DAD021BBD7AA006F6579 /* kxmovie-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAC521BBD7A9006F6579 /* kxmovie-Prefix.pch */; };
+		24E8DAD121BBD7AA006F6579 /* KxMovieViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAC621BBD7A9006F6579 /* KxMovieViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24E8DAD221BBD7AA006F6579 /* KxMovieGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAC721BBD7A9006F6579 /* KxMovieGLView.h */; };
+		24E8DAD321BBD7AA006F6579 /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DAC821BBD7A9006F6579 /* KxMovieDecoder.m */; };
+		24E8DADA21BBDF6C006F6579 /* KxAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAD921BBDF6B006F6579 /* KxAudioManager.h */; };
+		24E8DAE121BC03BF006F6579 /* KxMovieViewController+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DADF21BC03BF006F6579 /* KxMovieViewController+Extension.h */; };
+		24E8DAE221BC03BF006F6579 /* KxMovieViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DAE021BC03BF006F6579 /* KxMovieViewController+Extension.m */; };
+		24E8DAE421BC05BA006F6579 /* KxMoviewViewControllerHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAE321BC05BA006F6579 /* KxMoviewViewControllerHeader.h */; };
+		24E8DAE721BC06DD006F6579 /* KxSuperController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8DAE521BC06DD006F6579 /* KxSuperController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24E8DAE821BC06DD006F6579 /* KxSuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8DAE621BC06DD006F6579 /* KxSuperController.m */; };
 		24F928F6200CE940007ADAA4 /* AFOMediaThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F928F4200CE940007ADAA4 /* AFOMediaThumbnail.h */; };
 		24F928F7200CE940007ADAA4 /* AFOMediaThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F928F5200CE940007ADAA4 /* AFOMediaThumbnail.m */; };
 /* End PBXBuildFile section */
@@ -407,6 +426,9 @@
 		245C9FDA2024927500A8603C /* AFOMediaFrameImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMediaFrameImport.h; sourceTree = "<group>"; };
 		245C9FDC20249A4500A8603C /* AFOMediaManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMediaManager.h; sourceTree = "<group>"; };
 		245C9FDD20249A4500A8603C /* AFOMediaManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMediaManager.m; sourceTree = "<group>"; };
+		2474D07421BCC1D700A74F57 /* KxMovieDecoderStatic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoderStatic.h; sourceTree = "<group>"; };
+		2474D07621BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMovieSubtitleASSParser.h; sourceTree = "<group>"; };
+		2474D07721BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KxMovieSubtitleASSParser.m; sourceTree = "<group>"; };
 		24814F5B21B4FC06001B2388 /* aacdecoder_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aacdecoder_lib.h; sourceTree = "<group>"; };
 		24814F5C21B4FC06001B2388 /* machine_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = machine_type.h; sourceTree = "<group>"; };
 		24814F5D21B4FC06001B2388 /* aacenc_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aacenc_lib.h; sourceTree = "<group>"; };
@@ -440,6 +462,22 @@
 		24BAFED11FF4BD1D00D2EAB9 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		24D1B0CB2061029B0028680A /* AFOAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAudioManager.h; sourceTree = "<group>"; };
 		24D1B0CC2061029B0028680A /* AFOAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAudioManager.m; sourceTree = "<group>"; };
+		24E8DABF21BBD7A9006F6579 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
+		24E8DAC021BBD7A9006F6579 /* KxMovieDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoder.h; sourceTree = "<group>"; };
+		24E8DAC121BBD7A9006F6579 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
+		24E8DAC221BBD7A9006F6579 /* KxLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxLogger.h; sourceTree = "<group>"; };
+		24E8DAC321BBD7A9006F6579 /* kxmovie.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kxmovie.bundle; sourceTree = "<group>"; };
+		24E8DAC421BBD7A9006F6579 /* KxAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxAudioManager.m; sourceTree = "<group>"; };
+		24E8DAC521BBD7A9006F6579 /* kxmovie-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kxmovie-Prefix.pch"; sourceTree = "<group>"; };
+		24E8DAC621BBD7A9006F6579 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
+		24E8DAC721BBD7A9006F6579 /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
+		24E8DAC821BBD7A9006F6579 /* KxMovieDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieDecoder.m; sourceTree = "<group>"; };
+		24E8DAD921BBDF6B006F6579 /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
+		24E8DADF21BC03BF006F6579 /* KxMovieViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KxMovieViewController+Extension.h"; sourceTree = "<group>"; };
+		24E8DAE021BC03BF006F6579 /* KxMovieViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KxMovieViewController+Extension.m"; sourceTree = "<group>"; };
+		24E8DAE321BC05BA006F6579 /* KxMoviewViewControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMoviewViewControllerHeader.h; sourceTree = "<group>"; };
+		24E8DAE521BC06DD006F6579 /* KxSuperController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxSuperController.h; sourceTree = "<group>"; };
+		24E8DAE621BC06DD006F6579 /* KxSuperController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KxSuperController.m; sourceTree = "<group>"; };
 		24F928F4200CE940007ADAA4 /* AFOMediaThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOMediaThumbnail.h; sourceTree = "<group>"; };
 		24F928F5200CE940007ADAA4 /* AFOMediaThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOMediaThumbnail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -896,6 +934,33 @@
 			path = video;
 			sourceTree = "<group>";
 		};
+		2474D07321BCBA1600A74F57 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				24E8DAC321BBD7A9006F6579 /* kxmovie.bundle */,
+				24E8DAC221BBD7A9006F6579 /* KxLogger.h */,
+				24E8DAC521BBD7A9006F6579 /* kxmovie-Prefix.pch */,
+				24E8DAE321BC05BA006F6579 /* KxMoviewViewControllerHeader.h */,
+				24E8DAE521BC06DD006F6579 /* KxSuperController.h */,
+				24E8DAE621BC06DD006F6579 /* KxSuperController.m */,
+				24E8DADF21BC03BF006F6579 /* KxMovieViewController+Extension.h */,
+				24E8DAE021BC03BF006F6579 /* KxMovieViewController+Extension.m */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		2474D07A21BCC48300A74F57 /* decoder */ = {
+			isa = PBXGroup;
+			children = (
+				2474D07421BCC1D700A74F57 /* KxMovieDecoderStatic.h */,
+				2474D07621BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h */,
+				2474D07721BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m */,
+				24E8DAC021BBD7A9006F6579 /* KxMovieDecoder.h */,
+				24E8DAC821BBD7A9006F6579 /* KxMovieDecoder.m */,
+			);
+			path = decoder;
+			sourceTree = "<group>";
+		};
 		24814F5821B4FC06001B2388 /* aac */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,6 +1046,7 @@
 			isa = PBXGroup;
 			children = (
 				24BAFDBE1FF4B12900D2EAB9 /* AFOFFMpeg.h */,
+				24E8DABE21BBD7A9006F6579 /* kxmovie */,
 				240487552008459600D369FB /* foreign */,
 				24048766200845A600D369FB /* media */,
 				24814F5821B4FC06001B2388 /* aac */,
@@ -994,11 +1060,11 @@
 		24BAFEC41FF4BCB400D2EAB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				242F4576201C74E400830BF3 /* AFOViews.framework */,
 				2408BB3C200877D80049060F /* libsqlite3.tbd */,
 				24A59FBC2008387200311ACB /* libiconv.tbd */,
 				24A59FBA2008386B00311ACB /* libbz2.tbd */,
 				24A59FB82008382B00311ACB /* libz.tbd */,
+				242F4576201C74E400830BF3 /* AFOViews.framework */,
 				24AF6758201B4BCB00AB5537 /* AFOGitHub.framework */,
 				2488594B201AC3F500623E66 /* AFOFoundation.framework */,
 				2408BB3B200877C80049060F /* AFOSQLite.framework */,
@@ -1026,6 +1092,21 @@
 			path = audio;
 			sourceTree = "<group>";
 		};
+		24E8DABE21BBD7A9006F6579 /* kxmovie */ = {
+			isa = PBXGroup;
+			children = (
+				2474D07321BCBA1600A74F57 /* public */,
+				2474D07A21BCC48300A74F57 /* decoder */,
+				24E8DAC621BBD7A9006F6579 /* KxMovieViewController.h */,
+				24E8DABF21BBD7A9006F6579 /* KxMovieViewController.m */,
+				24E8DAC721BBD7A9006F6579 /* KxMovieGLView.h */,
+				24E8DAC121BBD7A9006F6579 /* KxMovieGLView.m */,
+				24E8DAD921BBDF6B006F6579 /* KxAudioManager.h */,
+				24E8DAC421BBD7A9006F6579 /* KxAudioManager.m */,
+			);
+			path = kxmovie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1033,6 +1114,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E8DAD121BBD7AA006F6579 /* KxMovieViewController.h in Headers */,
+				24E8DAE721BC06DD006F6579 /* KxSuperController.h in Headers */,
 				242559B92025519B00065F44 /* AFOMediaOpenGLView.h in Headers */,
 				24BAFDC01FF4B12900D2EAB9 /* AFOFFMpeg.h in Headers */,
 				24048793200845A600D369FB /* AFOMediaSeekFrame.h in Headers */,
@@ -1051,14 +1134,17 @@
 				244E31A31FFE64340094C6BB /* murmur3.h in Headers */,
 				244E31EA1FFE64340094C6BB /* version.h in Headers */,
 				244E31C91FFE64340094C6BB /* opt.h in Headers */,
+				2474D07521BCC1D700A74F57 /* KxMovieDecoderStatic.h in Headers */,
 				244E31FD1FFE64340094C6BB /* version.h in Headers */,
 				244E31E61FFE64340094C6BB /* avdevice.h in Headers */,
 				24D1B0CD2061029B0028680A /* AFOAudioManager.h in Headers */,
 				244E319C1FFE64340094C6BB /* hwcontext_cuda.h in Headers */,
+				2474D07821BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h in Headers */,
 				244E31D61FFE64340094C6BB /* imgutils.h in Headers */,
 				244E31C31FFE64340094C6BB /* pixelutils.h in Headers */,
 				244E31F81FFE64340094C6BB /* dirac.h in Headers */,
 				244E31BF1FFE64340094C6BB /* hwcontext_dxva2.h in Headers */,
+				24E8DAE421BC05BA006F6579 /* KxMoviewViewControllerHeader.h in Headers */,
 				244E31D81FFE64340094C6BB /* parseutils.h in Headers */,
 				244E31CD1FFE64340094C6BB /* macros.h in Headers */,
 				244E31C11FFE64340094C6BB /* buffer.h in Headers */,
@@ -1107,6 +1193,7 @@
 				245C9FD420248F2500A8603C /* AFOVideoFrameYUV.h in Headers */,
 				244E31D91FFE64340094C6BB /* ripemd.h in Headers */,
 				244E31B91FFE64340094C6BB /* tree.h in Headers */,
+				24E8DAD221BBD7AA006F6579 /* KxMovieGLView.h in Headers */,
 				243FB8B221BA5F1A00EBB5E1 /* AFOAudioDecoder.h in Headers */,
 				2404879D200845A600D369FB /* AFOMediaErrorString.h in Headers */,
 				244E319F1FFE64340094C6BB /* fifo.h in Headers */,
@@ -1152,6 +1239,8 @@
 				244E31C41FFE64340094C6BB /* common.h in Headers */,
 				244E31C71FFE64340094C6BB /* dict.h in Headers */,
 				244E31B51FFE64340094C6BB /* hwcontext_vaapi.h in Headers */,
+				24E8DACB21BBD7AA006F6579 /* KxMovieDecoder.h in Headers */,
+				24E8DACD21BBD7AA006F6579 /* KxLogger.h in Headers */,
 				244E31AE1FFE64340094C6BB /* xtea.h in Headers */,
 				244E31E01FFE64340094C6BB /* avassert.h in Headers */,
 				244E31BA1FFE64340094C6BB /* threadmessage.h in Headers */,
@@ -1164,6 +1253,7 @@
 				240487A8200845A600D369FB /* AFOMediaPlayController.h in Headers */,
 				24B2CF9F20230D1D007B7E14 /* AFOMediaDecoder.h in Headers */,
 				2488594F201AC94800623E66 /* AFOMediaControlView.h in Headers */,
+				24E8DAE121BC03BF006F6579 /* KxMovieViewController+Extension.h in Headers */,
 				2404875F2008459600D369FB /* AFOMediaForeignInterface+Dictionary.h in Headers */,
 				245C9FDB2024927500A8603C /* AFOMediaFrameImport.h in Headers */,
 				245C9FCB20248B8400A8603C /* AFOMediaFrame.h in Headers */,
@@ -1171,9 +1261,11 @@
 				24AF675C201B4CC300AB5537 /* AFOMediaPlayController+AFOOrientation.h in Headers */,
 				244E31D51FFE64340094C6BB /* twofish.h in Headers */,
 				244E31C01FFE64340094C6BB /* display.h in Headers */,
+				24E8DADA21BBDF6C006F6579 /* KxAudioManager.h in Headers */,
 				244E31D71FFE64340094C6BB /* mem.h in Headers */,
 				244E31AD1FFE64340094C6BB /* avutil.h in Headers */,
 				244E31BD1FFE64340094C6BB /* timecode.h in Headers */,
+				24E8DAD021BBD7AA006F6579 /* kxmovie-Prefix.pch in Headers */,
 				244E31B61FFE64340094C6BB /* spherical.h in Headers */,
 				245C9FDE20249A4500A8603C /* AFOMediaManager.h in Headers */,
 				244E31F01FFE64340094C6BB /* vaapi.h in Headers */,
@@ -1246,6 +1338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E8DACE21BBD7AA006F6579 /* kxmovie.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1256,12 +1349,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E8DAE821BC06DD006F6579 /* KxSuperController.m in Sources */,
 				24885950201AC94800623E66 /* AFOMediaControlView.m in Sources */,
 				243FB8C321BA9A0200EBB5E1 /* AFOAudioQueue.m in Sources */,
+				24E8DACA21BBD7AA006F6579 /* KxMovieViewController.m in Sources */,
+				24E8DACF21BBD7AA006F6579 /* KxAudioManager.m in Sources */,
 				24048795200845A600D369FB /* AFOMediaConditional.m in Sources */,
 				24AF6763201B636C00AB5537 /* AFOMediaPlayController+AFOGestures.m in Sources */,
 				245C9FD520248F2500A8603C /* AFOVideoFrameYUV.m in Sources */,
 				243FB8B321BA5F1A00EBB5E1 /* AFOAudioPacket.m in Sources */,
+				24E8DAE221BC03BF006F6579 /* KxMovieViewController+Extension.m in Sources */,
 				24F928F7200CE940007ADAA4 /* AFOMediaThumbnail.m in Sources */,
 				243FB8BF21BA99DE00EBB5E1 /* AFOAudioCache.m in Sources */,
 				243FB8BB21BA5FE600EBB5E1 /* AFOAudioThreadDecoder.m in Sources */,
@@ -1273,8 +1370,10 @@
 				240487622008459600D369FB /* AFOMediaForeignInterface+Dictionary.m in Sources */,
 				245C9FDF20249A4500A8603C /* AFOMediaManager.m in Sources */,
 				240487A9200845A600D369FB /* AFOMediaPlayController.m in Sources */,
+				24E8DACC21BBD7AA006F6579 /* KxMovieGLView.m in Sources */,
 				24B2CFA020230D1D007B7E14 /* AFOMediaDecoder.m in Sources */,
 				2404879F200845A600D369FB /* AFOMediaErrorCodeManager.m in Sources */,
+				2474D07921BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m in Sources */,
 				24048798200845A600D369FB /* AFOMediaTimer.m in Sources */,
 				243FB8A621BA5F0E00EBB5E1 /* AFOAudioSession.m in Sources */,
 				240487AB200845A600D369FB /* AFOMediaView.m in Sources */,
@@ -1285,6 +1384,7 @@
 				24AF675D201B4CC300AB5537 /* AFOMediaPlayController+AFOOrientation.m in Sources */,
 				245C9FD9202491B200A8603C /* AFOVideoFrameRGB.m in Sources */,
 				245C9FD020248D3700A8603C /* AFOVideoFrame.m in Sources */,
+				24E8DAD321BBD7AA006F6579 /* KxMovieDecoder.m in Sources */,
 				243FB8A821BA5F0E00EBB5E1 /* AFOAudioOutPut.m in Sources */,
 				24814F6F21B523FE001B2388 /* AFOAudioSeekFrame.m in Sources */,
 				240487A2200845A600D369FB /* AFOGenerateImages.m in Sources */,
