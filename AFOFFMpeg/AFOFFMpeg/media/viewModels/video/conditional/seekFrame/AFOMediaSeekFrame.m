@@ -101,7 +101,8 @@
                    plist:(NSString *)plist
                    block:(mediaSeekFrameBlock)block{
     struct SwsContext *context = sws_getContext(avCodecContext -> width,
-                                                avCodecContext -> height, AV_PIX_FMT_YUV420P,
+                                                avCodecContext -> height,
+                                                AV_PIX_FMT_YUV420P,
                                                 self.outWidth,
                                                 self.outHeight ,
                                                 AV_PIX_FMT_RGB24,

@@ -5,15 +5,23 @@
 //  Created by xueguang xian on 2017/12/30.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
-
 #import "AFOGenerateImages.h"
 #import "AFOMediaErrorCodeManager.h"
+#import "AFOMediaYUV.h"
 @interface AFOGenerateImages ()
 @property (nonatomic, strong) dispatch_queue_t  patchQueue;
 @property (nonatomic, strong) UIImage          *vedioImage;
 @end
 @implementation AFOGenerateImages
-#pragma mark ------ 图像数据格式的转换以及图片的缩放
+#pragma mark ------ 图像数据格式的转换以及图片的缩放 方法一
+- (void)decoedImageForYUV:(struct AVFrame *)avFrame
+             codecContext:(AVCodecContext *)avCodecContext
+                  outSize:(CGSize)outSize
+                    block:(generateImageBlock)block{
+    self.vedioImage = [AFOMediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0];
+    block(self.vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
+}
+#pragma mark ------ 图像数据格式的转换以及图片的缩放 方法二
 - (void)decodingImageWithAVFrame:(struct AVFrame *)avFrame
                     codecContext:(AVCodecContext *)avCodecContext
                          outSize:(CGSize)outSize

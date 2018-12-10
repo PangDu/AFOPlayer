@@ -135,16 +135,6 @@
     self.videoPosition = position;
     self.frameRate = frameRate;
     [self correctionTime];
-//    ///
-//    if (self.audioTimeStamp > 0) {
-//        if (fabs(self.frameRate - self.audioTimeStamp) > AV_SYNC_THRESHOLD_MIN &&
-//            fabs(self.frameRate - self.audioTimeStamp) < AV_NOSYNC_THRESHOLD) {
-//            //如果视频比音频快，延迟差值播放，否则直接播放，这里没有做丢帧处理
-//            if (self.frameRate > self.audioTimeStamp) {
-//
-//            }
-//        }
-//    }
 }
 #pragma mark ------ attribute
 - (AFOAudioManager *)audioManager{

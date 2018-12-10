@@ -108,7 +108,7 @@
     }];
 }
 - (void)decodingFrameToImage:(void (^) (UIImage *image, NSError *error))block{
-    [self.generateImage decodingImageWithAVFrame:avFrame codecContext:avCodecContext outSize:self.outSize srcFormat:AV_PIX_FMT_YUV420P dstFormat:AV_PIX_FMT_RGB24 pixelFormat:AV_PIX_FMT_RGB24 bitsPerComponent:8 bitsPerPixel:24 block:^(UIImage *image, NSError *error) {
+    [self.generateImage decoedImageForYUV:avFrame codecContext:avCodecContext outSize:self.outSize block:^(UIImage *image, NSError *error) {
         block(image,error);
     }];
 }
