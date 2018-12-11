@@ -5,7 +5,6 @@
 //  Created by xueguang xian on 2018/12/10.
 //  Copyright © 2018 AFO Science and technology Ltd. All rights reserved.
 //
-
 #import "AFOMediaYUV.h"
 @interface AFOMediaYUV ()
 @property (nonatomic, assign) CVPixelBufferPoolRef pixelBufferPool;
@@ -14,7 +13,7 @@
 
 @implementation AFOMediaYUV
 #pragma mark ------ 420P -> RGBA -> CGImageRef -> image
-+ (UIImage *)makeYUVToRGB:(AVFrame *)avFrame
+- (UIImage *)makeYUVToRGB:(AVFrame *)avFrame
                    width:(int)inWidth
                   height:(int)inHeight
                    scale:(int)scale{
@@ -43,80 +42,86 @@
 #pragma mark ------ 420P -> nv12 -> CIImage -> image
 - (void)dispatchAVFrame:(AVFrame*) frame
                   block:(void (^)(UIImage *image))block{
-    
     if(!frame || !frame->data[0]){
         return;
     }
-    @autoreleasepool {
-        AVFrame *avFrameYUV = av_frame_alloc();
-        int numBytes = av_image_get_buffer_size(AV_PIX_FMT_NV12,frame->width,frame->height, 1);
-        uint8_t *avFrameYUVBuffer = (uint8_t *)av_malloc(numBytes * sizeof(uint8_t));
-        av_image_fill_arrays(avFrameYUV -> data, avFrameYUV -> linesize, avFrameYUVBuffer, AV_PIX_FMT_NV12, frame->width, frame->height, 1);
-        I420ToNV12(frame->data[0],
+    ///--- 420P -> nv12
+    int numBytes = av_image_get_buffer_size(AV_PIX_FMT_NV12,frame->width,frame->height, 1);
+    uint8_t *bufferY = (uint8_t *)malloc(numBytes* sizeof(uint8_t));
+    uint8_t *bufferUV = (uint8_t *)malloc(numBytes* sizeof(uint8_t));
+    I420ToNV12(frame->data[0],
                    frame->linesize[0],
                    frame->data[1],
                    frame->linesize[1],
                    frame->data[2],
                    frame->linesize[2],
-                   avFrameYUV->data[0],
+                   bufferY,
                    frame->linesize[0],
-                   avFrameYUV->data[1],
-                   avFrameYUV->linesize[1],
+                   bufferUV,
+                   frame->linesize[1] + frame->linesize[2],
                    frame->width,
                    frame->height
                    );
-        NSMutableDictionary *attributes = [self dictionary:frame->width height:frame->height lineSize:frame->linesize[0]];
-        if (!_pixelBufferPool) {
-            CVPixelBufferPoolCreate(kCFAllocatorDefault,
-                                    NULL,
-                                    (__bridge CFDictionaryRef) attributes,
-                                    &_pixelBufferPool);
-        }
-        ///---
-        if (!_pixelBuffer) {
-            CVPixelBufferPoolCreatePixelBuffer(NULL,_pixelBufferPool, &_pixelBuffer);
-            CVReturn result = CVPixelBufferCreate(kCFAllocatorDefault,
-                                                  frame->width,
-                                                  frame->height,
-                                                  kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange,
-                                                  (__bridge CFDictionaryRef)(attributes),
-                                                  &_pixelBuffer);
-            if (result != kCVReturnSuccess) {
-                NSLog(@"Unable to create cvpixelbuffer %d", result);
-                return;
-            }
-        }
-        ///---
-        CVPixelBufferLockBaseAddress(_pixelBuffer, 0);
-        size_t bytePerRowY = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 0);
-        size_t bytesPerRowUV = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 1);
-        void* base = CVPixelBufferGetBaseAddressOfPlane(_pixelBuffer, 0);
-        memcpy(base, avFrameYUV->data[0], bytePerRowY * frame->height);
-        base = CVPixelBufferGetBaseAddressOfPlane(_pixelBuffer, 1);
-        memcpy(base, avFrameYUV->data[1], bytesPerRowUV * frame->height/2);
-        CVPixelBufferUnlockBaseAddress(_pixelBuffer, 0);
-        ///---
-        CIImage *coreImage = [CIImage imageWithCVPixelBuffer:_pixelBuffer];
-        CIContext *temporaryContext = [CIContext contextWithOptions:nil];
-        CGImageRef videoImage = [temporaryContext createCGImage:coreImage
+    ///---
+    NSMutableDictionary *attributes = [AFOMediaYUV dictionary:frame->width height:frame->height lineSize:frame->linesize[0]];
+    [self pixelBufferPoolRef:attributes];
+    CVPixelBufferRef pBuffer = [self pixelBufferWidth:frame->width height:frame->height dictionary:attributes];
+    ///---
+    CVPixelBufferLockBaseAddress(pBuffer, 0);
+    size_t bytePerRowY = CVPixelBufferGetBytesPerRowOfPlane(pBuffer, 0);
+    size_t bytesPerRowUV = CVPixelBufferGetBytesPerRowOfPlane(pBuffer, 1);
+    void* base = CVPixelBufferGetBaseAddressOfPlane(pBuffer, 0);
+    memcpy(base,bufferY, bytePerRowY * frame->height);
+    base = CVPixelBufferGetBaseAddressOfPlane(pBuffer, 1);
+    memcpy(base,bufferUV, bytesPerRowUV * frame->height/2);
+    CVPixelBufferUnlockBaseAddress(pBuffer, 0);
+    ///---
+    CIImage *coreImage = [CIImage imageWithCVPixelBuffer:pBuffer];
+    CIContext *temporaryContext = [CIContext contextWithOptions:nil];
+    CGImageRef videoImage = [temporaryContext createCGImage:coreImage
                                                        fromRect:CGRectMake(0, 0, frame ->width, frame -> height)];
-        ///------ UIImage Conversion
-        UIImage *image = [[UIImage alloc] initWithCGImage:videoImage scale:1.0 orientation:UIImageOrientationUp];
-        block(image);
-        free(avFrameYUVBuffer);
-        av_free(avFrameYUV);
-    }
+    ///------ UIImage Conversion
+    UIImage *image = [[UIImage alloc] initWithCGImage:videoImage scale:1.0 orientation:UIImageOrientationUp];
+    block(image);
+    free(bufferY);
+    free(bufferUV);
+    bufferY = NULL;
+    bufferUV = NULL;
+    CGImageRelease(videoImage);
 }
-- (NSMutableDictionary *)dictionary:(int)width
++ (NSMutableDictionary *)dictionary:(int)width
                              height:(int)height
                            lineSize:(int)lineSize{
-    NSMutableDictionary* attributes = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
     [attributes setObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange] forKey:(NSString*)kCVPixelBufferPixelFormatTypeKey];
     [attributes setObject:[NSNumber numberWithInt:width] forKey: (NSString*)kCVPixelBufferWidthKey];
     [attributes setObject:[NSNumber numberWithInt:height] forKey: (NSString*)kCVPixelBufferHeightKey];
     [attributes setObject:@(lineSize) forKey:(NSString*)kCVPixelBufferBytesPerRowAlignmentKey];
     [attributes setObject:[NSDictionary dictionary] forKey:(NSString*)kCVPixelBufferIOSurfacePropertiesKey];
     return attributes;
+}
+- (CVPixelBufferPoolRef)pixelBufferPoolRef:(NSMutableDictionary *)dictionary{
+    if (!_pixelBufferPool) {
+        CVPixelBufferPoolCreate(kCFAllocatorDefault,
+                                NULL,
+                                (__bridge CFDictionaryRef)dictionary,
+                                &_pixelBufferPool);
+    }
+    return _pixelBufferPool;
+}
+- (CVPixelBufferRef)pixelBufferWidth:(int)width
+                              height:(int)height
+                          dictionary:(NSMutableDictionary *)dictionary{
+    if (!_pixelBuffer) {
+        CVPixelBufferPoolCreatePixelBuffer(NULL,self.pixelBufferPool, &_pixelBuffer);
+        CVPixelBufferCreate(kCFAllocatorDefault,
+                                              width,
+                                              height,
+                                              kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange,
+                                              (__bridge CFDictionaryRef)(dictionary),
+                                              &_pixelBuffer);
+    }
+    return _pixelBuffer;
 }
 #pragma mark ------ dealloc
 - (void)dealloc{

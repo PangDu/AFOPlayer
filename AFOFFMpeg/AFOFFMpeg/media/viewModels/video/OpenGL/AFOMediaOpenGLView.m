@@ -65,10 +65,10 @@
 #pragma mark ------------   initWithFrame
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        if (![self settingGLView]) {
-            self = nil;
-            return nil;
-        };
+//        if (![self settingGLView]) {
+//            self = nil;
+//            return nil;
+//        };
     }
     return self;
 }

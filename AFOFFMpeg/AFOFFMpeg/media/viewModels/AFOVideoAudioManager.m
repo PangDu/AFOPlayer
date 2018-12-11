@@ -88,7 +88,7 @@
         block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
     }];
     ///------ play audio
-    [self.audioManager audioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
+//    [self.audioManager audioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
 }
 - (void)playAudio{
     [self.audioManager playAudio];

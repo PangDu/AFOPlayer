@@ -19,15 +19,13 @@
              codecContext:(AVCodecContext *)avCodecContext
                   outSize:(CGSize)outSize
                     block:(generateImageBlock)block{
-    WeakObject(self);
-    [self.mediaYUV dispatchAVFrame:avFrame block:^(UIImage * _Nonnull image) {
-        StrongObject(self);
-        self.vedioImage = image;
-    }];
-//    [AFOMediaYUV YUVtoImageWidth:outSize.width height:outSize.height buffer:(unsigned char *)avFrame -> data[0] block:^(UIImage * _Nonnull image) {
+//    WeakObject(self);
+//    [self.mediaYUV dispatchAVFrame:avFrame block:^(UIImage * _Nonnull image) {
+//        StrongObject(self);
 //        self.vedioImage = image;
 //    }];
-//    self.vedioImage = [AFOMediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0];
+    
+    self.vedioImage = [self.mediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0];
     block(self.vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
 }
 #pragma mark ------ 图像数据格式的转换以及图片的缩放 方法二
