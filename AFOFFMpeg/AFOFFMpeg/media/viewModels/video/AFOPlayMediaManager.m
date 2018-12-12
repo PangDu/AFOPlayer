@@ -16,7 +16,7 @@
     AVCodecContext      *avCodecContext;
     AVFrame             *avFrame;
     AVStream            *avStream;
-    AVPacket            packet;
+    AVPacket             packet;
 }
 /**视频宽*/
 @property (nonatomic, assign, readwrite) double         videoWidth;
@@ -108,7 +108,7 @@
     }];
 }
 - (void)decodingFrameToImage:(void (^) (UIImage *image, NSError *error))block{
-    [self.generateImage decoedImageForYUV:avFrame codecContext:avCodecContext outSize:self.outSize block:^(UIImage *image, NSError *error) {
+    [self.generateImage decoedImageForYUV:avFrame outSize:self.outSize block:^(UIImage *image, NSError *error) {
         block(image,error);
     }];
 }
@@ -139,11 +139,11 @@
         return;
     }
     NSLog(@"释放资源");
-    ///------   avFrame
-    av_free(avFrame);
-    ///------   avStream
+    ///------ avFrame
+    av_frame_free(&(avFrame));
+    ///------ avStream
     av_free(avStream);
-    ///------   packet
+    ///------ packet
     av_packet_unref(&packet);
     _isRelease = YES;
 }

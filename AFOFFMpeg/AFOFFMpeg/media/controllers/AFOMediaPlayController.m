@@ -32,11 +32,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.openGLView];
 }
 #pragma mark ------
 - (void)viewWillLayoutSubviews{
-    [self addMeidaView];
+   [self addMeidaView];
 }
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
@@ -81,13 +80,7 @@
     }
     return _mediaManager;
 }
-- (AFOMediaOpenGLView *)openGLView{
-    if (!_openGLView) {
-        _openGLView = [[AFOMediaOpenGLView alloc] initWithFrame:self.view.bounds];
-    }
-    return _openGLView;
-}
 - (void)dealloc{
-    NSLog(@"dealloc AFOMediaPlayController");
+    NSLog(@"AFOMediaPlayController dealloc");
 }
 @end

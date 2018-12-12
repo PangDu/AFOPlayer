@@ -27,7 +27,6 @@
 		2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB38200877410049060F /* libsqlite3.tbd */; };
 		2408BB44200885BD0049060F /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB45200885BD0049060F /* AFOSQLite.framework */; };
 		240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B10902007A5F70007F2F3 /* AppDelegate.m */; };
-		240B10942007A5F70007F2F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B10932007A5F70007F2F3 /* ViewController.m */; };
 		240B10972007A5F70007F2F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B10952007A5F70007F2F3 /* Main.storyboard */; };
 		240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B10982007A5F70007F2F3 /* Assets.xcassets */; };
 		240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */; };
@@ -74,8 +73,6 @@
 		240B108C2007A5F70007F2F3 /* AFOPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFOPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B108F2007A5F70007F2F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		240B10902007A5F70007F2F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		240B10922007A5F70007F2F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		240B10932007A5F70007F2F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		240B10962007A5F70007F2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		240B10982007A5F70007F2F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240B109B2007A5F70007F2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -201,8 +198,6 @@
 				2408BAE5200856A90049060F /* category */,
 				240B108F2007A5F70007F2F3 /* AppDelegate.h */,
 				240B10902007A5F70007F2F3 /* AppDelegate.m */,
-				240B10922007A5F70007F2F3 /* ViewController.h */,
-				240B10932007A5F70007F2F3 /* ViewController.m */,
 				240B10952007A5F70007F2F3 /* Main.storyboard */,
 				240B10982007A5F70007F2F3 /* Assets.xcassets */,
 				240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */,
@@ -324,7 +319,6 @@
 				2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */,
 				2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */,
 				2408BAE8200856A90049060F /* AppDelegate+Initialization.m in Sources */,
-				240B10942007A5F70007F2F3 /* ViewController.m in Sources */,
 				242A703C2021E4DD0064A1AC /* UIWindow+Initialization.m in Sources */,
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
 				240B109F2007A5F70007F2F3 /* main.m in Sources */,

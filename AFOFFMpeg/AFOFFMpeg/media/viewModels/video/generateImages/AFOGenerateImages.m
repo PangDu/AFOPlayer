@@ -16,19 +16,19 @@
 @implementation AFOGenerateImages
 #pragma mark ------ 图像数据格式的转换以及图片的缩放 方法一
 - (void)decoedImageForYUV:(struct AVFrame *)avFrame
-             codecContext:(AVCodecContext *)avCodecContext
                   outSize:(CGSize)outSize
                     block:(generateImageBlock)block{
-//    WeakObject(self);
-//    [self.mediaYUV dispatchAVFrame:avFrame block:^(UIImage * _Nonnull image) {
-//        StrongObject(self);
-//        self.vedioImage = image;
-//    }];
-    
-    self.vedioImage = [self.mediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0];
+    WeakObject(self);
+    [self.mediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0 block:^(UIImage * _Nonnull image) {
+        StrongObject(self);
+        self.vedioImage = image;
+    }];
     block(self.vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
 }
 #pragma mark ------ 图像数据格式的转换以及图片的缩放 方法二
+//[self.generateImage decodingImageWithAVFrame:avFrame codecContext:avCodecContext outSize:self.outSize srcFormat: AV_PIX_FMT_YUV420P dstFormat:AV_PIX_FMT_RGB24 pixelFormat:AV_PIX_FMT_RGB24 bitsPerComponent:8 bitsPerPixel:24 block:^(UIImage *image, NSError *error) {
+//    block(image,error);
+//}];
 - (void)decodingImageWithAVFrame:(struct AVFrame *)avFrame
                     codecContext:(AVCodecContext *)avCodecContext
                          outSize:(CGSize)outSize

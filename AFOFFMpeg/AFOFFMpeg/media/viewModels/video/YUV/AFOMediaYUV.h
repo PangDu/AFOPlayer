@@ -11,10 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOMediaYUV : NSObject
-- (UIImage *)makeYUVToRGB:(AVFrame *)avFrame
+- (void)makeYUVToRGB:(AVFrame *)avFrame
                     width:(int)inWidth
                    height:(int)inHeight
-                    scale:(int)scale;
+                    scale:(int)scale
+                    block:(void (^)(UIImage *image))block;
 - (void)dispatchAVFrame:(AVFrame*) frame
                   block:(void (^)(UIImage *image))block;
 @end

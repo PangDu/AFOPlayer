@@ -45,6 +45,7 @@
     }
     ///------ Retrieve stream information.
     if (avformat_find_stream_info(avFormatContext, NULL) < 0) {
+        avformat_close_input(&avFormatContext);
         // Couldn't find stream information.
         return;
     }

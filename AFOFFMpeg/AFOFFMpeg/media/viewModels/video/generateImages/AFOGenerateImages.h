@@ -63,12 +63,10 @@ typedef void(^avframeWithContextBlock)(struct AVFrame *frame, uint8_t *buffer);
  <#Description#>
 
  @param avFrame <#avFrame description#>
- @param avCodecContext <#avCodecContext description#>
  @param outSize <#outSize description#>
  @param block <#block description#>
  */
 - (void)decoedImageForYUV:(struct AVFrame *)avFrame
-             codecContext:(AVCodecContext *)avCodecContext
                   outSize:(CGSize)outSize
                     block:(generateImageBlock)block;
 @end

@@ -72,10 +72,11 @@
 - (void)displayVedioForPath:(NSString *)strPath
                       block:(displayVedioFrameBlock)block{
     WeakObject(self);
-    [AFOMediaConditional mediaSesourcesConditionalPath:strPath block:^(NSError *error, NSInteger videoIndex, NSInteger audioIndex) {
+    [AFOMediaConditional mediaSesourcesConditionalPath:strPath block:^(NSError *error, NSInteger videoIndex, NSInteger audioIndex){
+        StrongObject(self);
         if (error.code == 0) {
-            weakself.videoStream = videoIndex;
-            weakself.audioStream = audioIndex;
+            self.videoStream = videoIndex;
+            self.audioStream = audioIndex;
         }else{
             block(error, NULL, NULL, NULL, 0, 0);
             return;
@@ -162,11 +163,13 @@
     //---
     if (avCodecContextVideo) {
         avcodec_close(avCodecContextVideo);
+        avcodec_free_context(&avCodecContextVideo);
         avCodecContextVideo = NULL;
     }
     //---
     if (avCcodecContextAudio) {
         avcodec_close(avCcodecContextAudio);
+        avcodec_free_context(&avCcodecContextAudio);
         avCcodecContextAudio = NULL;
     }
 }

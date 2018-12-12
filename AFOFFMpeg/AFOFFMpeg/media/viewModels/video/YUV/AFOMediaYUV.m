@@ -13,10 +13,11 @@
 
 @implementation AFOMediaYUV
 #pragma mark ------ 420P -> RGBA -> CGImageRef -> image
-- (UIImage *)makeYUVToRGB:(AVFrame *)avFrame
+- (void)makeYUVToRGB:(AVFrame *)avFrame
                    width:(int)inWidth
                   height:(int)inHeight
-                   scale:(int)scale{
+                   scale:(int)scale
+                    block:(void (^)(UIImage *image))block{
     uint8 *argb  = (uint8 *) malloc(inWidth * inHeight * 4 *3 * sizeof(uint8));
     I420ToBGRA(avFrame ->data[0],
                avFrame ->linesize[0],
@@ -37,7 +38,7 @@
     CGImageRelease(quartzImage);
     free(argb);
     argb = NULL;
-    return image;
+    block(image);
 }
 #pragma mark ------ 420P -> nv12 -> CIImage -> image
 - (void)dispatchAVFrame:(AVFrame*) frame
@@ -47,8 +48,8 @@
     }
     ///--- 420P -> nv12
     int numBytes = av_image_get_buffer_size(AV_PIX_FMT_NV12,frame->width,frame->height, 1);
-    uint8_t *bufferY = (uint8_t *)malloc(numBytes* sizeof(uint8_t));
-    uint8_t *bufferUV = (uint8_t *)malloc(numBytes* sizeof(uint8_t));
+    uint8_t *bufferY = (uint8_t *)malloc(numBytes * sizeof(uint8_t));
+    uint8_t *bufferUV = (uint8_t *)malloc(numBytes / 2 * sizeof(uint8_t));
     I420ToNV12(frame->data[0],
                    frame->linesize[0],
                    frame->data[1],
@@ -70,7 +71,7 @@
     CVPixelBufferLockBaseAddress(pBuffer, 0);
     size_t bytePerRowY = CVPixelBufferGetBytesPerRowOfPlane(pBuffer, 0);
     size_t bytesPerRowUV = CVPixelBufferGetBytesPerRowOfPlane(pBuffer, 1);
-    void* base = CVPixelBufferGetBaseAddressOfPlane(pBuffer, 0);
+    void *base = CVPixelBufferGetBaseAddressOfPlane(pBuffer, 0);
     memcpy(base,bufferY, bytePerRowY * frame->height);
     base = CVPixelBufferGetBaseAddressOfPlane(pBuffer, 1);
     memcpy(base,bufferUV, bytesPerRowUV * frame->height/2);
@@ -87,6 +88,7 @@
     free(bufferUV);
     bufferY = NULL;
     bufferUV = NULL;
+    base = NULL;
     CGImageRelease(videoImage);
 }
 + (NSMutableDictionary *)dictionary:(int)width
@@ -125,6 +127,6 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
-    NSLog(@"AFOMediaYUV");
+    NSLog(@"AFOMediaYUV dealloc");
 }
 @end
