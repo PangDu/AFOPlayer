@@ -18,5 +18,6 @@
 + (void)selectSQLiteTableStatements:(NSString *)statements
                               model:(id)model
                               block:(void (^)(NSArray *array))block;
-
++ (void)deleteSQLiteTableStatements:(NSString *)statements
+                              block:(void (^)(BOOL isSucess))block;
 @end

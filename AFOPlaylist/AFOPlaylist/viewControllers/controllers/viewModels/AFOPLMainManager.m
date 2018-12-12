@@ -74,6 +74,47 @@
         }
     }];
 }
+#pragma mark ------------------ 删除影片相关内容
++ (void)deleteMovieRelatedContentLocally{
+    dispatch_queue_t queue_t = dispatch_queue_create("com.AFOPLMainManager.queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_group_t group_t = dispatch_group_create();
+    ///--- 删除数据库信息
+    __block BOOL isDataBase = NO;
+    dispatch_semaphore_t  semaphore_t = dispatch_semaphore_create(1);
+    dispatch_group_async(group_t, queue_t, ^{
+        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_FOREVER);
+        [AFOPLMainManager deleteDataFromDataBase:^(BOOL isSucess) {
+            isDataBase = isSucess;
+            dispatch_semaphore_signal(semaphore_t);
+        }];
+    });
+    ///--- 删除缩略图
+    __block BOOL isRemove;
+    dispatch_group_async(group_t, queue_t, ^{
+        if (!isDataBase) {
+            return;
+        }
+        [AFOPLMainFolderManager deleteFileFromDocument:nil isAll:YES block:^(BOOL isDelete) {
+            isRemove = isDelete;
+        }];
+    });
+    ///--- 删除视频
+    dispatch_group_async(group_t, queue_t, ^{
+        if (!isRemove) {
+            return;
+        }
+    });
+    ///--- 任务全部完成
+    dispatch_group_notify(group_t, queue_t, ^{
+        
+    });
+}
+#pragma mark ------ 删除数据库中数据
++ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block{
+    [AFOPLCorresponding deleteDataFromDataBase:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
 #pragma mark ------ AFOReadDirectoryFileDelegate
 - (void)directoryFromDocument:(NSArray *)array{
     [self.nameArray removeAllObjects];

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol AFOPLCorrespondingDelegate <NSObject>
+@property (nonnull, nonatomic, strong, readonly) dispatch_queue_t queue;
 @end
-
 @interface AFOPLCorresponding : NSObject
 + (AFOPLCorresponding *)correspondingDelegate:(id)delegate;
 - (void)createDataBase;
@@ -18,4 +18,5 @@
                  block:(void (^)(NSArray *array,
                                  NSArray *indexArray,
                                  BOOL isUpdate))block;
++ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block;
 @end

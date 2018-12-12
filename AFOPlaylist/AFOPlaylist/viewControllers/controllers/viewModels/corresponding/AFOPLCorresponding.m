@@ -60,4 +60,11 @@
         }];
     }
 }
+#pragma mark ------
++ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block{
+    [self deleateDataBaseFromSqlLite:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
+#pragma mark ------ 属性
 @end

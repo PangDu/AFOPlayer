@@ -16,4 +16,7 @@ typedef void(^fileExistBlock)(BOOL isHave, NSString *filePath);
 + (NSString *)dataBaseAddress;
 + (NSString *)mediaImagesAddress;
 + (NSString *)dataBaseName:(NSString *)path;
++ (void)deleteFileFromDocument:(NSString *)path
+                         isAll:(BOOL)isAll
+                         block:(void(^)(BOOL isDelete))block;
 @end

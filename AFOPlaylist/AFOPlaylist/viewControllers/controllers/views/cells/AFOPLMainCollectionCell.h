@@ -7,4 +7,5 @@
 //
 @interface AFOPLMainCollectionCell : UICollectionViewCell
 - (void)settingSubViews:(id)model;
+- (void)showDeleteIcon:(BOOL)isShow;
 @end

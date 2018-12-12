@@ -71,4 +71,12 @@
         block(NULL);
     }
 }
+#pragma mark ------ delete data
++ (void)deleteSQLiteTableStatements:(NSString *)statements
+                              block:(void (^)(BOOL isSucess))block{
+    [[AFOFMDBForeignInterface shareInstance].queue inDatabase:^(FMDatabase * _Nonnull db) {
+        BOOL result = [db executeUpdate:statements];
+        block(result);
+    }];
+}
 @end

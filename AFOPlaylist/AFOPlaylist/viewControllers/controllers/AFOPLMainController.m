@@ -10,6 +10,7 @@
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
+#import "AFOPLMainController+Operation.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonatomic, strong) AFOCollectionView             *collectionView;
@@ -24,6 +25,7 @@
     [self.view addSubview:self.collectionView];
     [self collectionViewDidSelectRowAtIndexPathExchange];
     [self initializerInstance];
+    [self addOperationButton];
 }
 #pragma mark ------------ custom
 #pragma mark ------

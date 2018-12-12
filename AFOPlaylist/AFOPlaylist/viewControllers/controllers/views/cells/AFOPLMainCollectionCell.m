@@ -10,18 +10,21 @@
 #import "AFOPLMainFolderManager.h"
 #import "AFOPLThumbnail.h"
 @interface AFOPLMainCollectionCell ()
-@property (nonatomic, strong) UIImageView *postersImageView;
-@property (nonatomic, strong) UILabel     *postersLB;
+@property (nonnull, nonatomic, strong) UIImageView *postersImageView;
+@property (nonnull, nonatomic, strong) UIButton    *deleteButton;
+@property (nonnull, nonatomic, strong) UILabel     *postersLB;
+@property (nonatomic, assign)          BOOL         isShow;
 @end
 @implementation AFOPLMainCollectionCell
-#pragma mark ------------ initWithFrame
+#pragma mark ------------ init
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        _isShow = YES;
         [self cellAddSubview:frame];
     }
     return self;
 }
-#pragma mark ------ addSubview
+#pragma mark ------ method
 - (void)cellAddSubview:(CGRect)frame{
     self.contentView.backgroundColor = [UIColor whiteColor];
     ///------
@@ -30,23 +33,42 @@
     ///------
     self.postersLB.frame = CGRectMake(0, CGRectGetHeight(self.postersImageView.frame), frame.size.width, CGRectGetHeight(frame) - CGRectGetHeight(self.postersImageView.frame));
     [self.contentView addSubview:self.postersLB];
+    ///------
+    self.deleteButton.frame = self.postersImageView.frame;
+    self.deleteButton.hidden = _isShow;
+    self.deleteButton.userInteractionEnabled = !_isShow;
+    [self.contentView addSubview:self.deleteButton];
 }
-#pragma mark ------ 设置文字、图片
+#pragma mark ------ 控件赋值
 - (void)settingSubViews:(id)model{
     AFOPLThumbnail *detail = model;
     NSString *path =[[AFOPLMainFolderManager mediaImagesCacheFolder] stringByAppendingString:@"/"];
     NSURL *imageUrl = [NSURL fileURLWithPath:[path stringByAppendingString:detail.image_name]];
     [self.postersImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"back.jpg"]];
+    self.postersLB.text = detail.vedio_name;
+}
+#pragma mark ------
+- (void)deleteVedioItem:(id)sender{
+    
+}
+- (void)showDeleteIcon:(BOOL)isShow{
+    self.isShow = isShow;
 }
 #pragma mark ------------ property
-#pragma mark ------ postersImageView
 - (UIImageView *)postersImageView{
     if (!_postersImageView) {
         _postersImageView = [[UIImageView alloc] init];
     }
     return _postersImageView;
 }
-#pragma mark ------ postersLB
+- (UIButton *)deleteButton{
+    if (!_deleteButton) {
+        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _deleteButton.backgroundColor = [UIColor orangeColor];
+        [_deleteButton addTarget:self action:@selector(deleteVedioItem:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _deleteButton;
+}
 - (UILabel *)postersLB{
     if (!_postersLB) {
         _postersLB = [[UILabel alloc] init];

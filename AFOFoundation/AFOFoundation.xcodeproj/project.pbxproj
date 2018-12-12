@@ -21,6 +21,8 @@
 		24885954201ACA3C00623E66 /* NSBundle+AFOCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 24885952201ACA3C00623E66 /* NSBundle+AFOCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24885955201ACA3C00623E66 /* NSBundle+AFOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 24885953201ACA3C00623E66 /* NSBundle+AFOCategory.m */; };
 		24898141200F2D19008FB71D /* AFOFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2489813F200F2D19008FB71D /* AFOFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C3571221C0FAE500F187DE /* NSFileManager+AFOOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C3571021C0FAE500F187DE /* NSFileManager+AFOOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C3571321C0FAE500F187DE /* NSFileManager+AFOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C3571121C0FAE500F187DE /* NSFileManager+AFOOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		24885953201ACA3C00623E66 /* NSBundle+AFOCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AFOCategory.m"; sourceTree = "<group>"; };
 		2489813C200F2D19008FB71D /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2489813F200F2D19008FB71D /* AFOFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOFoundation.h; sourceTree = "<group>"; };
+		24C3571021C0FAE500F187DE /* NSFileManager+AFOOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AFOOperation.h"; sourceTree = "<group>"; };
+		24C3571121C0FAE500F187DE /* NSFileManager+AFOOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AFOOperation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				2446ED1D2019AD4000FD5012 /* NSFileManager+AFOSandBox.h */,
 				2446ED1E2019AD4000FD5012 /* NSFileManager+AFOSandBox.m */,
+				24C3571021C0FAE500F187DE /* NSFileManager+AFOOperation.h */,
+				24C3571121C0FAE500F187DE /* NSFileManager+AFOOperation.m */,
 			);
 			path = sandbox;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 				2446ED1F2019AD4000FD5012 /* NSFileManager+AFOSandBox.h in Headers */,
 				2446ED692019B85C00FD5012 /* NSArray+AFOAbnormal.h in Headers */,
 				2446ED6D2019BDE500FD5012 /* NSMutableArray+AFOAbnormal.h in Headers */,
+				24C3571221C0FAE500F187DE /* NSFileManager+AFOOperation.h in Headers */,
 				2446ED722019BF9F00FD5012 /* NSDictionary+AFOAbnormal.h in Headers */,
 				2446ED762019BFB400FD5012 /* NSMutableDictionary+AFOAbnormal.h in Headers */,
 			);
@@ -220,6 +227,7 @@
 				2446ED732019BF9F00FD5012 /* NSDictionary+AFOAbnormal.m in Sources */,
 				2446ED772019BFB400FD5012 /* NSMutableDictionary+AFOAbnormal.m in Sources */,
 				2446ED6A2019B85C00FD5012 /* NSArray+AFOAbnormal.m in Sources */,
+				24C3571321C0FAE500F187DE /* NSFileManager+AFOOperation.m in Sources */,
 				2446ED6E2019BDE500FD5012 /* NSMutableArray+AFOAbnormal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

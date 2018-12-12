@@ -21,12 +21,14 @@
 		240BAB391FE1222400D58435 /* AFOPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 240BAB371FE1222400D58435 /* AFOPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		241D58DE2000A1CA0049CAF3 /* AFOPLMainFolderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 241D58DC2000A1CA0049CAF3 /* AFOPLMainFolderManager.h */; };
 		241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241D58DD2000A1CA0049CAF3 /* AFOPLMainFolderManager.m */; };
+		2421EF0821C0BA8200D44ED7 /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB352008771E0049060F /* AFOSQLite.framework */; };
+		2421EF0E21C0C6C200D44ED7 /* AFOPLMainController+Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */; };
+		2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */; };
 		2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */; };
 		2446ED14201979DC00FD5012 /* AFOPLMainController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */; };
 		2446ED1720197FFE00FD5012 /* AFOPlaylist.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */; };
 		2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */; };
 		2446ED1B2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */; };
-		2446ED212019B0D600FD5012 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2446ED222019B0D600FD5012 /* AFOFoundation.framework */; };
 		2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */; };
 		2459239E1FE132B00094C3E0 /* AFOPlayListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */; };
 		2494B0B9200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2494B0B7200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h */; };
@@ -80,12 +82,13 @@
 		240BAB371FE1222400D58435 /* AFOPlaylist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPlaylist.h; sourceTree = "<group>"; };
 		241D58DC2000A1CA0049CAF3 /* AFOPLMainFolderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainFolderManager.h; sourceTree = "<group>"; };
 		241D58DD2000A1CA0049CAF3 /* AFOPLMainFolderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainFolderManager.m; sourceTree = "<group>"; };
+		2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Operation.h"; sourceTree = "<group>"; };
+		2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Operation.m"; sourceTree = "<group>"; };
 		2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
 		2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Aspects.m"; sourceTree = "<group>"; };
 		2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPlaylist.pch; sourceTree = "<group>"; };
 		2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+AFOPLMainManager.h"; sourceTree = "<group>"; };
 		2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+AFOPLMainManager.m"; sourceTree = "<group>"; };
-		2446ED222019B0D600FD5012 /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2446ED262019B3FB00FD5012 /* AFOPLCorrespondingCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLCorrespondingCategory.h; sourceTree = "<group>"; };
 		2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPlayListNavigationController.h; sourceTree = "<group>"; };
 		2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPlayListNavigationController.m; sourceTree = "<group>"; };
@@ -124,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2446ED212019B0D600FD5012 /* AFOFoundation.framework in Frameworks */,
+				2421EF0821C0BA8200D44ED7 /* AFOSQLite.framework in Frameworks */,
 				2408BAF620085D990049060F /* AFOFFMpeg.framework in Frameworks */,
 				2408BAF220085D640049060F /* AFORouter.framework in Frameworks */,
 				2408BAF320085D640049060F /* AFOUIKit.framework in Frameworks */,
@@ -189,13 +192,39 @@
 			path = folder;
 			sourceTree = "<group>";
 		};
-		2446ED15201979E100FD5012 /* category */ = {
+		2421EF0921C0C56F00D44ED7 /* jump */ = {
 			isa = PBXGroup;
 			children = (
 				2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */,
 				2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */,
+			);
+			path = jump;
+			sourceTree = "<group>";
+		};
+		2421EF0A21C0C59600D44ED7 /* show */ = {
+			isa = PBXGroup;
+			children = (
 				2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */,
 				2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */,
+			);
+			path = show;
+			sourceTree = "<group>";
+		};
+		2421EF0B21C0C5AA00D44ED7 /* operation */ = {
+			isa = PBXGroup;
+			children = (
+				2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */,
+				2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */,
+			);
+			path = operation;
+			sourceTree = "<group>";
+		};
+		2446ED15201979E100FD5012 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2421EF0921C0C56F00D44ED7 /* jump */,
+				2421EF0A21C0C59600D44ED7 /* show */,
+				2421EF0B21C0C5AA00D44ED7 /* operation */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -225,7 +254,6 @@
 				240487B620084C8200D369FB /* libz.tbd */,
 				240487B820084CA300D369FB /* libbz2.tbd */,
 				240487BA20084CA900D369FB /* libiconv.tbd */,
-				2446ED222019B0D600FD5012 /* AFOFoundation.framework */,
 				2408BB352008771E0049060F /* AFOSQLite.framework */,
 				2408BAF720085D990049060F /* AFOFFMpeg.framework */,
 				2408BAF420085D640049060F /* AFORouter.framework */,
@@ -390,6 +418,7 @@
 				24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */,
 				2494B0C2200D9EC100B7816B /* AFOPLCorresponding+GCD.h in Headers */,
 				241D58DE2000A1CA0049CAF3 /* AFOPLMainFolderManager.h in Headers */,
+				2421EF0E21C0C6C200D44ED7 /* AFOPLMainController+Operation.h in Headers */,
 				2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +504,7 @@
 				24F928EF200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m in Sources */,
 				2494B0C3200D9EC100B7816B /* AFOPLCorresponding+GCD.m in Sources */,
 				241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */,
+				2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */,
 				24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */,
 				2494B0BA200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m in Sources */,
 				24F428DD1FFDDF33009F3F32 /* AFOPLMainManager.m in Sources */,

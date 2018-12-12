@@ -27,4 +27,4 @@ FOUNDATION_EXPORT const unsigned char AFOFoundationVersionString[];
 #import <AFOFoundation/NSMutableDictionary+AFOAbnormal.h>
 
 #import <AFOFoundation/NSFileManager+AFOSandBox.h>
-
+#import <AFOFoundation/NSFileManager+AFOOperation.h>

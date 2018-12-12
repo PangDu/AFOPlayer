@@ -61,4 +61,16 @@
  */
 + (void)selectSQLiteDataBase:(NSString *)dataBase
                        block:(void (^) (NSArray *array))block;
+
+
+/**
+ <#Description#>
+
+ @param dataBase <#dataBase description#>
+ @param isGroup <#isGroup description#>
+ @param block <#block description#>
+ */
++ (void)deleateDataBase:(NSString *)dataBase
+                isGroup:(BOOL)isGroup
+                  block:(void(^)(BOOL isSucess))block;
 @end

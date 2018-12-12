@@ -32,4 +32,13 @@
     }];
     return data;
 }
+#pragma mark ------ 删除数据库数据
++ (void)deleateDataBaseFromSqlLite:(void(^)(BOOL isSucess))block{
+    [AFOPLSQLiteManager deleateDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isGroup:YES block:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
+- (void)dealloc{
+    NSLog(@"AFOPLCorresponding+SQLite dealloc");
+}
 @end

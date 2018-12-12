@@ -31,4 +31,14 @@
     NSString *name = [NSString stringWithFormat:@"/%@.db",AFOPLAYLISTSCREENSHOTSVEDIOLIST];
     return [path stringByAppendingString:name];
 }
++ (void)deleteFileFromDocument:(NSString *)path
+                         isAll:(BOOL)isAll
+                         block:(void(^)(BOOL isDelete))block{
+    if (isAll) {
+        path = [self mediaImagesAddress];
+    }
+    [NSFileManager deleteFileFromSandBox:path block:^(BOOL isRemove) {
+        block(isRemove);
+    }];
+}
 @end

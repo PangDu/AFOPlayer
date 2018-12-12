@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSFileManager (AFOSandBox)
-+ (NSString *)createFolderTarget:(NSString *)target
-                       newFolder:(NSString *)name;
 + (NSString *)documentSandbox;
 + (NSString *)cachesDocumentSandbox;
++ (NSString *)libraryDirectory;
++ (NSString *)temporaryDirectory;
 @end
