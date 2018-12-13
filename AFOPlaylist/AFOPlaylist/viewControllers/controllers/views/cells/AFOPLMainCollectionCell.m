@@ -19,7 +19,6 @@
 #pragma mark ------------ init
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        _isShow = YES;
         [self cellAddSubview:frame];
     }
     return self;
@@ -35,8 +34,8 @@
     [self.contentView addSubview:self.postersLB];
     ///------
     self.deleteButton.frame = self.postersImageView.frame;
-    self.deleteButton.hidden = _isShow;
-    self.deleteButton.userInteractionEnabled = !_isShow;
+    self.deleteButton.hidden = YES ;
+    self.deleteButton.userInteractionEnabled = NO;
     [self.contentView addSubview:self.deleteButton];
 }
 #pragma mark ------ 控件赋值
@@ -44,15 +43,26 @@
     AFOPLThumbnail *detail = model;
     NSString *path =[[AFOPLMainFolderManager mediaImagesCacheFolder] stringByAppendingString:@"/"];
     NSURL *imageUrl = [NSURL fileURLWithPath:[path stringByAppendingString:detail.image_name]];
-    [self.postersImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"back.jpg"]];
+    [self.postersImageView sd_setImageWithURL:imageUrl];
     self.postersLB.text = detail.vedio_name;
 }
 #pragma mark ------
 - (void)deleteVedioItem:(id)sender{
-    
+    UIButton *button = (UIButton *)sender;
+    button.selected = !button.selected;
 }
 - (void)showDeleteIcon:(BOOL)isShow{
     self.isShow = isShow;
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if (!_isShow) {
+        [super touchesBegan:touches withEvent:event];
+    }else{
+        [[self nextResponder] touchesBegan:touches withEvent:event];
+        self.deleteButton.hidden = !_isShow;
+        self.deleteButton.userInteractionEnabled = _isShow;
+        self.deleteButton.selected = _isShow;
+    }
 }
 #pragma mark ------------ property
 - (UIImageView *)postersImageView{
@@ -64,7 +74,8 @@
 - (UIButton *)deleteButton{
     if (!_deleteButton) {
         _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _deleteButton.backgroundColor = [UIColor orangeColor];
+        [_deleteButton setImage:nil forState:UIControlStateNormal];
+        [_deleteButton setImage:[UIImage imageNamed:@"delete.png"] forState:UIControlStateSelected];
         [_deleteButton addTarget:self action:@selector(deleteVedioItem:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _deleteButton;

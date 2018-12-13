@@ -8,12 +8,44 @@
 
 #import "AFOPLMainController+Operation.h"
 #import "AFOPLMainManager.h"
+
+@interface AFOPLMainController ()<UIAlertViewDelegate>
+@property (nonatomic, assign) BOOL isShow;
+@end
 @implementation AFOPLMainController (Operation)
+#pragma mark ------
+- (void)setIsShow:(BOOL)isShow{
+    objc_setAssociatedObject(self, @selector(setIsShow:), @(isShow), OBJC_ASSOCIATION_ASSIGN);
+}
+- (BOOL)isShow{
+    NSNumber *numVaue = objc_getAssociatedObject(self, @selector(setIsShow:));
+    return [numVaue integerValue];
+}
+#pragma mark ------
 - (void)addOperationButton{
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"删除" style:UIBarButtonItemStylePlain target:self action:@selector(deleateVedioOperation:)];
     self.navigationItem.rightBarButtonItem = backItem;
 }
+- (void)addLeftItem{
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"全选" style:UIBarButtonItemStylePlain target:self action:@selector(selectAllVedioItem)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+}
 - (void)deleateVedioOperation:(id)sender{
-    [AFOPLMainManager deleteMovieRelatedContentLocally];
+    if (!self.isShow) {
+        [self addLeftItem];
+    }else{
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+    ///---
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOPLCollectionViewCellDeleteIcon" object:@(!self.isShow)];
+    self.isShow = !self.isShow;
+}
+- (void)selectAllVedioItem{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"删除全部影片！" message:@"请再次确认是否全部删除！" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [alertView show];
+}
+#pragma mark ------
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    //[AFOPLMainManager deleteMovieRelatedContentLocally];
 }
 @end

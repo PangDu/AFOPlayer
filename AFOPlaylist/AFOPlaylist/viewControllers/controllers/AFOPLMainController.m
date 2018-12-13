@@ -15,6 +15,7 @@
 @property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonatomic, strong) AFOCollectionView             *collectionView;
 @property (nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
+@property (nonatomic, assign) BOOL isShow;
 @end
 @implementation AFOPLMainController
 #pragma mark ------------------ viewDidLoad
@@ -39,6 +40,8 @@
     [self addCollectionViewData];
     ///------
     [self addPullToRefresh];
+    ///------
+    [INTUAutoRemoveObserver addObserver:self selector:@selector(showDeleteItemIcon:) name:@"AFOPLCollectionViewCellDeleteIcon" object:nil];
 }
 #pragma mark ------ 下拉刷新
 - (void)addPullToRefresh{
@@ -58,6 +61,12 @@
         [UIView performWithoutAnimation:^{
             [self.collectionView reloadData];
         }];
+    }];
+}
+- (void)showDeleteItemIcon:(BOOL)isShow{
+    [self.collectionView.indexPathsForVisibleItems enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        AFOPLMainCollectionCell * cell = (AFOPLMainCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
+        [cell showDeleteIcon:!self.isShow];
     }];
 }
 #pragma mark ------ UICollectionViewDelegate
