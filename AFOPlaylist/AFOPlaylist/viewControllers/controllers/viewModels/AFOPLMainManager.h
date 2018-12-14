@@ -15,7 +15,8 @@
 @end
 @interface AFOPLMainManager : NSObject
 + (AFOPLMainManager *)mainManagerDelegate:(id)managerDelegate;
-+ (void)deleteMovieRelatedContentLocally;
++ (void)deleteMovieRelatedContentLocally:(BOOL)isAll
+                                   block:(void (^)(BOOL isSucess))block;
 - (void)getThumbnailData:(void (^)(NSArray *array,
                                    NSArray *indexArray,
                                    BOOL isUpdate))block;

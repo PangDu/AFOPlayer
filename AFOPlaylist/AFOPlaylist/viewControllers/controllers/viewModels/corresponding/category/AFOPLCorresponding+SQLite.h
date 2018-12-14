@@ -13,6 +13,7 @@
                   isAll:(BOOL)isAll
                   block:(void(^)(BOOL isSucess))block;
 - (void)createDataBaseAndTable;
-- (NSArray *)getDataFromDataBase;
-+ (void)deleateDataBaseFromSqlLite:(void(^)(BOOL isSucess))block;
++ (NSArray *)getDataFromDataBase;
++ (void)deleateDataBaseFromSqlLite:(BOOL)isAll
+                             block:(void(^)(BOOL isSucess))block;
 @end

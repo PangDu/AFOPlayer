@@ -35,8 +35,8 @@
     ///------
     if (array.count > saveArray.count) {///最新添加未截图
     ///------ 先显示已有截图
-    block([self getDataFromDataBase],
-            [self indexPathArray:[self getDataFromDataBase]], NO);
+    block([AFOPLCorresponding getDataFromDataBase],
+            [self indexPathArray:[AFOPLCorresponding getDataFromDataBase]], NO);
     //
     NSArray *addArray = [self getUnscreenshotsArray:array compare:[self vedioName:saveArray]];
     [self cuttingImageSaveSqlite:addArray block:^(NSArray *array) {

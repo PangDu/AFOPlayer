@@ -13,6 +13,7 @@
 @property (nonnull, nonatomic, strong) UIImageView *postersImageView;
 @property (nonnull, nonatomic, strong) UIButton    *deleteButton;
 @property (nonnull, nonatomic, strong) UILabel     *postersLB;
+@property (nonnull, nonatomic, strong) id           models;
 @property (nonatomic, assign)          BOOL         isShow;
 @end
 @implementation AFOPLMainCollectionCell
@@ -45,14 +46,23 @@
     NSURL *imageUrl = [NSURL fileURLWithPath:[path stringByAppendingString:detail.image_name]];
     [self.postersImageView sd_setImageWithURL:imageUrl];
     self.postersLB.text = detail.vedio_name;
+    ///---
+    self.models = model;
 }
 #pragma mark ------
 - (void)deleteVedioItem:(id)sender{
     UIButton *button = (UIButton *)sender;
     button.selected = !button.selected;
+    if (button.selected) {
+        self.selectItemBlock(_models);
+    }
 }
 - (void)showDeleteIcon:(BOOL)isShow{
     self.isShow = isShow;
+    ///---
+    if (!isShow) {
+        self.deleteButton.hidden = !isShow;
+    }
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (!_isShow) {

@@ -15,7 +15,9 @@
 #pragma mark ------
 - (void)settingImageData:(NSArray *)array{
     [self.dataArray removeAllObjects];
-    [self.dataArray addObjectsFromArrayAFOAbnormal:array];
+    if (array) {
+        [self.dataArray addObjectsFromArrayAFOAbnormal:array];
+    }
 }
 #pragma mark ------------ UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

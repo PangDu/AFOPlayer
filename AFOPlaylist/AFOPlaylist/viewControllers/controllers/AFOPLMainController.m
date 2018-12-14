@@ -13,9 +13,9 @@
 #import "AFOPLMainController+Operation.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
-@property (nonatomic, strong) AFOCollectionView             *collectionView;
+@property (nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
 @property (nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
-@property (nonatomic, assign) BOOL isShow;
+@property (nonatomic, assign, readwrite) BOOL isData;
 @end
 @implementation AFOPLMainController
 #pragma mark ------------------ viewDidLoad
@@ -40,8 +40,6 @@
     [self addCollectionViewData];
     ///------
     [self addPullToRefresh];
-    ///------
-    [INTUAutoRemoveObserver addObserver:self selector:@selector(showDeleteItemIcon:) name:@"AFOPLCollectionViewCellDeleteIcon" object:nil];
 }
 #pragma mark ------ 下拉刷新
 - (void)addPullToRefresh{
@@ -61,12 +59,12 @@
         [UIView performWithoutAnimation:^{
             [self.collectionView reloadData];
         }];
-    }];
-}
-- (void)showDeleteItemIcon:(BOOL)isShow{
-    [self.collectionView.indexPathsForVisibleItems enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        AFOPLMainCollectionCell * cell = (AFOPLMainCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
-        [cell showDeleteIcon:!self.isShow];
+        ///---
+        if (array) {
+            self.isData = YES;
+        }else{
+            self.isData = NO;
+        }
     }];
 }
 #pragma mark ------ UICollectionViewDelegate

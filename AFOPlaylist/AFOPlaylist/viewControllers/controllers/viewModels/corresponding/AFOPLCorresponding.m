@@ -28,12 +28,15 @@
 - (void)createDataBase{
     [self createDataBaseAndTable];
 }
++ (NSArray *)getAllDataFromDataBase{
+   return  [self getDataFromDataBase];
+}
 #pragma mark ------------ 
 - (void)mediathumbnail:(NSArray *)vedioNameArray
                  block:(void (^)(NSArray *array,
                                  NSArray *indexArray,
                                  BOOL isUpdate))block{
-    [self compareVedioArray:vedioNameArray saveArray:[self getDataFromDataBase] block:^(NSArray *data,
+    [self compareVedioArray:vedioNameArray saveArray:[AFOPLCorresponding getDataFromDataBase] block:^(NSArray *data,
                                                                                         NSArray *indexArray,
                                                       BOOL     isUpdate              ) {
         block(data, indexArray, isUpdate);
@@ -61,8 +64,9 @@
     }
 }
 #pragma mark ------
-+ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block{
-    [self deleateDataBaseFromSqlLite:^(BOOL isSucess) {
++ (void)deleteDataFromDataBase:(BOOL)isAll
+                         block:(void(^)(BOOL isSucess))block{
+    [self deleateDataBaseFromSqlLite:isAll block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }

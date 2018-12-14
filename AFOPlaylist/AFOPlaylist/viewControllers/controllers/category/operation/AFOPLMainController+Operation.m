@@ -31,21 +31,33 @@
     self.navigationItem.leftBarButtonItem = leftItem;
 }
 - (void)deleateVedioOperation:(id)sender{
+    if (!self.isData) {
+        return;
+    }
     if (!self.isShow) {
         [self addLeftItem];
+        [self.navigationItem.rightBarButtonItem setTitle:@"取消"];
     }else{
+        [self.navigationItem.rightBarButtonItem setTitle:@"删除"];
         self.navigationItem.leftBarButtonItem = nil;
     }
-    ///---
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOPLCollectionViewCellDeleteIcon" object:@(!self.isShow)];
     self.isShow = !self.isShow;
 }
 - (void)selectAllVedioItem{
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"删除全部影片！" message:@"请再次确认是否全部删除！" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    alertView.tag = 100;
     [alertView show];
 }
 #pragma mark ------
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    //[AFOPLMainManager deleteMovieRelatedContentLocally];
+    if (alertView.tag == 100) {
+        [AFOPLMainManager deleteMovieRelatedContentLocally:self.isShow block:^(BOOL isSucess) {
+            if (isSucess) {
+                [self addCollectionViewData];
+            }
+            [self.navigationItem.rightBarButtonItem setTitle:@"删除"];
+            self.navigationItem.leftBarButtonItem = nil;
+        }];
+    }
 }
 @end

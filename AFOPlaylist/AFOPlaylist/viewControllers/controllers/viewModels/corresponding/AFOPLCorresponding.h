@@ -14,9 +14,11 @@
 @interface AFOPLCorresponding : NSObject
 + (AFOPLCorresponding *)correspondingDelegate:(id)delegate;
 - (void)createDataBase;
++ (NSArray *)getAllDataFromDataBase;
 - (void)mediathumbnail:(NSArray *)vedioNameArray
                  block:(void (^)(NSArray *array,
                                  NSArray *indexArray,
                                  BOOL isUpdate))block;
-+ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block;
++ (void)deleteDataFromDataBase:(BOOL)isAll
+                         block:(void(^)(BOOL isSucess))block;
 @end

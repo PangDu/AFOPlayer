@@ -31,10 +31,17 @@
     NSString *name = [NSString stringWithFormat:@"/%@.db",AFOPLAYLISTSCREENSHOTSVEDIOLIST];
     return [path stringByAppendingString:name];
 }
+#pragma mark ------ vedio address
++ (NSString *)vedioAddress:(NSString *)vedioName{
+    NSString *address = [NSString stringWithFormat:@"%@/%@",[NSFileManager documentSandbox],vedioName];
+    return address;
+}
+#pragma mark ------ delete file
 + (void)deleteFileFromDocument:(NSString *)path
+                          type:(AFOPLMainFileType)type
                          isAll:(BOOL)isAll
                          block:(void(^)(BOOL isDelete))block{
-    if (isAll) {
+    if (type == AFOPLMainFileTypeImage) {
         path = [self mediaImagesAddress];
     }
     [NSFileManager deleteFileFromSandBox:path block:^(BOOL isRemove) {

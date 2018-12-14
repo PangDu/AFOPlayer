@@ -71,47 +71,76 @@
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 block(array, indexArray, isUpdate);
             }];
+        }else{
+            block(array, indexArray, isUpdate);
         }
     }];
 }
 #pragma mark ------------------ 删除影片相关内容
-+ (void)deleteMovieRelatedContentLocally{
++ (void)deleteMovieRelatedContentLocally:(BOOL)isAll
+                                   block:(void (^)(BOOL isSucess))block{
     dispatch_queue_t queue_t = dispatch_queue_create("com.AFOPLMainManager.queue", DISPATCH_QUEUE_SERIAL);
     dispatch_group_t group_t = dispatch_group_create();
-    ///--- 删除数据库信息
-    __block BOOL isDataBase = NO;
-    dispatch_semaphore_t  semaphore_t = dispatch_semaphore_create(1);
+    ///--- 删除视频
+    __block BOOL isRemoveVedio;
     dispatch_group_async(group_t, queue_t, ^{
-        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_FOREVER);
-        [AFOPLMainManager deleteDataFromDataBase:^(BOOL isSucess) {
-            isDataBase = isSucess;
-            dispatch_semaphore_signal(semaphore_t);
+        __block NSMutableArray *nameArray = [[NSMutableArray alloc] init];
+        [[AFOPLCorresponding getAllDataFromDataBase] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            AFOPLThumbnail *detail = obj;
+            NSString *vedioPath = [AFOPLMainFolderManager vedioAddress:detail.vedio_name];
+            [nameArray addObject:vedioPath];
+        }];
+        ///---
+        [nameArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [AFOPLMainFolderManager deleteFileFromDocument:obj type:AFOPLMainFileTypeVedio isAll:isAll block:^(BOOL isDelete) {
+                if (isDelete) {
+                    isRemoveVedio = isDelete;
+                }else{
+                    isRemoveVedio = NO;
+                    return;
+                }
+            }];
         }];
     });
     ///--- 删除缩略图
-    __block BOOL isRemove;
+    __block BOOL isRemoveImage;
     dispatch_group_async(group_t, queue_t, ^{
-        if (!isDataBase) {
+        if (!isRemoveVedio) {
             return;
         }
-        [AFOPLMainFolderManager deleteFileFromDocument:nil isAll:YES block:^(BOOL isDelete) {
-            isRemove = isDelete;
+        [AFOPLMainFolderManager deleteFileFromDocument:nil type:AFOPLMainFileTypeImage isAll:isAll block:^(BOOL isDelete) {
+            isRemoveImage = isDelete;
         }];
-    });
-    ///--- 删除视频
-    dispatch_group_async(group_t, queue_t, ^{
-        if (!isRemove) {
+        if (![AFOPLMainFolderManager mediaImagesCacheFolder]) {
             return;
         }
+    });
+    ///--- 删除数据库信息
+    __block BOOL isRemoveDataBase = NO;
+    dispatch_group_async(group_t, queue_t, ^{
+        if (!isRemoveImage) {
+            return;
+        }
+        [AFOPLMainManager deleteDataFromDataBase:isAll block:^(BOOL isSucess){
+            isRemoveDataBase = isSucess;
+        }];
     });
     ///--- 任务全部完成
     dispatch_group_notify(group_t, queue_t, ^{
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (isRemoveDataBase && isRemoveImage && isRemoveVedio) {
+                block(YES);
+            }else{
+                block(NO);
+            }
+        });
     });
 }
 #pragma mark ------ 删除数据库中数据
-+ (void)deleteDataFromDataBase:(void(^)(BOOL isSucess))block{
-    [AFOPLCorresponding deleteDataFromDataBase:^(BOOL isSucess) {
++ (void)deleteDataFromDataBase:(BOOL)isAll
+                         block:(void(^)(BOOL isSucess))block{
+    
+    [AFOPLCorresponding deleteDataFromDataBase:isAll block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }

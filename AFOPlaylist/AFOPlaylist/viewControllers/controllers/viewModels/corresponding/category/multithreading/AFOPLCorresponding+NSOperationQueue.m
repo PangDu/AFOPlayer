@@ -36,7 +36,7 @@
     }];
     ///------
     NSBlockOperation *operationR = [NSBlockOperation blockOperationWithBlock:^{
-        NSArray *array = [self getDataFromDataBase];
+        NSArray *array = [AFOPLCorresponding getDataFromDataBase];
         block(array);
     }];
     [operationR addDependency:opreration];

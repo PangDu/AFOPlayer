@@ -64,16 +64,20 @@
     }];
 }
 #pragma mark ------------ 删除语句
-+ (NSString *)deleteSetData:(NSString *)table{
++ (NSString *)deleteAllData:(NSString *)table{
     NSString *sql = [NSString stringWithFormat:@"delete from %@",table];
+    return sql;
+}
++ (NSString *)deleteGroupData:(NSString *)table{
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ where ",table];
     return sql;
 }
 #pragma mark ------------ 删除数据
 + (void)deleateDataBase:(NSString *)dataBase
                 isGroup:(BOOL)isGroup
                   block:(void(^)(BOOL isSucess))block{
-//    NSString *sql = (isGroup)?[self deleteSetData:dataBase]:[self deleteSingleData:dataBase where:<#(NSString *)#>];
-    [AFOFMDBForeignInterface deleteSQLiteTableStatements:[self deleteSetData:dataBase] block:^(BOOL isSucess) {
+    NSString *sql = (isGroup)?[self deleteAllData:dataBase]:[self deleteGroupData:dataBase];
+    [AFOFMDBForeignInterface deleteSQLiteTableStatements:sql block:^(BOOL isSucess) {
             block(isSucess);
     }];
 }

@@ -25,7 +25,7 @@
     }
 }
 #pragma mark ------------ 获取数据库所有数据
-- (NSArray *)getDataFromDataBase{
++ (NSArray *)getDataFromDataBase{
     __block NSArray *data = NULL;
     [AFOPLSQLiteManager selectSQLiteDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST block:^(NSArray *array) {
         data = array;
@@ -33,8 +33,9 @@
     return data;
 }
 #pragma mark ------ 删除数据库数据
-+ (void)deleateDataBaseFromSqlLite:(void(^)(BOOL isSucess))block{
-    [AFOPLSQLiteManager deleateDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isGroup:YES block:^(BOOL isSucess) {
++ (void)deleateDataBaseFromSqlLite:(BOOL)isAll
+                             block:(void(^)(BOOL isSucess))block{
+    [AFOPLSQLiteManager deleateDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isGroup:isAll block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }
