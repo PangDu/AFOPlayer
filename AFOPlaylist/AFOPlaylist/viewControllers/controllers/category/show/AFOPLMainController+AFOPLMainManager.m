@@ -11,7 +11,7 @@
 #import "AFOPLMainManager.h"
 
 @interface AFOPLMainController ()<AFOPLMainManagerDelegate>
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong, readwrite) NSArray *dataArray;
 @end
 
 @implementation AFOPLMainController (AFOPLMainManager)
@@ -33,15 +33,16 @@
 #pragma mark ------------ custom
 #pragma mark ------
 - (void)addCollectionViewData:(void (^)(NSArray *array,
-                                        NSArray *indexArray))block{
+                                        NSArray *indexArray,
+                                        BOOL isHaveData))block{
     if (!self.mainManager) {
       self.mainManager = [AFOPLMainManager mainManagerDelegate:self];
     }
     WeakObject(self);
-    [self.mainManager getThumbnailData:^(NSArray *array, NSArray *indexArray, BOOL isUpdate) {
+    [self.mainManager getThumbnailData:^(NSArray *array, NSArray *indexArray, BOOL isUpdate,BOOL isHaveData) {
         StrongObject(self);
         self.dataArray = [[NSArray alloc]initWithArray:array];
-        block(array, indexArray);
+        block(array, indexArray,isHaveData);
     }];
 }
 #pragma mark ------

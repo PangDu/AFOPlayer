@@ -15,6 +15,7 @@
 @property (nonnull, nonatomic, strong) UILabel     *postersLB;
 @property (nonnull, nonatomic, strong) id           models;
 @property (nonatomic, assign)          BOOL         isShow;
+@property (nonatomic, assign)          BOOL         isTouch;
 @end
 @implementation AFOPLMainCollectionCell
 #pragma mark ------------ init
@@ -26,6 +27,7 @@
 }
 #pragma mark ------ method
 - (void)cellAddSubview:(CGRect)frame{
+    self.isTouch = YES;
     self.contentView.backgroundColor = [UIColor whiteColor];
     ///------
     self.postersImageView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height - 20);
@@ -36,7 +38,6 @@
     ///------
     self.deleteButton.frame = self.postersImageView.frame;
     self.deleteButton.hidden = YES ;
-    self.deleteButton.userInteractionEnabled = NO;
     [self.contentView addSubview:self.deleteButton];
 }
 #pragma mark ------ 控件赋值
@@ -53,25 +54,34 @@
 - (void)deleteVedioItem:(id)sender{
     UIButton *button = (UIButton *)sender;
     button.selected = !button.selected;
+    NSDictionary *dictionary = nil;
     if (button.selected) {
-        self.selectItemBlock(_models);
+        dictionary = @{@"operation" : @"add",
+                       @"value" : self.models
+                       };
+    }else{
+        dictionary = @{@"operation" : @"remove",
+                       @"value" : self.models
+                       };
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOPLEditMenuViewNotification" object:nil userInfo:dictionary ];
 }
-- (void)showDeleteIcon:(BOOL)isShow{
+- (void)showAllDeleteIcon:(BOOL)isShow{
     self.isShow = isShow;
     ///---
-    if (!isShow) {
-        self.deleteButton.hidden = !isShow;
-    }
+    self.isTouch = isShow;
+    self.deleteButton.hidden = !isShow;
+    self.deleteButton.selected = isShow;
+}
+- (void)settingCellUnTouch:(BOOL)isShow{
+    self.isTouch = isShow;
+    self.deleteButton.hidden = isShow;
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    if (!_isShow) {
+    if (_isTouch) {
         [super touchesBegan:touches withEvent:event];
     }else{
         [[self nextResponder] touchesBegan:touches withEvent:event];
-        self.deleteButton.hidden = !_isShow;
-        self.deleteButton.userInteractionEnabled = _isShow;
-        self.deleteButton.selected = _isShow;
     }
 }
 #pragma mark ------------ property

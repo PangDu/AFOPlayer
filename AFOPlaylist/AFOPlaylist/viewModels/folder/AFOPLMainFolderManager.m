@@ -36,15 +36,20 @@
     NSString *address = [NSString stringWithFormat:@"%@/%@",[NSFileManager documentSandbox],vedioName];
     return address;
 }
+#pragma mark ------
++ (NSString *)imageAddress:(NSString *)imageName{
+    NSString *address = [NSString stringWithFormat:@"%@/%@",[self mediaImagesAddress],imageName];
+    return address;
+}
 #pragma mark ------ delete file
-+ (void)deleteFileFromDocument:(NSString *)path
++ (void)deleteFileFromDocument:(NSString *)strPath
                           type:(AFOPLMainFileType)type
                          isAll:(BOOL)isAll
                          block:(void(^)(BOOL isDelete))block{
-    if (type == AFOPLMainFileTypeImage) {
-        path = [self mediaImagesAddress];
+    if (type == AFOPLMainFileTypeImage && isAll) {
+        strPath = [self mediaImagesAddress];
     }
-    [NSFileManager deleteFileFromSandBox:path block:^(BOOL isRemove) {
+    [NSFileManager deleteFileFromSandBox:strPath block:^(BOOL isRemove) {
         block(isRemove);
     }];
 }

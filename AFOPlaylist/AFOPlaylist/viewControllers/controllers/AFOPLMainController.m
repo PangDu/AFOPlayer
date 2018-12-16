@@ -13,9 +13,8 @@
 #import "AFOPLMainController+Operation.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
-@property (nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
 @property (nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
-@property (nonatomic, assign, readwrite) BOOL isData;
+@property (nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
 #pragma mark ------------------ viewDidLoad
@@ -40,6 +39,11 @@
     [self addCollectionViewData];
     ///------
     [self addPullToRefresh];
+    ///---
+    self.updateCollectionBlock = ^{
+        StrongObject(self);
+        [self addCollectionViewData];
+    };
 }
 #pragma mark ------ 下拉刷新
 - (void)addPullToRefresh{
@@ -53,18 +57,14 @@
 #pragma mark ------ 获取数据
 - (void)addCollectionViewData{
     WeakObject(self);
-    [self addCollectionViewData:^(NSArray *array, NSArray *indexArray) {
+    [self addCollectionViewData:^(NSArray *array,
+                                  NSArray *indexArray,
+                                  BOOL isHaveData) {
         StrongObject(self);
         [self.collectionDataSource settingImageData:array];
         [UIView performWithoutAnimation:^{
             [self.collectionView reloadData];
         }];
-        ///---
-        if (array) {
-            self.isData = YES;
-        }else{
-            self.isData = NO;
-        }
     }];
 }
 #pragma mark ------ UICollectionViewDelegate

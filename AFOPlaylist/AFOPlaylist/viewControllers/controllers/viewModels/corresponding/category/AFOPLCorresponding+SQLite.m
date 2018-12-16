@@ -33,9 +33,14 @@
     return data;
 }
 #pragma mark ------ 删除数据库数据
-+ (void)deleateDataBaseFromSqlLite:(BOOL)isAll
++ (void)deleateAllDataBaseFromSqlLite:(void(^)(BOOL isSucess))block{
+    [AFOPLSQLiteManager deleateAllDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST block:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
++ (void)deleateDataBaseFromSqlLite:(NSArray *)array
                              block:(void(^)(BOOL isSucess))block{
-    [AFOPLSQLiteManager deleateDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isGroup:isAll block:^(BOOL isSucess) {
+    [AFOPLSQLiteManager deleateDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST data:array block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }

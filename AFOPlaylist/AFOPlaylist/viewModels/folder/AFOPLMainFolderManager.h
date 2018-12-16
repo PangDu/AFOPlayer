@@ -21,7 +21,8 @@ typedef void(^fileExistBlock)(BOOL isHave, NSString *filePath);
 + (NSString *)mediaImagesAddress;
 + (NSString *)dataBaseName:(NSString *)path;
 + (NSString *)vedioAddress:(NSString *)vedioName;
-+ (void)deleteFileFromDocument:(NSString *)path
++ (NSString *)imageAddress:(NSString *)imageName;
++ (void)deleteFileFromDocument:(NSString *)strPath
                           type:(AFOPLMainFileType)type
                          isAll:(BOOL)isAll
                          block:(void(^)(BOOL isDelete))block;

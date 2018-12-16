@@ -67,10 +67,11 @@
  <#Description#>
 
  @param dataBase <#dataBase description#>
- @param isGroup <#isGroup description#>
  @param block <#block description#>
  */
-+ (void)deleateDataBase:(NSString *)dataBase
-                isGroup:(BOOL)isGroup
++ (void)deleateAllDataBase:(NSString *)dataBase
                   block:(void(^)(BOOL isSucess))block;
++ (void)deleateDataBase:(NSString *)dataBase
+                   data:(NSArray *)array
+                     block:(void(^)(BOOL isSucess))block;
 @end

@@ -60,32 +60,39 @@
 #pragma mark ------ 获取最新数据
 - (void)getThumbnailData:(void (^)(NSArray *array,
                                    NSArray *indexArray,
-                                   BOOL isUpdate))block{
-    __weak __typeof(self) weakSelf = self;
+                                   BOOL isUpdate,
+                                   BOOL isHaveData))block{
+    WeakObject(self);
     [self.corresponding mediathumbnail:self.nameArray block:^(NSArray *array,
                                                          NSArray *indexArray,
-                                                              BOOL isUpdate) {
+                                                         BOOL isUpdate) {
+        StrongObject(self);
         if (array) {
-            [weakSelf.dataArray removeAllObjects];
-            [weakSelf.dataArray addObjectsFromArrayAFOAbnormal:array];
+            [self.dataArray removeAllObjects];
+            [self.dataArray addObjectsFromArrayAFOAbnormal:array];
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                block(array, indexArray, isUpdate);
+                block(array, indexArray, isUpdate, YES);
             }];
         }else{
-            block(array, indexArray, isUpdate);
+            block(array, indexArray, isUpdate, NO);
         }
     }];
 }
 #pragma mark ------------------ 删除影片相关内容
-+ (void)deleteMovieRelatedContentLocally:(BOOL)isAll
++ (void)deleteMovieRelatedContentLocally:(NSArray *)array
                                    block:(void (^)(BOOL isSucess))block{
+    BOOL isAll = NO;
+    if (array.count == [AFOPLCorresponding getAllDataFromDataBase].count) {
+        isAll = YES;
+    }
+    ///---
     dispatch_queue_t queue_t = dispatch_queue_create("com.AFOPLMainManager.queue", DISPATCH_QUEUE_SERIAL);
     dispatch_group_t group_t = dispatch_group_create();
     ///--- 删除视频
     __block BOOL isRemoveVedio;
     dispatch_group_async(group_t, queue_t, ^{
         __block NSMutableArray *nameArray = [[NSMutableArray alloc] init];
-        [[AFOPLCorresponding getAllDataFromDataBase] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             AFOPLThumbnail *detail = obj;
             NSString *vedioPath = [AFOPLMainFolderManager vedioAddress:detail.vedio_name];
             [nameArray addObject:vedioPath];
@@ -108,9 +115,19 @@
         if (!isRemoveVedio) {
             return;
         }
-        [AFOPLMainFolderManager deleteFileFromDocument:nil type:AFOPLMainFileTypeImage isAll:isAll block:^(BOOL isDelete) {
-            isRemoveImage = isDelete;
-        }];
+        if (!isAll) {
+            [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                AFOPLThumbnail *detail = obj;
+                NSString *imagePath = [AFOPLMainFolderManager vedioAddress:detail.image_name];
+                [AFOPLMainFolderManager deleteFileFromDocument:imagePath type:AFOPLMainFileTypeImage isAll:isAll block:^(BOOL isDelete) {
+                    isRemoveImage = isDelete;
+                }];
+            }];
+        }else{
+            [AFOPLMainFolderManager deleteFileFromDocument:nil type:AFOPLMainFileTypeImage isAll:isAll block:^(BOOL isDelete) {
+                isRemoveImage = isDelete;
+            }];
+        }
         if (![AFOPLMainFolderManager mediaImagesCacheFolder]) {
             return;
         }
@@ -121,9 +138,16 @@
         if (!isRemoveImage) {
             return;
         }
-        [AFOPLMainManager deleteDataFromDataBase:isAll block:^(BOOL isSucess){
-            isRemoveDataBase = isSucess;
-        }];
+        if (isAll) {
+            [AFOPLMainManager deleteAllDataFromDataBase:^(BOOL isSucess){
+                isRemoveDataBase = isSucess;
+            }];
+        }else{
+            [AFOPLMainManager deleteDataFromDataBase:array block:^(BOOL isSucess) {
+                isRemoveDataBase = isSucess;
+            }];
+        }
+
     });
     ///--- 任务全部完成
     dispatch_group_notify(group_t, queue_t, ^{
@@ -137,10 +161,15 @@
     });
 }
 #pragma mark ------ 删除数据库中数据
-+ (void)deleteDataFromDataBase:(BOOL)isAll
-                         block:(void(^)(BOOL isSucess))block{
++ (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block{
     
-    [AFOPLCorresponding deleteDataFromDataBase:isAll block:^(BOOL isSucess) {
+    [AFOPLCorresponding deleteAllDataFromDataBase:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
++ (void)deleteDataFromDataBase:(NSArray *)array
+                         block:(void(^)(BOOL isSucess))block{
+    [AFOPLCorresponding deleteDataFromDataBase:array block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }

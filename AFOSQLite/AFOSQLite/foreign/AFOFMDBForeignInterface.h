@@ -20,4 +20,6 @@
                               block:(void (^)(NSArray *array))block;
 + (void)deleteSQLiteTableStatements:(NSString *)statements
                               block:(void (^)(BOOL isSucess))block;
++ (void)deleteTransactionStatements:(NSArray<NSString *> *)array
+                              block:(void (^)(BOOL isSucess))block;
 @end

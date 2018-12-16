@@ -79,4 +79,18 @@
         block(result);
     }];
 }
++ (void)deleteTransactionStatements:(NSArray<NSString *> *)array
+                              block:(void (^)(BOOL isSucess))block{
+    [[AFOFMDBForeignInterface shareInstance].queue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
+        [db open];
+        [array enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            BOOL isResult = [db executeUpdate:obj];
+            if (!isResult) {
+                *rollback = YES;
+                return;
+            }
+        }];
+        [db close];
+    }];
+}
 @end

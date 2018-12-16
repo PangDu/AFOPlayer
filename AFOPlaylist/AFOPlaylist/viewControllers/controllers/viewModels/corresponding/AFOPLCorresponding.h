@@ -19,6 +19,7 @@
                  block:(void (^)(NSArray *array,
                                  NSArray *indexArray,
                                  BOOL isUpdate))block;
-+ (void)deleteDataFromDataBase:(BOOL)isAll
-                         block:(void(^)(BOOL isSucess))block;
++ (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block;
++ (void)deleteDataFromDataBase:(NSArray *)array
+                            block:(void(^)(BOOL isSucess))block;
 @end

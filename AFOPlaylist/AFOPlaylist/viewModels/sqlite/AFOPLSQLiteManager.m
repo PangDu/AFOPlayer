@@ -68,17 +68,33 @@
     NSString *sql = [NSString stringWithFormat:@"delete from %@",table];
     return sql;
 }
-+ (NSString *)deleteGroupData:(NSString *)table{
-    NSString *sql = [NSString stringWithFormat:@"delete from %@ where ",table];
++ (NSString *)deleteGroupData:(NSString *)table id:(NSInteger)vedioId{
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ where vedio_id = %ld",table,(long)vedioId];
     return sql;
 }
 #pragma mark ------------ 删除数据
-+ (void)deleateDataBase:(NSString *)dataBase
-                isGroup:(BOOL)isGroup
++ (void)deleateAllDataBase:(NSString *)dataBase
                   block:(void(^)(BOOL isSucess))block{
-    NSString *sql = (isGroup)?[self deleteAllData:dataBase]:[self deleteGroupData:dataBase];
+    NSString *sql = [self deleteAllData:dataBase];
     [AFOFMDBForeignInterface deleteSQLiteTableStatements:sql block:^(BOOL isSucess) {
             block(isSucess);
     }];
+}
++ (void)deleateDataBase:(NSString *)dataBase
+                   data:(NSArray *)array
+                  block:(void(^)(BOOL isSucess))block{
+    
+    [AFOFMDBForeignInterface deleteTransactionStatements:[self sqlsArray:array name:dataBase] block:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
++ (NSArray *)sqlsArray:(NSArray *)array name:(NSString *)name{
+    NSMutableArray *sqls = [[NSMutableArray alloc] init];
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        AFOPLThumbnail *value = obj;
+        NSString *strSql = [self deleteGroupData:name id:value.vedio_id];
+        [sqls addObject:strSql];
+    }];
+    return sqls;
 }
 @end

@@ -64,9 +64,14 @@
     }
 }
 #pragma mark ------
-+ (void)deleteDataFromDataBase:(BOOL)isAll
++ (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block{
+    [self deleateAllDataBaseFromSqlLite:^(BOOL isSucess) {
+        block(isSucess);
+    }];
+}
++ (void)deleteDataFromDataBase:(NSArray *)array
                          block:(void(^)(BOOL isSucess))block{
-    [self deleateDataBaseFromSqlLite:isAll block:^(BOOL isSucess) {
+    [self deleateDataBaseFromSqlLite:array block:^(BOOL isSucess) {
         block(isSucess);
     }];
 }

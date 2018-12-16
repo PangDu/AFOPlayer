@@ -9,9 +9,11 @@
 #import "AFOPLMainController.h"
 @class AFOPLMainManager;
 @interface AFOPLMainController (AFOPLMainManager)
-@property (nonatomic, strong) AFOPLMainManager  *mainManager;
+@property (nonnull, nonatomic, strong) AFOPLMainManager  *mainManager;
+@property (nonnull ,nonatomic, strong, readonly) NSArray *dataArray;
 - (void)addCollectionViewData:(void (^)(NSArray *array,
-                                        NSArray *indexArray))block;
+                                        NSArray *indexArray,
+                                        BOOL isHaveData))block;
 - (NSString *)vedioPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioName:(NSIndexPath *)indexPath;
 - (CGFloat)vedioItemHeight:(NSIndexPath *)indexPath width:(CGFloat)width;

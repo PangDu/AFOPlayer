@@ -9,9 +9,9 @@
 #import "AFOPLMainController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^AFOPLUpdateCollectionViewBlock)(void);
 @interface AFOPLMainController (Operation)
+@property (nonatomic, strong) AFOPLUpdateCollectionViewBlock updateCollectionBlock;
 - (void)addOperationButton;
 @end
-
 NS_ASSUME_NONNULL_END
