@@ -111,29 +111,35 @@
         StrongObject(self);
         [AFOPLMainManager deleteMovieRelatedContentLocally:array block:^(BOOL isSucess) {
             if (isSucess) {
-                [self addCollectionViewData];
+                self.updateCollectionBlock();
+                [self.editMenuView settingDataCount];
             }
         }];
     };
 }
+#pragma mark ------ 设置默认值
 - (void)editMenuViewDefault{
     WeakObject(self);
     self.editMenuView.defaultBlock = ^{
         StrongObject(self);
-        self.isEditor = NO;
         [self.navigationItem.rightBarButtonItem setTitle:@"编辑"];
-        [self showDeleteIconImageIsAll:self.isEditor isTouch:self.isTouch];
-        self.isTouch = !self.isTouch;
+        [self showDeleteIconImageIsAll:!self.isEditor isTouch:self.isTouch];
+        self.isTouch = NO;
+        self.isEditor = NO;
     };
 }
-- (void)showDeleteIconImageIsAll:(BOOL)isAll
+- (void)showDeleteIconImageIsAll:(BOOL)isShow
                           isTouch:(BOOL)isTouch{
     [[self.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         AFOPLMainCollectionCell * cell = (AFOPLMainCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
         ///---
-        [cell showAllDeleteIcon:isAll];
+        [cell showAllDeleteIcon:isShow];
         ///---
         [cell settingCellUnTouch:isTouch];
     }];
+}
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOPLMainController+Operation dealloc");
 }
 @end

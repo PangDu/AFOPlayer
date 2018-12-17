@@ -12,11 +12,11 @@
 #import "AFOPLCorresponding.h"
 #import "AFOPLThumbnail.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
-@property (nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
-@property (nonatomic, strong) AFOPLCorresponding         *corresponding;
-@property (nonatomic, strong) NSMutableArray             *dataArray;
-@property (nonatomic, strong) NSMutableArray             *nameArray;
-@property (nonatomic, weak) id<AFOPLMainManagerDelegate>  delegate;
+@property (nonnull,nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
+@property (nonnull,nonatomic, strong) AFOPLCorresponding         *corresponding;
+@property (nonnull,nonatomic, strong) NSMutableArray             *dataArray;
+@property (nonnull,nonatomic, strong) NSMutableArray             *nameArray;
+@property (nonatomic, weak) id<AFOPLMainManagerDelegate>          delegate;
 @end
 @implementation AFOPLMainManager
 #pragma mark ------------ init
@@ -34,7 +34,7 @@
 #pragma mark ------------ custom
 #pragma mark ------ readDirectoryFile
 - (void)readDirectoryFile{
-    [self.corresponding createDataBase];
+    [AFOPLCorresponding createDataBase];
     _directoryFile = [AFOReadDirectoryFile readDirectoryFiledelegate:self];
 }
 #pragma mark ------ 获取图片高度
@@ -57,24 +57,32 @@
     AFOPLThumbnail *detail = [self.dataArray objectAtIndexAFOAbnormal:indexPath.item];
     return detail.vedio_name;
 }
+#pragma mark ------ 横竖屏
+- (UIInterfaceOrientationMask)orientationMask:(NSIndexPath *)indexPath{
+    AFOPLThumbnail *model = [self.dataArray objectAtIndexAFOAbnormal:indexPath.item];
+    if (model) {
+        if (model.image_width < model.image_hight) {
+            return UIInterfaceOrientationMaskPortrait;
+        }
+    }
+    return UIInterfaceOrientationMaskLandscapeLeft;
+}
 #pragma mark ------ 获取最新数据
 - (void)getThumbnailData:(void (^)(NSArray *array,
                                    NSArray *indexArray,
-                                   BOOL isUpdate,
                                    BOOL isHaveData))block{
     WeakObject(self);
     [self.corresponding mediathumbnail:self.nameArray block:^(NSArray *array,
-                                                         NSArray *indexArray,
-                                                         BOOL isUpdate) {
+                                                         NSArray *indexArray) {
         StrongObject(self);
         if (array) {
             [self.dataArray removeAllObjects];
             [self.dataArray addObjectsFromArrayAFOAbnormal:array];
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                block(array, indexArray, isUpdate, YES);
+                block(array, indexArray,YES);
             }];
         }else{
-            block(array, indexArray, isUpdate, NO);
+            block(array, indexArray, NO);
         }
     }];
 }
@@ -199,5 +207,9 @@
         _nameArray = [[NSMutableArray alloc] init];
     }
     return _nameArray;
+}
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOPLMainManager dealloc");
 }
 @end

@@ -7,6 +7,6 @@
 //
 @interface AFOPLMainCollectionCell : UICollectionViewCell
 - (void)settingSubViews:(id)model;
-- (void)settingCellUnTouch:(BOOL)isShow;
+- (void)settingCellUnTouch:(BOOL)isTouch;
 - (void)showAllDeleteIcon:(BOOL)isShow;
 @end

@@ -11,7 +11,6 @@
 @interface AFOPLCorresponding ()
 @property (nonatomic, weak) id<AFOPLCorrespondingDelegate>  delegate;
 @end
-
 @implementation AFOPLCorresponding
 #pragma mark ------------ init
 #pragma mark ------ AFOPLCorresponding
@@ -25,8 +24,8 @@
     return corresponding;
 }
 #pragma mark ------------ 创建数据库
-- (void)createDataBase{
-    [self createDataBaseAndTable];
++ (void)createDataBase{
+    [AFOPLCorresponding createDataBaseAndTable];
 }
 + (NSArray *)getAllDataFromDataBase{
    return  [self getDataFromDataBase];
@@ -34,32 +33,28 @@
 #pragma mark ------------ 
 - (void)mediathumbnail:(NSArray *)vedioNameArray
                  block:(void (^)(NSArray *array,
-                                 NSArray *indexArray,
-                                 BOOL isUpdate))block{
+                                 NSArray *indexArray))block{
     [self compareVedioArray:vedioNameArray saveArray:[AFOPLCorresponding getDataFromDataBase] block:^(NSArray *data,
-                                                                                        NSArray *indexArray,
-                                                      BOOL     isUpdate              ) {
-        block(data, indexArray, isUpdate);
+                                                                                        NSArray *indexArray              ) {
+        block(data, indexArray);
     }];
 }
 #pragma mark ------------
 - (void)compareVedioArray:(NSArray *)array
                 saveArray:(NSArray *)saveArray
                     block:(void (^) (NSArray *data,
-                                     NSArray *indexArray,
-                                     BOOL isUpdate))block{
+                                     NSArray *indexArray))block{
     if (array.count == 0) {//没有视频
-        block(NULL, NULL, NO);
+        block(NULL, NULL);
         return;
     }else if (array.count > 0 && array.count == saveArray.count){//全部已截图
-        block(saveArray, [self indexPathArray:saveArray], NO);
+        block(saveArray, [AFOPLCorresponding indexPathArray:saveArray]);
         return;
     }else{//新添加
         [self usedispatchQueue:saveArray array:array block:^(
                                                              NSArray *array,
-                                                             NSArray *indexArray,
-                                                             BOOL isUpdate) {
-            block(array, NULL, isUpdate);
+                                                             NSArray *indexArray) {
+            block(array, NULL);
         }];
     }
 }
@@ -75,5 +70,8 @@
         block(isSucess);
     }];
 }
-#pragma mark ------ 属性
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOPLCorresponding dealloc");
+}
 @end

@@ -78,7 +78,7 @@
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
-#pragma mark ------------ system
+#pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -110,5 +110,8 @@
         _defaultLayout = [[AFOPLMainCellDefaultLayout alloc] init];
     }
     return _defaultLayout;
+}
+- (void)dealloc{
+    NSLog(@"AFOPLMainController dealloc");
 }
 @end

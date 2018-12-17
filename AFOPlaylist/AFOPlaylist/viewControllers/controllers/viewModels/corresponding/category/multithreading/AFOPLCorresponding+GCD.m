@@ -28,17 +28,16 @@
 - (void)usedispatchQueue:(NSArray *)saveArray
                     array:(NSArray *)array
                     block:(void (^) (NSArray *array,
-                                     NSArray *indexArray,
-                                     BOOL isUpdate))block{
+                                     NSArray *indexArray))block{
     ///------
     self.dispatchQueue_t = dispatch_queue_create("com.AFOPlayer.AFOPLCorresponding", DISPATCH_QUEUE_SERIAL);
     ///------
     if (array.count > saveArray.count) {///最新添加未截图
     ///------ 先显示已有截图
     block([AFOPLCorresponding getDataFromDataBase],
-            [self indexPathArray:[AFOPLCorresponding getDataFromDataBase]], NO);
+            [AFOPLCorresponding indexPathArray:[AFOPLCorresponding getDataFromDataBase]]);
     //
-    NSArray *addArray = [self getUnscreenshotsArray:array compare:[self vedioName:saveArray]];
+    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:saveArray]];
     [self cuttingImageSaveSqlite:addArray block:^(NSArray *array) {
             }];
     }

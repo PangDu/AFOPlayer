@@ -24,4 +24,7 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:baseStr]];
     } error:NULL];
 }
+- (void)dealloc{
+    NSLog(@"AFOPLMainController+Aspects dealloc");
+}
 @end

@@ -59,18 +59,17 @@
     UIButton *button = (UIButton *)sender;
     button.selected = !button.selected;
     ///---
-    self.allSelectBlock(button.selected);
-    ///---
     if (!button.selected) {
-        [self removeUserSelected];
-        [self showDeleteItemsCount:self.selectArray.count];
+        [self settingButtonTitle];
     }
+    ///---
+    self.allSelectBlock(button.selected);
 }
 - (void)settingButtonTitle{
     self.deleteBT.selected = NO;
     self.allSelectBT.selected = NO;
 }
-- (void)userAllSelectedItems:(NSArray*)vedeoArray{
+- (void)userAllSelectedItems:(NSArray *)vedeoArray{
     if (!vedeoArray || vedeoArray.count == 0) {
         self.deleteBT.selected = NO;
         return;
@@ -112,6 +111,9 @@
     }else{
         self.allSelectBT.selected = NO;
     }
+}
+- (void)settingDataCount{
+    self.allVedioNumber -= self.selectArray.count;
 }
 - (void)settingDefaultState{
     [self settingButtonTitle];

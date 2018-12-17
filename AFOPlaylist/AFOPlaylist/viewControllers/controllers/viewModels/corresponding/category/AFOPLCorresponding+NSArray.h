@@ -9,10 +9,10 @@
 #import "AFOPLCorresponding.h"
 
 @interface AFOPLCorresponding (NSArray)
-- (NSArray *)getUnscreenshotsArray:(NSArray *)data
++ (NSArray *)getUnscreenshotsArray:(NSArray *)data
                       compare:(NSArray *)compare;
-- (NSArray *)vedioName:(NSArray *)data;
-- (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array;
-- (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array
++ (NSArray *)vedioName:(NSArray *)data;
++ (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array;
++ (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array
                                      index:(NSInteger)index;
 @end

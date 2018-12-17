@@ -24,4 +24,5 @@
 - (CGFloat)thumbnailHight:(NSIndexPath *)indexPath width:(CGFloat)width;
 - (NSString *)vedioAddressIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioNameIndexPath:(NSIndexPath *)indexPath;
+- (UIInterfaceOrientationMask)orientationMask:(NSIndexPath *)indexPath;
 @end

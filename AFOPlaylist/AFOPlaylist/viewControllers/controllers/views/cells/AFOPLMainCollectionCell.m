@@ -14,7 +14,6 @@
 @property (nonnull, nonatomic, strong) UIButton    *deleteButton;
 @property (nonnull, nonatomic, strong) UILabel     *postersLB;
 @property (nonnull, nonatomic, strong) id           models;
-@property (nonatomic, assign)          BOOL         isShow;
 @property (nonatomic, assign)          BOOL         isTouch;
 @end
 @implementation AFOPLMainCollectionCell
@@ -67,15 +66,12 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOPLEditMenuViewNotification" object:nil userInfo:dictionary ];
 }
 - (void)showAllDeleteIcon:(BOOL)isShow{
-    self.isShow = isShow;
-    ///---
-    self.isTouch = isShow;
     self.deleteButton.hidden = !isShow;
     self.deleteButton.selected = isShow;
 }
-- (void)settingCellUnTouch:(BOOL)isShow{
-    self.isTouch = isShow;
-    self.deleteButton.hidden = isShow;
+- (void)settingCellUnTouch:(BOOL)isTouch{
+    self.isTouch = isTouch;
+    self.deleteButton.hidden = isTouch;
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (_isTouch) {

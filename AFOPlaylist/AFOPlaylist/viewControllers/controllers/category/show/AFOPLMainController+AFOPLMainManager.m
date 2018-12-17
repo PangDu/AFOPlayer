@@ -11,25 +11,10 @@
 #import "AFOPLMainManager.h"
 
 @interface AFOPLMainController ()<AFOPLMainManagerDelegate>
-@property (nonatomic, strong, readwrite) NSArray *dataArray;
+@property (nonnull, nonatomic, strong, readwrite) AFOPLMainManager  *mainManager;
+@property (nonnull, nonatomic, strong, readwrite) NSArray *dataArray;
 @end
-
 @implementation AFOPLMainController (AFOPLMainManager)
-#pragma mark ------------ property
-#pragma mark ------ mainManager
-- (void)setMainManager:(AFOPLMainManager *)mainManager{
-    objc_setAssociatedObject(self, @selector(setMainManager:), mainManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (AFOPLMainManager *)mainManager{
-    return objc_getAssociatedObject(self, @selector(setMainManager:));
-}
-#pragma mark ------ dataArray
-- (void)setDataArray:(NSArray *)dataArray{
-    objc_setAssociatedObject(self, @selector(setDataArray:), dataArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (NSArray *)dataArray{
-    return objc_getAssociatedObject(self, @selector(setDataArray:));
-}
 #pragma mark ------------ custom
 #pragma mark ------
 - (void)addCollectionViewData:(void (^)(NSArray *array,
@@ -61,12 +46,23 @@
 }
 #pragma mark ------ 
 - (UIInterfaceOrientationMask)screenPortrait:(NSIndexPath *)indexPath{
-    AFOPLThumbnail *model = [self.dataArray objectAtIndexAFOAbnormal:indexPath.item];
-    if (model) {
-        if (model.image_width < model.image_hight) {
-            return UIInterfaceOrientationMaskPortrait;
-        }
-    }
-    return UIInterfaceOrientationMaskLandscapeLeft;
+    return [self.mainManager orientationMask:indexPath];
+}
+#pragma mark ------------ property
+- (void)setMainManager:(AFOPLMainManager *)mainManager{
+    objc_setAssociatedObject(self, @selector(setMainManager:), mainManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (AFOPLMainManager *)mainManager{
+    return objc_getAssociatedObject(self, @selector(setMainManager:));
+}
+- (void)setDataArray:(NSArray *)dataArray{
+    objc_setAssociatedObject(self, @selector(setDataArray:), dataArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSArray *)dataArray{
+    return objc_getAssociatedObject(self, @selector(setDataArray:));
+}
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOPLMainController+AFOPLMainManager dealloc");
 }
 @end

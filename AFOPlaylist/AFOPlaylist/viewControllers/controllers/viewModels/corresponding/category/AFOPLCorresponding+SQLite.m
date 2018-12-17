@@ -12,7 +12,7 @@
 
 @implementation AFOPLCorresponding (SQLite)
 #pragma mark ------------ 创建数据库和表
-- (void)createDataBaseAndTable{
++ (void)createDataBaseAndTable{
     [AFOPLMainFolderManager mediaImagesCacheFolder];
     //
     NSString *strPath = [NSFileManager createFolderTarget:[NSFileManager cachesDocumentSandbox] newFolder:AFOPLAYLISTSCREENSHOTSVEDIOLIST];

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ <#Description#>
+
+ @param width <#width description#>
+ @param indexPath <#indexPath description#>
+ @return <#return value description#>
+ */
 typedef CGFloat(^PLMainCellHightBlock)(CGFloat width, NSIndexPath *indexPath);
 @interface AFOPLMainCellDefaultLayout : UICollectionViewLayout
 @property (nonatomic, copy) PLMainCellHightBlock block;

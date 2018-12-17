@@ -9,7 +9,7 @@
 #import "AFOPLCorresponding.h"
 
 @interface AFOPLCorresponding (SQLite)
-- (void)createDataBaseAndTable;
++ (void)createDataBaseAndTable;
 + (NSArray *)getDataFromDataBase;
 + (void)deleateAllDataBaseFromSqlLite:(void(^)(BOOL isSucess))block;
 + (void)deleateDataBaseFromSqlLite:(NSArray *)array

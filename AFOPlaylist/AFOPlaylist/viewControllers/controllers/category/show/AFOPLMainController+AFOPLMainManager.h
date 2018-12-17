@@ -9,7 +9,7 @@
 #import "AFOPLMainController.h"
 @class AFOPLMainManager;
 @interface AFOPLMainController (AFOPLMainManager)
-@property (nonnull, nonatomic, strong) AFOPLMainManager  *mainManager;
+@property (nonnull, nonatomic, strong, readonly) AFOPLMainManager  *mainManager;
 @property (nonnull ,nonatomic, strong, readonly) NSArray *dataArray;
 - (void)addCollectionViewData:(void (^)(NSArray *array,
                                         NSArray *indexArray,

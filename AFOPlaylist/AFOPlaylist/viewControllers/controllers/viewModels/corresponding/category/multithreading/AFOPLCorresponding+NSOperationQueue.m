@@ -24,7 +24,7 @@
 - (void)useOperationQueue:(NSArray *)saveArray
                     array:(NSArray *)array
                     block:(void (^) (NSArray * array))block{
-    NSArray *addArray = [self getUnscreenshotsArray:array compare:saveArray];
+    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:saveArray];
     NSBlockOperation *opreration = [NSBlockOperation blockOperationWithBlock:^{
         [[AFOMediaForeignInterface shareInstance] mediaSeekFrameUseQueue:addArray vediopath:[NSFileManager documentSandbox] imagePath:[AFOPLMainFolderManager mediaImagesAddress] sqlite:[AFOPLMainFolderManager dataBaseAddress] block:^(BOOL isHave,NSString *createTime,NSString *vedioName, NSString *imageName, int width, int height) {
             [AFOPLSQLiteManager inserSQLiteDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isHave:isHave createTime:createTime vedioName:vedioName imageName:imageName width:width height:height block:^(BOOL isFinish) {

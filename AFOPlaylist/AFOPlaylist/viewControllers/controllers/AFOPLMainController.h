@@ -8,5 +8,4 @@
 
 @interface AFOPLMainController : AFOViewController
 @property (nonatomic, strong, readonly) AFOCollectionView             *collectionView;
-- (void)addCollectionViewData;
 @end

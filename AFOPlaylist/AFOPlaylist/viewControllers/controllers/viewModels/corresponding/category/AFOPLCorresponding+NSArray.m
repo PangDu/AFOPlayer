@@ -8,9 +8,8 @@
 
 #import "AFOPLCorresponding+NSArray.h"
 #import "AFOPLThumbnail.h"
-
 @implementation AFOPLCorresponding (NSArray)
-- (NSArray *)getUnscreenshotsArray:(NSArray *)data
++ (NSArray *)getUnscreenshotsArray:(NSArray *)data
                       compare:(NSArray *)compare{
     NSPredicate * filterPredicate = [NSPredicate predicateWithFormat:@"NOT (SELF IN %@)",compare];
     //过滤数组
@@ -18,7 +17,7 @@
     NSLog(@"Reslut Filtered Array = %@",reslut);
     return reslut;
 }
-- (NSArray *)vedioName:(NSArray *)data{
++ (NSArray *)vedioName:(NSArray *)data{
     __block NSMutableArray *array = [[NSMutableArray alloc] init];
     [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         AFOPLThumbnail *model = obj;
@@ -27,7 +26,7 @@
     return array;
 }
 #pragma mark ------------
-- (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array
++ (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array
                                      index:(NSInteger)index{
     __block NSMutableArray *indexArray = [[NSMutableArray alloc] init];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -37,7 +36,7 @@
     }];
     return indexArray;
 }
-- (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array{
++ (NSArray<NSIndexPath *> *)indexPathArray:(NSArray *)array{
     __block NSMutableArray *indexArray = [[NSMutableArray alloc] init];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [indexArray addObjectAFOAbnormal:[NSIndexPath indexPathForItem:idx inSection:0]];

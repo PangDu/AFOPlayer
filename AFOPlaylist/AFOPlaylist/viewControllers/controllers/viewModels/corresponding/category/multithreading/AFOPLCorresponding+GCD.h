@@ -12,6 +12,5 @@
 - (void)usedispatchQueue:(NSArray *)saveArray
                    array:(NSArray *)array
                    block:(void (^) (NSArray *array,
-                                    NSArray *indexArray,
-                                    BOOL isUpdate))block;
+                                    NSArray *indexArray))block;
 @end
