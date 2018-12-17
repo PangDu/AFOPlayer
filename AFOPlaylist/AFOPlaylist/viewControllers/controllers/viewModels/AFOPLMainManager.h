@@ -17,10 +17,7 @@
 + (AFOPLMainManager *)mainManagerDelegate:(id)managerDelegate;
 + (void)deleteMovieRelatedContentLocally:(NSArray *)array
                                    block:(void (^)(BOOL isSucess))block;
-- (void)getThumbnailData:(void (^)(NSArray *array,
-                                   NSArray *indexArray,
-                                   BOOL isUpdate,
-                                   BOOL isHaveData))block;
+- (void)getThumbnailData:(void (^)(NSArray *array))block;
 - (CGFloat)thumbnailHight:(NSIndexPath *)indexPath width:(CGFloat)width;
 - (NSString *)vedioAddressIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioNameIndexPath:(NSIndexPath *)indexPath;

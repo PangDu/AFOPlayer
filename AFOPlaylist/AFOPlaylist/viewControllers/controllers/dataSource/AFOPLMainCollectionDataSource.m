@@ -9,7 +9,7 @@
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
 @interface AFOPLMainCollectionDataSource ()
-@property (nonatomic, strong) NSMutableArray       *dataArray;
+@property (nonnull, nonatomic, strong) NSMutableArray       *dataArray;
 @end
 @implementation AFOPLMainCollectionDataSource
 #pragma mark ------
@@ -28,12 +28,15 @@
     [cell settingSubViews:[self.dataArray objectAtIndexAFOAbnormal:indexPath.item]];
     return cell;
 }
-#pragma mark ------------ property
-#pragma mark ------ dataArray
+#pragma mark ------ property
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc] init];
     }
     return _dataArray;
+}
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOPLMainCollectionDataSource dealloc");
 }
 @end

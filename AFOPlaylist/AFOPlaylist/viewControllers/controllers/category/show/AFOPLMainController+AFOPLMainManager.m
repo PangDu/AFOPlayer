@@ -7,48 +7,46 @@
 //
 
 #import "AFOPLMainController+AFOPLMainManager.h"
-#import "AFOPLThumbnail.h"
-#import "AFOPLMainManager.h"
-
 @interface AFOPLMainController ()<AFOPLMainManagerDelegate>
 @property (nonnull, nonatomic, strong, readwrite) AFOPLMainManager  *mainManager;
-@property (nonnull, nonatomic, strong, readwrite) NSArray *dataArray;
+@property (nonnull, nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @end
 @implementation AFOPLMainController (AFOPLMainManager)
-#pragma mark ------------ custom
-#pragma mark ------
-- (void)addCollectionViewData:(void (^)(NSArray *array,
-                                        NSArray *indexArray,
-                                        BOOL isHaveData))block{
+#pragma mark ------ 获取数据
+- (void)addCollectionViewData:(void (^)(NSArray *array))block{
     if (!self.mainManager) {
       self.mainManager = [AFOPLMainManager mainManagerDelegate:self];
     }
+    if (!self.dataArray) {
+        self.dataArray = [[NSMutableArray alloc] init];
+    }
     WeakObject(self);
-    [self.mainManager getThumbnailData:^(NSArray *array, NSArray *indexArray, BOOL isUpdate,BOOL isHaveData) {
+    [self.mainManager getThumbnailData:^(NSArray *array) {
         StrongObject(self);
-        self.dataArray = [[NSArray alloc]initWithArray:array];
-        block(array, indexArray,isHaveData);
+        [self.dataArray removeAllObjects];
+        [self.dataArray addObjectsFromArray:array];
+        block(array);
     }];
 }
-#pragma mark ------
+#pragma mark ------ 视频地址
 - (NSString *)vedioPath:(NSIndexPath *)indexPath{
     NSString *path = [self.mainManager vedioAddressIndexPath:indexPath];
     return path;
 }
-#pragma mark ------
+#pragma mark ------ 视频名称
 - (NSString *)vedioName:(NSIndexPath *)indexPath{
     NSString *name = [self.mainManager vedioNameIndexPath:indexPath];
     return name;
 }
-#pragma mark ------
+#pragma mark ------ 图片高度
 - (CGFloat)vedioItemHeight:(NSIndexPath *)indexPath width:(CGFloat)width{
     return [self.mainManager thumbnailHight:indexPath width:width];
 }
-#pragma mark ------ 
+#pragma mark ------ 横竖屏切换
 - (UIInterfaceOrientationMask)screenPortrait:(NSIndexPath *)indexPath{
     return [self.mainManager orientationMask:indexPath];
 }
-#pragma mark ------------ property
+#pragma mark ------ property
 - (void)setMainManager:(AFOPLMainManager *)mainManager{
     objc_setAssociatedObject(self, @selector(setMainManager:), mainManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

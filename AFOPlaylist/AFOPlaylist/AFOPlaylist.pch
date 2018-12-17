@@ -22,7 +22,18 @@
 #import <AFOSQLite/AFOSQLite.h>
 #import <AFOFFMpeg/AFOFFMpeg.h>
 /*******************/
-#import "AFOPLMainController+AFOPLMainManager.h"
-#import "AFOPLMainController+Aspects.h"
+#import "AFOPLMainFolderManager.h"
+#import "AFOPLSQLiteManager.h"
+#import "AFOPLThumbnail.h"
+#import "AFODirectoryWatcher.h"
+#import "AFOReadDirectoryFile.h"
+/*******************/
+/*******************/
+#import "AFOPLMainManager.h"
+#import "AFOPLCorresponding.h"
+#import "AFOPLCorrespondingCategory.h"
+/*******************/
+/*******************/
+#import "AFOPLMainControllerCategory.h"
 /*******************/
 #endif /* AFOPlaylist_pch */

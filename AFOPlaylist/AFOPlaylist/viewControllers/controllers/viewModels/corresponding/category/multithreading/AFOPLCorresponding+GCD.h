@@ -11,6 +11,5 @@
 @interface AFOPLCorresponding (GCD)
 - (void)usedispatchQueue:(NSArray *)saveArray
                    array:(NSArray *)array
-                   block:(void (^) (NSArray *array,
-                                    NSArray *indexArray))block;
+                   block:(void (^) (NSArray *array))block;
 @end

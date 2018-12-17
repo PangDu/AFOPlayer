@@ -7,7 +7,6 @@
 //
 
 #import "AFOPLMainController.h"
-
 @interface AFOPLMainController (Aspects)
 - (void)collectionViewDidSelectRowAtIndexPathExchange;
 @end

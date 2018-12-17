@@ -11,9 +11,7 @@
 @interface AFOPLMainController (AFOPLMainManager)
 @property (nonnull, nonatomic, strong, readonly) AFOPLMainManager  *mainManager;
 @property (nonnull ,nonatomic, strong, readonly) NSArray *dataArray;
-- (void)addCollectionViewData:(void (^)(NSArray *array,
-                                        NSArray *indexArray,
-                                        BOOL isHaveData))block;
+- (void)addCollectionViewData:(void (^)(NSArray *array))block;
 - (NSString *)vedioPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioName:(NSIndexPath *)indexPath;
 - (CGFloat)vedioItemHeight:(NSIndexPath *)indexPath width:(CGFloat)width;

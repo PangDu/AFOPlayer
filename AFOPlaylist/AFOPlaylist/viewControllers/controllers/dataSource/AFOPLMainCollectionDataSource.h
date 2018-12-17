@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 @interface AFOPLMainCollectionDataSource : NSObject<UICollectionViewDataSource>
 - (void)settingImageData:(NSArray *)array;
 @end

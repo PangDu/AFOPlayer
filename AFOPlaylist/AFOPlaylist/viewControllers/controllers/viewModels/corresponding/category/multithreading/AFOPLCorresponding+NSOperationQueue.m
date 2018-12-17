@@ -7,11 +7,6 @@
 //
 
 #import "AFOPLCorresponding+NSOperationQueue.h"
-#import "AFOPLCorresponding+NSArray.h"
-#import "AFOPLCorresponding+SQLite.h"
-#import "AFOPLMainFolderManager.h"
-#import "AFOPLSQLiteManager.h"
-
 @implementation AFOPLCorresponding (NSOperationQueue)
 #pragma marm ------------ add property
 - (void)setOperationQueue:(NSOperationQueue *)operationQueue{

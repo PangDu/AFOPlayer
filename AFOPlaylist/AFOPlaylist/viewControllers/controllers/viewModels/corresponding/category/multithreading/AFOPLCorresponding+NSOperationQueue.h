@@ -9,7 +9,7 @@
 #import "AFOPLCorresponding.h"
 
 @interface AFOPLCorresponding (NSOperationQueue)
-@property (nonatomic, strong)   NSOperationQueue *operationQueue;
+@property (nonnull, nonatomic, strong)   NSOperationQueue *operationQueue;
 - (void)useOperationQueue:(NSArray *)saveArray
                     array:(NSArray *)array
                     block:(void (^) (NSArray * array))block;

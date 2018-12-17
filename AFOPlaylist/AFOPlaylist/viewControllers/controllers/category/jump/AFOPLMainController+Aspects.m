@@ -7,9 +7,7 @@
 //
 
 #import "AFOPLMainController+Aspects.h"
-#import "AFOPLMainController+AFOPLMainManager.h"
 @implementation AFOPLMainController (Aspects)
-#pragma mark ------------Aspects
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
 - (void)collectionViewDidSelectRowAtIndexPathExchange{
     [self aspect_hookSelector:@selector(collectionView:didSelectItemAtIndexPath:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, UITableView *tableView, NSIndexPath *indexPath){

@@ -68,32 +68,23 @@
 
 @synthesize delegate;
 
-- (id)init
-{
-	self= [super init];
+- (instancetype)init{
+	self = [super init];
 	delegate = NULL;
-
 	dirFD = -1;
     kq = -1;
 	dirKQRef = NULL;
-	
 	return self;
 }
-
-- (void)dealloc
-{
+- (void)dealloc{
 	[self invalidate];
 }
-
-+ (AFODirectoryWatcher *)watchFolderWithPath:(NSString *)watchPath delegate:(id)watchDelegate
-{
++ (AFODirectoryWatcher *)watchFolderWithPath:(NSString *)watchPath delegate:(id)watchDelegate{
 	AFODirectoryWatcher *retVal = NULL;
-	if ((watchDelegate != NULL) && (watchPath != NULL))
-	{
+	if ((watchDelegate != NULL) && (watchPath != NULL)){
 		AFODirectoryWatcher *tempManager = [[AFODirectoryWatcher alloc] init];
 		tempManager.delegate = watchDelegate;		
-		if ([tempManager startMonitoringDirectory: watchPath])
-		{
+		if ([tempManager startMonitoringDirectory: watchPath]){
 			// Everything appears to be in order, so return the DirectoryWatcher.  
 			// Otherwise we'll fall through and return NULL.
 			retVal = tempManager;
@@ -101,11 +92,8 @@
 	}
 	return retVal;
 }
-
-- (void)invalidate
-{
-	if (dirKQRef != NULL)
-	{
+- (void)invalidate{
+	if (dirKQRef != NULL){
 		CFFileDescriptorInvalidate(dirKQRef);
 		CFRelease(dirKQRef);
 		dirKQRef = NULL;
@@ -113,23 +101,18 @@
 		// Change the value so no one thinks it's still live.
 		kq = -1;
 	}
-	
-	if(dirFD != -1)
-	{
+	if(dirFD != -1){
 		close(dirFD);
 		dirFD = -1;
 	}
 }
-
 @end
-
 
 #pragma mark -
 
 @implementation AFODirectoryWatcher (DirectoryWatcherPrivate)
 
-- (void)kqueueFired
-{
+- (void)kqueueFired{
     assert(kq >= 0);
 
     struct kevent   event;
@@ -145,8 +128,7 @@
     CFFileDescriptorEnableCallBacks(dirKQRef, kCFFileDescriptorReadCallBack);
 }
 
-static void KQCallback(CFFileDescriptorRef kqRef, CFOptionFlags callBackTypes, void *info)
-{
+static void KQCallback(CFFileDescriptorRef kqRef, CFOptionFlags callBackTypes, void *info){
     AFODirectoryWatcher *obj;
 	
     obj = (__bridge AFODirectoryWatcher *)info;
@@ -156,20 +138,15 @@ static void KQCallback(CFFileDescriptorRef kqRef, CFOptionFlags callBackTypes, v
 	
     [obj kqueueFired];
 }
-
-- (BOOL)startMonitoringDirectory:(NSString *)dirPath
-{
+- (BOOL)startMonitoringDirectory:(NSString *)dirPath{
 	// Double initializing is not going to work...
-	if ((dirKQRef == NULL) && (dirFD == -1) && (kq == -1))
-	{
+	if ((dirKQRef == NULL) && (dirFD == -1) && (kq == -1)){
 		// Open the directory we're going to watch
 		dirFD = open([dirPath fileSystemRepresentation], O_EVTONLY);
-		if (dirFD >= 0)
-		{
+		if (dirFD >= 0){
 			// Create a kqueue for our event messages...
 			kq = kqueue();
-			if (kq >= 0)
-			{
+			if (kq >= 0){
 				struct kevent eventToAdd;
 				eventToAdd.ident  = dirFD;
 				eventToAdd.filter = EVFILT_VNODE;
@@ -179,18 +156,15 @@ static void KQCallback(CFFileDescriptorRef kqRef, CFOptionFlags callBackTypes, v
 				eventToAdd.udata  = NULL;
 				
 				int errNum = kevent(kq, &eventToAdd, 1, NULL, 0, NULL);
-				if (errNum == 0)
-				{
+				if (errNum == 0){
 					CFFileDescriptorContext context = { 0, (__bridge void *)(self), NULL, NULL, NULL };
 					CFRunLoopSourceRef      rls;
 
 					// Passing true in the third argument so CFFileDescriptorInvalidate will close kq.
 					dirKQRef = CFFileDescriptorCreate(NULL, kq, true, KQCallback, &context);
-					if (dirKQRef != NULL)
-					{
+					if (dirKQRef != NULL){
 						rls = CFFileDescriptorCreateRunLoopSource(NULL, dirKQRef, 0);
-						if (rls != NULL)
-						{
+						if (rls != NULL){
 							CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
 							CFRelease(rls);
 							CFFileDescriptorEnableCallBacks(dirKQRef, kCFFileDescriptorReadCallBack);

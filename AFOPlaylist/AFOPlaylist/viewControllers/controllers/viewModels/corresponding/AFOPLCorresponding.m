@@ -7,7 +7,6 @@
 //
 
 #import "AFOPLCorresponding.h"
-#import "AFOPLCorrespondingCategory.h"
 @interface AFOPLCorresponding ()
 @property (nonatomic, weak) id<AFOPLCorrespondingDelegate>  delegate;
 @end
@@ -28,33 +27,28 @@
     [AFOPLCorresponding createDataBaseAndTable];
 }
 + (NSArray *)getAllDataFromDataBase{
-   return  [self getDataFromDataBase];
+   return [self getDataFromDataBase];
 }
 #pragma mark ------------ 
 - (void)mediathumbnail:(NSArray *)vedioNameArray
-                 block:(void (^)(NSArray *array,
-                                 NSArray *indexArray))block{
-    [self compareVedioArray:vedioNameArray saveArray:[AFOPLCorresponding getDataFromDataBase] block:^(NSArray *data,
-                                                                                        NSArray *indexArray              ) {
-        block(data, indexArray);
+                 block:(void (^)(NSArray *array))block{
+    [self compareVedioArray:vedioNameArray saveArray:[AFOPLCorresponding getDataFromDataBase] block:^(NSArray *data) {
+        block(data);
     }];
 }
 #pragma mark ------------
 - (void)compareVedioArray:(NSArray *)array
                 saveArray:(NSArray *)saveArray
-                    block:(void (^) (NSArray *data,
-                                     NSArray *indexArray))block{
+                    block:(void (^) (NSArray *data))block{
     if (array.count == 0) {//没有视频
-        block(NULL, NULL);
+        block(NULL);
         return;
     }else if (array.count > 0 && array.count == saveArray.count){//全部已截图
-        block(saveArray, [AFOPLCorresponding indexPathArray:saveArray]);
+        block(saveArray);
         return;
     }else{//新添加
-        [self usedispatchQueue:saveArray array:array block:^(
-                                                             NSArray *array,
-                                                             NSArray *indexArray) {
-            block(array, NULL);
+        [self usedispatchQueue:saveArray array:array block:^(NSArray *array) {
+            block(array);
         }];
     }
 }

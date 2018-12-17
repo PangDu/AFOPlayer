@@ -7,11 +7,8 @@
 //
 
 #import "AFOPLMainController+Operation.h"
-#import "AFOPLMainController+AFOPLMainManager.h"
-#import "AFOPLMainManager.h"
 #import "AFOPLMainCollectionCell.h"
 #import "AFOPLEditMenuView.h"
-#import "AFOPLMainManager.h"
 @interface AFOPLMainController ()
 @property (nonatomic, assign)          BOOL               isEditor;
 @property (nonatomic, assign)          BOOL               isTouch;

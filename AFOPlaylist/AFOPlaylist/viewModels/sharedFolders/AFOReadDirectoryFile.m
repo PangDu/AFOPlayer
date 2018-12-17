@@ -9,8 +9,8 @@
 #import "AFOReadDirectoryFile.h"
 #import "AFODirectoryWatcher.h"
 @interface AFOReadDirectoryFile ()<DirectoryWatcherDelegate>
-@property (nonatomic, strong) NSMutableArray       *fileArray;
-@property (nonatomic, strong) AFODirectoryWatcher  *directoryWatcher;
+@property (nonnull, nonatomic, strong) NSMutableArray       *fileArray;
+@property (nonnull, nonatomic, strong) AFODirectoryWatcher  *directoryWatcher;
 @property (nonatomic, weak) id<AFOReadDirectoryFileDelegate> delegate;
 @end
 
@@ -26,7 +26,7 @@
     }
     return directoryFile;
 }
-#pragma mark ------------ custom
+#pragma mark ------------
 - (void)settingDirectoryWatcher{
     self.directoryWatcher = [AFODirectoryWatcher watchFolderWithPath:[NSFileManager documentSandbox] delegate:self];
     [self directoryDidChange:self.directoryWatcher];
@@ -54,14 +54,16 @@
     dispatch_async(queue, ^{
       [self.delegate directoryFromDocument:self.fileArray];
     });
-
 }
 #pragma mark ------------ property
-#pragma mark ------ fileArray
 - (NSMutableArray *)fileArray{
     if (!_fileArray) {
         _fileArray = [[NSMutableArray alloc] init];
     }
     return _fileArray;
+}
+#pragma mark ------ dealloc
+- (void)dealloc{
+    NSLog(@"AFOReadDirectoryFile dealloc");
 }
 @end

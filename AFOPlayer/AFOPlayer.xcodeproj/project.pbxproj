@@ -471,7 +471,10 @@
 				GENERATE_PROFILING_CODE = NO;
 				INFOPLIST_FILE = AFOPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -496,7 +499,10 @@
 				GENERATE_PROFILING_CODE = NO;
 				INFOPLIST_FILE = AFOPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

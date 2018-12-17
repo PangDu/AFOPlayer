@@ -19,6 +19,5 @@
 + (void)deleteDataFromDataBase:(NSArray *)array
                             block:(void(^)(BOOL isSucess))block;
 - (void)mediathumbnail:(NSArray *)vedioNameArray
-                 block:(void (^)(NSArray *array,
-                                 NSArray *indexArray))block;
+                 block:(void (^)(NSArray *array))block;
 @end

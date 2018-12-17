@@ -7,42 +7,34 @@
 //
 
 #import "AFOPLCorresponding+GCD.h"
-#import "AFOPLCorresponding+NSArray.h"
-#import "AFOPLCorresponding+SQLite.h"
-#import "AFOPLThumbnail.h"
-#import "AFOPLMainFolderManager.h"
-#import "AFOPLSQLiteManager.h"
 @interface AFOPLCorresponding ()
-@property (nonatomic, strong) dispatch_queue_t   dispatchQueue_t;
+@property (nonnull, nonatomic, strong) dispatch_queue_t   dispatchQueue_t;
 @end
 @implementation AFOPLCorresponding (GCD)
-#pragma mark ------------ add property
-#pragma mark ------ dispatchQueue_t
+#pragma mark ------------property
 - (void)setDispatchQueue_t:(dispatch_queue_t)dispatchQueue_t{
     objc_setAssociatedObject(self, @selector(setDispatchQueue_t:), dispatchQueue_t, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (dispatch_queue_t)dispatchQueue_t{
     return objc_getAssociatedObject(self, @selector(setDispatchQueue_t:));
 }
-#pragma mark ------------ NSOperationQueue
+#pragma mark ------ 添加数据
 - (void)usedispatchQueue:(NSArray *)saveArray
                     array:(NSArray *)array
-                    block:(void (^) (NSArray *array,
-                                     NSArray *indexArray))block{
+                    block:(void (^) (NSArray *array))block{
     ///------
     self.dispatchQueue_t = dispatch_queue_create("com.AFOPlayer.AFOPLCorresponding", DISPATCH_QUEUE_SERIAL);
     ///------
     if (array.count > saveArray.count) {///最新添加未截图
     ///------ 先显示已有截图
-    block([AFOPLCorresponding getDataFromDataBase],
-            [AFOPLCorresponding indexPathArray:[AFOPLCorresponding getDataFromDataBase]]);
+    block([AFOPLCorresponding getDataFromDataBase]);
     //
     NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:saveArray]];
     [self cuttingImageSaveSqlite:addArray block:^(NSArray *array) {
             }];
     }
 }
-#pragma mark ------------
+#pragma mark ------ 截图
 - (void)cuttingImageSaveSqlite:(NSArray *)array
                          block:(void (^) (NSArray * array))block{
     ///------

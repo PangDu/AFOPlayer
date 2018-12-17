@@ -7,10 +7,6 @@
 //
 
 #import "AFOPLMainManager.h"
-#import "AFOReadDirectoryFile.h"
-#import "AFOPLMainFolderManager.h"
-#import "AFOPLCorresponding.h"
-#import "AFOPLThumbnail.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
 @property (nonnull,nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
 @property (nonnull,nonatomic, strong) AFOPLCorresponding         *corresponding;
@@ -68,21 +64,18 @@
     return UIInterfaceOrientationMaskLandscapeLeft;
 }
 #pragma mark ------ 获取最新数据
-- (void)getThumbnailData:(void (^)(NSArray *array,
-                                   NSArray *indexArray,
-                                   BOOL isHaveData))block{
+- (void)getThumbnailData:(void (^)(NSArray *array))block{
     WeakObject(self);
-    [self.corresponding mediathumbnail:self.nameArray block:^(NSArray *array,
-                                                         NSArray *indexArray) {
+    [self.corresponding mediathumbnail:self.nameArray block:^(NSArray *array) {
         StrongObject(self);
         if (array) {
             [self.dataArray removeAllObjects];
             [self.dataArray addObjectsFromArrayAFOAbnormal:array];
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                block(array, indexArray,YES);
+                block(array);
             }];
         }else{
-            block(array, indexArray, NO);
+            block(array);
         }
     }];
 }

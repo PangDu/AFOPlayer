@@ -10,14 +10,13 @@
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
-#import "AFOPLMainController+Operation.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
 @property (nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
-#pragma mark ------------------ viewDidLoad
+#pragma mark ------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"播放列表";
@@ -27,8 +26,7 @@
     [self initializerInstance];
     [self addOperationButton];
 }
-#pragma mark ------------ custom
-#pragma mark ------
+#pragma mark ------ 设置初始值
 - (void)initializerInstance{
     WeakObject(self);
     self.defaultLayout.block = ^CGFloat(CGFloat width, NSIndexPath *indexPath) {
@@ -57,9 +55,7 @@
 #pragma mark ------ 获取数据
 - (void)addCollectionViewData{
     WeakObject(self);
-    [self addCollectionViewData:^(NSArray *array,
-                                  NSArray *indexArray,
-                                  BOOL isHaveData) {
+    [self addCollectionViewData:^(NSArray *array) {
         StrongObject(self);
         [self.collectionDataSource settingImageData:array];
         [UIView performWithoutAnimation:^{
@@ -70,21 +66,7 @@
 #pragma mark ------ UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 }
-#pragma mark ------ 是否可以旋转
-- (BOOL)shouldAutorotate{
-    return YES;
-}
-#pragma mark ------ 支持的方向
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
-}
-#pragma mark ------------ didReceiveMemoryWarning
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 #pragma mark ------------ property
-#pragma mark ------ collectionView
 - (AFOCollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = [[AFOCollectionView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64) collectionViewLayout:self.defaultLayout];
@@ -97,20 +79,32 @@
     }
     return _collectionView;
 }
-#pragma mark ------ collectionDataSource
 - (AFOPLMainCollectionDataSource *)collectionDataSource{
     if (!_collectionDataSource) {
         _collectionDataSource = [[AFOPLMainCollectionDataSource alloc] init];
     }
     return _collectionDataSource;
 }
-#pragma mark ------ defaultLayout
 - (AFOPLMainCellDefaultLayout *)defaultLayout{
     if (!_defaultLayout) {
         _defaultLayout = [[AFOPLMainCellDefaultLayout alloc] init];
     }
     return _defaultLayout;
 }
+#pragma mark ------ 是否可以旋转
+- (BOOL)shouldAutorotate{
+    return YES;
+}
+#pragma mark ------ 支持的方向
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+#pragma mark ------ didReceiveMemoryWarning
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"AFOPLMainController dealloc");
 }
