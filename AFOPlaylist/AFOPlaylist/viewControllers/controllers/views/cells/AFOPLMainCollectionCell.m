@@ -95,7 +95,7 @@
     if (!_deleteButton) {
         _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_deleteButton setImage:nil forState:UIControlStateNormal];
-        [_deleteButton setImage:[UIImage imageNamed:@"delete.png"] forState:UIControlStateSelected];
+        [_deleteButton setImage:[UIImage imageNamed:@"AFO_delete.png"] forState:UIControlStateSelected];
         [_deleteButton addTarget:self action:@selector(deleteVedioItem:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _deleteButton;

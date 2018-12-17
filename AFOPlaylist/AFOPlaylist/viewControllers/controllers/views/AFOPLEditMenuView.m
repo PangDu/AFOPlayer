@@ -60,6 +60,11 @@
     button.selected = !button.selected;
     ///---
     self.allSelectBlock(button.selected);
+    ///---
+    if (!button.selected) {
+        [self removeUserSelected];
+        [self showDeleteItemsCount:self.selectArray.count];
+    }
 }
 - (void)settingButtonTitle{
     self.deleteBT.selected = NO;
