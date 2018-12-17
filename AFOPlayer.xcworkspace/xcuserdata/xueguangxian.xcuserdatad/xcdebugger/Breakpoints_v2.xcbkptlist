@@ -2,4 +2,69 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AFOPlaylist/AFOPlaylist/viewModels/folder/AFOPLMainFolderManager.m"
+            timestampString = "566699389.4938999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "+deleteFileFromDocument:type:isAll:block:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[AFOPLMainFolderManager deleteFileFromDocument:type:isAll:block:]"
+                  moduleName = "AFOPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xueguangxian/Documents/GitHub/AFOPlayer/AFOPlaylist/AFOPlaylist/viewModels/folder/AFOPLMainFolderManager.m"
+                  timestampString = "566699389.822112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__66+[AFOPLMainFolderManager deleteFileFromDocument:type:isAll:block:]_block_invoke"
+                  moduleName = "AFOPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xueguangxian/Documents/GitHub/AFOPlayer/AFOPlaylist/AFOPlaylist/viewModels/folder/AFOPLMainFolderManager.m"
+                  timestampString = "566699389.823627"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "AFOPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xueguangxian/Documents/GitHub/AFOPlayer/AFOPlaylist/AFOPlaylist/viewModels/folder/AFOPLMainFolderManager.m"
+                  timestampString = "566699389.825086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

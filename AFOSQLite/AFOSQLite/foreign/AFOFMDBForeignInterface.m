@@ -63,7 +63,6 @@
           id obj = [weakSelf dictinaryToClassModel:keyDic model:model];
          [dataArray addObject:obj];
         }
-        [result close];
     }];
     if (dataArray.count > 0) {
         block(dataArray);
@@ -82,7 +81,6 @@
 + (void)deleteTransactionStatements:(NSArray<NSString *> *)array
                               block:(void (^)(BOOL isSucess))block{
     [[AFOFMDBForeignInterface shareInstance].queue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
-        [db open];
         [array enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             BOOL isResult = [db executeUpdate:obj];
             if (!isResult) {
@@ -90,7 +88,7 @@
                 return;
             }
         }];
-        [db close];
+        block(!*rollback);
     }];
 }
 @end

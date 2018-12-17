@@ -118,7 +118,7 @@
         if (!isAll) {
             [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 AFOPLThumbnail *detail = obj;
-                NSString *imagePath = [AFOPLMainFolderManager vedioAddress:detail.image_name];
+                NSString *imagePath = [AFOPLMainFolderManager imageAddress:detail.image_name];
                 [AFOPLMainFolderManager deleteFileFromDocument:imagePath type:AFOPLMainFileTypeImage isAll:isAll block:^(BOOL isDelete) {
                     isRemoveImage = isDelete;
                 }];

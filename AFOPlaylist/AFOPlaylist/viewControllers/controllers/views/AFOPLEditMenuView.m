@@ -61,21 +61,6 @@
     ///---
     self.allSelectBlock(button.selected);
 }
-- (void)deleteVedioItem:(id)sender{
-    UIButton *button = (UIButton *)sender;
-    button.selected = !button.selected;
-    //
-    [self showAlertView];
-}
-- (void)showAlertView{
-    NSString *strMessage = @"确定删除全部文件吗？";
-    if (self.selectArray.count < self.allVedioNumber) {
-        strMessage = [NSString stringWithFormat:@"确认删除%lu个文件吗？",(unsigned long)self.selectArray.count];
-    }
-    ///---
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:strMessage delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
-    [alertView show];
-}
 - (void)settingButtonTitle{
     self.deleteBT.selected = NO;
     self.allSelectBT.selected = NO;
@@ -88,6 +73,25 @@
     [self.selectArray removeAllObjects];
     [self.selectArray addObjectsFromArray:vedeoArray];
     [self showDeleteItemsCount:self.selectArray.count];
+}
+#pragma mark ------ 删除视频
+- (void)deleteVedioItem:(id)sender{
+    if (self.selectArray.count < 1) {
+        return;
+    }
+    ///---
+    [self settingDefaultState];
+    ///---
+    [self showAlertView];
+}
+- (void)showAlertView{
+    NSString *strMessage = @"确定删除全部文件吗？";
+    if (self.selectArray.count < self.allVedioNumber) {
+        strMessage = [NSString stringWithFormat:@"确认删除%lu个文件吗？",(unsigned long)self.selectArray.count];
+    }
+    ///---
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:strMessage delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [alertView show];
 }
 - (void)showDeleteItemsCount:(NSInteger)vedioCount{
     if (vedioCount == 0) {
@@ -103,6 +107,11 @@
     }else{
         self.allSelectBT.selected = NO;
     }
+}
+- (void)settingDefaultState{
+    [self settingButtonTitle];
+    self.defaultBlock();
+    self.frame = CGRectMake(0, AFO_SCREEN_HEIGHT, AFO_SCREEN_WIDTH, 40);
 }
 #pragma mark ------ delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

@@ -11,9 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^editMenuViewALLBlock)(BOOL isSelected);
 typedef void(^editMenuViewDeleteVediosBlock)(NSArray *array);
+typedef void(^editMenuViewDefaultBlock)(void);
 @interface AFOPLEditMenuView : UIView
 @property (nonnull, nonatomic, strong) editMenuViewALLBlock allSelectBlock;
 @property (nonnull, nonatomic, strong) editMenuViewDeleteVediosBlock deleteVedioBlock;
+@property (nonatomic, strong) editMenuViewDefaultBlock defaultBlock;
 - (instancetype)initWithFrame:(CGRect)frame
                      allVedio:(NSInteger)number;
 - (void)settingButtonTitle;

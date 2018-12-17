@@ -18,7 +18,7 @@
 @property (nonnull, nonatomic, strong) AFOPLEditMenuView *editMenuView;
 @end
 @implementation AFOPLMainController (Operation)
-#pragma mark ------
+#pragma mark ------ attribute
 - (void)setIsEditor:(BOOL)isEditor{
     objc_setAssociatedObject(self, @selector(setIsEditor:), @(isEditor), OBJC_ASSOCIATION_ASSIGN);
 }
@@ -50,6 +50,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editorVedioOperation:)];
     self.navigationItem.rightBarButtonItem = backItem;
 }
+#pragma mark ------ 编辑
 - (void)editorVedioOperation:(id)sender{
     if (self.dataArray.count < 1) {
         return;
@@ -59,51 +60,7 @@
     ///---
     [self userSelectAllItems];
 }
-- (void)userSelectAllItems{
-    WeakObject(self);
-    ///--- 全选
-    self.editMenuView.allSelectBlock = ^(BOOL isSelected){
-        StrongObject(self);
-        [self showDeleteIconImageIsAll:isSelected isTouch:!self.isTouch];
-        if (isSelected) {
-            [self.editMenuView userAllSelectedItems:self.dataArray];
-        }else{
-            [self.editMenuView userAllSelectedItems:[NSArray array]];
-        }
-    };
-    ///--- 删除
-    self.editMenuView.deleteVedioBlock = ^(NSArray * _Nonnull array) {
-        StrongObject(self);
-        [AFOPLMainManager deleteMovieRelatedContentLocally:array block:^(BOOL isSucess) {
-            if (isSucess) {
-                [self addCollectionViewData];
-                ///
-                [UIView animateWithDuration:0.3 animations:^{
-                    [self.navigationItem.rightBarButtonItem setTitle:@"编辑"];
-                    self.editMenuView.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), 40);
-                    [self.editMenuView removeUserSelected];
-                }];
-                self.isEditor = !self.isEditor;
-                [self.editMenuView settingButtonTitle];
-            }
-        }];
-    };
-    ///---
-    [self showDeleteIconImageIsAll:self.isEditor isTouch:self.isTouch];
-    self.isTouch = !self.isTouch;
-}
-- (void)showDeleteIconImageIsAll:(BOOL)isAll
-                          isTouch:(BOOL)isTouch{
-    [[self.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        AFOPLMainCollectionCell * cell = (AFOPLMainCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
-        ///---
-        [cell showAllDeleteIcon:isAll];
-        ///---
-        [cell settingCellUnTouch:isTouch];
-    }];
-}
 - (void)addMenuView{
-    ///---
     if (!self.editMenuView) {
         self.editMenuView = [[AFOPLEditMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), 40) allVedio:self.dataArray.count];
         [self.view addSubview:self.editMenuView];
@@ -121,6 +78,62 @@
     } completion:^(BOOL finished) {
         self.isEditor = !self.isEditor;
         [self.editMenuView settingButtonTitle];
+    }];
+}
+- (void)userSelectAllItems{
+    ///--- 全选
+    [self editMenuViewSelectAll];
+    ///--- 删除
+    [self editMenuViewDelete];
+    ///--- 恢复默认值
+    [self editMenuViewDefault];
+    ///---
+    [self showDeleteIconImageIsAll:self.isEditor isTouch:self.isTouch];
+    self.isTouch = !self.isTouch;
+}
+#pragma mark ------ 全选
+- (void)editMenuViewSelectAll{
+    WeakObject(self);
+    self.editMenuView.allSelectBlock = ^(BOOL isSelected){
+    StrongObject(self);
+    [self showDeleteIconImageIsAll:isSelected isTouch:!self.isTouch];
+        if (isSelected) {
+            [self.editMenuView userAllSelectedItems:self.dataArray];
+        }else{
+            [self.editMenuView userAllSelectedItems:[NSArray array]];
+        }
+    };
+}
+#pragma mark ------ 删除
+- (void)editMenuViewDelete{
+    WeakObject(self);
+    self.editMenuView.deleteVedioBlock = ^(NSArray * _Nonnull array) {
+        StrongObject(self);
+        [AFOPLMainManager deleteMovieRelatedContentLocally:array block:^(BOOL isSucess) {
+            if (isSucess) {
+                [self addCollectionViewData];
+            }
+        }];
+    };
+}
+- (void)editMenuViewDefault{
+    WeakObject(self);
+    self.editMenuView.defaultBlock = ^{
+        StrongObject(self);
+        self.isEditor = NO;
+        [self.navigationItem.rightBarButtonItem setTitle:@"编辑"];
+        [self showDeleteIconImageIsAll:self.isEditor isTouch:self.isTouch];
+        self.isTouch = !self.isTouch;
+    };
+}
+- (void)showDeleteIconImageIsAll:(BOOL)isAll
+                          isTouch:(BOOL)isTouch{
+    [[self.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        AFOPLMainCollectionCell * cell = (AFOPLMainCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
+        ///---
+        [cell showAllDeleteIcon:isAll];
+        ///---
+        [cell settingCellUnTouch:isTouch];
     }];
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2425804421C736C20070E981 /* AFOMacroDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2425804321C736C20070E981 /* AFOMacroDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2446ED1F2019AD4000FD5012 /* NSFileManager+AFOSandBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED1D2019AD4000FD5012 /* NSFileManager+AFOSandBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2446ED202019AD4000FD5012 /* NSFileManager+AFOSandBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED1E2019AD4000FD5012 /* NSFileManager+AFOSandBox.m */; };
 		2446ED692019B85C00FD5012 /* NSArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED672019B85C00FD5012 /* NSArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2425804321C736C20070E981 /* AFOMacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMacroDefinition.h; sourceTree = "<group>"; };
 		2446ED1D2019AD4000FD5012 /* NSFileManager+AFOSandBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AFOSandBox.h"; sourceTree = "<group>"; };
 		2446ED1E2019AD4000FD5012 /* NSFileManager+AFOSandBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AFOSandBox.m"; sourceTree = "<group>"; };
 		2446ED672019B85C00FD5012 /* NSArray+AFOAbnormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+AFOAbnormal.h"; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2425804221C736600070E981 /* define */ = {
+			isa = PBXGroup;
+			children = (
+				2425804321C736C20070E981 /* AFOMacroDefinition.h */,
+			);
+			path = define;
+			sourceTree = "<group>";
+		};
 		2446ED1C2019ACE600FD5012 /* sandbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				2489813F200F2D19008FB71D /* AFOFoundation.h */,
+				2425804221C736600070E981 /* define */,
 				24885951201AC9E300623E66 /* bundle */,
 				2488594C201AC40600623E66 /* weak */,
 				2446ED1C2019ACE600FD5012 /* sandbox */,
@@ -150,6 +161,7 @@
 				2446ED6D2019BDE500FD5012 /* NSMutableArray+AFOAbnormal.h in Headers */,
 				24C3571221C0FAE500F187DE /* NSFileManager+AFOOperation.h in Headers */,
 				2446ED722019BF9F00FD5012 /* NSDictionary+AFOAbnormal.h in Headers */,
+				2425804421C736C20070E981 /* AFOMacroDefinition.h in Headers */,
 				2446ED762019BFB400FD5012 /* NSMutableDictionary+AFOAbnormal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

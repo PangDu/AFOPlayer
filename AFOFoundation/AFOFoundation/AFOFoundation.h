@@ -18,6 +18,8 @@ FOUNDATION_EXPORT const unsigned char AFOFoundationVersionString[];
 
 #import <AFOFoundation/AFOWeakInstance.h>
 
+#import <AFOFoundation/AFOMacroDefinition.h>
+
 #import <AFOFoundation/NSBundle+AFOCategory.h>
 
 #import <AFOFoundation/NSArray+AFOAbnormal.h>
