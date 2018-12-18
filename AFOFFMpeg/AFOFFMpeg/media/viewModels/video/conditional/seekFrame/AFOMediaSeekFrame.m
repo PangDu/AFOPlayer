@@ -5,8 +5,8 @@
 //  Created by xueguang xian on 2018/1/5.
 //  Copyright © 2018年 AFO Science Technology Ltd. All rights reserved.
 //
-#import <UIKit/UIKit.h>
 #import "AFOMediaSeekFrame.h"
+#import "AFOMediaSeekFrame+Conditional.h"
 #import "AFOMediaThumbnail.h"
 #import "AFOMediaConditional.h"
 #import "AFOMediaYUV.h"
@@ -25,16 +25,19 @@
 @property (nonnull, nonatomic, strong) AFOMediaYUV   *meidaYUV;
 @end
 @implementation AFOMediaSeekFrame
-#pragma mark ------------ initialize
-+ (void)initialize{
-    if (self == [AFOMediaSeekFrame class]) {
-        ///------ 注册解码器
+#pragma mark ------------ init
+- (instancetype)init{
+    if (self = [super init]) {
         avcodec_register_all();
         av_register_all();
-        avformat_network_init();
+        ///---
+        _videoStream = -1;
+        avFormatContext = avformat_alloc_context();
+        avCodecContext = avcodec_alloc_context3(NULL);
     }
+    return self;
 }
-#pragma mark ------------ custom
+#pragma mark ------------ 
 + (instancetype)vedioName:(NSString *)name
                      path:(NSString *)path
                 imagePath:(NSString *)imagePath
@@ -62,27 +65,26 @@
                 name:(NSString *)name
            imagePath:(NSString *)imagePath
                plist:(NSString *)plist
-               block:(mediaSeekFrameDetailBlock)block
-            {
-    _videoStream = -1;
-    avFormatContext = avformat_alloc_context();
-   __block NSError *avError = NULL;
+               block:(mediaSeekFrameDetailBlock)block{
+    ///---
+    __block NSError *verror;
     WeakObject(self);
-    [AFOMediaConditional mediaSesourcesConditionalPath:[AFOMediaThumbnail vedioAddress:path name:name] block:^(NSError *error, NSInteger videoIndex, NSInteger audioIndex) {
+    [AFOMediaConditional mediaSesourcesConditionalPath:[AFOMediaSeekFrame vedioAddress:path name:name] block:^(NSError *error, NSInteger videoIndex, NSInteger audioIndex) {
         StrongObject(self);
-        avError = error;
         self.videoStream = videoIndex;
+        verror = error;
     }];
-    if (avError.code != 0) {
+    if (verror.code != 0) {
         return;
     }
-    ///------
-    avformat_open_input(&avFormatContext, [[AFOMediaThumbnail vedioAddress:path name:name] UTF8String], NULL, NULL);
-    if (avformat_find_stream_info(avFormatContext, NULL) < 0) {
-        avformat_close_input(&avFormatContext);
+    ///------ Open video file.
+    if(avformat_open_input(&avFormatContext, [[AFOMediaSeekFrame vedioAddress:path name:name] UTF8String], NULL, NULL) != 0){
+        return;
     }
-    ///------ Get a pointer to the codec context for the video stream.
-    avCodecContext = avcodec_alloc_context3(NULL);
+    ///------ Retrieve stream information.
+    if (avformat_find_stream_info(avFormatContext, NULL) < 0) {
+        return;
+    }
     avcodec_parameters_to_context(avCodecContext, avFormatContext -> streams[self.videoStream] -> codecpar);
     ///------ Find the decoder for the video stream.
     avcodec = avcodec_find_decoder(avCodecContext -> codec_id);
@@ -96,6 +98,9 @@
     [self firstFrameToCover:[AFOMediaThumbnail vedioAddress:path name:name] name:name imagePath:imagePath block:^(BOOL isWrite, BOOL isCutting){
             block(isWrite, isCutting, [self createTime], name, [AFOMediaThumbnail imageName:name], self.outWidth, self.outHeight);
         }];
+}
+- (void)detectVideoStreams{
+    
 }
 #pragma mark ------ 将第一帧作为封面
 - (void)firstFrameToCover:(NSString *)path

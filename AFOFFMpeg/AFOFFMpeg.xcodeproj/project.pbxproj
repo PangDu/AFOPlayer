@@ -205,6 +205,8 @@
 		2474D07521BCC1D700A74F57 /* KxMovieDecoderStatic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2474D07421BCC1D700A74F57 /* KxMovieDecoderStatic.h */; };
 		2474D07821BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2474D07621BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h */; };
 		2474D07921BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474D07721BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m */; };
+		247CF0A621C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.h in Headers */ = {isa = PBXBuildFile; fileRef = 247CF0A421C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.h */; };
+		247CF0A721C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.m in Sources */ = {isa = PBXBuildFile; fileRef = 247CF0A521C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.m */; };
 		24814F6221B4FC06001B2388 /* aacdecoder_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5B21B4FC06001B2388 /* aacdecoder_lib.h */; };
 		24814F6321B4FC06001B2388 /* machine_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5C21B4FC06001B2388 /* machine_type.h */; };
 		24814F6421B4FC06001B2388 /* aacenc_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 24814F5D21B4FC06001B2388 /* aacenc_lib.h */; };
@@ -467,6 +469,8 @@
 		2474D07421BCC1D700A74F57 /* KxMovieDecoderStatic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoderStatic.h; sourceTree = "<group>"; };
 		2474D07621BCC3FB00A74F57 /* KxMovieSubtitleASSParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMovieSubtitleASSParser.h; sourceTree = "<group>"; };
 		2474D07721BCC3FB00A74F57 /* KxMovieSubtitleASSParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KxMovieSubtitleASSParser.m; sourceTree = "<group>"; };
+		247CF0A421C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOMediaSeekFrame+Conditional.h"; sourceTree = "<group>"; };
+		247CF0A521C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOMediaSeekFrame+Conditional.m"; sourceTree = "<group>"; };
 		24814F5B21B4FC06001B2388 /* aacdecoder_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aacdecoder_lib.h; sourceTree = "<group>"; };
 		24814F5C21B4FC06001B2388 /* machine_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = machine_type.h; sourceTree = "<group>"; };
 		24814F5D21B4FC06001B2388 /* aacenc_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aacenc_lib.h; sourceTree = "<group>"; };
@@ -604,6 +608,8 @@
 				24F928F5200CE940007ADAA4 /* AFOMediaThumbnail.m */,
 				2404876E200845A600D369FB /* AFOMediaSeekFrame.h */,
 				2404876F200845A600D369FB /* AFOMediaSeekFrame.m */,
+				247CF0A421C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.h */,
+				247CF0A521C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.m */,
 			);
 			path = seekFrame;
 			sourceTree = "<group>";
@@ -1300,6 +1306,7 @@
 				245C9FD420248F2500A8603C /* AFOVideoFrameYUV.h in Headers */,
 				246289E021BDFACD00E14172 /* rotate.h in Headers */,
 				244E31D91FFE64340094C6BB /* ripemd.h in Headers */,
+				247CF0A621C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.h in Headers */,
 				244E31B91FFE64340094C6BB /* tree.h in Headers */,
 				24E8DAD221BBD7AA006F6579 /* KxMovieGLView.h in Headers */,
 				243FB8B221BA5F1A00EBB5E1 /* AFOAudioDecoder.h in Headers */,
@@ -1497,6 +1504,7 @@
 				245C9FD9202491B200A8603C /* AFOVideoFrameRGB.m in Sources */,
 				246289ED21BDFB4700E14172 /* AFOMediaYUV.m in Sources */,
 				245C9FD020248D3700A8603C /* AFOVideoFrame.m in Sources */,
+				247CF0A721C8EE1700ADE889 /* AFOMediaSeekFrame+Conditional.m in Sources */,
 				24E8DAD321BBD7AA006F6579 /* KxMovieDecoder.m in Sources */,
 				243FB8A821BA5F0E00EBB5E1 /* AFOAudioOutPut.m in Sources */,
 				240487A2200845A600D369FB /* AFOGenerateImages.m in Sources */,

@@ -48,9 +48,6 @@
             }
         }
     });
-    dispatch_barrier_sync(queue, ^{
-        
-    });
     dispatch_async(queue, ^{
       [self.delegate directoryFromDocument:self.fileArray];
     });

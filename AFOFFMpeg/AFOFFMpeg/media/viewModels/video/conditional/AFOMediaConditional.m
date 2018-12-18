@@ -11,6 +11,9 @@
 #pragma mark ------------ 
 + (void)mediaSesourcesConditionalPath:(NSString *)path
                             block:(MediaConditionalBlock) block{
+    avcodec_register_all();
+    av_register_all();
+    
     AVFormatContext   *avFormatContext;
     AVCodecContext    *avCodecContext;
     AVCodec           *avCodec;

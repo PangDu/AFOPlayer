@@ -34,8 +34,6 @@
 		2459239E1FE132B00094C3E0 /* AFOPlayListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */; };
 		245B4EB121C3E95B007608AC /* AFOPLEditMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 245B4EAF21C3E95B007608AC /* AFOPLEditMenuView.h */; };
 		245B4EB221C3E95B007608AC /* AFOPLEditMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245B4EB021C3E95B007608AC /* AFOPLEditMenuView.m */; };
-		2494B0B9200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2494B0B7200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h */; };
-		2494B0BA200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2494B0B8200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m */; };
 		2494B0BD200D993B00B7816B /* AFOPLCorresponding+SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2494B0BB200D993B00B7816B /* AFOPLCorresponding+SQLite.h */; };
 		2494B0BE200D993B00B7816B /* AFOPLCorresponding+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */; };
 		2494B0C2200D9EC100B7816B /* AFOPLCorresponding+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */; };
@@ -98,8 +96,6 @@
 		2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPlayListNavigationController.m; sourceTree = "<group>"; };
 		245B4EAF21C3E95B007608AC /* AFOPLEditMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLEditMenuView.h; sourceTree = "<group>"; };
 		245B4EB021C3E95B007608AC /* AFOPLEditMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLEditMenuView.m; sourceTree = "<group>"; };
-		2494B0B7200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+NSOperationQueue.h"; sourceTree = "<group>"; };
-		2494B0B8200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLCorresponding+NSOperationQueue.m"; sourceTree = "<group>"; };
 		2494B0BB200D993B00B7816B /* AFOPLCorresponding+SQLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+SQLite.h"; sourceTree = "<group>"; };
 		2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLCorresponding+SQLite.m"; sourceTree = "<group>"; };
 		2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+GCD.h"; sourceTree = "<group>"; };
@@ -291,8 +287,6 @@
 		2494B0C4200D9FC100B7816B /* multithreading */ = {
 			isa = PBXGroup;
 			children = (
-				2494B0B7200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h */,
-				2494B0B8200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m */,
 				2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */,
 				2494B0C1200D9EC100B7816B /* AFOPLCorresponding+GCD.m */,
 			);
@@ -413,7 +407,6 @@
 				24F428D61FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h in Headers */,
 				2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */,
 				24F928E9200C8B65007ADAA4 /* AFOPLThumbnail.h in Headers */,
-				2494B0B9200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.h in Headers */,
 				2408BB512008A37E0049060F /* AFOPLSQLiteManager.h in Headers */,
 				24EDFA1D2004A7940071AF43 /* AFOPLCorresponding.h in Headers */,
 				2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */,
@@ -517,7 +510,6 @@
 				241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */,
 				2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */,
 				24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */,
-				2494B0BA200D971800B7816B /* AFOPLCorresponding+NSOperationQueue.m in Sources */,
 				24F428DD1FFDDF33009F3F32 /* AFOPLMainManager.m in Sources */,
 				24F428D71FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m in Sources */,
 				245B4EB221C3E95B007608AC /* AFOPLEditMenuView.m in Sources */,

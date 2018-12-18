@@ -48,10 +48,9 @@
            imagePath:(NSString *)imagePath
                sqlite:(NSString *)sqlitePath
                block:(mediaSeekFrameQueueBlock)block{
-    ///------ 截图
-    [vedioArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        dispatch_async(_queue_t, ^{
-            [AFOMediaSeekFrame vedioName:obj path:vediopath imagePath:imagePath plist:sqlitePath block:^(BOOL isWrite,
+    dispatch_apply(vedioArray.count, self.queue_t, ^(size_t index) {
+        dispatch_async(self.queue_t, ^{
+            [AFOMediaSeekFrame vedioName:vedioArray[index] path:vediopath imagePath:imagePath plist:sqlitePath block:^(BOOL isWrite,
                                                                                                          BOOL isCutting,
                                                                                                          
                                                                                                          NSString *createTime,
@@ -62,7 +61,7 @@
                 block(isWrite, createTime, vedioName, imageName, width, height);
             }];
         });
-    }];
+    });
 }
 #pragma mark ------------ property
 - (NSMutableArray *)seekArray{

@@ -10,7 +10,6 @@
 #define AFOPLCorrespondingCategory_h
 
 #import "AFOPLCorresponding+NSArray.h"
-#import "AFOPLCorresponding+NSOperationQueue.h"
 #import "AFOPLCorresponding+GCD.h"
 #import "AFOPLCorresponding+SQLite.h"
 #endif /* AFOPLCorrespondingCategory_h */
