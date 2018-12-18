@@ -10,11 +10,7 @@
 		240487512008453600D369FB /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487532008453600D369FB /* AFORouter.framework */; };
 		240487522008453600D369FB /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487542008453600D369FB /* AFOUIKit.framework */; };
 		2404875E2008459600D369FB /* AFOMediaForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 240487562008459600D369FB /* AFOMediaForeignInterface.m */; };
-		2404875F2008459600D369FB /* AFOMediaForeignInterface+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 240487572008459600D369FB /* AFOMediaForeignInterface+Dictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		240487602008459600D369FB /* AFOMediaForeignInterface+Array.h in Headers */ = {isa = PBXBuildFile; fileRef = 240487582008459600D369FB /* AFOMediaForeignInterface+Array.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		240487622008459600D369FB /* AFOMediaForeignInterface+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2404875A2008459600D369FB /* AFOMediaForeignInterface+Dictionary.m */; };
 		240487632008459600D369FB /* AFOMediaForeignInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 2404875B2008459600D369FB /* AFOMediaForeignInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		240487652008459600D369FB /* AFOMediaForeignInterface+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 2404875D2008459600D369FB /* AFOMediaForeignInterface+Array.m */; };
 		24048792200845A600D369FB /* AFOMediaConditional.h in Headers */ = {isa = PBXBuildFile; fileRef = 2404876C200845A600D369FB /* AFOMediaConditional.h */; };
 		24048793200845A600D369FB /* AFOMediaSeekFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2404876E200845A600D369FB /* AFOMediaSeekFrame.h */; };
 		24048794200845A600D369FB /* AFOMediaSeekFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2404876F200845A600D369FB /* AFOMediaSeekFrame.m */; };
@@ -272,11 +268,7 @@
 		240487532008453600D369FB /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240487542008453600D369FB /* AFOUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240487562008459600D369FB /* AFOMediaForeignInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOMediaForeignInterface.m; sourceTree = "<group>"; };
-		240487572008459600D369FB /* AFOMediaForeignInterface+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFOMediaForeignInterface+Dictionary.h"; sourceTree = "<group>"; };
-		240487582008459600D369FB /* AFOMediaForeignInterface+Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFOMediaForeignInterface+Array.h"; sourceTree = "<group>"; };
-		2404875A2008459600D369FB /* AFOMediaForeignInterface+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFOMediaForeignInterface+Dictionary.m"; sourceTree = "<group>"; };
 		2404875B2008459600D369FB /* AFOMediaForeignInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOMediaForeignInterface.h; sourceTree = "<group>"; };
-		2404875D2008459600D369FB /* AFOMediaForeignInterface+Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFOMediaForeignInterface+Array.m"; sourceTree = "<group>"; };
 		2404876C200845A600D369FB /* AFOMediaConditional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOMediaConditional.h; sourceTree = "<group>"; };
 		2404876E200845A600D369FB /* AFOMediaSeekFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOMediaSeekFrame.h; sourceTree = "<group>"; };
 		2404876F200845A600D369FB /* AFOMediaSeekFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOMediaSeekFrame.m; sourceTree = "<group>"; };
@@ -565,10 +557,6 @@
 			children = (
 				2404875B2008459600D369FB /* AFOMediaForeignInterface.h */,
 				240487562008459600D369FB /* AFOMediaForeignInterface.m */,
-				240487582008459600D369FB /* AFOMediaForeignInterface+Array.h */,
-				2404875D2008459600D369FB /* AFOMediaForeignInterface+Array.m */,
-				240487572008459600D369FB /* AFOMediaForeignInterface+Dictionary.h */,
-				2404875A2008459600D369FB /* AFOMediaForeignInterface+Dictionary.m */,
 			);
 			path = foreign;
 			sourceTree = "<group>";
@@ -576,6 +564,7 @@
 		24048766200845A600D369FB /* media */ = {
 			isa = PBXGroup;
 			children = (
+				24E8DABE21BBD7A9006F6579 /* kxmovie */,
 				2404878D200845A600D369FB /* views */,
 				24048767200845A600D369FB /* viewModels */,
 				2404878A200845A600D369FB /* controllers */,
@@ -1152,13 +1141,12 @@
 			isa = PBXGroup;
 			children = (
 				24BAFDBE1FF4B12900D2EAB9 /* AFOFFMpeg.h */,
-				24E8DABE21BBD7A9006F6579 /* kxmovie */,
 				240487552008459600D369FB /* foreign */,
 				24048766200845A600D369FB /* media */,
-				24814F5821B4FC06001B2388 /* aac */,
 				244E31141FFE64340094C6BB /* FFmpeg */,
 				2408BAF820085E190049060F /* x264 */,
 				246289B921BDFACD00E14172 /* libYUV */,
+				24814F5821B4FC06001B2388 /* aac */,
 				240487AC2008460800D369FB /* AFOFFMpeg.pch */,
 			);
 			path = AFOFFMpeg;
@@ -1375,12 +1363,10 @@
 				24F928F6200CE940007ADAA4 /* AFOMediaThumbnail.h in Headers */,
 				244E31E41FFE64340094C6BB /* avstring.h in Headers */,
 				244E31DE1FFE64340094C6BB /* timestamp.h in Headers */,
-				240487602008459600D369FB /* AFOMediaForeignInterface+Array.h in Headers */,
 				240487A8200845A600D369FB /* AFOMediaPlayController.h in Headers */,
 				24B2CF9F20230D1D007B7E14 /* AFOMediaDecoder.h in Headers */,
 				2488594F201AC94800623E66 /* AFOMediaControlView.h in Headers */,
 				24E8DAE121BC03BF006F6579 /* KxMovieViewController+Extension.h in Headers */,
-				2404875F2008459600D369FB /* AFOMediaForeignInterface+Dictionary.h in Headers */,
 				245C9FDB2024927500A8603C /* AFOMediaFrameImport.h in Headers */,
 				245C9FCB20248B8400A8603C /* AFOMediaFrame.h in Headers */,
 				244E31961FFE64340094C6BB /* buffersrc.h in Headers */,
@@ -1493,9 +1479,7 @@
 				242559BA2025519B00065F44 /* AFOMediaOpenGLView.m in Sources */,
 				240D412521B5641400B52DC2 /* AFOVideoAudioManager.m in Sources */,
 				243FB8B621BA5F1A00EBB5E1 /* AFOAudioDecoder.m in Sources */,
-				240487652008459600D369FB /* AFOMediaForeignInterface+Array.m in Sources */,
 				245C9FCC20248B8400A8603C /* AFOMediaFrame.m in Sources */,
-				240487622008459600D369FB /* AFOMediaForeignInterface+Dictionary.m in Sources */,
 				245C9FDF20249A4500A8603C /* AFOMediaManager.m in Sources */,
 				240487A9200845A600D369FB /* AFOMediaPlayController.m in Sources */,
 				24E8DACC21BBD7AA006F6579 /* KxMovieGLView.m in Sources */,

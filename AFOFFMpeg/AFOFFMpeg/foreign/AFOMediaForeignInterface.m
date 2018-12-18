@@ -7,11 +7,11 @@
 //
 
 #import "AFOMediaForeignInterface.h"
-#import "AFOMediaForeignInterface+Array.h"
 #import "AFOMediaSeekFrame.h"
 
 @interface AFOMediaForeignInterface ()
-@property (nonatomic, strong) NSMutableArray        *seekArray;
+@property (nonnull, nonatomic, strong) NSMutableArray        *seekArray;
+@property (nonnull, nonatomic, strong) dispatch_queue_t       queue_t;
 @end
 
 @implementation AFOMediaForeignInterface
@@ -50,24 +50,31 @@
                block:(mediaSeekFrameQueueBlock)block{
     ///------ 截图
     [vedioArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        dispatch_async(_queue_t, ^{
             [AFOMediaSeekFrame vedioName:obj path:vediopath imagePath:imagePath plist:sqlitePath block:^(BOOL isWrite,
-                                                                                                    BOOL isCutting,
+                                                                                                         BOOL isCutting,
                                                                                                          
-                                                        NSString *createTime,
+                                                                                                         NSString *createTime,
                                                                                                          NSString *vedioName,
-                                                                                                    NSString *imageName,
-                                                                                                    int width,
-                                                                                                    int height) {
+                                                                                                         NSString *imageName,
+                                                                                                         int width,
+                                                                                                         int height) {
                 block(isWrite, createTime, vedioName, imageName, width, height);
             }];
+        });
     }];
 }
 #pragma mark ------------ property
-#pragma mark ------ seekArray
 - (NSMutableArray *)seekArray{
     if (!_seekArray) {
         _seekArray = [[NSMutableArray alloc] init];
     }
     return _seekArray;
+}
+- (dispatch_queue_t)queue_t{
+    if (!_queue_t) {
+        _queue_t = dispatch_queue_create("com.AFOFFMpeg.AFOMediaForeignInterface", DISPATCH_QUEUE_CONCURRENT);
+    }
+    return _queue_t;
 }
 @end

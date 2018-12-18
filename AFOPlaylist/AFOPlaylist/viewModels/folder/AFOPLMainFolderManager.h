@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define AFOPLAYLISTSCREENSHOTSVEDIOLIST @"Corresponding"
+#define AFO_PLAYLIST_SCREENSHOTSVEDIOLIST @"Corresponding"
 
 typedef NS_OPTIONS(NSUInteger, AFOPLMainFileType) {
     AFOPLMainFileTypeImage = 1,

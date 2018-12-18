@@ -11,12 +11,12 @@
 #pragma mark ------------ 
 + (void)mediaSesourcesConditionalPath:(NSString *)path
                             block:(MediaConditionalBlock) block{
-    AVFormatContext   *avFormatContext = NULL;
-    AVCodecContext    *avCodecContext  = NULL;
-    AVCodec           *avCodec         = NULL;
+    AVFormatContext   *avFormatContext;
+    AVCodecContext    *avCodecContext;
+    AVCodec           *avCodec;
    __block NSInteger videoStream = -1;
    __block NSInteger audioStream = -1;
-    
+    avFormatContext = avformat_alloc_context();
     ///------ Open video file.
     if(avformat_open_input(&avFormatContext, [path UTF8String], NULL, NULL) != 0){
         block([AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorCodeReadFailure],0,0);
@@ -140,6 +140,6 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
-    NSLog(@"dealloc AFOMediaConditional");
+    NSLog(@"AFOMediaConditional dealloc");
 }
 @end

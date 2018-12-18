@@ -7,8 +7,6 @@
 //
 
 #import "AFOPLSQLiteManager.h"
-#import "AFOPLThumbnail.h"
-
 @implementation AFOPLSQLiteManager
 #pragma mark ------------ 创建表
 + (NSString *)createTable:(NSString *)name{
@@ -96,5 +94,8 @@
         [sqls addObject:strSql];
     }];
     return sqls;
+}
+- (void)dealloc{
+    NSLog(@"AFOPLSQLiteManager dealloc");
 }
 @end

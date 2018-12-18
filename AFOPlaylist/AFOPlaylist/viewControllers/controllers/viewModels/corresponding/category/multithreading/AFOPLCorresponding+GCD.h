@@ -12,4 +12,6 @@
 - (void)usedispatchQueue:(NSArray *)saveArray
                    array:(NSArray *)array
                    block:(void (^) (NSArray *array))block;
+- (void)cuttingImageSaveSqlite:(NSArray *)array
+                         block:(void (^) (NSArray *itemArray))block;
 @end

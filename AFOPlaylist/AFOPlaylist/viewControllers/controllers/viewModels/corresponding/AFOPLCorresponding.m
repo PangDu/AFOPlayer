@@ -47,9 +47,9 @@
         block(saveArray);
         return;
     }else{//新添加
-        [self usedispatchQueue:saveArray array:array block:^(NSArray *array) {
-            block(array);
-        }];
+//        [self usedispatchQueue:saveArray array:array block:^(NSArray *array) {
+//            block(array);
+//        }];
     }
 }
 #pragma mark ------

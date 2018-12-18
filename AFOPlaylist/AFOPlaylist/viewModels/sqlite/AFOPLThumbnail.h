@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface AFOPLThumbnail : NSObject
-@property (nonatomic, copy) NSString   *create_time;
-@property (nonatomic, copy) NSString   *vedio_name;
-@property (nonatomic, copy) NSString   *image_name;
-@property (nonatomic, assign) NSInteger vedio_id;
-@property (nonatomic, assign) NSInteger image_width;
-@property (nonatomic, assign) NSInteger image_hight;
+@property (nonnull, nonatomic, copy)   NSString   *create_time;
+@property (nonnull, nonatomic, copy)   NSString   *vedio_name;
+@property (nonnull, nonatomic, copy)   NSString   *image_name;
+@property (nonatomic, assign) NSInteger   vedio_id;
+@property (nonatomic, assign) NSInteger   image_width;
+@property (nonatomic, assign) NSInteger   image_hight;
 @end

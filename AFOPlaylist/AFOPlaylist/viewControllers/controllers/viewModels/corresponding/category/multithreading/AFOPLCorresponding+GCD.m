@@ -27,23 +27,25 @@
     ///------
     if (array.count > saveArray.count) {///最新添加未截图
     ///------ 先显示已有截图
-    block([AFOPLCorresponding getDataFromDataBase]);
-    //
-    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:saveArray]];
-    [self cuttingImageSaveSqlite:addArray block:^(NSArray *array) {
+    if ([AFOPLCorresponding getDataFromDataBase].count != 0) {
+        block([AFOPLCorresponding getDataFromDataBase]);
+    }else if([AFOPLCorresponding getDataFromDataBase].count == 0){
+        NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:saveArray]];
+        [self cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
+                block(itemArray);
             }];
+        }
     }
 }
 #pragma mark ------ 截图
 - (void)cuttingImageSaveSqlite:(NSArray *)array
-                         block:(void (^) (NSArray * array))block{
-    ///------
+                         block:(void (^) (NSArray *itemArray))block{
     self.dispatchQueue_t = dispatch_queue_create("com.AFOPlayer.AFOPLCorresponding", DISPATCH_QUEUE_SERIAL);
     ///------
     __block NSMutableArray *newArray = [[NSMutableArray alloc] init];
     dispatch_apply(array.count, self.dispatchQueue_t, ^(size_t index) {
         [[AFOMediaForeignInterface shareInstance] mediaSeekFrameUseQueue:array[index] vediopath:[NSFileManager documentSandbox] imagePath:[AFOPLMainFolderManager mediaImagesAddress] sqlite:[AFOPLMainFolderManager dataBaseAddress] block:^(BOOL isHave,NSString *createTime,NSString *vedioName, NSString *imageName, int width, int height) {
-            [AFOPLSQLiteManager inserSQLiteDataBase:AFOPLAYLISTSCREENSHOTSVEDIOLIST isHave:isHave createTime:createTime vedioName:vedioName imageName:imageName width:width height:height block:^(BOOL isFinish) {
+            [AFOPLSQLiteManager inserSQLiteDataBase:AFO_PLAYLIST_SCREENSHOTSVEDIOLIST isHave:isHave createTime:createTime vedioName:vedioName imageName:imageName width:width height:height block:^(BOOL isFinish) {
                 if (isFinish) {
                     AFOPLThumbnail *detail = [[AFOPLThumbnail alloc] init];
                     detail.create_time =createTime;
@@ -55,9 +57,8 @@
                     NSLog(@"成功插入数据!");
                 }
             }];
+            block(newArray);
         }];
     });
-    ///------
-    block(newArray);
 }
 @end

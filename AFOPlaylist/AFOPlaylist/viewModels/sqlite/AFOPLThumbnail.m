@@ -9,5 +9,7 @@
 #import "AFOPLThumbnail.h"
 
 @implementation AFOPLThumbnail
-
+- (void)dealloc{
+    NSLog(@"AFOPLThumbnail dealloc");
+}
 @end

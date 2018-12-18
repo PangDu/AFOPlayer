@@ -65,19 +65,9 @@
 }
 #pragma mark ------ 获取最新数据
 - (void)getThumbnailData:(void (^)(NSArray *array))block{
-    WeakObject(self);
-    [self.corresponding mediathumbnail:self.nameArray block:^(NSArray *array) {
-        StrongObject(self);
-        if (array) {
-            [self.dataArray removeAllObjects];
-            [self.dataArray addObjectsFromArrayAFOAbnormal:array];
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                block(array);
-            }];
-        }else{
-            block(array);
-        }
-    }];
+    [self.dataArray removeAllObjects];
+    [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
+    block(self.dataArray);
 }
 #pragma mark ------------------ 删除影片相关内容
 + (void)deleteMovieRelatedContentLocally:(NSArray *)array
@@ -163,7 +153,6 @@
 }
 #pragma mark ------ 删除数据库中数据
 + (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block{
-    
     [AFOPLCorresponding deleteAllDataFromDataBase:^(BOOL isSucess) {
         block(isSucess);
     }];
@@ -178,6 +167,16 @@
 - (void)directoryFromDocument:(NSArray *)array{
     [self.nameArray removeAllObjects];
     [self.nameArray addObjectsFromArrayAFOAbnormal:array];
+    [self getsUnshotMovie:array];
+}
+- (void)getsUnshotMovie:(NSArray *)array{
+    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
+    if (!addArray.count) {
+        return;
+    }
+    [self.corresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
+        [self.dataArray addObjectAFOAbnormal:itemArray];
+    }];
 }
 #pragma mark ------------ property
 #pragma mark ------ corresponding

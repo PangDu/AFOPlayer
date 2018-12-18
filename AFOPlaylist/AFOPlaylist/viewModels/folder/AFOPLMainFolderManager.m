@@ -23,12 +23,12 @@
 }
 #pragma mark ------ dataBaseAddress
 + (NSString *)dataBaseAddress{
-    NSString *pathpath = [[NSFileManager cachesDocumentSandbox] stringByAppendingString:[NSString stringWithFormat:@"/%@.db",AFOPLAYLISTSCREENSHOTSVEDIOLIST]];
+    NSString *pathpath = [[NSFileManager cachesDocumentSandbox] stringByAppendingString:[NSString stringWithFormat:@"/%@.db",AFO_PLAYLIST_SCREENSHOTSVEDIOLIST]];
     return pathpath;
 }
 #pragma mark ------ dataBaseName
 + (NSString *)dataBaseName:(NSString *)path{
-    NSString *name = [NSString stringWithFormat:@"/%@.db",AFOPLAYLISTSCREENSHOTSVEDIOLIST];
+    NSString *name = [NSString stringWithFormat:@"/%@.db",AFO_PLAYLIST_SCREENSHOTSVEDIOLIST];
     return [path stringByAppendingString:name];
 }
 #pragma mark ------ vedio address

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AFOFFMpeg/AFOFFMpeg.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AFOPlaylist/AFOPlaylist.xcodeproj">
    </FileRef>
    <FileRef
