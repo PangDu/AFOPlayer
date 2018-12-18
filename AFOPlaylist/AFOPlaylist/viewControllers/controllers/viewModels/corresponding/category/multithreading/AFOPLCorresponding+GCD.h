@@ -9,6 +9,6 @@
 #import "AFOPLCorresponding.h"
 
 @interface AFOPLCorresponding (GCD)
-- (void)cuttingImageSaveSqlite:(NSArray *)array
++ (void)cuttingImageSaveSqlite:(NSArray *)array
                          block:(void (^) (NSArray *itemArray))block;
 @end

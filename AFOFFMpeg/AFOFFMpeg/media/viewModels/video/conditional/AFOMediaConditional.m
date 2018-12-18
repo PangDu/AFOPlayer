@@ -5,15 +5,11 @@
 //  Created by xueguang xian on 2018/1/5.
 //  Copyright © 2018年 AFO Science Technology Ltd. All rights reserved.
 //
-
 #import "AFOMediaConditional.h"
 @implementation AFOMediaConditional
 #pragma mark ------------ 
 + (void)mediaSesourcesConditionalPath:(NSString *)path
                             block:(MediaConditionalBlock) block{
-    avcodec_register_all();
-    av_register_all();
-    
     AVFormatContext   *avFormatContext;
     AVCodecContext    *avCodecContext;
     AVCodec           *avCodec;

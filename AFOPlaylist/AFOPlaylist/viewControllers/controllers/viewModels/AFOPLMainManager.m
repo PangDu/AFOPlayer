@@ -8,10 +8,11 @@
 
 #import "AFOPLMainManager.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
-@property (nonnull,nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
-@property (nonnull,nonatomic, strong) AFOPLCorresponding         *corresponding;
-@property (nonnull,nonatomic, strong) NSMutableArray             *dataArray;
-@property (nonnull,nonatomic, strong) NSMutableArray             *nameArray;
+@property (nonnull, nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
+@property (nonnull, nonatomic, strong) AFOPLCorresponding         *corresponding;
+@property (nonnull, nonatomic, strong) NSMutableArray             *dataArray;
+@property (nonnull, nonatomic, strong) NSMutableArray             *nameArray;
+@property (nonatomic,assign)    BOOL isUpdate;
 @property (nonatomic, weak) id<AFOPLMainManagerDelegate>          delegate;
 @end
 @implementation AFOPLMainManager
@@ -30,6 +31,7 @@
 #pragma mark ------------ custom
 #pragma mark ------ readDirectoryFile
 - (void)readDirectoryFile{
+    self.isUpdate = YES;
     [AFOPLCorresponding createDataBase];
     _directoryFile = [AFOReadDirectoryFile readDirectoryFiledelegate:self];
 }
@@ -64,10 +66,37 @@
     return UIInterfaceOrientationMaskLandscapeLeft;
 }
 #pragma mark ------ 获取最新数据
-- (void)getThumbnailData:(void (^)(NSArray *array))block{
+- (void)getThumbnailData:(void (^)(NSArray *array,
+                                   BOOL isUpdate))block{
     [self.dataArray removeAllObjects];
-    [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
-    block(self.dataArray);
+    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:self.nameArray compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
+    if (addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase] == 0) {
+        [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
+            [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
+            block(self.dataArray, self.isUpdate);
+        }];
+        self.isUpdate = YES;
+    }else if(addArray.count == 0 && [AFOPLCorresponding getAllDataFromDataBase].count > 0){
+        [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
+        block(self.dataArray, self.isUpdate);
+        self.isUpdate = NO;
+    }else if(addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase] > 0){
+        [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
+        [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
+            [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
+            block(self.dataArray, self.isUpdate);
+        }];
+        self.isUpdate = YES;
+    }
+}
+- (void)getsUnshotMovie:(NSArray *)array{
+    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
+    if (!addArray.count) {
+        return;
+    }
+    [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
+        [self.dataArray addObjectAFOAbnormal:itemArray];
+    }];
 }
 #pragma mark ------------------ 删除影片相关内容
 + (void)deleteMovieRelatedContentLocally:(NSArray *)array
@@ -167,16 +196,6 @@
 - (void)directoryFromDocument:(NSArray *)array{
     [self.nameArray removeAllObjects];
     [self.nameArray addObjectsFromArrayAFOAbnormal:array];
-    [self getsUnshotMovie:array];
-}
-- (void)getsUnshotMovie:(NSArray *)array{
-    NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:array compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
-    if (!addArray.count) {
-        return;
-    }
-    [self.corresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
-        [self.dataArray addObjectAFOAbnormal:itemArray];
-    }];
 }
 #pragma mark ------------ property
 #pragma mark ------ corresponding

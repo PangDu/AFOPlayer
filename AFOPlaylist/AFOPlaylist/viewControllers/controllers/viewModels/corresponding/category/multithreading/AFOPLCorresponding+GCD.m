@@ -11,7 +11,7 @@
 @end
 @implementation AFOPLCorresponding (GCD)
 #pragma mark ------ 截图
-- (void)cuttingImageSaveSqlite:(NSArray *)array
++ (void)cuttingImageSaveSqlite:(NSArray *)array
                          block:(void (^) (NSArray *itemArray))block{
     __block NSMutableArray *newArray = [[NSMutableArray alloc] init];
     [[AFOMediaForeignInterface shareInstance] mediaSeekFrameUseQueue:array vediopath:[NSFileManager documentSandbox] imagePath:[AFOPLMainFolderManager mediaImagesAddress] sqlite:[AFOPLMainFolderManager dataBaseAddress] block:^(BOOL isHave,NSString *createTime,NSString *vedioName, NSString *imageName, int width, int height) {

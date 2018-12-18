@@ -29,29 +29,6 @@
 + (NSArray *)getAllDataFromDataBase{
    return [self getDataFromDataBase];
 }
-#pragma mark ------------ 
-- (void)mediathumbnail:(NSArray *)vedioNameArray
-                 block:(void (^)(NSArray *array))block{
-    [self compareVedioArray:vedioNameArray saveArray:[AFOPLCorresponding getDataFromDataBase] block:^(NSArray *data) {
-        block(data);
-    }];
-}
-#pragma mark ------------
-- (void)compareVedioArray:(NSArray *)array
-                saveArray:(NSArray *)saveArray
-                    block:(void (^) (NSArray *data))block{
-    if (array.count == 0) {//没有视频
-        block(NULL);
-        return;
-    }else if (array.count > 0 && array.count == saveArray.count){//全部已截图
-        block(saveArray);
-        return;
-    }else{//新添加
-//        [self usedispatchQueue:saveArray array:array block:^(NSArray *array) {
-//            block(array);
-//        }];
-    }
-}
 #pragma mark ------
 + (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block{
     [self deleateAllDataBaseFromSqlLite:^(BOOL isSucess) {

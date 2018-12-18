@@ -18,6 +18,4 @@
 + (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block;
 + (void)deleteDataFromDataBase:(NSArray *)array
                             block:(void(^)(BOOL isSucess))block;
-- (void)mediathumbnail:(NSArray *)vedioNameArray
-                 block:(void (^)(NSArray *array))block;
 @end

@@ -37,8 +37,7 @@
     NSString *documentsDirectoryPath = [NSFileManager documentSandbox];
     NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath
                                                                                               error:NULL];
-    dispatch_queue_t queue = dispatch_queue_create("com.AFOPlayer.AFOReadDirectoryFile", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue, ^{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
         for (NSString* curFileName in [documentsDirectoryContents objectEnumerator]) {
             NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
             BOOL isDirectory;
@@ -47,9 +46,9 @@
                 [self.fileArray addObjectAFOAbnormal:curFileName];
             }
         }
-    });
-    dispatch_async(queue, ^{
-      [self.delegate directoryFromDocument:self.fileArray];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate directoryFromDocument:self.fileArray];
+        });
     });
 }
 #pragma mark ------------ property

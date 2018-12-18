@@ -58,9 +58,11 @@
     [self addCollectionViewData:^(NSArray *array) {
         StrongObject(self);
         [self.collectionDataSource settingImageData:array];
-        [UIView performWithoutAnimation:^{
-            [self.collectionView reloadData];
-        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView performWithoutAnimation:^{
+                [self.collectionView reloadData];
+            }];
+        });
     }];
 }
 #pragma mark ------ UICollectionViewDelegate

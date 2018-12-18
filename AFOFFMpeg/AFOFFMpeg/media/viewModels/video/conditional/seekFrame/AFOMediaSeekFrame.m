@@ -28,7 +28,6 @@
 #pragma mark ------------ init
 - (instancetype)init{
     if (self = [super init]) {
-        avcodec_register_all();
         av_register_all();
         ///---
         _videoStream = -1;
@@ -66,7 +65,6 @@
            imagePath:(NSString *)imagePath
                plist:(NSString *)plist
                block:(mediaSeekFrameDetailBlock)block{
-    ///---
     __block NSError *verror;
     WeakObject(self);
     [AFOMediaConditional mediaSesourcesConditionalPath:[AFOMediaSeekFrame vedioAddress:path name:name] block:^(NSError *error, NSInteger videoIndex, NSInteger audioIndex) {

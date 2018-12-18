@@ -14,7 +14,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabBarItem.title = @"播放列表";
-    // Do any additional setup after loading the view.
 }
 #pragma mark ------
 -(BOOL)shouldAutorotate{
