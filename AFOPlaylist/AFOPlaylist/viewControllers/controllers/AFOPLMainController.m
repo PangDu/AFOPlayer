@@ -11,9 +11,9 @@
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
-@property (nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
-@property (nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
-@property (nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
+@property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
+@property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
+@property (nonnull, nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
 #pragma mark ------ viewDidLoad

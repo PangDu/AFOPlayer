@@ -9,7 +9,7 @@
 #import "AFOAppWindow.h"
 
 @interface AFOAppWindow ()
-@property (nonatomic, strong) AFOAppWindowViewModel *viewModel;
+@property (nonnull, nonatomic, strong) AFOAppWindowViewModel *viewModel;
 @end
 
 @implementation AFOAppWindow

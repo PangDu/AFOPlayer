@@ -5,14 +5,13 @@
 //  Created by xueguang xian on 2018/1/4.
 //  Copyright © 2018年 AFO. All rights reserved.
 //
-
 #import "AFOPLMainManager.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
 @property (nonnull, nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
 @property (nonnull, nonatomic, strong) AFOPLCorresponding         *corresponding;
 @property (nonnull, nonatomic, strong) NSMutableArray             *dataArray;
 @property (nonnull, nonatomic, strong) NSMutableArray             *nameArray;
-@property (nonatomic,assign)    BOOL isUpdate;
+@property (nonatomic, assign)           BOOL                       isUpdate;
 @property (nonatomic, weak) id<AFOPLMainManagerDelegate>          delegate;
 @end
 @implementation AFOPLMainManager
@@ -28,7 +27,6 @@
     }
     return manager;
 }
-#pragma mark ------------ custom
 #pragma mark ------ readDirectoryFile
 - (void)readDirectoryFile{
     self.isUpdate = YES;

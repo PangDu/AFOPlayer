@@ -8,18 +8,18 @@
 
 #import "AFOPLMainFolderManager.h"
 
-#define AFOPLAYLISTTHUMBNAILFOLDER @"MediaImages"
+
 
 @implementation AFOPLMainFolderManager
 #pragma mark ------ 创建截图文件地址
 + (NSString *)mediaImagesCacheFolder{
     NSString *cach = [NSFileManager cachesDocumentSandbox];
-    NSString *path = [NSFileManager createFolderTarget:cach newFolder:AFOPLAYLISTTHUMBNAILFOLDER];
+    NSString *path = [NSFileManager createFolderTarget:cach newFolder:AFO_PLAYLIST_THUMBNAILFOLDER];
     return path;
 }
 #pragma mark ------ MediaImages
 + (NSString *)mediaImagesAddress{
-    return  [[NSFileManager cachesDocumentSandbox] stringByAppendingString:[NSString stringWithFormat:@"/%@",AFOPLAYLISTTHUMBNAILFOLDER]];
+    return  [[NSFileManager cachesDocumentSandbox] stringByAppendingString:[NSString stringWithFormat:@"/%@",AFO_PLAYLIST_THUMBNAILFOLDER]];
 }
 #pragma mark ------ dataBaseAddress
 + (NSString *)dataBaseAddress{

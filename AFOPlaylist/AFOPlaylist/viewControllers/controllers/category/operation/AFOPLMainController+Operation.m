@@ -48,7 +48,7 @@
     self.navigationItem.rightBarButtonItem = backItem;
 }
 #pragma mark ------ 编辑
-- (void)editorVedioOperation:(id)sender{
+- (void)editorVedioOperation:(id)sender{ 
     if (self.dataArray.count < 1) {
         return;
     }

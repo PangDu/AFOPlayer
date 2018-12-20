@@ -9,8 +9,8 @@
 #import "AFOMediaView.h"
 #import "AFOMediaControlView.h"
 @interface AFOMediaView ()<AFOMediaControlViewDelegate>
-@property (nonatomic, strong) UIImageView           *playImageView;
-@property (nonatomic, strong) AFOMediaControlView   *controlView;
+@property (nonnull,nonatomic, strong) UIImageView           *playImageView;
+@property (nonnull,nonatomic, strong) AFOMediaControlView   *controlView;
 @property (nonatomic, weak) id<AFOMediaViewDelegate> delegate;
 @end
 @implementation AFOMediaView

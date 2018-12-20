@@ -9,9 +9,9 @@
 #import "AFOMediaControlView.h"
 
 @interface AFOMediaControlView ()
-@property (nonatomic, strong) UIButton                  *playButton;
-@property (nonatomic, strong) UILabel                   *timeLabel;
-@property (nonatomic, strong) AFOProgressSliderManager  *sliderManager;
+@property (nonnull,nonatomic, strong) UIButton                  *playButton;
+@property (nonnull,nonatomic, strong) UILabel                   *timeLabel;
+@property (nonnull,nonatomic, strong) AFOProgressSliderManager  *sliderManager;
 @property (nonatomic, weak) id<AFOMediaControlViewDelegate>   delegate;
 @end
 

@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#define AFO_PLAYLIST_SCREENSHOTSVEDIOLIST @"Corresponding"
+#define AFO_PLAYLIST_THUMBNAILFOLDER        @"MediaImages"
+#define AFO_PLAYLIST_SCREENSHOTSVEDIOLIST   @"Corresponding"
 
 typedef NS_OPTIONS(NSUInteger, AFOPLMainFileType) {
     AFOPLMainFileTypeImage = 1,
     AFOPLMainFileTypeVedio = 2
 };
-typedef void(^fileExistBlock)(BOOL isHave, NSString *filePath);
 @interface AFOPLMainFolderManager : NSObject
 + (NSString *)mediaImagesCacheFolder;
 + (NSString *)dataBaseAddress;

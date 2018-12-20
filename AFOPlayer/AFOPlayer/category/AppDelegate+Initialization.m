@@ -8,7 +8,6 @@
 
 #import "AppDelegate+Initialization.h"
 #import "UIWindow+Initialization.h"
-#import <AFOFFMpeg/AFOFFMpeg.h>
 @implementation AppDelegate (Initialization)
 #pragma mark ------------ 实例方法
 #pragma mark ------ 初始化

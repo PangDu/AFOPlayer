@@ -7,8 +7,6 @@
 //
 
 #import "AFOPlayListNavigationController.h"
-@interface AFOPlayListNavigationController ()
-@end
 @implementation AFOPlayListNavigationController
 #pragma mark ------------------ viewDidLoad
 - (void)viewDidLoad {
