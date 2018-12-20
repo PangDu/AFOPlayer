@@ -20,14 +20,10 @@
     if (!self.dataArray) {
         self.dataArray = [[NSMutableArray alloc] init];
     }
-    WeakObject(self);
-    [self.mainManager getThumbnailData:^(NSArray *array,BOOL isUpdate) {
-        if (isUpdate) {
-            StrongObject(self);
-            [self.dataArray removeAllObjects];
-            [self.dataArray addObjectsFromArray:array];
+    [self.mainManager getThumbnailData:^(NSArray *array) {
+        [self.dataArray removeAllObjects];
+        [self.dataArray addObjectsFromArray:array];
             block(array);
-        }
     }];
 }
 #pragma mark ------ 视频地址

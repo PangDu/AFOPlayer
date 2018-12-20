@@ -11,7 +11,6 @@
 @property (nonnull, nonatomic, strong) AFOPLCorresponding         *corresponding;
 @property (nonnull, nonatomic, strong) NSMutableArray             *dataArray;
 @property (nonnull, nonatomic, strong) NSMutableArray             *nameArray;
-@property (nonatomic, assign)           BOOL                       isUpdate;
 @property (nonatomic, weak) id<AFOPLMainManagerDelegate>          delegate;
 @end
 @implementation AFOPLMainManager
@@ -29,7 +28,6 @@
 }
 #pragma mark ------ readDirectoryFile
 - (void)readDirectoryFile{
-    self.isUpdate = YES;
     [AFOPLCorresponding createDataBase];
     _directoryFile = [AFOReadDirectoryFile readDirectoryFiledelegate:self];
 }
@@ -64,27 +62,26 @@
     return UIInterfaceOrientationMaskLandscapeLeft;
 }
 #pragma mark ------ 获取最新数据
-- (void)getThumbnailData:(void (^)(NSArray *array,
-                                   BOOL isUpdate))block{
+- (void)getThumbnailData:(void (^)(NSArray *array))block{
     [self.dataArray removeAllObjects];
     NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:self.nameArray compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
-    if (addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase] == 0) {
+    ///---
+    if (addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count == 0) {
         [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
-            [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
-            block(self.dataArray, self.isUpdate);
+                [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
+                block(self.dataArray);
         }];
-        self.isUpdate = YES;
     }else if(addArray.count == 0 && [AFOPLCorresponding getAllDataFromDataBase].count > 0){
         [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
-        block(self.dataArray, self.isUpdate);
-        self.isUpdate = NO;
-    }else if(addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase] > 0){
+        block(self.dataArray);
+    }else if(addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count > 0){
         [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
         [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
             [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
-            block(self.dataArray, self.isUpdate);
+            block(self.dataArray);
         }];
-        self.isUpdate = YES;
+    }else{
+        block(self.dataArray);
     }
 }
 - (void)getsUnshotMovie:(NSArray *)array{
