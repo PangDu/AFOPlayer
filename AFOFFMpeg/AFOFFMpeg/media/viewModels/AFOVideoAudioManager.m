@@ -42,9 +42,7 @@
 #pragma mark ------ init
 + (void)initialize{
     if (self == [AFOVideoAudioManager class]) {
-        avcodec_register_all();
         av_register_all();
-        avformat_network_init();
     }
 }
 #pragma mark ------ add method
@@ -85,7 +83,7 @@
     ///------
     [self registerBaseMethod:strPath];
     ///------ display video
-    [self.videoManager displayVedioCodec:avCodecVideo formatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+    [self.videoManager displayVedioFormatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
     }];
     ///------ play audio
@@ -153,24 +151,5 @@
 #pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"AFOVideoAudioManager dealloc");
-    //---
-    avformat_network_deinit();
-    //---
-    if (avFormatContext) {
-        avformat_close_input(&avFormatContext);
-        avFormatContext = NULL;
-    }
-    //---
-    if (avCodecContextVideo) {
-        avcodec_close(avCodecContextVideo);
-        avcodec_free_context(&avCodecContextVideo);
-        avCodecContextVideo = NULL;
-    }
-    //---
-    if (avCcodecContextAudio) {
-        avcodec_close(avCcodecContextAudio);
-        avcodec_free_context(&avCcodecContextAudio);
-        avCcodecContextAudio = NULL;
-    }
 }
 @end

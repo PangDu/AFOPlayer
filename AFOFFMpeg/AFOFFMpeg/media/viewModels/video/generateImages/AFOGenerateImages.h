@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libavutil/imgutils.h>
-#import <libavcodec/avcodec.h>
-#import <libavformat/avformat.h>
-#import <libswscale/swscale.h>
 /**
  <#Description#>
 

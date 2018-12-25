@@ -13,7 +13,7 @@
 
 @implementation AFOMediaYUV
 #pragma mark ------ 420P -> RGBA -> CGImageRef -> image
-- (void)makeYUVToRGB:(AVFrame *)avFrame
++ (void)makeYUVToRGB:(AVFrame *)avFrame
                    width:(int)inWidth
                   height:(int)inHeight
                    scale:(int)scale

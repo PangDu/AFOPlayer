@@ -18,4 +18,5 @@
 + (NSInteger)totalSecondsDuration:(int64_t)douration;
 + (NSString *)timeFormatShort:(int64_t)douration;
 + (NSString *)currentTime:(int64_t)douration;
++ (NSInteger)totalNumberSeconds:(int64_t)douration;
 @end

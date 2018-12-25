@@ -14,10 +14,9 @@
 @end
 @interface AFOAudioManager : NSObject
 - (instancetype)initWithDelegate:(id<AFOAudioManagerDelegate>)delegate;
-- (void)audioCodec:(AVCodec *)codec
-     formatContext:(AVFormatContext *)formatContext
-      codecContext:(AVCodecContext *)codecContext
-             index:(NSInteger)index;
+- (void)audioFormatContext:(AVFormatContext *)formatContext
+              codecContext:(AVCodecContext *)codecContext
+                     index:(NSInteger)index;
 - (void)playAudio;
 - (void)stopAudio;
 @end

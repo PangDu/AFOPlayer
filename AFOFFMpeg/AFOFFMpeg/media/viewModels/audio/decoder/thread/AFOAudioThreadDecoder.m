@@ -42,11 +42,10 @@
 }
 - (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
         codecContext:(nonnull AVCodecContext *)avCodecContext
-               codec:(nonnull AVCodec *)codec
                index:(NSInteger)index{
     [self createBaseData:avCodecContext -> sample_rate];
     ///---
-    [self.audioDecoder audioDecoder:avFormatContext codecContext:avCodecContext codec:codec index:index packetSize:_packetBufferSize];
+    [self.audioDecoder audioDecoder:avFormatContext codecContext:avCodecContext index:index packetSize:_packetBufferSize];
     ///---
     [self threadDecoderAudio];
 }

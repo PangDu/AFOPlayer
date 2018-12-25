@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 @protocol AFOPlayMediaManager <NSObject>
 @optional
@@ -36,16 +35,13 @@ typedef void(^displayVedioFrameBlock)(NSError *error,
 - (instancetype)initWithDelegate:(id<AFOPlayMediaManager>)delegate;
 /**
  <#Description#>
-
- @param codec <#codec description#>
  @param formatContext <#avFormatContext description#>
  @param codecContext <#CodecContext description#>
  @param index <#index description#>
  @param block <#block description#>
  */
-- (void)displayVedioCodec:(AVCodec *)codec
-            formatContext:(AVFormatContext *)formatContext
-             codecContext:(AVCodecContext *)codecContext
-                           index:(NSInteger)index
-                           block:(displayVedioFrameBlock)block;
+- (void)displayVedioFormatContext:(AVFormatContext *)formatContext
+                     codecContext:(AVCodecContext *)codecContext
+                            index:(NSInteger)index
+                            block:(displayVedioFrameBlock)block;
 @end

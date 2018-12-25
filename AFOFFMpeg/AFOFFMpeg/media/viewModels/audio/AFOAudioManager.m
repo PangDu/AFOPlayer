@@ -28,15 +28,14 @@
     return self;
 }
 #pragma mark ------  method
-- (void)audioCodec:(AVCodec *)codec
-           formatContext:(AVFormatContext *)formatContext
-            codecContext:(AVCodecContext *)codecContext
-                   index:(NSInteger)index{
+- (void)audioFormatContext:(AVFormatContext *)formatContext
+              codecContext:(AVCodecContext *)codecContext
+                     index:(NSInteger)index{
     self.channel = codecContext -> channels;
     [self settingAudioSession:codecContext];
     ///---
     [self.threadDecoder packetBufferTimePercent:0.02f];
-    [self.threadDecoder audioDecoder:formatContext codecContext:codecContext codec:codec index:index];
+    [self.threadDecoder audioDecoder:formatContext codecContext:codecContext index:index];
     ///---
     _audioOutPut = [[AFOAudioOutPut alloc] initWithChannel:codecContext -> channels sampleRate:codecContext -> sample_rate bytesPerSample:2 delegate:self];
 }

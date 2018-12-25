@@ -13,7 +13,6 @@
     AVFormatContext     *formatContext;
     AVCodecContext      *codecContext;
     AVFrame             *avFrame;
-    AVCodec             *avCodec;
     SwrContext          *swrContext;
     void                *swrBuffer;
     short               *audioBuffer;
@@ -39,12 +38,10 @@
 #pragma mark ------ add method
 - (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
         codecContext:(nonnull AVCodecContext *)avCodecContext
-               codec:(nonnull AVCodec *)codec
                index:(NSInteger)index
           packetSize:(int)packetSize{
     formatContext = avFormatContext;
     codecContext = avCodecContext;
-    avCodec = codec;
     self.audioStream = index;
     ///---
     AVStream *audioStream =formatContext -> streams[self.audioStream];

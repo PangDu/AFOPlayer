@@ -50,6 +50,22 @@
 + (NSString *)currentTime:(int64_t)douration{
     return [NSString stringWithFormat:@"%02lld:%02lld:%02lld",douration/ 3600,(douration % 3600) / 60, douration % 60];
 }
+#pragma mark ------
++ (NSInteger)totalNumberSeconds:(int64_t)douration{
+    NSInteger total = 0;
+    if(douration != AV_NOPTS_VALUE){
+        NSInteger hours, mins, secs, us;
+        int64_t duration = douration + 5000;
+        secs = duration / AV_TIME_BASE;
+        us = duration % AV_TIME_BASE;
+        mins = secs / 60;
+        secs %= 60;
+        hours = mins/ 60;
+        mins %= 60;
+        total = hours * 3600 + mins *60 + secs;
+    }
+    return total;
+}
 - (void)dealloc{
     NSLog(@"dealloc AFOMediaTimer");
 }

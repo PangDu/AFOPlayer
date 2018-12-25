@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AFOAudioDecoder : NSObject
 - (void)audioDecoder:(nonnull AVFormatContext *)avFormatContext
         codecContext:(nonnull AVCodecContext *)avCodecContext
-               codec:(nonnull AVCodec *)codec
                index:(NSInteger)index
           packetSize:(int)packetSize;
 - (int)readAudioSamples:(short *)samples

@@ -9,21 +9,16 @@
 #import "AFOMediaErrorCodeManager.h"
 #import "AFOMediaYUV.h"
 @interface AFOGenerateImages ()
-@property (nonatomic, strong) dispatch_queue_t  patchQueue;
-@property (nonatomic, strong) UIImage          *vedioImage;
-@property (nonatomic, strong) AFOMediaYUV      *mediaYUV;
+@property (nonnull, nonatomic, strong) dispatch_queue_t  patchQueue;
 @end
 @implementation AFOGenerateImages
 #pragma mark ------ 图像数据格式的转换以及图片的缩放 方法一
 - (void)decoedImageForYUV:(struct AVFrame *)avFrame
                   outSize:(CGSize)outSize
                     block:(generateImageBlock)block{
-    WeakObject(self);
-    [self.mediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0 block:^(UIImage * _Nonnull image) {
-        StrongObject(self);
-        self.vedioImage = image;
+    [AFOMediaYUV makeYUVToRGB:avFrame width:outSize.width height:outSize.height scale:1.0 block:^(UIImage * _Nonnull image) {
+        block(image, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
     }];
-    block(self.vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
 }
 #pragma mark ------ 图像数据格式的转换以及图片的缩放 方法二
 //[self.generateImage decodingImageWithAVFrame:avFrame codecContext:avCodecContext outSize:self.outSize srcFormat: AV_PIX_FMT_YUV420P dstFormat:AV_PIX_FMT_RGB24 pixelFormat:AV_PIX_FMT_RGB24 bitsPerComponent:8 bitsPerPixel:24 block:^(UIImage *image, NSError *error) {
@@ -76,7 +71,6 @@
         av_free(avframeYUN);
         av_free(YUVBuffer);
         sws_freeContext(swsContenxt);
-        self.vedioImage = nil;
     });
 }
 #pragma mark ------ 图像数据格式的转换
@@ -148,9 +142,9 @@
                                                NO,
                                                kCGRenderingIntentDefault);
     ///------ UIImage
-   self.vedioImage = [[UIImage alloc] initWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationUp];
+   UIImage *vedioImage = [[UIImage alloc] initWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationUp];
     ///------ block
-    block(self.vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
+    block(vedioImage, [AFOMediaErrorCodeManager errorCode:AFOPlayMediaErrorNone]);
     ///------ Release
     CGColorSpaceRelease(colorSpace);
     CGDataProviderRelease(provider);
@@ -164,12 +158,6 @@
         _patchQueue = dispatch_queue_create("com.AFOMediaManager.queue", DISPATCH_QUEUE_PRIORITY_DEFAULT);
     }
     return _patchQueue;
-}
-- (AFOMediaYUV *)mediaYUV{
-    if (!_mediaYUV) {
-        _mediaYUV = [[AFOMediaYUV alloc] init];
-    }
-    return _mediaYUV;
 }
 - (void)dealloc{
     NSLog(@"dealloc AFOGenerateImages");

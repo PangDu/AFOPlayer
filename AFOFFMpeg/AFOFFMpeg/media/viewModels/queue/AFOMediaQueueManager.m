@@ -49,12 +49,13 @@
                      duration:(int64_t)time
                         block:(void (^)(NSNumber *isEnd))block{
     __block int timeout = time * fps;
-    __weak __typeof(self)weakSelf = self;
     dispatch_source_set_timer(self.sourceTimer,dispatch_walltime(NULL, 0),(1.0 /fps)* NSEC_PER_SEC, 0); //每秒执行
+    WeakObject(self);
     dispatch_source_set_event_handler(self.sourceTimer, ^{
+        StrongObject(self);
         if(timeout <= 0){ //倒计时结束，关闭
             block(@(YES));
-            dispatch_source_cancel(weakSelf.sourceTimer);
+            dispatch_source_cancel(self.sourceTimer);
         } else {
             timeout--;
             block(@(NO));
@@ -63,21 +64,13 @@
     dispatch_resume(self.sourceTimer);
 }
 #pragma mark ------------ property
-#pragma mark ------ sourceTimer
 - (dispatch_source_t)sourceTimer{
     if (!_sourceTimer) {
-        _sourceTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,self.queues);
+        _sourceTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
     }
     return _sourceTimer;
 }
-#pragma mark ------ queues
-- (dispatch_queue_t)queues{
-    if (!_queues) {
-        _queues = dispatch_queue_create([@"com.media.queueManager" UTF8String], DISPATCH_QUEUE_PRIORITY_DEFAULT);
-    }
-    return _queues;
-}
 - (void)dealloc{
-    NSLog(@"dealloc AFOMediaQueueManager");
+    NSLog(@"AFOMediaQueueManager dealloc");
 }
 @end

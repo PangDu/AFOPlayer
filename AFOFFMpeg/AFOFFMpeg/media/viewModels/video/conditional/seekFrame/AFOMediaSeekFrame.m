@@ -109,7 +109,7 @@
                 continue;
             }
             if (avFrame ->key_frame == 1) {
-                [self.meidaYUV makeYUVToRGB:avFrame width:avFrame->width height:avFrame->height scale:1.0 block:^(UIImage * _Nonnull image) {
+                [AFOMediaYUV makeYUVToRGB:avFrame width:avFrame->width height:avFrame->height scale:1.0 block:^(UIImage * _Nonnull image) {
                     NSString *strPath = [NSString stringWithFormat:@"%@/%@",imagePath,[AFOMediaThumbnail imageName:name]];
                     BOOL result = [UIImagePNGRepresentation(image) writeToFile:strPath atomically:YES];
                     block(result,result);
