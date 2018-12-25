@@ -34,6 +34,8 @@
 		2408BAFE20085E930049060F /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAFD20085E4D0049060F /* libx264.a */; };
 		240D412421B5641400B52DC2 /* AFOVideoAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 240D412221B5641400B52DC2 /* AFOVideoAudioManager.h */; };
 		240D412521B5641400B52DC2 /* AFOVideoAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 240D412321B5641400B52DC2 /* AFOVideoAudioManager.m */; };
+		2413B77A21CFD20A0073F742 /* xvid.h in Headers */ = {isa = PBXBuildFile; fileRef = 2413B77721CFD20A0073F742 /* xvid.h */; };
+		2413B77B21CFD20A0073F742 /* libxvidcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2413B77921CFD20A0073F742 /* libxvidcore.a */; };
 		242559B92025519B00065F44 /* AFOMediaOpenGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 242559B72025519B00065F44 /* AFOMediaOpenGLView.h */; };
 		242559BA2025519B00065F44 /* AFOMediaOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242559B82025519B00065F44 /* AFOMediaOpenGLView.m */; };
 		242F4575201C74E400830BF3 /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F4576201C74E400830BF3 /* AFOViews.framework */; };
@@ -298,6 +300,8 @@
 		2408BB3C200877D80049060F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		240D412221B5641400B52DC2 /* AFOVideoAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOVideoAudioManager.h; sourceTree = "<group>"; };
 		240D412321B5641400B52DC2 /* AFOVideoAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOVideoAudioManager.m; sourceTree = "<group>"; };
+		2413B77721CFD20A0073F742 /* xvid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xvid.h; sourceTree = "<group>"; };
+		2413B77921CFD20A0073F742 /* libxvidcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxvidcore.a; sourceTree = "<group>"; };
 		242559B72025519B00065F44 /* AFOMediaOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMediaOpenGLView.h; sourceTree = "<group>"; };
 		242559B82025519B00065F44 /* AFOMediaOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMediaOpenGLView.m; sourceTree = "<group>"; };
 		242F4576201C74E400830BF3 /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -542,6 +546,7 @@
 				24AF6757201B4BCB00AB5537 /* AFOGitHub.framework in Frameworks */,
 				2488594A201AC3F500623E66 /* AFOFoundation.framework in Frameworks */,
 				240487512008453600D369FB /* AFORouter.framework in Frameworks */,
+				2413B77B21CFD20A0073F742 /* libxvidcore.a in Frameworks */,
 				240487522008453600D369FB /* AFOUIKit.framework in Frameworks */,
 				24BAFED21FF4BD1D00D2EAB9 /* VideoToolbox.framework in Frameworks */,
 				24BAFED01FF4BD0700D2EAB9 /* CoreMedia.framework in Frameworks */,
@@ -709,6 +714,31 @@
 				24048781200845A600D369FB /* generateImages */,
 			);
 			path = video;
+			sourceTree = "<group>";
+		};
+		2413B77521CFD20A0073F742 /* libxvidcore */ = {
+			isa = PBXGroup;
+			children = (
+				2413B77621CFD20A0073F742 /* include */,
+				2413B77821CFD20A0073F742 /* lib */,
+			);
+			path = libxvidcore;
+			sourceTree = "<group>";
+		};
+		2413B77621CFD20A0073F742 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2413B77721CFD20A0073F742 /* xvid.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2413B77821CFD20A0073F742 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2413B77921CFD20A0073F742 /* libxvidcore.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		243FB8A121BA5F0E00EBB5E1 /* audioUnit */ = {
@@ -1153,6 +1183,7 @@
 				2408BAF820085E190049060F /* x264 */,
 				246289B921BDFACD00E14172 /* libYUV */,
 				24814F5821B4FC06001B2388 /* aac */,
+				2413B77521CFD20A0073F742 /* libxvidcore */,
 				240487AC2008460800D369FB /* AFOFFMpeg.pch */,
 			);
 			path = AFOFFMpeg;
@@ -1392,6 +1423,7 @@
 				244E319E1FFE64340094C6BB /* error.h in Headers */,
 				244E31A11FFE64340094C6BB /* replaygain.h in Headers */,
 				240487632008459600D369FB /* AFOMediaForeignInterface.h in Headers */,
+				2413B77A21CFD20A0073F742 /* xvid.h in Headers */,
 				246289D621BDFACD00E14172 /* version.h in Headers */,
 				244E31971FFE64340094C6BB /* buffersink.h in Headers */,
 				244E31A71FFE64340094C6BB /* base64.h in Headers */,
@@ -1654,6 +1686,7 @@
 					"$(PROJECT_DIR)/AFOFFMpeg/x264/lib",
 					"$(PROJECT_DIR)/AFOFFMpeg/aac/lib",
 					"$(PROJECT_DIR)/AFOFFMpeg/libYUV/lib",
+					"$(PROJECT_DIR)/AFOFFMpeg/libxvidcore/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
@@ -1696,6 +1729,7 @@
 					"$(PROJECT_DIR)/AFOFFMpeg/x264/lib",
 					"$(PROJECT_DIR)/AFOFFMpeg/aac/lib",
 					"$(PROJECT_DIR)/AFOFFMpeg/libYUV/lib",
+					"$(PROJECT_DIR)/AFOFFMpeg/libxvidcore/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (

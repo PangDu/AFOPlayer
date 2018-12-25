@@ -16,30 +16,21 @@
     AVCodecContext      *avCodecContext;
     AVFrame             *avFrame;
     AVStream            *avStream;
-    AVPacket             packet;
 }
-/**视频宽*/
-@property (nonatomic, assign, readwrite) double         videoWidth;
-/**视频高*/
-@property (nonatomic, assign, readwrite) double         videoHight;
 /**输出视频Size*/
-@property (nonatomic, assign, readwrite) CGSize         outSize;
+@property (nonatomic, assign) CGSize         outSize;
 /**视频的长度，秒为单位*/
-@property (nonatomic, assign, readwrite) int64_t        duration;
+@property (nonatomic, assign) int64_t        duration;
 /**视频的当前秒数*/
-@property (nonatomic, assign, readwrite) int64_t        currentTime;
+@property (nonatomic, assign) int64_t        currentTime;
 /**视频的当前秒数*/
-@property (nonatomic, assign, readwrite) int64_t        nowTime;
+@property (nonatomic, assign) int64_t        nowTime;
 /**视频的帧率*/
-@property (nonatomic, assign, readwrite) CGFloat         fps;
-/**视频长度*/
+@property (nonatomic, assign) CGFloat         fps;
 @property (nonatomic, assign)            NSInteger       videoStream;
 @property (nonatomic, assign)            CGFloat         videoTimeBase;
-/***/
 @property (nonatomic, assign)            BOOL            isRelease;
-/**queueManager*/
 @property (nonatomic, strong) AFOMediaQueueManager      *queueManager;
-/**generateImage*/
 @property (nonatomic, strong) AFOGenerateImages         *generateImage;
 @property (nonatomic, weak) id<AFOPlayMediaManager>      delegate;
 @end
@@ -55,8 +46,7 @@
     }
     return self;
 }
-#pragma mark ------ add method
-#pragma mark ------ 
+#pragma mark ------ displayVedio
 - (void)displayVedioCodec:(AVCodec *)codec
             formatContext:(AVFormatContext *)formatContext
              codecContext:(AVCodecContext *)codecContext
@@ -68,8 +58,6 @@
     avFormatContext =formatContext;
     ///------ 获取视频流编解码上下文指针
     avStream = avFormatContext -> streams[self.videoStream];
-    ///------
-    self.outSize = CGSizeMake(avCodecContext -> width,avCodecContext -> height);
     ///------ 正常流程，分配视频帧
     avFrame = av_frame_alloc();
     avStreamFPSTimeBase(avStream, 0.04, &_fps, &_videoTimeBase);
@@ -107,6 +95,7 @@
         }
     }];
 }
+#pragma mark ------ YUV to image
 - (void)decodingFrameToImage:(void (^) (UIImage *image, NSError *error))block{
     [self.generateImage decoedImageForYUV:avFrame outSize:self.outSize block:^(UIImage *image, NSError *error) {
         block(image,error);
@@ -114,6 +103,7 @@
 }
 #pragma mark ------ stepFrame
 - (BOOL)avReadFrame:(NSInteger)duration {
+    AVPacket  packet;
     while (av_read_frame(avFormatContext, &packet) >= 0) {
         if (packet.stream_index == duration) {
             int ret = avcodec_send_packet(avCodecContext, &packet);
@@ -139,40 +129,47 @@
         return;
     }
     NSLog(@"释放资源");
-    ///------ avFrame
-    av_frame_free(&(avFrame));
-    ///------ avStream
-    av_free(avStream);
-    ///------ packet
-    av_packet_unref(&packet);
+    if (avStream) {
+        av_frame_free(&(avFrame));
+        avStream = NULL;
+    }
+    //---
+    if (avFormatContext) {
+        avformat_close_input(&avFormatContext);
+        avFormatContext = NULL;
+    }
+    //---
+    if (avCodecContext) {
+        avcodec_close(avCodecContext);
+        avcodec_free_context(&avCodecContext);
+        avCodecContext = NULL;
+    }
     _isRelease = YES;
 }
 #pragma mark ------------ property
-#pragma mark ------ duration
 - (int64_t)duration{
     AVStream *stream = avFormatContext -> streams[_videoStream];
     return stream -> duration * av_q2d(stream -> time_base);
 }
-#pragma mark ------ currentTime
 - (int64_t)currentTime{
     AVRational timeBase = avFormatContext->streams[_videoStream]->time_base;
-    return packet.pts * (double)timeBase.num / timeBase.den;
+    return avFrame->pts * (double)timeBase.num / timeBase.den;
 }
-#pragma mark ------ fps
 - (CGFloat)fps{
     if(avStream ->avg_frame_rate.den && avStream ->avg_frame_rate.num){
        return av_q2d(avStream -> avg_frame_rate);
     }
     return 30;
 }
-#pragma mark ------ queueManager
+- (CGSize)outSize{
+    return CGSizeMake(avFrame ->width, avFrame -> height);
+}
 - (AFOMediaQueueManager *)queueManager{
     if (!_queueManager) {
         _queueManager = [[AFOMediaQueueManager alloc] init];
     }
     return _queueManager;
 }
-#pragma mark ------ generateImage
 - (AFOGenerateImages *)generateImage{
     if (!_generateImage) {
         _generateImage = [[AFOGenerateImages alloc] init];
@@ -182,7 +179,7 @@
 #pragma mark ------------ dealloc
 - (void)dealloc{
     [self freeResources];
-    NSLog(@"dealloc AFOPlayMediaManager");
+    NSLog(@"AFOPlayMediaManager dealloc");
 }
 #pragma mark ------ C
 static void avStreamFPSTimeBase(AVStream *st, CGFloat defaultTimeBase, CGFloat *pFPS, CGFloat *pTimeBase){

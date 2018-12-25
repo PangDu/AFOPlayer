@@ -15,7 +15,6 @@
     AVFormatContext     *avFormatContext;
     AVCodecContext      *avCodecContext;
     AVFrame             *avFrame;
-    AVStream            *avStream;
 }
 @property (nonatomic, assign)  NSInteger              videoStream;
 @property (nonatomic, assign)  int                    zoomFacto;
@@ -88,8 +87,6 @@
     avcodec = avcodec_find_decoder(avCodecContext -> codec_id);
     ///------ Open codec
     avcodec_open2(avCodecContext, avcodec, NULL);
-    ///------ 获取视频流编解码上下文指针
-    avStream = avFormatContext -> streams[self.videoStream];
     ///------ 正常流程，分配视频帧
     avFrame = av_frame_alloc();
     ///------
@@ -97,51 +94,45 @@
             block(isWrite, isCutting, [self createTime], name, [AFOMediaThumbnail imageName:name], self.outWidth, self.outHeight);
         }];
 }
-- (void)detectVideoStreams{
-    
-}
 #pragma mark ------ 将第一帧作为封面
 - (void)firstFrameToCover:(NSString *)path
                      name:(NSString *)name
                 imagePath:(NSString *)imagePath
                     block:(mediaSeekFrameBlock)block{
-    int i = 0;
     AVPacket packet;
     while (av_read_frame(avFormatContext, &packet) >= 0) {
-        if (packet.stream_index != self.videoStream) {
-            continue;
+        if (packet.stream_index == self.videoStream) {
+            if (avcodec_send_packet(avCodecContext, &packet) != 0) {
+                continue;
+            }
+            if (avcodec_receive_frame(avCodecContext, avFrame) != 0) {
+                continue;
+            }
+            if (avFrame ->key_frame == 1) {
+                [self.meidaYUV makeYUVToRGB:avFrame width:avFrame->width height:avFrame->height scale:1.0 block:^(UIImage * _Nonnull image) {
+                    NSString *strPath = [NSString stringWithFormat:@"%@/%@",imagePath,[AFOMediaThumbnail imageName:name]];
+                    BOOL result = [UIImagePNGRepresentation(image) writeToFile:strPath atomically:YES];
+                    block(result,result);
+                }];
+                break;
+            }
+            av_packet_unref(&packet);
         }
-        avcodec_send_packet(avCodecContext, &packet);
-        if (avcodec_receive_frame(avCodecContext, avFrame) != 0) {
-            continue;
-        }
-        // Save the frame to disk.
-        if (++i <= 1) {
-            [self.meidaYUV makeYUVToRGB:avFrame width:avFrame->width height:avFrame->height scale:1.0 block:^(UIImage * _Nonnull image) {
-            NSString *strPath = [NSString stringWithFormat:@"%@/%@",imagePath,[AFOMediaThumbnail imageName:name]];
-           BOOL result = [UIImagePNGRepresentation(image) writeToFile:strPath atomically:YES];
-                block(result,result);
-            }];
-        }else{
-            break;
-        }
-        av_packet_unref(&packet);
     }
 }
 #pragma mark ------------ free
 - (void)freeResources{
     ///------
-    av_frame_free(&avFrame);
-    ///------
-    av_free(avStream);
+    if (avFrame) {
+        av_frame_free(&avFrame);
+    }
     //------ 关闭解码器
     if (avCodecContext){
         avcodec_close(avCodecContext);
     };
     //------ 关闭文件
     if (avFormatContext) {
-        avFormatContext->interrupt_callback.opaque = NULL;
-        avFormatContext->interrupt_callback.callback = NULL;
+        avformat_close_input(&(avFormatContext));
         avFormatContext = NULL;
     }
     ///------
