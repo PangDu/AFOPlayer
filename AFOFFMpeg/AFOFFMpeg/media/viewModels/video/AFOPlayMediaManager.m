@@ -150,7 +150,7 @@
 }
 - (int64_t)currentTime{
     AVRational timeBase = avFormatContext->streams[self.videoStream]->time_base;
-    return avFrame->pts * (double)timeBase.num / timeBase.den; 
+    return avFrame->pts * (double)timeBase.num / timeBase.den;
 }
 - (CGFloat)fps{
     if([self avStream] ->avg_frame_rate.den && [self avStream] ->avg_frame_rate.num){

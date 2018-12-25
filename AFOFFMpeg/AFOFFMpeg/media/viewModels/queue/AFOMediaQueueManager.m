@@ -49,7 +49,10 @@
                      duration:(int64_t)time
                         block:(void (^)(NSNumber *isEnd))block{
     __block int timeout = time * fps;
-    dispatch_source_set_timer(self.sourceTimer,dispatch_walltime(NULL, 0),(1.0 /fps)* NSEC_PER_SEC, 0); //每秒执行
+    if (fps / 100 >= 1) {
+        fps = fps / 100;
+    }
+    dispatch_source_set_timer(self.sourceTimer,dispatch_walltime(NULL, 0),(1.0 / fps) * NSEC_PER_SEC, 0); //每秒执行
     WeakObject(self);
     dispatch_source_set_event_handler(self.sourceTimer, ^{
         StrongObject(self);
