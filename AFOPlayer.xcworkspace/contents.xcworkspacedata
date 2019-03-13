@@ -5,6 +5,9 @@
       location = "group:AFOFFMpeg/AFOFFMpeg.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:AFOPlaylist/AFOPlaylist.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AFOPlayer/AFOPlayer.xcodeproj">
    </FileRef>
 </Workspace>

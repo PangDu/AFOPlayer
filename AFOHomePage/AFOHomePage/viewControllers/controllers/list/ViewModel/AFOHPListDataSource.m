@@ -14,7 +14,6 @@
 @end
 
 @implementation AFOHPListDataSource
-#pragma mark ------------ custom
 #pragma mark ------ 数据源
 - (void)settingDataArray:(NSArray *)array index:(NSInteger)index{
     self.type = index;
@@ -37,7 +36,6 @@
     return cell;
 }
 #pragma mark ------------ property
-#pragma mark ------ dataArray
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc] init];
