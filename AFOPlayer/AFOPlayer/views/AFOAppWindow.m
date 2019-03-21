@@ -11,16 +11,12 @@
 @interface AFOAppWindow ()
 @property (nonnull, nonatomic, strong) AFOAppWindowViewModel *viewModel;
 @end
-
 @implementation AFOAppWindow
-
 #pragma mark ------------ 自定义方法
-#pragma mark ------
 - (void)tabBarInitialization:(AFOAppTabBarController *)tabBarController{
     [self.viewModel controllerInitialization:tabBarController];
 }
-#pragma mark ------------ 属性
-#pragma mark ------ viewModel
+#pragma mark ------------ property
 - (AFOAppWindowViewModel *)viewModel{
     if (!_viewModel) {
         _viewModel = [[AFOAppWindowViewModel alloc]init];

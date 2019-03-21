@@ -123,6 +123,15 @@
 			path = AFORouter;
 			sourceTree = "<group>";
 		};
+		24197D81224370C4002E4086 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2408BAFF2008622B0049060F /* plist */,
+				240903BA1FF0955D0022A943 /* Delegate */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		2437D9C21FF3602A00E12235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +173,7 @@
 			children = (
 				24CA98611FE79C0500CE9BB2 /* AFORouterManager.h */,
 				24CA98621FE79C0500CE9BB2 /* AFORouterManager.m */,
-				2408BAFF2008622B0049060F /* plist */,
-				240903BA1FF0955D0022A943 /* Delegate */,
+				24197D81224370C4002E4086 /* models */,
 				2405E6071FEA566900BAFF97 /* Category */,
 			);
 			path = Manager;

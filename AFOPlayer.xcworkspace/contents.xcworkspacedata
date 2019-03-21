@@ -5,9 +5,6 @@
       location = "group:CompileLibrary/AFOAppDelegate/AFOAppDelegateExtension.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CompileLibrary/AFOGitHub/AFOGitHub.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:CompileLibrary/AFORouter/AFORouter.xcodeproj">
    </FileRef>
    <FileRef

@@ -8,23 +8,23 @@
 
 #import "AFORouterManager.h"
 #import <UIKit/UIKit.h>
+#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
 #import <JLRoutes/JLRoutes.h>
 #import "AFORouterManager+StringManipulation.h"
 #import "AFORouterInfoplist.h"
 #import "AFORouterManagerDelegate.h"
 
-@interface AFORouterManager ()<AFORouterManagerDelegate>
+@interface AFORouterManager ()<AFORouterManagerDelegate,UIApplicationDelegate>
 @property (nonatomic, strong) JLRoutes                  *routes;
 @property (nonatomic, copy)   NSString                  *strScheme;
 @property (nonatomic, strong)       id                   rootController;
 @property (nonatomic, strong)       id                   valueModel;
 @end
 
-static AFORouterManager *shareInstance;
 @implementation AFORouterManager
-#pragma mark ------------ custom
-#pragma mark ------ 单例
+#pragma mark ------ shareInstance
 + (instancetype)shareInstance{
+    static AFORouterManager<UIApplicationDelegate> *shareInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shareInstance = [[[self class] alloc] init];
@@ -123,13 +123,15 @@ static AFORouterManager *shareInstance;
                                    params:(NSDictionary *)dictionary{
     return [self settingPushControllerRouter:controller present:present scheme:self.strScheme params:dictionary];
 }
-#pragma mark ------------ system
+#pragma mark ------ UIApplicationDelegate
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
+    return [self routeURL:url];
+}
 #pragma mark ------ dealloc
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-#pragma mark ------------ 属性
-#pragma mark ------ rootController
+#pragma mark ------ property
 - (UIViewController *)rootController{
     if (!_rootController) {
         _rootController = [[UIViewController alloc]init];

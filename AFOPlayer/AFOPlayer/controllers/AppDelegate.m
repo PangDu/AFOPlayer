@@ -12,8 +12,6 @@
 @end
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    [self windowInitialization:_tabBarController];
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

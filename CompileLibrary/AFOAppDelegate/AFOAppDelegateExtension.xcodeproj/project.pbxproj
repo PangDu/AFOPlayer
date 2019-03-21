@@ -9,24 +9,16 @@
 /* Begin PBXBuildFile section */
 		241325472243364500D51960 /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241325462243364500D51960 /* AFOGitHub.framework */; };
 		2413254B2243374A00D51960 /* AFOAppDelegateProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2413254A2243374A00D51960 /* AFOAppDelegateProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24897910224098530033C73D /* AFOAppDelegateHook+OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2489790E224098530033C73D /* AFOAppDelegateHook+OperationQueue.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		24897911224098530033C73D /* AFOAppDelegateHook+OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2489790F224098530033C73D /* AFOAppDelegateHook+OperationQueue.m */; };
 		24EB683D223BAD0100B90090 /* AFOAppDelegateForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EB683B223BAD0100B90090 /* AFOAppDelegateForeign.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24EB683E223BAD0100B90090 /* AFOAppDelegateForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EB683C223BAD0100B90090 /* AFOAppDelegateForeign.m */; };
-		24EB6841223BAE8B00B90090 /* AFOAppDelegateHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EB683F223BAE8B00B90090 /* AFOAppDelegateHook.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		24EB6842223BAE8B00B90090 /* AFOAppDelegateHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EB6840223BAE8B00B90090 /* AFOAppDelegateHook.m */; };
 		24EEAEBF223B3BEB001596DD /* AFOAppDelegateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EEAEBD223B3BEB001596DD /* AFOAppDelegateHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		241325462243364500D51960 /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2413254A2243374A00D51960 /* AFOAppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateProtocol.h; sourceTree = "<group>"; };
-		2489790E224098530033C73D /* AFOAppDelegateHook+OperationQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppDelegateHook+OperationQueue.h"; sourceTree = "<group>"; };
-		2489790F224098530033C73D /* AFOAppDelegateHook+OperationQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppDelegateHook+OperationQueue.m"; sourceTree = "<group>"; };
 		24EB683B223BAD0100B90090 /* AFOAppDelegateForeign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateForeign.h; sourceTree = "<group>"; };
 		24EB683C223BAD0100B90090 /* AFOAppDelegateForeign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegateForeign.m; sourceTree = "<group>"; };
-		24EB683F223BAE8B00B90090 /* AFOAppDelegateHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateHook.h; sourceTree = "<group>"; };
-		24EB6840223BAE8B00B90090 /* AFOAppDelegateHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegateHook.m; sourceTree = "<group>"; };
 		24EEAEBA223B3BEB001596DD /* AFOAppDelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOAppDelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EEAEBD223B3BEB001596DD /* AFOAppDelegateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,15 +43,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2489790D224097560033C73D /* category */ = {
-			isa = PBXGroup;
-			children = (
-				2489790E224098530033C73D /* AFOAppDelegateHook+OperationQueue.h */,
-				2489790F224098530033C73D /* AFOAppDelegateHook+OperationQueue.m */,
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
 		24EB683A223BAC7B00B90090 /* foreign */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +56,6 @@
 		24EB6843223BAE8E00B90090 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				24EB683F223BAE8B00B90090 /* AFOAppDelegateHook.h */,
-				24EB6840223BAE8B00B90090 /* AFOAppDelegateHook.m */,
-				2489790D224097560033C73D /* category */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -115,10 +95,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2413254B2243374A00D51960 /* AFOAppDelegateProtocol.h in Headers */,
-				24EB6841223BAE8B00B90090 /* AFOAppDelegateHook.h in Headers */,
 				24EB683D223BAD0100B90090 /* AFOAppDelegateForeign.h in Headers */,
 				24EEAEBF223B3BEB001596DD /* AFOAppDelegateHeader.h in Headers */,
-				24897910224098530033C73D /* AFOAppDelegateHook+OperationQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +167,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24897911224098530033C73D /* AFOAppDelegateHook+OperationQueue.m in Sources */,
-				24EB6842223BAE8B00B90090 /* AFOAppDelegateHook.m in Sources */,
 				24EB683E223BAD0100B90090 /* AFOAppDelegateForeign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

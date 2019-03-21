@@ -8,9 +8,9 @@
 
 #import "AppDelegate+Initialization.h"
 #import "UIWindow+Initialization.h"
+#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
 @implementation AppDelegate (Initialization)
-#pragma mark ------------ 实例方法
-#pragma mark ------ 初始化
+#pragma mark ------------ Initialization
 - (void)windowInitialization:(AFOAppTabBarController *)tabBarController{
     self.window = [[AFOAppWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -18,7 +18,7 @@
     [self.window tabBarInitialization:tabBarController];
     self.window.rootViewController = tabBarController;
     [[AFORouterManager shareInstance] settingRooterController:tabBarController];
+    [[AFOAppDelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance] queue:dispatch_get_main_queue()];
     [self.window makeKeyAndVisible];
 }
-#pragma mark ------------ 类方法
 @end

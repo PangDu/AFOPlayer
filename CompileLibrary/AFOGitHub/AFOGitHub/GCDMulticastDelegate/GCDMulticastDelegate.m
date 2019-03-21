@@ -55,25 +55,18 @@
 @end
 
 
-@interface GCDMulticastDelegate ()
-{
+@interface GCDMulticastDelegate (){
 	NSMutableArray *delegateNodes;
 }
-
 - (NSInvocation *)duplicateInvocation:(NSInvocation *)origInvocation;
-
 @end
 
-
-@interface GCDMulticastDelegateEnumerator ()
-{
+@interface GCDMulticastDelegateEnumerator (){
 	NSUInteger numNodes;
 	NSUInteger currentNodeIndex;
 	NSArray *delegateNodes;
 }
-
 - (id)initFromDelegateNodes:(NSMutableArray *)inDelegateNodes;
-
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -82,28 +75,25 @@
 
 @implementation GCDMulticastDelegate
 
-- (id)init
-{
-	if ((self = [super init]))
-	{
+- (id)init{
+	if ((self = [super init])){
 		delegateNodes = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
-- (void)addDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue
-{
-	if (delegate == nil) return;
-	if (delegateQueue == NULL) return;
+- (void)addDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue{
+	if (delegate == nil)
+        return;
+	if (delegateQueue == NULL)
+        return;
 	
 	GCDMulticastDelegateNode *node =
 	    [[GCDMulticastDelegateNode alloc] initWithDelegate:delegate delegateQueue:delegateQueue];
 	
 	[delegateNodes addObject:node];
 }
-
-- (void)removeDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue
-{
+- (void)removeDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue{
 	if (delegate == nil) return;
 	
 	NSUInteger i;

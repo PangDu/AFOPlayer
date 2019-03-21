@@ -7,10 +7,9 @@
 //
 
 #import "AFOAppDelegateForeign.h"
-#import "AFOAppDelegateHook.h"
 #import <AFOGitHub/GCDMulticastDelegate.h>
-@interface AFOAppDelegateForeign ()<AFOAppDelegateHookDelegate>
-@property (nonatomic, strong)   AFOAppDelegateHook  *hook;
+@interface AFOAppDelegateForeign ()
+@property (nonatomic, strong)   GCDMulticastDelegate    *multicastDelegate;
 @end
 @implementation AFOAppDelegateForeign
 #pragma mark ------ shareInstance
@@ -30,19 +29,19 @@
     if ([self respondsToSelector:aSelector]) {
         return self;
     }
-    return self.hook;
+    return self.multicastDelegate;
 }
 #pragma mark ------ setting target
-- (void)addImplementationTarget:(id)target{
-    NSLog(@"Thread name ====== %@",[NSThread currentThread]);
-    NSLog(@"target name ===== %@",NSStringFromClass([target class]));
+- (void)addImplementationQueueTarget:(id<UIApplicationDelegate>)target
+                               queue:(dispatch_queue_t)queue{
+    [self.multicastDelegate addDelegate:target delegateQueue:queue];
 }
 #pragma mark ------ property
-- (AFOAppDelegateHook *)hook{
-    if (!_hook) {
-        _hook = [[AFOAppDelegateHook alloc] init];
+- (GCDMulticastDelegate *)multicastDelegate{
+    if (!_multicastDelegate) {
+        _multicastDelegate = (GCDMulticastDelegate <UIApplicationDelegate> *) [[GCDMulticastDelegate alloc] init];
     }
-    return _hook;
+    return _multicastDelegate;
 }
 #pragma mark ------
 - (void)dealloc{
