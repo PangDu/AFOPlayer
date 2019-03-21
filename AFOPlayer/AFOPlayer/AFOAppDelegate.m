@@ -7,10 +7,10 @@
 //
 
 #import "AFOAppDelegate.h"
-
+#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
 @implementation AFOAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[AFOAppDelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     [self windowInitialization:self.tabBarController];
     return YES;
 }

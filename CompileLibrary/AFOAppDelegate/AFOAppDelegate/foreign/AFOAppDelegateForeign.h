@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
-@protocol AFOAppDelegateForeignDelegate <UIApplicationDelegate>
-- (void)settingDelegate:(id)target;
-@end
-
 NS_ASSUME_NONNULL_BEGIN
-@interface AFOAppDelegateForeign : NSObject<UIApplicationDelegate>
+@interface AFOAppDelegateForeign : NSObject <UIApplicationDelegate>
 + (instancetype)shareInstance;
-- (void)settingImplementationTarget:(id)target;
+- (void)addImplementationTarget:(id)target;
 @end
 
 NS_ASSUME_NONNULL_END

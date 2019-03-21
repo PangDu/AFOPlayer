@@ -141,13 +141,13 @@
 			path = GCDMulticastDelegate;
 			sourceTree = "<group>";
 		};
-		242686572020462300F9E96C /* notifaction */ = {
+		242686572020462300F9E96C /* INTUAutoRemoveObserver */ = {
 			isa = PBXGroup;
 			children = (
 				242686592020465E00F9E96C /* INTUAutoRemoveObserver.h */,
 				242686582020465E00F9E96C /* INTUAutoRemoveObserver.m */,
 			);
-			path = notifaction;
+			path = INTUAutoRemoveObserver;
 			sourceTree = "<group>";
 		};
 		2446ED0C201978A100FD5012 /* Aspects */ = {
@@ -239,11 +239,11 @@
 			isa = PBXGroup;
 			children = (
 				2458D68920102B5E00D2058C /* AFOGitHub.h */,
+				2446ED0C201978A100FD5012 /* Aspects */,
 				24132540224333E100D51960 /* GCDMulticastDelegate */,
-				242686572020462300F9E96C /* notifaction */,
+				242686572020462300F9E96C /* INTUAutoRemoveObserver */,
 				2446ED322019B4E900FD5012 /* SDWebImage */,
 				2446ED272019B45A00FD5012 /* SVPullToRefresh */,
-				2446ED0C201978A100FD5012 /* Aspects */,
 				2458D69120102C9400D2058C /* Masonry */,
 			);
 			path = AFOGitHub;

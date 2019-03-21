@@ -8,10 +8,9 @@
 
 #import "AFOAppDelegateForeign.h"
 #import "AFOAppDelegateHook.h"
+#import <AFOGitHub/GCDMulticastDelegate.h>
 @interface AFOAppDelegateForeign ()<AFOAppDelegateHookDelegate>
 @property (nonatomic, strong)   AFOAppDelegateHook  *hook;
-@property (nonatomic, strong)   NSMutableArray      *blockArray;
-@property (nonatomic, strong)   NSOperationQueue    *queue;
 @end
 @implementation AFOAppDelegateForeign
 #pragma mark ------ shareInstance
@@ -34,8 +33,7 @@
     return self.hook;
 }
 #pragma mark ------ setting target
-- (void)settingImplementationTarget:(id)target{
-    [self.blockArray addObject:target];
+- (void)addImplementationTarget:(id)target{
     NSLog(@"Thread name ====== %@",[NSThread currentThread]);
     NSLog(@"target name ===== %@",NSStringFromClass([target class]));
 }
@@ -45,12 +43,6 @@
         _hook = [[AFOAppDelegateHook alloc] init];
     }
     return _hook;
-}
-- (NSMutableArray *)blockArray{
-    if (!_blockArray) {
-        _blockArray = [[NSMutableArray alloc] init];
-    }
-    return _blockArray;
 }
 #pragma mark ------
 - (void)dealloc{

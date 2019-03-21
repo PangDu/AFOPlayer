@@ -15,6 +15,6 @@ FOUNDATION_EXPORT double AFOAppDelegateVersionNumber;
 FOUNDATION_EXPORT const unsigned char AFOAppDelegateVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AFOAppDelegate/PublicHeader.h>
-#import <AFOAppDelegate/AFOAppDelegateProtocol.h>
-#import <AFOAppDelegate/AFOAppDelegateForeign.h>
+#import <AFOAppDelegateExtension/AFOAppDelegateProtocol.h>
+#import <AFOAppDelegateExtension/AFOAppDelegateForeign.h>
 

@@ -15,7 +15,7 @@
 		24EB683E223BAD0100B90090 /* AFOAppDelegateForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EB683C223BAD0100B90090 /* AFOAppDelegateForeign.m */; };
 		24EB6841223BAE8B00B90090 /* AFOAppDelegateHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EB683F223BAE8B00B90090 /* AFOAppDelegateHook.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		24EB6842223BAE8B00B90090 /* AFOAppDelegateHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EB6840223BAE8B00B90090 /* AFOAppDelegateHook.m */; };
-		24EEAEBF223B3BEB001596DD /* AFOAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EEAEBD223B3BEB001596DD /* AFOAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24EEAEBF223B3BEB001596DD /* AFOAppDelegateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EEAEBD223B3BEB001596DD /* AFOAppDelegateHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		24EB683C223BAD0100B90090 /* AFOAppDelegateForeign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegateForeign.m; sourceTree = "<group>"; };
 		24EB683F223BAE8B00B90090 /* AFOAppDelegateHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateHook.h; sourceTree = "<group>"; };
 		24EB6840223BAE8B00B90090 /* AFOAppDelegateHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegateHook.m; sourceTree = "<group>"; };
-		24EEAEBA223B3BEB001596DD /* AFOAppDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOAppDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24EEAEBD223B3BEB001596DD /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
+		24EEAEBA223B3BEB001596DD /* AFOAppDelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOAppDelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24EEAEBD223B3BEB001596DD /* AFOAppDelegateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegateHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		24EEAEBB223B3BEB001596DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24EEAEBA223B3BEB001596DD /* AFOAppDelegate.framework */,
+				24EEAEBA223B3BEB001596DD /* AFOAppDelegateExtension.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 		24EEAEBC223B3BEB001596DD /* AFOAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				24EEAEBD223B3BEB001596DD /* AFOAppDelegate.h */,
+				24EEAEBD223B3BEB001596DD /* AFOAppDelegateHeader.h */,
 				24EB683A223BAC7B00B90090 /* foreign */,
 				24EB6843223BAE8E00B90090 /* models */,
 			);
@@ -114,20 +114,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EB6841223BAE8B00B90090 /* AFOAppDelegateHook.h in Headers */,
 				2413254B2243374A00D51960 /* AFOAppDelegateProtocol.h in Headers */,
-				24EEAEBF223B3BEB001596DD /* AFOAppDelegate.h in Headers */,
-				24897910224098530033C73D /* AFOAppDelegateHook+OperationQueue.h in Headers */,
+				24EB6841223BAE8B00B90090 /* AFOAppDelegateHook.h in Headers */,
 				24EB683D223BAD0100B90090 /* AFOAppDelegateForeign.h in Headers */,
+				24EEAEBF223B3BEB001596DD /* AFOAppDelegateHeader.h in Headers */,
+				24897910224098530033C73D /* AFOAppDelegateHook+OperationQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		24EEAEB9223B3BEB001596DD /* AFOAppDelegate */ = {
+		24EEAEB9223B3BEB001596DD /* AFOAppDelegateExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24EEAEC2223B3BEB001596DD /* Build configuration list for PBXNativeTarget "AFOAppDelegate" */;
+			buildConfigurationList = 24EEAEC2223B3BEB001596DD /* Build configuration list for PBXNativeTarget "AFOAppDelegateExtension" */;
 			buildPhases = (
 				24EEAEB5223B3BEB001596DD /* Headers */,
 				24EEAEB6223B3BEB001596DD /* Sources */,
@@ -138,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = AFOAppDelegate;
+			name = AFOAppDelegateExtension;
 			productName = AFOAppDelegate;
-			productReference = 24EEAEBA223B3BEB001596DD /* AFOAppDelegate.framework */;
+			productReference = 24EEAEBA223B3BEB001596DD /* AFOAppDelegateExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24EEAEB4223B3BEB001596DD /* Build configuration list for PBXProject "AFOAppDelegate" */;
+			buildConfigurationList = 24EEAEB4223B3BEB001596DD /* Build configuration list for PBXProject "AFOAppDelegateExtension" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24EEAEB9223B3BEB001596DD /* AFOAppDelegate */,
+				24EEAEB9223B3BEB001596DD /* AFOAppDelegateExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -377,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24EEAEB4223B3BEB001596DD /* Build configuration list for PBXProject "AFOAppDelegate" */ = {
+		24EEAEB4223B3BEB001596DD /* Build configuration list for PBXProject "AFOAppDelegateExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24EEAEC0223B3BEB001596DD /* Debug */,
@@ -386,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24EEAEC2223B3BEB001596DD /* Build configuration list for PBXNativeTarget "AFOAppDelegate" */ = {
+		24EEAEC2223B3BEB001596DD /* Build configuration list for PBXNativeTarget "AFOAppDelegateExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24EEAEC3223B3BEB001596DD /* Debug */,
