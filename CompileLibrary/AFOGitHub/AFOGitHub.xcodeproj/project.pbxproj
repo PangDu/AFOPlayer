@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241325432243345100D51960 /* GCDMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 241325412243345100D51960 /* GCDMulticastDelegate.m */; };
+		241325442243345100D51960 /* GCDMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 241325422243345100D51960 /* GCDMulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2426865A2020465E00F9E96C /* INTUAutoRemoveObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 242686582020465E00F9E96C /* INTUAutoRemoveObserver.m */; };
 		2426865B2020465E00F9E96C /* INTUAutoRemoveObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 242686592020465E00F9E96C /* INTUAutoRemoveObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2446ED0F201978A200FD5012 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED0D201978A100FD5012 /* Aspects.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241325412243345100D51960 /* GCDMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDMulticastDelegate.m; sourceTree = "<group>"; };
+		241325422243345100D51960 /* GCDMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDMulticastDelegate.h; sourceTree = "<group>"; };
 		242686582020465E00F9E96C /* INTUAutoRemoveObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTUAutoRemoveObserver.m; sourceTree = "<group>"; };
 		242686592020465E00F9E96C /* INTUAutoRemoveObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUAutoRemoveObserver.h; sourceTree = "<group>"; };
 		2446ED0D201978A100FD5012 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24132540224333E100D51960 /* GCDMulticastDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				241325422243345100D51960 /* GCDMulticastDelegate.h */,
+				241325412243345100D51960 /* GCDMulticastDelegate.m */,
+			);
+			path = GCDMulticastDelegate;
+			sourceTree = "<group>";
+		};
 		242686572020462300F9E96C /* notifaction */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				2458D68920102B5E00D2058C /* AFOGitHub.h */,
+				24132540224333E100D51960 /* GCDMulticastDelegate */,
 				242686572020462300F9E96C /* notifaction */,
 				2446ED322019B4E900FD5012 /* SDWebImage */,
 				2446ED272019B45A00FD5012 /* SVPullToRefresh */,
@@ -325,6 +339,7 @@
 				2446ED302019B45A00FD5012 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
 				2458D6AC20102C9400D2058C /* MASConstraint.h in Headers */,
 				2426865B2020465E00F9E96C /* INTUAutoRemoveObserver.h in Headers */,
+				241325442243345100D51960 /* GCDMulticastDelegate.h in Headers */,
 				2446ED312019B45A00FD5012 /* UIScrollView+SVPullToRefresh.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +416,7 @@
 				2446ED10201978A200FD5012 /* Aspects.m in Sources */,
 				2426865A2020465E00F9E96C /* INTUAutoRemoveObserver.m in Sources */,
 				2446ED2F2019B45A00FD5012 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				241325432243345100D51960 /* GCDMulticastDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

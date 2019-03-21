@@ -14,10 +14,6 @@
 		240903BC1FF0955D0022A943 /* AFORouterManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 240903BB1FF0955D0022A943 /* AFORouterManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		240BAB781FE1238200D58435 /* AFORouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 240BAB761FE1238200D58435 /* AFORouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		243A8D2B1FF0D100004BA1CE /* AFORouterNamesPace.h in Headers */ = {isa = PBXBuildFile; fileRef = 243A8D2A1FF0D100004BA1CE /* AFORouterNamesPace.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2458D6BA2010751F00D2058C /* GCDMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2458D6B82010751F00D2058C /* GCDMulticastDelegate.h */; };
-		2458D6BB2010751F00D2058C /* GCDMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2458D6B92010751F00D2058C /* GCDMulticastDelegate.m */; };
-		2458D6BE2010769800D2058C /* AFOMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2458D6BC2010769800D2058C /* AFOMulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2458D6BF2010769800D2058C /* AFOMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2458D6BD2010769800D2058C /* AFOMulticastDelegate.m */; };
 		24940C291FE8B33F008F958A /* libJLRoutes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24940C231FE8B33F008F958A /* libJLRoutes.a */; };
 		24940C2A1FE8B33F008F958A /* JLRRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 24940C241FE8B33F008F958A /* JLRRouteRequest.h */; };
 		24940C2B1FE8B33F008F958A /* JLRRouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 24940C251FE8B33F008F958A /* JLRRouteResponse.h */; };
@@ -51,10 +47,6 @@
 		240BAB731FE1238200D58435 /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240BAB761FE1238200D58435 /* AFORouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFORouter.h; sourceTree = "<group>"; };
 		243A8D2A1FF0D100004BA1CE /* AFORouterNamesPace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFORouterNamesPace.h; sourceTree = "<group>"; };
-		2458D6B82010751F00D2058C /* GCDMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDMulticastDelegate.h; sourceTree = "<group>"; };
-		2458D6B92010751F00D2058C /* GCDMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDMulticastDelegate.m; sourceTree = "<group>"; };
-		2458D6BC2010769800D2058C /* AFOMulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMulticastDelegate.h; sourceTree = "<group>"; };
-		2458D6BD2010769800D2058C /* AFOMulticastDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMulticastDelegate.m; sourceTree = "<group>"; };
 		24940C231FE8B33F008F958A /* libJLRoutes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libJLRoutes.a; sourceTree = "<group>"; };
 		24940C241FE8B33F008F958A /* JLRRouteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteRequest.h; sourceTree = "<group>"; };
 		24940C251FE8B33F008F958A /* JLRRouteResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteResponse.h; sourceTree = "<group>"; };
@@ -146,17 +138,6 @@
 			path = ModelName;
 			sourceTree = "<group>";
 		};
-		2458D6B72010751F00D2058C /* GCDMulticastDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				2458D6BC2010769800D2058C /* AFOMulticastDelegate.h */,
-				2458D6BD2010769800D2058C /* AFOMulticastDelegate.m */,
-				2458D6B82010751F00D2058C /* GCDMulticastDelegate.h */,
-				2458D6B92010751F00D2058C /* GCDMulticastDelegate.m */,
-			);
-			path = GCDMulticastDelegate;
-			sourceTree = "<group>";
-		};
 		24940C221FE8B33F008F958A /* JLRoutes */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +154,6 @@
 		24CA985E1FE79B6000CE9BB2 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				2458D6B72010751F00D2058C /* GCDMulticastDelegate */,
 				24940C221FE8B33F008F958A /* JLRoutes */,
 			);
 			path = Framework;
@@ -201,8 +181,6 @@
 				24940C2E1FE8B33F008F958A /* JLRoutes.h in Headers */,
 				24940C2B1FE8B33F008F958A /* JLRRouteResponse.h in Headers */,
 				240903BC1FF0955D0022A943 /* AFORouterManagerDelegate.h in Headers */,
-				2458D6BE2010769800D2058C /* AFOMulticastDelegate.h in Headers */,
-				2458D6BA2010751F00D2058C /* GCDMulticastDelegate.h in Headers */,
 				243A8D2B1FF0D100004BA1CE /* AFORouterNamesPace.h in Headers */,
 				24940C2D1FE8B33F008F958A /* JLRRouteDefinition.h in Headers */,
 				240BAB781FE1238200D58435 /* AFORouter.h in Headers */,
@@ -283,11 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2458D6BB2010751F00D2058C /* GCDMulticastDelegate.m in Sources */,
 				24CA98641FE79C0500CE9BB2 /* AFORouterManager.m in Sources */,
 				2408BB032008624B0049060F /* AFORouterInfoplist.m in Sources */,
 				2405E6061FEA565A00BAFF97 /* AFORouterManager+StringManipulation.m in Sources */,
-				2458D6BF2010769800D2058C /* AFOMulticastDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

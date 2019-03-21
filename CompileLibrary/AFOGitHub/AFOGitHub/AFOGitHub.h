@@ -18,7 +18,6 @@ FOUNDATION_EXPORT const unsigned char AFOGitHubVersionString[];
 #import <AFOGitHub/Masonry.h>
 #import <AFOGitHub/Aspects.h>
 #import <AFOGitHub/SVPullToRefresh.h>
-/************/
 #import <AFOGitHub/UIImageView+WebCache.h>
-/************/
 #import <AFOGitHub/INTUAutoRemoveObserver.h>
+#import <AFOGitHub/GCDMulticastDelegate.h>
