@@ -19,8 +19,7 @@
 		2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404874D20083C7600D369FB /* libiconv.tbd */; };
 		2408BAE2200856870049060F /* AFOAppWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD4200856870049060F /* AFOAppWindow.m */; };
 		2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD7200856870049060F /* AFOAppTabBarController.m */; };
-		2408BAE4200856870049060F /* AFOAppWindowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BADB200856870049060F /* AFOAppWindowViewModel.m */; };
-		2408BAE8200856A90049060F /* AppDelegate+Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAE7200856A90049060F /* AppDelegate+Initialization.m */; };
+		2408BAE4200856870049060F /* AFOAddControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BADB200856870049060F /* AFOAddControllerModel.m */; };
 		2408BAEC20085BAF0049060F /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF020085BAF0049060F /* AFORouter.framework */; };
 		2408BAED20085BAF0049060F /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF120085BAF0049060F /* AFOUIKit.framework */; };
 		2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB38200877410049060F /* libsqlite3.tbd */; };
@@ -32,7 +31,6 @@
 		2413253C22432CD900D51960 /* AFOHomePage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
 		2413254D2243420500D51960 /* AFOAppDelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2413254C2243420500D51960 /* AFOAppDelegateExtension.framework */; };
-		242A703C2021E4DD0064A1AC /* UIWindow+Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */; };
 		242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FAA98205FA38400C82B66 /* AFOSetting.framework */; };
 		24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */; };
 		246EFE0E21BCB12C000C3C44 /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */; };
@@ -60,11 +58,8 @@
 		2408BAD4200856870049060F /* AFOAppWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppWindow.m; sourceTree = "<group>"; };
 		2408BAD7200856870049060F /* AFOAppTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppTabBarController.m; sourceTree = "<group>"; };
 		2408BAD8200856870049060F /* AFOAppTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppTabBarController.h; sourceTree = "<group>"; };
-		2408BADA200856870049060F /* AFOAppModelsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppModelsHeader.h; sourceTree = "<group>"; };
-		2408BADB200856870049060F /* AFOAppWindowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAppWindowViewModel.m; sourceTree = "<group>"; };
-		2408BADC200856870049060F /* AFOAppWindowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAppWindowViewModel.h; sourceTree = "<group>"; };
-		2408BAE6200856A90049060F /* AppDelegate+Initialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Initialization.h"; sourceTree = "<group>"; };
-		2408BAE7200856A90049060F /* AppDelegate+Initialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Initialization.m"; sourceTree = "<group>"; };
+		2408BADB200856870049060F /* AFOAddControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAddControllerModel.m; sourceTree = "<group>"; };
+		2408BADC200856870049060F /* AFOAddControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAddControllerModel.h; sourceTree = "<group>"; };
 		2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFFMpeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2408BAEF20085BAF0049060F /* AFOPlaylist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOPlaylist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2408BAF020085BAF0049060F /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,8 +75,6 @@
 		2413253D22432DAC00D51960 /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
 		2413253E22432DAC00D51960 /* AFOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegate.m; sourceTree = "<group>"; };
 		2413254C2243420500D51960 /* AFOAppDelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOAppDelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		242A703A2021E4DD0064A1AC /* UIWindow+Initialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Initialization.h"; sourceTree = "<group>"; };
-		242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Initialization.m"; sourceTree = "<group>"; };
 		242FAA98205FA38400C82B66 /* AFOSetting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSetting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOHomePage.bundle; sourceTree = "<group>"; };
@@ -160,23 +153,10 @@
 		2408BAD9200856870049060F /* models */ = {
 			isa = PBXGroup;
 			children = (
-				2408BAE5200856A90049060F /* category */,
-				2408BADA200856870049060F /* AFOAppModelsHeader.h */,
-				2408BADC200856870049060F /* AFOAppWindowViewModel.h */,
-				2408BADB200856870049060F /* AFOAppWindowViewModel.m */,
+				2408BADC200856870049060F /* AFOAddControllerModel.h */,
+				2408BADB200856870049060F /* AFOAddControllerModel.m */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		2408BAE5200856A90049060F /* category */ = {
-			isa = PBXGroup;
-			children = (
-				2408BAE6200856A90049060F /* AppDelegate+Initialization.h */,
-				2408BAE7200856A90049060F /* AppDelegate+Initialization.m */,
-				242A703A2021E4DD0064A1AC /* UIWindow+Initialization.h */,
-				242A703B2021E4DD0064A1AC /* UIWindow+Initialization.m */,
-			);
-			path = category;
 			sourceTree = "<group>";
 		};
 		240B10832007A5F70007F2F3 = {
@@ -331,11 +311,9 @@
 			files = (
 				2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */,
 				2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */,
-				2408BAE8200856A90049060F /* AppDelegate+Initialization.m in Sources */,
-				242A703C2021E4DD0064A1AC /* UIWindow+Initialization.m in Sources */,
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
 				240B109F2007A5F70007F2F3 /* main.m in Sources */,
-				2408BAE4200856870049060F /* AFOAppWindowViewModel.m in Sources */,
+				2408BAE4200856870049060F /* AFOAddControllerModel.m in Sources */,
 				2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */,
 				240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */,
 			);

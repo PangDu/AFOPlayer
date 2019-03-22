@@ -37,4 +37,12 @@
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     return UIInterfaceOrientationMaskPortrait;
 }
+#pragma mark ------ property
+- (AFOAppWindow *)window{
+    if (!_window) {
+        _window = [[AFOAppWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _window.backgroundColor = [UIColor whiteColor];
+    }
+    return _window;
+}
 @end

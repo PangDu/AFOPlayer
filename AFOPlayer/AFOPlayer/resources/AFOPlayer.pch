@@ -14,6 +14,7 @@
 /*------基础库------*/
 #import <AFOUIKit/AFOUIKit.h>
 #import <AFORouter/AFORouter.h>
+#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
 /*---------------------------------------------------------*/
 /*------首页------*/
 #import <AFOHomePage/AFOHomePage.h>
@@ -23,16 +24,14 @@
 #import <AFOSetting/AFOSetting.h>
 
 /*---------------------------------------------------------*/
-
 /*------ViewModels------*/
-#import "AFOAppModelsHeader.h"
-
+#import "AFOAddControllerModel.h"
 /*-----Views------*/
 #import "AFOAppWindow.h"
-
 /*------ViewController------*/
 #import "AFOAppTabBarController.h"
 
 /*------AppDelegate------*/
-#import "AppDelegate+Initialization.h"
+#import "AppDelegate.h"
+#import "AFOAppDelegate.h"
 #endif /* AFOPlayer_pch */

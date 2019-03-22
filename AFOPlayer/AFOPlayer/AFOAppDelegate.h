@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOAppDelegate : AppDelegate
-
+@property (nonatomic, strong, nonnull) AFOAppTabBarController    *tabBarController;
 @end
 
 NS_ASSUME_NONNULL_END

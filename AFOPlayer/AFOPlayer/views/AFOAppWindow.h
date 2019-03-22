@@ -10,5 +10,4 @@
 
 @class AFOAppTabBarController;
 @interface AFOAppWindow : AFOWindow
-- (void)tabBarInitialization:(AFOAppTabBarController *)tabBarController;
 @end

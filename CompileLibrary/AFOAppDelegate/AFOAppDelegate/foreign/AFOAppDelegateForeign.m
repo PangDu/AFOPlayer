@@ -32,9 +32,15 @@
     return self.multicastDelegate;
 }
 #pragma mark ------ setting target
-- (void)addImplementationQueueTarget:(id<UIApplicationDelegate>)target
+- (void)addImplementationQueueTarget:(id)target
                                queue:(dispatch_queue_t)queue{
     [self.multicastDelegate addDelegate:target delegateQueue:queue];
+}
+- (void)addImplementationArray:(NSArray *)array
+                         queue:(dispatch_queue_t)queue{
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self addImplementationQueueTarget:obj queue:queue];
+    }];
 }
 #pragma mark ------ property
 - (GCDMulticastDelegate *)multicastDelegate{

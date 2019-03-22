@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 @class AFOAppTabBarController;
-@interface AFOAppWindowViewModel : NSObject
+@interface AFOAddControllerModel : NSObject
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController;
 @end

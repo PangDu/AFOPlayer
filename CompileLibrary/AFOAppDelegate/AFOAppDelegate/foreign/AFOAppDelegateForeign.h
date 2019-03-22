@@ -12,7 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface AFOAppDelegateForeign : NSObject <UIApplicationDelegate>
 + (instancetype)shareInstance;
-- (void)addImplementationQueueTarget:(id<UIApplicationDelegate>)target
+- (void)addImplementationArray:(NSArray *)array
+                         queue:(dispatch_queue_t)queue;
+- (void)addImplementationQueueTarget:(id)target
                                queue:(dispatch_queue_t)queue;
 @end
 

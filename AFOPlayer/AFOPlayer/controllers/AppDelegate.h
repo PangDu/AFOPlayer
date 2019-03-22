@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (nonatomic, strong) AFOAppTabBarController    *tabBarController;
 @property (nonatomic, strong) AFOAppWindow              *window;
 @end
 
