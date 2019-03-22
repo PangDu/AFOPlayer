@@ -30,7 +30,6 @@
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253C22432CD900D51960 /* AFOHomePage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
-		2413254D2243420500D51960 /* AFOAppDelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2413254C2243420500D51960 /* AFOAppDelegateExtension.framework */; };
 		242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FAA98205FA38400C82B66 /* AFOSetting.framework */; };
 		24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */; };
 		246EFE0E21BCB12C000C3C44 /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */; };
@@ -40,6 +39,7 @@
 		24C3571721C0FDD500F187DE /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C3571621C0FDD500F187DE /* AFOFoundation.framework */; };
 		24D8F827201CB34700E99AAF /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8F828201CB34700E99AAF /* AFOViews.framework */; };
 		24D9406C21C692C4004D260D /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D9406B21C692C4004D260D /* AFOSQLite.framework */; };
+		24D979462244CA4E007253DB /* AFODelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D979452244CA4E007253DB /* AFODelegateExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +74,6 @@
 		240B109E2007A5F70007F2F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2413253D22432DAC00D51960 /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
 		2413253E22432DAC00D51960 /* AFOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegate.m; sourceTree = "<group>"; };
-		2413254C2243420500D51960 /* AFOAppDelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOAppDelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242FAA98205FA38400C82B66 /* AFOSetting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSetting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOHomePage.bundle; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		24C3571621C0FDD500F187DE /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D8F828201CB34700E99AAF /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D9406B21C692C4004D260D /* AFOSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D979452244CA4E007253DB /* AFODelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFODelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
 				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
 				2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */,
-				2413254D2243420500D51960 /* AFOAppDelegateExtension.framework in Frameworks */,
+				24D979462244CA4E007253DB /* AFODelegateExtension.framework in Frameworks */,
 				24D9406C21C692C4004D260D /* AFOSQLite.framework in Frameworks */,
 				24926DBE21C155AC00639477 /* AFOPlaylist.framework in Frameworks */,
 				24C3571721C0FDD500F187DE /* AFOFoundation.framework in Frameworks */,
@@ -210,11 +210,11 @@
 				2404874B20083C6D00D369FB /* libbz2.tbd */,
 				2404874920083C6700D369FB /* libz.tbd */,
 				2408BB38200877410049060F /* libsqlite3.tbd */,
+				24D979452244CA4E007253DB /* AFODelegateExtension.framework */,
 				24D9406B21C692C4004D260D /* AFOSQLite.framework */,
 				24C3571621C0FDD500F187DE /* AFOFoundation.framework */,
 				242FAA98205FA38400C82B66 /* AFOSetting.framework */,
 				24D8F828201CB34700E99AAF /* AFOViews.framework */,
-				2413254C2243420500D51960 /* AFOAppDelegateExtension.framework */,
 				24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */,
 				24898148200F2DA3008FB71D /* AFOHomePage.framework */,
 				2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */,

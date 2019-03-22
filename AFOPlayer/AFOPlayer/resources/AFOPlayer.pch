@@ -14,7 +14,7 @@
 /*------基础库------*/
 #import <AFOUIKit/AFOUIKit.h>
 #import <AFORouter/AFORouter.h>
-#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
+#import <AFODelegateExtension/AFODelegateExtension.h>
 /*---------------------------------------------------------*/
 /*------首页------*/
 #import <AFOHomePage/AFOHomePage.h>

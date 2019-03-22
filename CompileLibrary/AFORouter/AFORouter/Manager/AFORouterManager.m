@@ -8,7 +8,6 @@
 
 #import "AFORouterManager.h"
 #import <UIKit/UIKit.h>
-#import <AFOAppDelegateExtension/AFOAppDelegateHeader.h>
 #import <JLRoutes/JLRoutes.h>
 #import "AFORouterManager+StringManipulation.h"
 #import "AFORouterInfoplist.h"

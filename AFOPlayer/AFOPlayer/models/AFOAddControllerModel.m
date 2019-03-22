@@ -16,9 +16,9 @@
  播放列表
  */
 @property (nullable, nonatomic, strong) AFOPlayListForeign *playListForeign;
-///**
-// 设置
-// */
+/**
+设置
+ */
 @property (nullable, nonatomic, strong) AFOSettingForeign *settingPublicController;
 @end
 @implementation AFOAddControllerModel

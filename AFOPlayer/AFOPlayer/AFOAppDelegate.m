@@ -13,13 +13,12 @@
 @implementation AFOAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.rootViewController = self.tabBarController;
-    [[AFORouterManager shareInstance] settingRooterController:self.tabBarController];
-    [[AFOAppDelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance] queue:dispatch_get_main_queue()];
+    [[AFODelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance]];
     [self.window makeKeyAndVisible];
-    return [[AFOAppDelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
-    return [[AFOAppDelegateForeign shareInstance]application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    return [[AFODelegateForeign shareInstance]application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     return self.window.rootViewController.supportedInterfaceOrientations;
@@ -35,6 +34,7 @@
     if (!_tabBarController) {
         _tabBarController = [[AFOAppTabBarController alloc] init];
         [self.addModel controllerInitialization:_tabBarController];
+        [[AFORouterManager shareInstance] settingRooterController:self.tabBarController];
     }
     return _tabBarController;
 }
