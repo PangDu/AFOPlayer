@@ -9,4 +9,4 @@ Overall engineering introduction。
 使用多种方式去播放视频。
 iOS播放器
 整体工程介绍:
-https://www.jianshu.com/p/3f046607a86f
+https://juejin.im/post/5c9a2b896fb9a070df1671dd
