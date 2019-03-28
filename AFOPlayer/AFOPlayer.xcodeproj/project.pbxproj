@@ -459,7 +459,7 @@
 					"-all_load",
 					"-w",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOAbstractFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -487,7 +487,7 @@
 					"-all_load",
 					"-w",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOAbstractFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "AFODelegateForeign.h"
 #import <AFOGitHub/GCDMulticastDelegate.h>
-@interface AFODelegateForeign ()<UIApplicationDelegate>
+@interface AFODelegateForeign ()
 @property (nonatomic, strong)   GCDMulticastDelegate    *multicastDelegate;
 @end
 @implementation AFODelegateForeign
@@ -26,9 +26,6 @@
     return NO;
 }
 - (id)forwardingTargetForSelector:(SEL)aSelector{
-    if ([self respondsToSelector:aSelector]) {
-        return self;
-    }
     return self.multicastDelegate;
 }
 #pragma mark ------ setting target

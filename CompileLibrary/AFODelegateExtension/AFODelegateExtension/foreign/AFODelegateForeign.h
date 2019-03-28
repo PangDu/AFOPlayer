@@ -7,7 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface AFODelegateForeign : NSObject
+@interface AFODelegateForeign : NSObject<UIApplicationDelegate>
 + (instancetype)shareInstance;
 - (void)addImplementationQueueTarget:(id)target;
 - (void)addImplementationQueueTarget:(id)target
