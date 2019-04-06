@@ -8,9 +8,11 @@
 
 #import "AFOHPListDataSource.h"
 #import "AFOHPListCell.h"
+#import "AFOHPListViewModel.h"
 @interface AFOHPListDataSource ()
-@property (nonatomic, assign) NSInteger       type;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, assign) NSInteger              type;
+@property (nonatomic, strong) NSMutableArray        *dataArray;
+@property (nonatomic, strong) AFOHPListViewModel    *viewModel;
 @end
 
 @implementation AFOHPListDataSource
@@ -32,7 +34,10 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     }
-    [cell settingSubviewsValue:self.dataArray[indexPath.row] type:self.type];
+    ///---
+    [self.viewModel settingAlbumObject:self.dataArray[indexPath.row] block:^(NSString *name) {
+            cell.block(name, [AFOHPListViewModel artistsNameObject:self.dataArray[indexPath.row]], [AFOHPListViewModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
+    }];
     return cell;
 }
 #pragma mark ------------ property
@@ -41,5 +46,11 @@
         _dataArray = [[NSMutableArray alloc] init];
     }
     return _dataArray;
+}
+- (AFOHPListViewModel *)viewModel{
+    if (!_viewModel) {
+        _viewModel = [[AFOHPListViewModel alloc] init];
+    }
+    return _viewModel;
 }
 @end

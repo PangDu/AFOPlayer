@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^AFOHPListCellBlock)(NSString *title,
+                                  NSString *artists,
+                                  UIImage *image,
+                                  NSInteger type);
 @interface AFOHPListCell : UITableViewCell
-- (void)settingSubviewsValue:(id)object type:(NSInteger)type;
+@property (nonatomic, assign, readonly) CGSize     imageSize;
+@property (nonatomic, copy) AFOHPListCellBlock     block;
 @end
