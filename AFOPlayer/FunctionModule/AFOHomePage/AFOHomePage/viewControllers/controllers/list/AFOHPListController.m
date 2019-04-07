@@ -25,7 +25,6 @@
     [self.view addSubview:self.tableView];
     [self tableViewdidSelectRowAtIndexPathExchange];
 }
-#pragma mark ------------ custom
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
     NSDictionary *parameters = model;
@@ -37,7 +36,6 @@
         [weakSelf.tableView reloadData];
     }];
 }
-#pragma mark ------------ system
 #pragma mark ------ UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
@@ -57,14 +55,12 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark ------------ property
-#pragma mark ------ mediaQuery
 - (AFOHPListViewModel *)viewModel{
     if (!_viewModel) {
         _viewModel = [[AFOHPListViewModel alloc] init];
     }
     return _viewModel;
 }
-#pragma mark ------ dataSource
 - (AFOHPListDataSource *)dataSource{
     if (!_dataSource) {
         _dataSource = [[AFOHPListDataSource alloc] init];
@@ -72,10 +68,9 @@
     return _dataSource;
 }
 #pragma mark ------------ property
-#pragma mark ------ tableView
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource =self.dataSource;
     }

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^AFOHPDetailCellBlock)(NSString *albumTitle,
+                                    NSString *title,
+                                    UIImage  *image,
+                                    NSInteger type);
+
 @interface AFOHPDetailCell : UITableViewCell
-- (void)settingSubViews:(id)object type:(NSInteger)type;
+@property (nonatomic, copy) AFOHPDetailCellBlock block;
+@property (nonatomic, assign, readonly) CGSize imageSize;
 @end

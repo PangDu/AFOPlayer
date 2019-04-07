@@ -7,53 +7,52 @@
 //
 
 #import "AFOHPDetailCell.h"
-#import "AFOHPDetailViewModel.h"
-
 @interface AFOHPDetailCell ()
-@property (nonatomic , assign) NSInteger   type;
-@property (nonatomic, strong) UIImageView *albumImageView;
-@property (nonatomic, strong) UILabel     *albumLB;
-@property (nonatomic, strong) UILabel     *songLB;
+@property (nonatomic, strong) UIImageView      *albumImageView;
+@property (nonatomic, strong) UILabel          *albumLB;
+@property (nonatomic, strong) UILabel          *songLB;
+@property (nonatomic, assign, readwrite) CGSize imageSize;
 @end
 
 @implementation AFOHPDetailCell
 
-#pragma mark ------------ init
+#pragma mark ------------ initWithStyle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self cellAddSubView];
     }
     return self;
 }
-#pragma mark ------ 添加控件
+#pragma mark ------ cellAddSubView
 - (void)cellAddSubView{
     ///------ 专辑图
     self.albumImageView.frame = CGRectMake(10, 20, 60, 60);
     [self.contentView addSubview:self.albumImageView];
-    ///------ 专辑名
+    _imageSize = CGSizeMake(60, 60);
+    ///--- 专辑名
     self.albumLB.frame = CGRectMake(CGRectGetWidth(self.albumImageView.bounds) + 20, 10, 200, 20);
     [self.contentView addSubview:self.albumLB];
-    ///------ 歌曲名
+    ///--- 歌曲名
     self.songLB.frame = CGRectMake(CGRectGetWidth(self.albumImageView.bounds) +20, CGRectGetHeight(self.albumLB.frame) + 20, 200, CGRectGetHeight(self.bounds));
     [self.contentView addSubview:self.songLB];
-}
-#pragma mark ------ 控件赋值
-- (void)settingSubViews:(id)object type:(NSInteger)type{
-    self.type = type;
-    if (self.type == 2) {
-        self.albumLB.hidden = YES;
-        self.songLB.textAlignment = NSTextAlignmentCenter;
-    }
-      __weak typeof(self) weakSelf = self;
-    [AFOHPDetailViewModel songsDetails:object block:^(NSDictionary *dictionary) {
-        weakSelf.albumLB.text = dictionary[@"albumTitle"];
-        weakSelf.songLB.text  = dictionary[@"title"];
-    }];
-    ///------ 专辑图片
-    self.albumImageView.image = [AFOHPDetailViewModel albumImageWithSize:CGSizeMake(CGRectGetWidth(self.albumImageView.frame), CGRectGetHeight(self.albumImageView.frame)) object:object];
+    ///---
+    WeakObject(self);
+    self.block = ^(NSString *albumTitle,
+                   NSString *title,
+                   UIImage *image,
+                   NSInteger type) {
+        StrongObject(self);
+        if (type == 2) {
+            self.albumLB.hidden = YES;
+            self.songLB.textAlignment = NSTextAlignmentCenter;
+        }
+        self.albumLB.text = albumTitle;
+        self.songLB.text  = title;
+        ///------ 专辑图片
+        self.albumImageView.image = image;
+    };
 }
 #pragma mark ------------ property
-#pragma mark ------ albumImageView
 - (UIImageView *)albumImageView{
     if (!_albumImageView) {
         _albumImageView = [[UIImageView alloc]init];
@@ -62,7 +61,6 @@
     }
     return _albumImageView;
 }
-#pragma mark ------ albumLB
 - (UILabel *)albumLB{
     if (!_albumLB) {
         _albumLB = [[UILabel alloc] init];
@@ -70,7 +68,6 @@
     }
     return _albumLB;
 }
-#pragma mark ------ songLB
 - (UILabel *)songLB{
     if (!_songLB) {
         _songLB = [[UILabel alloc] init];

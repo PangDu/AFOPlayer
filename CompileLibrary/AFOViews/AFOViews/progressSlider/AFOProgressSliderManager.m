@@ -63,7 +63,6 @@
     [self.delegate progressValueChangeDelegate];
 }
 #pragma mark ------------ property
-#pragma mark ------ displayLink
 - (CADisplayLink *)displayLink{
     if (!_displayLink) {
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateProgressSlider)];
@@ -71,7 +70,6 @@
     }
     return _displayLink;
 }
-#pragma mark ------
 - (AFOProgressSlider *)progressSlider{
     if (!_progressSlider) {
         _progressSlider = [[AFOProgressSlider alloc] initWithFrame:CGRectZero direction:AFOSliderDirectionHorizonal];
@@ -79,7 +77,6 @@
     }
     return _progressSlider;
 }
-#pragma mark ------
 - (CGFloat)sliderPercent{
     _sliderPercent = self.progressSlider.sliderPercent;
     return _sliderPercent;

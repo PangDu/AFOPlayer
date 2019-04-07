@@ -15,13 +15,14 @@
 @end
 @implementation AFOHPListCell
 
+#pragma mark ------ initWithStyle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self cellAddSubviews];
     }
     return self;
 }
-#pragma mark ------------ custom
+#pragma mark ------------ cellAddSubviews
 - (void)cellAddSubviews{
     ///----
     self.albumImageView.frame =CGRectMake(0, 0, 80, 80);

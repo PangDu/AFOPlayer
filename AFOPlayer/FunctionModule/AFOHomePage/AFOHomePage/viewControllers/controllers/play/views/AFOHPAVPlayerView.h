@@ -13,7 +13,9 @@
 - (void)settingSongName:(NSString *)name;
 @end
 
+typedef void(^AFOHPAVPlayerViewBlock)(NSDictionary *dictionary);
 @interface AFOHPAVPlayerView : UIView
+@property (nonatomic, copy) AFOHPAVPlayerViewBlock block;
 - (instancetype)initWithFrame:(CGRect)frame delegate:(id)sender;
 - (void)settingValue:(id)model dictionary:(NSDictionary *)dicionary;
 - (void)displayLinkPause;

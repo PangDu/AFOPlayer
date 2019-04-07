@@ -7,6 +7,7 @@
 //
 
 #import "AFOHPDetailDataSource.h"
+#import "AFOHPDetailViewModel.h"
 #import "AFOHPDetailCell.h"
 
 @interface AFOHPDetailDataSource ()
@@ -14,8 +15,7 @@
 @property (nonatomic, strong) NSMutableArray        *dataArray;
 @end
 @implementation AFOHPDetailDataSource
-#pragma mark ------------ custom
-#pragma mark ------ 数据源
+#pragma mark ------ settingDataArray
 - (void)settingDataArray:(NSArray *)array type:(id)type{
     self.type = [type integerValue];
     [self.dataArray removeAllObjects];
@@ -33,11 +33,12 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     }
-    [cell settingSubViews:self.dataArray[indexPath.row] type:self.type];
+    [AFOHPDetailViewModel songsDetails:self.dataArray[indexPath.row] block:^(NSDictionary *dictionary) {
+        cell.block(dictionary[@"albumTitle"], dictionary[@"title"], [AFOHPDetailViewModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
+    }];
     return cell;
 }
 #pragma mark ------------ property
-#pragma mark ------ dataArray
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc] init];

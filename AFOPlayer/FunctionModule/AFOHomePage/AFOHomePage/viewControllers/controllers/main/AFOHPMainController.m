@@ -19,7 +19,7 @@
     self.title = AFOHPTITLESTRING;
     [self loadCustomView];
 }
-#pragma mark ------------ custom
+#pragma mark ------------ loadCustomView
 - (void)loadCustomView{
     [self addChildViewController:self.cardStacking];
     [self.view addSubview:self.cardStacking.view];
@@ -32,8 +32,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark ------------ 属性
-#pragma mark ------ cardStacking
+#pragma mark ------------ property
 - (AFOCardStackingController *)cardStacking{
     if (!_cardStacking) {
         _cardStacking = [[AFOCardStackingController alloc]init];

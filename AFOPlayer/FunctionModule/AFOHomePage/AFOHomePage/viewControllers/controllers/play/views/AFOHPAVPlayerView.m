@@ -193,7 +193,6 @@
     [self.avPlayer changeSliderValue:self.sliderManager.sliderPercent];
 }
 #pragma mark ------------ property
-#pragma mark ------ revolveImageView
 - (UIImageView *)revolveImageView{
     if (!_revolveImageView) {
         _revolveImageView = [[UIImageView alloc] init];
