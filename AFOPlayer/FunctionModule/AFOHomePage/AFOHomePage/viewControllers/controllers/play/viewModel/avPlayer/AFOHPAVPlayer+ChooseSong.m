@@ -13,22 +13,19 @@
 
 @implementation AFOHPAVPlayer (ChooseSong)
 
-#pragma mark ------------- add property
-#pragma mark ------ dataArray
+#pragma mark ------------- property
 - (void)setDataArray:(NSArray *)dataArray{
     objc_setAssociatedObject(self, @selector(setDataArray:), dataArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSArray *)dataArray{
     return  objc_getAssociatedObject(self, @selector(setDataArray:));
 }
-#pragma mark ------ index
 - (void)setIndex:(NSNumber *)index{
     objc_setAssociatedObject(self, @selector(setIndex:), index, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSNumber *)index{
     return  objc_getAssociatedObject(self, @selector(setIndex:));
 }
-#pragma mark ------ currentItem
 - (void)setCurrentItem:(id)currentItem{
     objc_setAssociatedObject(self, @selector(setCurrentItem:), currentItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

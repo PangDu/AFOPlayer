@@ -20,15 +20,14 @@
 
 @implementation AFOProgressSliderManager
 
-#pragma mark ------ init
+#pragma mark ------ 
 - (instancetype)initWithDelegate:(id)delegate{
     if (self = [super init]) {
         _delegate = delegate;
     }
     return self;
 }
-#pragma mark ------------ custom
-#pragma mark ------ return progressSlider
+#pragma mark ------
 - (void)progressSliderManager:(void (^)(AFOProgressSlider *slider))block{
     block(self.progressSlider);
 }

@@ -56,6 +56,8 @@
 		24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AEB79A1FF1338E00F017E9 /* AFOHPDetailDataSource.h */; };
 		24AEB79D1FF1338E00F017E9 /* AFOHPDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AEB79B1FF1338E00F017E9 /* AFOHPDetailDataSource.m */; };
 		24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */; };
+		24AFA166225AE4D90054C2A6 /* AFOHPPlayerBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */; };
+		24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */; };
 		24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CA98581FE798D300CE9BB2 /* AFOHPListController.h */; };
 		24CA985B1FE798D300CE9BB2 /* AFOHPListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA98591FE798D300CE9BB2 /* AFOHPListController.m */; };
 		24CFFB301FF1EEDB00C1E465 /* AFOHPListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB2E1FF1EEDB00C1E465 /* AFOHPListViewModel.h */; };
@@ -133,6 +135,8 @@
 		24AEB79A1FF1338E00F017E9 /* AFOHPDetailDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailDataSource.h; sourceTree = "<group>"; };
 		24AEB79B1FF1338E00F017E9 /* AFOHPDetailDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailDataSource.m; sourceTree = "<group>"; };
 		24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOHPListDataSource.m; sourceTree = "<group>"; };
+		24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayerBaseView.h; sourceTree = "<group>"; };
+		24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayerBaseView.m; sourceTree = "<group>"; };
 		24CA98581FE798D300CE9BB2 /* AFOHPListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListController.h; sourceTree = "<group>"; };
 		24CA98591FE798D300CE9BB2 /* AFOHPListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListController.m; sourceTree = "<group>"; };
 		24CFFB2E1FF1EEDB00C1E465 /* AFOHPListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListViewModel.h; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 		2489814E200F316A008FB71D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */,
+				24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */,
 				2458D6762010263900D2058C /* AFOHPAVPlayerView.h */,
 				2458D6772010263900D2058C /* AFOHPAVPlayerView.m */,
 			);
@@ -476,6 +482,7 @@
 				2405E6011FEA4A7600BAFF97 /* CardStackingViewModel.h in Headers */,
 				24033CAD1FE904D80001DD63 /* AFOHPDetailController.h in Headers */,
 				241EA61A1FF3A06800F3A222 /* AFOCardStackingController+Router.h in Headers */,
+				24AFA166225AE4D90054C2A6 /* AFOHPPlayerBaseView.h in Headers */,
 				2405E5FB1FEA497E00BAFF97 /* CardStackingModel.h in Headers */,
 				24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */,
 				249797A41FE5F74C009AB645 /* AFOCardStackDefaultLayout.h in Headers */,
@@ -581,6 +588,7 @@
 				249797A71FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m in Sources */,
 				24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */,
 				245923901FE131880094C3E0 /* AFOHPNavigationController.m in Sources */,
+				24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */,
 				24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */,
 				2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */,
 				24CFFB311FF1EEDB00C1E465 /* AFOHPListViewModel.m in Sources */,

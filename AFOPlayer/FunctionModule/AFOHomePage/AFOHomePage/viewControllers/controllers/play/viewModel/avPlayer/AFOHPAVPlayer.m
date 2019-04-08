@@ -45,15 +45,16 @@
 }
 #pragma mark ------------ 播放音乐
 - (void)selectMusicPlayer:(AFOHPAVPlayerSelectMusic)type{
-    __weak __typeof(self) weakSelf = self;
+    WeakObject(self);
     switch (type) {
         case AFOHPAVPlayerSelectMusicPlay:
             [self audioPlayer];
             break;
         default:
             [self operationMusicPlayer:type block:^(id model) {
-                [weakSelf.avPlayer pause];
-                [weakSelf.delegate audioOperationPlay:model];
+                StrongObject(self);
+                [self.avPlayer pause];
+                [self.delegate audioOperationPlay:model];
             }];
             break;
     }
@@ -125,6 +126,15 @@
     NSLog(@"dealloc %@",NSStringFromClass([AFOHPAVPlayer class]));
 }
 #pragma mark ------------ 获取专辑图片
+- (id)getCurrentSongImage:(id)model dictionary:(NSDictionary *)dictionary{
+    if (dictionary != NULL) {
+        [self settingData:model];
+        model = [self modelFormDataArray];
+    }else{
+        model = model;
+    }
+    return model;
+}
 + (UIImage *)albumImageWithSize:(CGSize)size
                          object:(id)object{
     return [AFOMPMediaQuery albumImageWithSize:size object:object];
