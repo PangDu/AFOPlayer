@@ -19,7 +19,10 @@
 @implementation AFOHPVedioController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+}
+- (void)loadView{
+    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
+    self.view = view;
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -101,7 +104,7 @@
 }
 - (AFOHPAVPlayerView *)hpAVPlayerView{
     if (!_hpAVPlayerView) {
-        _hpAVPlayerView = [[AFOHPAVPlayerView alloc] initWithFrame:self.view.bounds delegate:self];
+        _hpAVPlayerView = [[AFOHPAVPlayerView alloc] initWithFrame:CGRectMake(0, 60, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) delegate:self];
     }
     return _hpAVPlayerView;
 }

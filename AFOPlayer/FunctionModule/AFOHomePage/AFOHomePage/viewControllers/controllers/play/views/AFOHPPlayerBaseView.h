@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface AFOHPPlayerBaseView : UIView
 @property (nonatomic, strong) UIImageView               *revolveImageView;
+@property (nonatomic, strong) UIImageView               *backImageView;
 @property (nonatomic, strong) UILabel                   *playTimeLabel;
 @property (nonatomic, strong) UILabel                   *totalTimeLabel;
 @property (nonatomic, strong) UIButton                  *onButton;

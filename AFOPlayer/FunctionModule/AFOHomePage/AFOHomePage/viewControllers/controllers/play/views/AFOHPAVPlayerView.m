@@ -31,12 +31,20 @@
         make.top.mas_equalTo (100);
         make.width.height.mas_equalTo(260);
     }];
-    ///------ playTimeLabel
+    ///---
+    [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        StrongObject(self);
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.width.mas_equalTo(self.mas_width);
+        make.height.mas_equalTo(self.mas_height);
+    }];
+    ///--- playTimeLabel
     [self.playTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         StrongObject(self);
-        make.left.mas_equalTo(10);
+        make.left.mas_equalTo(20);
         make.top.mas_equalTo(self.revolveImageView.mas_bottom).offset(40);
-        make.width.mas_equalTo(55);
+        make.width.mas_equalTo(60);
         make.height.mas_equalTo(10);
     }];
     ///------ slider
@@ -46,16 +54,16 @@
         [self addSubview:view];
         ///---
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.playTimeLabel.mas_right).offset(5);
-            make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width - 130);;
-            make.height.mas_equalTo(40);
+            make.left.equalTo(self.playTimeLabel.mas_right).offset(15);
+            make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width - 180);
+            make.height.mas_equalTo(25);
             make.centerY.mas_equalTo(self.playTimeLabel.mas_centerY);;
         }];
         ///------ totalTimeLabel
         [self.totalTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(view.mas_right).offset(5);
+            make.left.mas_equalTo(view.mas_right).offset(10);
             make.top.mas_equalTo(self.revolveImageView.mas_bottom).offset(40);
-            make.width.mas_equalTo(50);
+            make.width.mas_equalTo(60);
             make.height.mas_equalTo(10);
         }];
     };
@@ -80,6 +88,8 @@
         make.width.height.mas_equalTo(40);
         make.centerX.mas_equalTo(self.mas_centerX);
     }];
+    ///---
+    self.backImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_backImage.jpeg"]];
     ///---
     self.imageSize = self.revolveImageView.frame.size;
     ///---

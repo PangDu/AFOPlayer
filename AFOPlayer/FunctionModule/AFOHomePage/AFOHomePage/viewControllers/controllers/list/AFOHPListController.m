@@ -25,6 +25,10 @@
     [self.view addSubview:self.tableView];
     [self tableViewdidSelectRowAtIndexPathExchange];
 }
+- (void)loadView{
+    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
+    self.view = view;
+}
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
     NSDictionary *parameters = model;
@@ -70,7 +74,7 @@
 #pragma mark ------------ property
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource =self.dataSource;
     }

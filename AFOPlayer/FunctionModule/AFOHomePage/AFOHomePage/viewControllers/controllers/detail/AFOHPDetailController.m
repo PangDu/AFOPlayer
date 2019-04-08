@@ -88,7 +88,7 @@
 #pragma mark ------ tableView
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource =self.dataSource;
     }

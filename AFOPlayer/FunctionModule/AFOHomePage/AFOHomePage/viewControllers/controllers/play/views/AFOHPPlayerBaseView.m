@@ -15,19 +15,20 @@
     return self;
 }
 - (void)addSubBaseview{
-    ///------ revolveImageView
+    ///---
+    [self addSubview:self.backImageView];
+    ///--- revolveImageView
     [self addSubview:self.revolveImageView];
-    ///------ playTimeLabel
+    ///--- playTimeLabel
     [self addSubview:self.playTimeLabel];
-    ///------ totalTimeLabel
+    ///--- totalTimeLabel
     [self addSubview:self.totalTimeLabel];
-    ///------ playButton
+    ///--- playButton
     [self addSubview:self.playButton];
-    ///------ onButton
+    ///--- onButton
     [self addSubview:self.onButton];
-    ///------ nextButton
+    ///--- nextButton
     [self addSubview:self.nextButton];
-    ///------
 }
 #pragma mark ------
 - (void)playMusicAction:(UIButton *)sender{
@@ -50,22 +51,30 @@
     }
     return _revolveImageView;
 }
+- (UIImageView *)backImageView{
+    if (!_backImageView) {
+        _backImageView = [[UIImageView alloc] init];
+        [_backImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
+        _backImageView.contentMode =  UIViewContentModeScaleAspectFill;
+    }
+    return _backImageView;
+}
 - (UILabel *)playTimeLabel{
     if (!_playTimeLabel) {
         _playTimeLabel = [[UILabel alloc] init];
         _playTimeLabel.text = @"00:00:00";
-        _playTimeLabel.textColor = [UIColor blackColor];
+        _playTimeLabel.textColor = [UIColor whiteColor];
         _playTimeLabel.textAlignment = NSTextAlignmentCenter;
-        _playTimeLabel.font = [UIFont systemFontOfSize:10];
+        _playTimeLabel.font = [UIFont systemFontOfSize:13];
     }
     return _playTimeLabel;
 }
 - (UILabel *)totalTimeLabel{
     if (!_totalTimeLabel) {
         _totalTimeLabel = [[UILabel alloc] init];
-        _totalTimeLabel.font = [UIFont systemFontOfSize:10];
+        _totalTimeLabel.font = [UIFont systemFontOfSize:13];
         _totalTimeLabel.text = @"00:00:00";
-        _totalTimeLabel.textColor = [UIColor blackColor];
+        _totalTimeLabel.textColor = [UIColor whiteColor];
         _totalTimeLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _totalTimeLabel;
