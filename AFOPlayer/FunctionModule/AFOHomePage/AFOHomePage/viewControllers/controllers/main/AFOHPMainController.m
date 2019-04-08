@@ -24,9 +24,6 @@
     [self addChildViewController:self.cardStacking];
     [self.view addSubview:self.cardStacking.view];
 }
-//- (id)didSenderControllerRouterManagerDelegate{
-//    return @"mainController";
-//}
 #pragma mark ------------ system
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

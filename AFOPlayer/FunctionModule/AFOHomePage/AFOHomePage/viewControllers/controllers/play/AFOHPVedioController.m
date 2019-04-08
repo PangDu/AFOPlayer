@@ -17,16 +17,6 @@
 @end
 
 @implementation AFOHPVedioController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-- (void)loadView{
-    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
-    self.view = view;
-}
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-}
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model
                                         parameters:(NSDictionary *)parameters{
@@ -45,20 +35,16 @@
     [self.view addSubview:self.hpAVPlayerView];
 }
 #pragma mark ------ AFOHPAVPlayerViewDelegate
-- (void)settingSongName:(NSString *)name{
-    self.title = name;
-}
-- (void)progressValueChangeDelegate:(CGFloat)percent{
-    [self.hpAVPlayer changeSliderValue:percent];
+- (void)playMusicActionDelegate:(BOOL)isPlay{
+    [self.sliderManager settingDisplayLink:isPlay];
+    [self.hpAVPlayer settingAVPlayerPause:isPlay];
 }
 #pragma mark ------ AFOHPAVPlayerDelegate
 - (void)audioTotalTime:(NSString *)totalTime{
-    self.hpAVPlayerView.totalTimeBlock(totalTime);
     [self.sliderManager settingDisplayLink:NO];
 }
 - (void)audioPlayWithEnter{
     [self.hpAVPlayer selectMusicPlayer:0];
-    self.hpAVPlayerView.enterBlock();
 }
 - (void)audioOperationPlay:(id)model{
     
@@ -70,21 +56,17 @@
         StrongObject(self);
         [self.sliderManager settingProgressSlider:currentTime total:totalTime block:^(BOOL isEnd) {
             if (isEnd) {
-                [self.sliderManager settingSliderPercent:0.0];
-                self.hpAVPlayerView.playTimeBlock(@"00:00:00",YES);
-                ///------
+                [self.hpAVPlayerView settingDefaultTimer];
                 [self.hpAVPlayer selectMusicPlayer:AFOHPAVPlayerSelectMusicNext];
             }else{
-                self.hpAVPlayerView.playTimeBlock([NSString stringWithFormat:@"%@",
-                                                   [self.hpAVPlayer formatPlayTime:currentTime]],YES);
+                self.hpAVPlayerView.timeBlock([NSString stringWithFormat:@"%@",
+                                               [self.hpAVPlayer formatPlayTime:totalTime]],[NSString stringWithFormat:@"%@",
+                                                                                              [self.hpAVPlayer formatPlayTime:currentTime]]);
             }
         }];
     }];
 }
-- (void)progressValueChangeDelegate{
-    [self.hpAVPlayer changeSliderValue:self.sliderManager.sliderPercent];
-}
-#pragma mark ------------ system
+#pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

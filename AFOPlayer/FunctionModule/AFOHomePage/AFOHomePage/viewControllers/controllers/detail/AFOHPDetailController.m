@@ -28,8 +28,7 @@
     [self detailAddSubviews];
     // Do any additional setup after loading the view.
 }
-#pragma mark ------------ custom
-#pragma mark ------ 添加控件
+#pragma mark ------ detailAddSubviews
 - (void)detailAddSubviews{
     [self.view addSubview:self.tableView];
 }
@@ -70,22 +69,18 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
-#pragma mark ------------ system
-
+#pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 #pragma mark ------------ property
-#pragma mark ------ dataSource
 - (AFOHPDetailDataSource *)dataSource{
     if (!_dataSource) {
         _dataSource = [[AFOHPDetailDataSource alloc] init];
     }
     return _dataSource;
 }
-#pragma mark ------ tableView
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
@@ -94,7 +89,6 @@
     }
     return _tableView;
 }
-#pragma mark ------ viewModel
 - (AFOHPDetailViewModel *)viewModel{
     if (!_viewModel) {
         _viewModel = [[AFOHPDetailViewModel alloc] init];

@@ -19,8 +19,7 @@
     self.tabBarItem.title = AFOHPTITLESTRING;
     // Do any additional setup after loading the view.
 }
-#pragma mark ------------ 自定义方法
-#pragma mark ------------ 系统方法
+#pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

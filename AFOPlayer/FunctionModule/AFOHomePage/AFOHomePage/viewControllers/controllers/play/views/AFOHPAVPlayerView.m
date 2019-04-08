@@ -107,27 +107,18 @@
         }
     };
     ///---
-    self.totalTimeBlock = ^(NSString *totalTime) {
+    self.timeBlock = ^(NSString *totalTime,NSString *playTime) {
         StrongObject(self);
         self.totalTimeLabel.text = totalTime;
-    };
-    ///---
-    self.enterBlock = ^{
-        StrongObject(self);
-        self.playButton.selected = YES;
-    };
-    ///---
-    self.playTimeBlock = ^(NSString *playTime,BOOL isSelect) {
-        StrongObject(self);
         self.playTimeLabel.text = playTime;
-        self.playButton.selected = isSelect;
-        [self changeButtonImage:self.playButton];
     };
+    ///---
+    [self.playButton setSelected:YES];
 }
 #pragma mark ------
 - (void)playMusicAction:(UIButton *)sender{
+    [self.delegate playMusicActionDelegate:sender.selected];
     [self changeButtonImage:sender];
- //   [self.sliderManager settingDisplayLink:!sender.selected];
 }
 #pragma mark ------
 - (void)changeButtonImage:(UIButton *)sender{

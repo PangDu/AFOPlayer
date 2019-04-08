@@ -116,7 +116,6 @@
 		245923C01FE13E5E0094C3E0 /* AFOHPStaticString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPStaticString.h; sourceTree = "<group>"; };
 		247CADC420175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOHPAVPlayer+ChooseSong.h"; sourceTree = "<group>"; };
 		247CADC520175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOHPAVPlayer+ChooseSong.m"; sourceTree = "<group>"; };
-		247CADC82017632700F73A5D /* AFOHPAVPlayerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPAVPlayerHeader.h; sourceTree = "<group>"; };
 		24885957201ACB4700623E66 /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24898155200F38DF008FB71D /* AFOHPVedioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPVedioController.h; sourceTree = "<group>"; };
 		24898156200F38DF008FB71D /* AFOHPVedioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPVedioController.m; sourceTree = "<group>"; };
@@ -325,7 +324,6 @@
 		2489814F200F3173008FB71D /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				247CADC82017632700F73A5D /* AFOHPAVPlayerHeader.h */,
 				24B13029201835B70082AA66 /* avPlayer */,
 			);
 			path = viewModel;

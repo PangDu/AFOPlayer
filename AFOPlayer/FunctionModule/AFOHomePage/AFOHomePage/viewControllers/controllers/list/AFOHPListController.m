@@ -25,10 +25,6 @@
     [self.view addSubview:self.tableView];
     [self tableViewdidSelectRowAtIndexPathExchange];
 }
-- (void)loadView{
-    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
-    self.view = view;
-}
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
     NSDictionary *parameters = model;

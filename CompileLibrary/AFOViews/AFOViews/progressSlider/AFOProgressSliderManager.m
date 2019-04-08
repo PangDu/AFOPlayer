@@ -41,6 +41,7 @@
     self.progressSlider.sliderPercent = current / total;
     if (current < total) {
         self.displayLink.paused = NO;
+        [self settingSliderPercent:0.0];
         block(NO);
     }else if (current == total){
         self.displayLink.paused = YES;

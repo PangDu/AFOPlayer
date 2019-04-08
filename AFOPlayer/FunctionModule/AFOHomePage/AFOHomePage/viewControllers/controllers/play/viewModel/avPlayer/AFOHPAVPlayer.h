@@ -13,8 +13,6 @@ typedef NS_ENUM(NSInteger, AFOHPAVPlayerSelectMusic){
     AFOHPAVPlayerSelectMusicOn     =   1,
     AFOHPAVPlayerSelectMusicNext   =   2
 };
-
-
 @protocol AFOHPAVPlayerDelegate
 @optional
 - (void)audioTotalTime:(NSString *)totalTime;
@@ -25,7 +23,7 @@ typedef NS_ENUM(NSInteger, AFOHPAVPlayerSelectMusic){
 @property (nonatomic, weak) id<AFOHPAVPlayerDelegate>delegate;
 - (instancetype)initWithDelegate:(id)delegate;
 - (void)addPlayerItem:(id)model;
-- (void)settingAVPlayerPause;
+- (void)settingAVPlayerPause:(BOOL)isPause;
 - (void)changeSliderValue:(CGFloat)percent;
 - (void)updateProgressSlider:(void (^) (NSTimeInterval currentTime,
                                         NSTimeInterval totalTime))block;

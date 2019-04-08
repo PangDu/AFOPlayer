@@ -40,8 +40,12 @@
     }
 }
 #pragma mark ------------ 
-- (void)settingAVPlayerPause{
-    [self.avPlayer pause];
+- (void)settingAVPlayerPause:(BOOL)isPause{
+    if (isPause) {
+        [self.avPlayer pause];
+    }else{
+        [self.avPlayer play];
+    }
 }
 #pragma mark ------------ 播放音乐
 - (void)selectMusicPlayer:(AFOHPAVPlayerSelectMusic)type{

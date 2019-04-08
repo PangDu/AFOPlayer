@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol AFOHPAVPlayerViewDelegate
 @optional
-- (void)settingSongName:(NSString *)name;
+- (void)playMusicActionDelegate:(BOOL)isPlay;
 @end
 @interface AFOHPPlayerBaseView : UIView
 @property (nonatomic, strong) UIImageView               *revolveImageView;
@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)playMusicAction:(UIButton *)sender;
 - (void)changeButtonImage:(UIButton *)sender;
 - (void)changeMusicAction:(UIButton *)sender;
+- (void)settingDefaultTimer;
 @end
 
 NS_ASSUME_NONNULL_END

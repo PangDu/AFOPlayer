@@ -8,15 +8,12 @@
 
 #import "AFOHPPlayerBaseView.h"
 typedef void(^AFOHPAVPlayerViewBlock)(UIImage *image);
-typedef void(^HPAVPlayerViewTotalTimeBlock)(NSString *totalTime);
-typedef void(^HPAVPlayTimeBlock)(NSString *playTime, BOOL isSelect);
-typedef void(^HPAVPlayerViewEnterBlock)(void);
+typedef void(^HPAVPlayerViewTimeBlock)(NSString *totalTime,
+                                       NSString *playTime);
 typedef void(^HPAVPlayerViewSliderBlock)(id model);
 @interface AFOHPAVPlayerView : AFOHPPlayerBaseView
 @property (nonatomic, copy) AFOHPAVPlayerViewBlock           block;
-@property (nonatomic, copy) HPAVPlayerViewTotalTimeBlock     totalTimeBlock;
-@property (nonatomic, copy) HPAVPlayerViewEnterBlock         enterBlock;
-@property (nonatomic, copy) HPAVPlayTimeBlock                playTimeBlock;
+@property (nonatomic, copy) HPAVPlayerViewTimeBlock          timeBlock;
 @property (nonatomic, copy) HPAVPlayerViewSliderBlock        sliderBlock;
 @property (nonatomic, assign, readonly) CGSize               imageSize;
 - (instancetype)initWithFrame:(CGRect)frame delegate:(id)sender;

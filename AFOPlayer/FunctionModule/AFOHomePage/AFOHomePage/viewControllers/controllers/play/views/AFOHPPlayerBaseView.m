@@ -8,12 +8,14 @@
 
 #import "AFOHPPlayerBaseView.h"
 @implementation AFOHPPlayerBaseView
+#pragma mark ------ initWithFrame
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self addSubBaseview];
     }
     return self;
 }
+#pragma mark ------ addSubBaseview
 - (void)addSubBaseview{
     ///---
     [self addSubview:self.backImageView];
@@ -30,13 +32,18 @@
     ///--- nextButton
     [self addSubview:self.nextButton];
 }
-#pragma mark ------
+#pragma mark ------ playMusicAction
 - (void)playMusicAction:(UIButton *)sender{
 }
 #pragma mark ------
 - (void)changeButtonImage:(UIButton *)sender{
 }
 - (void)changeMusicAction:(UIButton *)sender{
+}
+#pragma mark ------ settingDefaultTimer
+- (void)settingDefaultTimer{
+    self.totalTimeLabel.text = @"00:00:00";
+    self.playTimeLabel.text = @"00:00:00";
 }
 #pragma mark ------------ property
 - (UIImageView *)revolveImageView{
