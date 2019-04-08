@@ -49,7 +49,12 @@
         self.albumLB.text = albumTitle;
         self.songLB.text  = title;
         ///------ 专辑图片
-        self.albumImageView.image = image;
+        if (!image) {
+            self.albumImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_ album.jpeg"]];
+        }else{
+            self.albumImageView.image = image;
+            
+        }
     };
 }
 #pragma mark ------------ property

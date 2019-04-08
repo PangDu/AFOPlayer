@@ -40,7 +40,11 @@
             self.titleLB.hidden = YES;
         }else{
             self.titleLB.text = title;
-            self.albumImageView.image = image;
+            if (!image) {
+                self.albumImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_ album.jpeg"]];
+            }else{
+                self.albumImageView.image = image;
+            }
         }
     };
 }

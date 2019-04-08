@@ -100,7 +100,11 @@
     ///---
     self.block = ^(UIImage *image) {
         StrongObject(self);
-        self.revolveImageView.image = image;
+        if (!image) {
+            self.revolveImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_ album.jpeg"]];
+        }else{
+            self.revolveImageView.image = image;
+        }
     };
     ///---
     self.totalTimeBlock = ^(NSString *totalTime) {
