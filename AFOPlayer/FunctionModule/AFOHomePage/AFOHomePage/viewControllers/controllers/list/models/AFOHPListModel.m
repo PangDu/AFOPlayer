@@ -1,19 +1,19 @@
 //
-//  AFOHPListViewModel.m
+//  AFOHPListModel.m
 //  AFOHomePage
 //
 //  Created by xueguang xian on 2017/12/26.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 #import <MediaPlayer/MPMediaItemCollection.h>
-#import "AFOHPListViewModel.h"
+#import "AFOHPListModel.h"
 #import "AFOMPMediaQuery.h"
-@interface AFOHPListViewModel ()
+@interface AFOHPListModel ()
 @property (nonatomic, assign) NSInteger          type;
 @property (nonatomic, strong) NSMutableArray    *artistsArray;
 @property (nonatomic, strong) AFOMPMediaQuery   *mediaQuery;
 @end
-@implementation AFOHPListViewModel
+@implementation AFOHPListModel
 #pragma mark ------------ custom
 #pragma mark ------ 获取数据源
 - (void)settingDataIndex:(NSInteger)index block:(artistsListBlock)block{
@@ -32,7 +32,7 @@
 #pragma mark---------------------------- 艺术家相关
 #pragma mark ------ 获取艺术家名
 - (NSString *)artistsNameIndex:(NSInteger)index{
-    return [AFOHPListViewModel artistsNameObject:self.artistsArray[index]];
+    return [AFOHPListModel artistsNameObject:self.artistsArray[index]];
 }
 #pragma mark ------ 根据MPMediaItemCollection获取艺术家
 + (NSString *)artistsNameObject:(id)object{
@@ -52,7 +52,7 @@
 }
 #pragma mark ------ 专辑名
 - (NSString *)albumTitleNameIndex:(NSInteger)index{
-    return [AFOHPListViewModel albumTitleNameObject:self.artistsArray[index]];
+    return [AFOHPListModel albumTitleNameObject:self.artistsArray[index]];
 }
 #pragma mark ------ 根据MPMediaItemCollection获取专辑
 + (NSString *)albumTitleNameObject:(id)object{

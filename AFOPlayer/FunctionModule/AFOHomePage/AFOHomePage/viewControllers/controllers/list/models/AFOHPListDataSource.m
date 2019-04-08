@@ -8,11 +8,11 @@
 
 #import "AFOHPListDataSource.h"
 #import "AFOHPListCell.h"
-#import "AFOHPListViewModel.h"
+#import "AFOHPListModel.h"
 @interface AFOHPListDataSource ()
 @property (nonatomic, assign) NSInteger              type;
 @property (nonatomic, strong) NSMutableArray        *dataArray;
-@property (nonatomic, strong) AFOHPListViewModel    *viewModel;
+@property (nonatomic, strong) AFOHPListModel    *viewModel;
 @end
 
 @implementation AFOHPListDataSource
@@ -36,7 +36,7 @@
     }
     ///---
     [self.viewModel settingAlbumObject:self.dataArray[indexPath.row] block:^(NSString *name) {
-            cell.block(name, [AFOHPListViewModel artistsNameObject:self.dataArray[indexPath.row]], [AFOHPListViewModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
+            cell.block(name, [AFOHPListModel artistsNameObject:self.dataArray[indexPath.row]], [AFOHPListModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
     }];
     return cell;
 }
@@ -47,9 +47,9 @@
     }
     return _dataArray;
 }
-- (AFOHPListViewModel *)viewModel{
+- (AFOHPListModel *)viewModel{
     if (!_viewModel) {
-        _viewModel = [[AFOHPListViewModel alloc] init];
+        _viewModel = [[AFOHPListModel alloc] init];
     }
     return _viewModel;
 }

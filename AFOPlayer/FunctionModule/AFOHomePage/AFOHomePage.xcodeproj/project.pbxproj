@@ -16,8 +16,6 @@
 		2405E6011FEA4A7600BAFF97 /* CardStackingViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2405E5FF1FEA4A7600BAFF97 /* CardStackingViewModel.h */; };
 		2405E6021FEA4A7600BAFF97 /* CardStackingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */; };
 		240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */ = {isa = PBXBuildFile; fileRef = 240BAB221FE1218800D58435 /* AFOHomePage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		241EA6091FF384FA00F3A222 /* AFOHPListController+Router.h in Headers */ = {isa = PBXBuildFile; fileRef = 241EA6071FF384FA00F3A222 /* AFOHPListController+Router.h */; };
-		241EA60A1FF384FA00F3A222 /* AFOHPListController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 241EA6081FF384FA00F3A222 /* AFOHPListController+Router.m */; };
 		241EA61A1FF3A06800F3A222 /* AFOCardStackingController+Router.h in Headers */ = {isa = PBXBuildFile; fileRef = 241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */; };
 		241EA61B1FF3A06800F3A222 /* AFOCardStackingController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */; };
 		2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */; };
@@ -26,6 +24,8 @@
 		243A8D301FF0DE94004BA1CE /* AFOMPMediaQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 243A8D2E1FF0DE94004BA1CE /* AFOMPMediaQuery.m */; };
 		24479093200F7AD600445C62 /* AFOHPAVPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 24479091200F7AD600445C62 /* AFOHPAVPlayer.h */; };
 		24479094200F7AD600445C62 /* AFOHPAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24479092200F7AD600445C62 /* AFOHPAVPlayer.m */; };
+		24482103225B379200DC9207 /* AFOHPPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 24482101225B379200DC9207 /* AFOHPPresenter.h */; };
+		24482104225B379200DC9207 /* AFOHPPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24482102225B379200DC9207 /* AFOHPPresenter.m */; };
 		2458D6782010263900D2058C /* AFOHPAVPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2458D6762010263900D2058C /* AFOHPAVPlayerView.h */; };
 		2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2458D6772010263900D2058C /* AFOHPAVPlayerView.m */; };
 		2458D6B420102D9100D2058C /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2458D6B520102D9100D2058C /* AFOGitHub.framework */; };
@@ -53,6 +53,11 @@
 		249797A71FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */; };
 		249797A81FE5F74C009AB645 /* AFOCardStackCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */; };
 		249797A91FE5F74C009AB645 /* AFOCardStackingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2497979D1FE5F74C009AB645 /* AFOCardStackingController.h */; };
+		24A0F987225B83B7006CC24D /* AFOListPresenterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A0F985225B83B7006CC24D /* AFOListPresenterView.h */; };
+		24A0F988225B83B7006CC24D /* AFOListPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A0F986225B83B7006CC24D /* AFOListPresenterView.m */; };
+		24A0F98B225B83CE006CC24D /* AFOListPresenterBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A0F989225B83CE006CC24D /* AFOListPresenterBusiness.h */; };
+		24A0F98C225B83CE006CC24D /* AFOListPresenterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A0F98A225B83CE006CC24D /* AFOListPresenterBusiness.m */; };
+		24A0F98E225B84A8006CC24D /* AFOHPPresenterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A0F98D225B84A8006CC24D /* AFOHPPresenterDelegate.h */; };
 		24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AEB79A1FF1338E00F017E9 /* AFOHPDetailDataSource.h */; };
 		24AEB79D1FF1338E00F017E9 /* AFOHPDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AEB79B1FF1338E00F017E9 /* AFOHPDetailDataSource.m */; };
 		24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */; };
@@ -60,8 +65,8 @@
 		24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */; };
 		24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CA98581FE798D300CE9BB2 /* AFOHPListController.h */; };
 		24CA985B1FE798D300CE9BB2 /* AFOHPListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA98591FE798D300CE9BB2 /* AFOHPListController.m */; };
-		24CFFB301FF1EEDB00C1E465 /* AFOHPListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB2E1FF1EEDB00C1E465 /* AFOHPListViewModel.h */; };
-		24CFFB311FF1EEDB00C1E465 /* AFOHPListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB2F1FF1EEDB00C1E465 /* AFOHPListViewModel.m */; };
+		24CFFB301FF1EEDB00C1E465 /* AFOHPListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB2E1FF1EEDB00C1E465 /* AFOHPListModel.h */; };
+		24CFFB311FF1EEDB00C1E465 /* AFOHPListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */; };
 		24CFFB341FF1F27100C1E465 /* AFOHPDetailViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB321FF1F27100C1E465 /* AFOHPDetailViewModel.h */; };
 		24CFFB351FF1F27100C1E465 /* AFOHPDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB331FF1F27100C1E465 /* AFOHPDetailViewModel.m */; };
 		24CFFB391FF200BC00C1E465 /* AFOHPDetailCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB371FF200BC00C1E465 /* AFOHPDetailCell.h */; };
@@ -93,8 +98,6 @@
 		2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardStackingViewModel.m; sourceTree = "<group>"; };
 		240BAB1F1FE1218800D58435 /* AFOHomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOHomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240BAB221FE1218800D58435 /* AFOHomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHomePage.h; sourceTree = "<group>"; };
-		241EA6071FF384FA00F3A222 /* AFOHPListController+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOHPListController+Router.h"; sourceTree = "<group>"; };
-		241EA6081FF384FA00F3A222 /* AFOHPListController+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOHPListController+Router.m"; sourceTree = "<group>"; };
 		241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOCardStackingController+Router.h"; sourceTree = "<group>"; };
 		241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOCardStackingController+Router.m"; sourceTree = "<group>"; };
 		2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListCell.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		243A8D2E1FF0DE94004BA1CE /* AFOMPMediaQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMPMediaQuery.m; sourceTree = "<group>"; };
 		24479091200F7AD600445C62 /* AFOHPAVPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPAVPlayer.h; sourceTree = "<group>"; };
 		24479092200F7AD600445C62 /* AFOHPAVPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPAVPlayer.m; sourceTree = "<group>"; };
+		24482101225B379200DC9207 /* AFOHPPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPresenter.h; sourceTree = "<group>"; };
+		24482102225B379200DC9207 /* AFOHPPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPresenter.m; sourceTree = "<group>"; };
 		2458D6762010263900D2058C /* AFOHPAVPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPAVPlayerView.h; sourceTree = "<group>"; };
 		2458D6772010263900D2058C /* AFOHPAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPAVPlayerView.m; sourceTree = "<group>"; };
 		2458D6B520102D9100D2058C /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +136,11 @@
 		2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOCardStackCollectionDataSource.m; sourceTree = "<group>"; };
 		2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOCardStackCollectionCell.m; sourceTree = "<group>"; };
 		2497979D1FE5F74C009AB645 /* AFOCardStackingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOCardStackingController.h; sourceTree = "<group>"; };
+		24A0F985225B83B7006CC24D /* AFOListPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOListPresenterView.h; sourceTree = "<group>"; };
+		24A0F986225B83B7006CC24D /* AFOListPresenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOListPresenterView.m; sourceTree = "<group>"; };
+		24A0F989225B83CE006CC24D /* AFOListPresenterBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOListPresenterBusiness.h; sourceTree = "<group>"; };
+		24A0F98A225B83CE006CC24D /* AFOListPresenterBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOListPresenterBusiness.m; sourceTree = "<group>"; };
+		24A0F98D225B84A8006CC24D /* AFOHPPresenterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPresenterDelegate.h; sourceTree = "<group>"; };
 		24AEB79A1FF1338E00F017E9 /* AFOHPDetailDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailDataSource.h; sourceTree = "<group>"; };
 		24AEB79B1FF1338E00F017E9 /* AFOHPDetailDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailDataSource.m; sourceTree = "<group>"; };
 		24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOHPListDataSource.m; sourceTree = "<group>"; };
@@ -138,8 +148,8 @@
 		24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayerBaseView.m; sourceTree = "<group>"; };
 		24CA98581FE798D300CE9BB2 /* AFOHPListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListController.h; sourceTree = "<group>"; };
 		24CA98591FE798D300CE9BB2 /* AFOHPListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListController.m; sourceTree = "<group>"; };
-		24CFFB2E1FF1EEDB00C1E465 /* AFOHPListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListViewModel.h; sourceTree = "<group>"; };
-		24CFFB2F1FF1EEDB00C1E465 /* AFOHPListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListViewModel.m; sourceTree = "<group>"; };
+		24CFFB2E1FF1EEDB00C1E465 /* AFOHPListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListModel.h; sourceTree = "<group>"; };
+		24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListModel.m; sourceTree = "<group>"; };
 		24CFFB321FF1F27100C1E465 /* AFOHPDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailViewModel.h; sourceTree = "<group>"; };
 		24CFFB331FF1F27100C1E465 /* AFOHPDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailViewModel.m; sourceTree = "<group>"; };
 		24CFFB371FF200BC00C1E465 /* AFOHPDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailCell.h; sourceTree = "<group>"; };
@@ -216,6 +226,7 @@
 				240BAB221FE1218800D58435 /* AFOHomePage.h */,
 				245923BA1FE136BA0094C3E0 /* public */,
 				24DC53AE1FE3A910005B4A4D /* views */,
+				24482100225B375D00DC9207 /* presenter */,
 				245923B91FE136A00094C3E0 /* models */,
 				24E040FB1FE2116E00BE0B5B /* viewModels */,
 				245923911FE131B60094C3E0 /* viewControllers */,
@@ -224,22 +235,25 @@
 			path = AFOHomePage;
 			sourceTree = "<group>";
 		};
-		241EA60B1FF3852600F3A222 /* Category */ = {
+		2437D9B91FF3327100E12235 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				241EA6071FF384FA00F3A222 /* AFOHPListController+Router.h */,
-				241EA6081FF384FA00F3A222 /* AFOHPListController+Router.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		2437D9B91FF3327100E12235 /* Views */ = {
-			isa = PBXGroup;
-			children = (
+				24CA98581FE798D300CE9BB2 /* AFOHPListController.h */,
+				24CA98591FE798D300CE9BB2 /* AFOHPListController.m */,
 				2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */,
 				2437D9BB1FF3329E00E12235 /* AFOHPListCell.m */,
 			);
-			path = Views;
+			path = views;
+			sourceTree = "<group>";
+		};
+		24482100225B375D00DC9207 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24A0F98D225B84A8006CC24D /* AFOHPPresenterDelegate.h */,
+				24482101225B379200DC9207 /* AFOHPPresenter.h */,
+				24482102225B379200DC9207 /* AFOHPPresenter.m */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		245923911FE131B60094C3E0 /* viewControllers */ = {
@@ -375,6 +389,17 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		24A0F984225B834B006CC24D /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24A0F985225B83B7006CC24D /* AFOListPresenterView.h */,
+				24A0F986225B83B7006CC24D /* AFOListPresenterView.m */,
+				24A0F989225B83CE006CC24D /* AFOListPresenterBusiness.h */,
+				24A0F98A225B83CE006CC24D /* AFOListPresenterBusiness.m */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
 		24AEB7991FF1336C00F017E9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,11 +434,9 @@
 		24CA98571FE798A100CE9BB2 /* list */ = {
 			isa = PBXGroup;
 			children = (
-				2437D9B91FF3327100E12235 /* Views */,
-				24E41A5D1FF0F4BE00CA3285 /* ViewModel */,
-				241EA60B1FF3852600F3A222 /* Category */,
-				24CA98581FE798D300CE9BB2 /* AFOHPListController.h */,
-				24CA98591FE798D300CE9BB2 /* AFOHPListController.m */,
+				24E41A5D1FF0F4BE00CA3285 /* models */,
+				2437D9B91FF3327100E12235 /* views */,
+				24A0F984225B834B006CC24D /* presenter */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -452,15 +475,15 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
-		24E41A5D1FF0F4BE00CA3285 /* ViewModel */ = {
+		24E41A5D1FF0F4BE00CA3285 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				24CFFB2E1FF1EEDB00C1E465 /* AFOHPListViewModel.h */,
-				24CFFB2F1FF1EEDB00C1E465 /* AFOHPListViewModel.m */,
+				24CFFB2E1FF1EEDB00C1E465 /* AFOHPListModel.h */,
+				24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */,
 				24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */,
 				24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */,
 			);
-			path = ViewModel;
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,12 +497,16 @@
 				24CFFB341FF1F27100C1E465 /* AFOHPDetailViewModel.h in Headers */,
 				243A8D2F1FF0DE94004BA1CE /* AFOMPMediaQuery.h in Headers */,
 				24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */,
+				24A0F987225B83B7006CC24D /* AFOListPresenterView.h in Headers */,
 				2458D6782010263900D2058C /* AFOHPAVPlayerView.h in Headers */,
+				24A0F98B225B83CE006CC24D /* AFOListPresenterBusiness.h in Headers */,
 				240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */,
 				247CADC620175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h in Headers */,
 				2405E6011FEA4A7600BAFF97 /* CardStackingViewModel.h in Headers */,
+				24A0F98E225B84A8006CC24D /* AFOHPPresenterDelegate.h in Headers */,
 				24033CAD1FE904D80001DD63 /* AFOHPDetailController.h in Headers */,
 				241EA61A1FF3A06800F3A222 /* AFOCardStackingController+Router.h in Headers */,
+				24482103225B379200DC9207 /* AFOHPPresenter.h in Headers */,
 				24AFA166225AE4D90054C2A6 /* AFOHPPlayerBaseView.h in Headers */,
 				2405E5FB1FEA497E00BAFF97 /* CardStackingModel.h in Headers */,
 				24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */,
@@ -490,10 +517,9 @@
 				2489815C200F3956008FB71D /* AFOHPDetailController+Router.h in Headers */,
 				24CFFB391FF200BC00C1E465 /* AFOHPDetailCell.h in Headers */,
 				249797A91FE5F74C009AB645 /* AFOCardStackingController.h in Headers */,
-				24CFFB301FF1EEDB00C1E465 /* AFOHPListViewModel.h in Headers */,
+				24CFFB301FF1EEDB00C1E465 /* AFOHPListModel.h in Headers */,
 				24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */,
 				2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */,
-				241EA6091FF384FA00F3A222 /* AFOHPListController+Router.h in Headers */,
 				245923B71FE136970094C3E0 /* AFOHPMainController.h in Headers */,
 				249797A11FE5F74C009AB645 /* AFOCardStackCollectionCell.h in Headers */,
 				2459238F1FE131880094C3E0 /* AFOHPNavigationController.h in Headers */,
@@ -572,12 +598,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24479094200F7AD600445C62 /* AFOHPAVPlayer.m in Sources */,
+				24482104225B379200DC9207 /* AFOHPPresenter.m in Sources */,
 				245923BE1FE1371F0094C3E0 /* AFOHPForeign.m in Sources */,
 				2405E5FC1FEA497E00BAFF97 /* CardStackingModel.m in Sources */,
 				249797A81FE5F74C009AB645 /* AFOCardStackCollectionCell.m in Sources */,
 				249797A21FE5F74C009AB645 /* AFOCardStackDefaultLayout.m in Sources */,
 				241EA61B1FF3A06800F3A222 /* AFOCardStackingController+Router.m in Sources */,
 				2405E6021FEA4A7600BAFF97 /* CardStackingViewModel.m in Sources */,
+				24A0F988225B83B7006CC24D /* AFOListPresenterView.m in Sources */,
 				2489815D200F3956008FB71D /* AFOHPDetailController+Router.m in Sources */,
 				24AEB79D1FF1338E00F017E9 /* AFOHPDetailDataSource.m in Sources */,
 				243A8D301FF0DE94004BA1CE /* AFOMPMediaQuery.m in Sources */,
@@ -586,12 +614,12 @@
 				249797A71FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m in Sources */,
 				24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */,
 				245923901FE131880094C3E0 /* AFOHPNavigationController.m in Sources */,
+				24A0F98C225B83CE006CC24D /* AFOListPresenterBusiness.m in Sources */,
 				24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */,
 				24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */,
 				2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */,
-				24CFFB311FF1EEDB00C1E465 /* AFOHPListViewModel.m in Sources */,
+				24CFFB311FF1EEDB00C1E465 /* AFOHPListModel.m in Sources */,
 				249797A31FE5F74C009AB645 /* AFOCardStackSelectedLayout.m in Sources */,
-				241EA60A1FF384FA00F3A222 /* AFOHPListController+Router.m in Sources */,
 				247CADC720175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m in Sources */,
 				24CFFB351FF1F27100C1E465 /* AFOHPDetailViewModel.m in Sources */,
 				249797A61FE5F74C009AB645 /* AFOCardStackingController.m in Sources */,

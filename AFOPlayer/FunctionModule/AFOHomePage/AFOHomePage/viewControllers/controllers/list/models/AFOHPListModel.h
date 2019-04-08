@@ -1,5 +1,5 @@
 //
-//  AFOHPListViewModel.h
+//  AFOHPListModel.h
 //  AFOHomePage
 //
 //  Created by xueguang xian on 2017/12/26.
@@ -21,7 +21,7 @@ typedef void(^artistsListBlock)(NSArray *array);
  @param name <#name description#>
  */
 typedef void(^albumDetailBlock)(NSString *name);
-@interface AFOHPListViewModel : NSObject
+@interface AFOHPListModel : NSObject
 
 /**
  <#Description#>

@@ -7,33 +7,30 @@
 //
 
 #import "AFOHPListController.h"
-#import "AFOHPListController+Router.h"
 #import "AFOHPListDataSource.h"
-#import "AFOHPListViewModel.h"
+#import "AFOListPresenterView.h"
+#import "AFOListPresenterBusiness.h"
 @interface AFOHPListController ()<AFORouterManagerDelegate,UITableViewDelegate>
-@property (nonatomic, strong) UITableView             *tableView;
-@property (nonatomic, strong) AFOHPListDataSource     *dataSource;
-@property (nonatomic, strong, readwrite) AFOHPListViewModel      *viewModel;
+@property (nonatomic, strong) UITableView                    *tableView;
+@property (nonatomic, strong) AFOHPListDataSource            *dataSource;
+@property (nonatomic, strong) AFOListPresenterBusiness       *listModel;
 @end
 
 @implementation AFOHPListController
-
 #pragma mark ------------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
-    [self tableViewdidSelectRowAtIndexPathExchange];
+    [self.listModel hookMethodTarget:self selector:@selector(tableView:didSelectRowAtIndexPath:)];
 }
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
-    NSDictionary *parameters = model;
-    self.title = [parameters objectForKey:@"value"];
-    NSInteger index =[parameters[@"type"] integerValue];
-    __weak typeof(self) weakSelf = self;
-    [self.viewModel settingDataIndex:index block:^(NSArray *array) {
-        [weakSelf.dataSource settingDataArray:array index:index];
-        [weakSelf.tableView reloadData];
+    WeakObject(self);
+    [self.listModel receiverRouterMessage:model block:^(NSString * _Nonnull title, NSInteger index,NSArray *_Nonnull array) {
+        StrongObject(self);
+        self.title = title;
+        [self.dataSource settingDataArray:array index:index];
+        [self.tableView reloadData];
     }];
 }
 #pragma mark ------ UITableViewDelegate
@@ -55,11 +52,11 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark ------------ property
-- (AFOHPListViewModel *)viewModel{
-    if (!_viewModel) {
-        _viewModel = [[AFOHPListViewModel alloc] init];
+- (AFOListPresenterBusiness *)listModel{
+    if (!_listModel) {
+        _listModel = [[AFOListPresenterBusiness alloc] init];
     }
-    return _viewModel;
+    return _listModel;
 }
 - (AFOHPListDataSource *)dataSource{
     if (!_dataSource) {
@@ -76,14 +73,4 @@
     }
     return _tableView;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
