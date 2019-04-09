@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) UIViewController  *controller;
 - (instancetype)initWithView:(UIView *)view;
 - (instancetype)initWithController:(UIViewController *)controller;
+- (id)delegateTarget;
+- (id)dataSourceTarget;
 @end
 
 NS_ASSUME_NONNULL_END

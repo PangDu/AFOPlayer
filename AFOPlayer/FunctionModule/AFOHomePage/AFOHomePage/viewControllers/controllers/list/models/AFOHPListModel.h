@@ -7,20 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-/**
- <#Description#>
-
- @param array <#array description#>
- */
-typedef void(^artistsListBlock)(NSArray *array);
-
-/**
- <#Description#>
-
- @param name <#name description#>
- */
-typedef void(^albumDetailBlock)(NSString *name);
 @interface AFOHPListModel : NSObject
 
 /**
@@ -29,7 +15,7 @@ typedef void(^albumDetailBlock)(NSString *name);
  @param index <#index description#>
  @param block <#block description#>
  */
-- (void)settingDataIndex:(NSInteger)index block:(artistsListBlock)block;
+- (void)settingDataIndex:(NSInteger)index block:(void(^)(NSArray *array))block;
 
 /**
  <#Description#>
@@ -44,7 +30,7 @@ typedef void(^albumDetailBlock)(NSString *name);
  @param object <#object description#>
  @param block <#block description#>
  */
-- (void)settingAlbumObject:(id)object block:(albumDetailBlock)block;
++ (void)settingAlbumObject:(id)object block:(void(^)(NSString *name))block;
 
 /**
  <#Description#>

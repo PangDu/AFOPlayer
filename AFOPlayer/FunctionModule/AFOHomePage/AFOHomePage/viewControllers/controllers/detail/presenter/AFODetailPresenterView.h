@@ -1,8 +1,8 @@
 //
-//  AFOListPresenterView.h
+//  AFODetailPresenterView.h
 //  AFOHomePage
 //
-//  Created by xueguang xian on 2019/4/8.
+//  Created by xueguang xian on 2019/4/9.
 //  Copyright © 2019 AFO. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AFOListPresenterView : AFOHPPresenter
+@interface AFODetailPresenterView : AFOHPPresenter
 - (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate;
 - (void)bindingTableView;
 - (void)loadDataAction;

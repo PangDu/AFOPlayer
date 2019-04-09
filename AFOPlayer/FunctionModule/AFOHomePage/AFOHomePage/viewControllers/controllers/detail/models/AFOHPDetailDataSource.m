@@ -7,7 +7,7 @@
 //
 
 #import "AFOHPDetailDataSource.h"
-#import "AFOHPDetailViewModel.h"
+#import "AFOHPDetailModel.h"
 #import "AFOHPDetailCell.h"
 
 @interface AFOHPDetailDataSource ()
@@ -33,8 +33,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     }
-    [AFOHPDetailViewModel songsDetails:self.dataArray[indexPath.row] block:^(NSDictionary *dictionary) {
-        cell.block(dictionary[@"albumTitle"], dictionary[@"title"], [AFOHPDetailViewModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
+    [AFOHPDetailModel songsDetails:self.dataArray[indexPath.row] block:^(NSDictionary *dictionary) {
+        cell.block(dictionary[@"albumTitle"], dictionary[@"title"], [AFOHPDetailModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
     }];
     return cell;
 }

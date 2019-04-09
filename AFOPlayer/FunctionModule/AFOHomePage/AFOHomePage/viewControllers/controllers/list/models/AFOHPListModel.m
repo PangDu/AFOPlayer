@@ -14,13 +14,13 @@
 @property (nonatomic, strong) AFOMPMediaQuery   *mediaQuery;
 @end
 @implementation AFOHPListModel
-#pragma mark ------------ custom
-#pragma mark ------ 获取数据源
-- (void)settingDataIndex:(NSInteger)index block:(artistsListBlock)block{
+#pragma mark ------ settingData
+- (void)settingDataIndex:(NSInteger)index block:(void(^)(NSArray *array))block{
     self.type = index;
-    __weak typeof(self) weakSelf = self;
+    WeakObject(self);
     [self.mediaQuery loadLocalMediaIndex:index block:^(NSArray *array) {
-        [weakSelf settingDataArray:array];
+        StrongObject(self);
+        [self settingDataArray:array];
         block(array);
     }];
 }
@@ -44,7 +44,7 @@
 }
 #pragma mark---------------------------- 专辑相关
 #pragma mark ------ 专辑集合
-- (void)settingAlbumObject:(id)object block:(albumDetailBlock)block{
++ (void)settingAlbumObject:(id)object block:(void(^)(NSString *name))block{
     if ([object isKindOfClass:[MPMediaItemCollection class]]) {
         MPMediaItemCollection *item = object;
         block(item.representativeItem.albumTitle);
@@ -86,18 +86,19 @@
     return [NSURL URLWithString:strBase];
 }
 #pragma mark ------------ property
-#pragma mark ------ artistsArray
 - (NSMutableArray *)artistsArray{
     if (!_artistsArray) {
         _artistsArray = [[NSMutableArray alloc] init];
     }
     return _artistsArray;
 }
-#pragma mark ------ mediaQuery
 - (AFOMPMediaQuery *)mediaQuery{
     if (!_mediaQuery) {
         _mediaQuery = [[AFOMPMediaQuery alloc] init];
     }
     return _mediaQuery;
+}
+- (void)dealloc{
+    NSLog(@"dealloc %@",NSStringFromClass([AFOHPListModel class]));
 }
 @end

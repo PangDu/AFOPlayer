@@ -27,4 +27,10 @@
     }
     return self;
 }
+- (id)delegateTarget{
+    return nil;
+}
+- (id)dataSourceTarget{
+    return nil;
+}
 @end

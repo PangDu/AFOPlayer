@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (void)bindingView:(UIView *)view;
 - (void)unbundlingView:(UIView *)view;
-- (void)bindingController:(UIViewController *)controller target:(id)target;
+- (void)bindingController:(UIViewController *)controller;
 - (void)unbundlingController:(UIViewController *)controller;
 - (void)hookMethodTarget:(id)target selector:(SEL)selector;
 @end

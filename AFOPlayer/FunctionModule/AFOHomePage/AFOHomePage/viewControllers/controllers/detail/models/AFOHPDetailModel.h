@@ -1,5 +1,5 @@
 //
-//  AFOHPDetailViewModel.h
+//  AFOHPDetailModel.h
 //  AFOHomePage
 //
 //  Created by xueguang xian on 2017/12/26.
@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void(^detailArtistListBlock)(NSArray *array);
-typedef void(^detailArtistListDictionaryBlock)(NSDictionary *dictionary);
-@interface AFOHPDetailViewModel : NSObject
+@interface AFOHPDetailModel : NSObject
 - (void)detailDataForValue:(NSString *)value
                       type:(id)type
-                     block:(detailArtistListBlock)block;
+                     block:(void(^)(NSArray *array))block;
 + (void)songsDetails:(id)object
-               block:(detailArtistListDictionaryBlock)block;
+               block:(void(^)(NSDictionary *dictionary))block;
 + (UIImage *)albumImageWithSize:(CGSize)size
                          object:(id)object;
 + (void)routerParams:(NSArray *)array

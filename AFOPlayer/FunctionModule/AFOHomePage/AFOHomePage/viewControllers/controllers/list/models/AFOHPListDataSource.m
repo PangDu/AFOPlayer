@@ -12,11 +12,10 @@
 @interface AFOHPListDataSource ()
 @property (nonatomic, assign) NSInteger                         type;
 @property (nonatomic, strong) NSMutableArray                   *dataArray;
-@property (nonatomic, strong) AFOHPListModel                   *viewModel;
 @end
 
 @implementation AFOHPListDataSource
-#pragma mark ------ 数据源
+#pragma mark ------ settingData
 - (void)settingDataArray:(NSArray *)array index:(NSInteger)index{
     self.type = index;
     [self.dataArray removeAllObjects];
@@ -35,7 +34,7 @@
         cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     }
     ///---
-    [self.viewModel settingAlbumObject:self.dataArray[indexPath.row] block:^(NSString *name) {
+    [AFOHPListModel settingAlbumObject:self.dataArray[indexPath.row] block:^(NSString *name) {
             cell.block(name, [AFOHPListModel artistsNameObject:self.dataArray[indexPath.row]], [AFOHPListModel albumImageWithSize:cell.imageSize object:self.dataArray[indexPath.row]], self.type);
     }];
     return cell;
@@ -46,11 +45,5 @@
         _dataArray = [[NSMutableArray alloc] init];
     }
     return _dataArray;
-}
-- (AFOHPListModel *)viewModel{
-    if (!_viewModel) {
-        _viewModel = [[AFOHPListModel alloc] init];
-    }
-    return _viewModel;
 }
 @end

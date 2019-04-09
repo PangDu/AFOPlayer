@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)receiverRouterMessage:(id)model block:(void(^)(NSString *title,
                                                        NSInteger index,
                                                        NSArray *array))block;
-- (id)delegateTarget;
-- (id)dataSourceTarget;
 @end
 
 NS_ASSUME_NONNULL_END

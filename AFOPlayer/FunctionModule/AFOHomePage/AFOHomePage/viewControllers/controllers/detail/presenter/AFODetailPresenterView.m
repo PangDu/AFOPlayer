@@ -1,19 +1,19 @@
 //
-//  AFOListPresenterView.m
+//  AFODetailPresenterView.m
 //  AFOHomePage
 //
-//  Created by xueguang xian on 2019/4/8.
+//  Created by xueguang xian on 2019/4/9.
 //  Copyright © 2019 AFO. All rights reserved.
 //
 
-#import "AFOListPresenterView.h"
+#import "AFODetailPresenterView.h"
 
-@interface AFOListPresenterView ()
-@property (nonatomic, strong) UITableView   *tableView;
+@interface AFODetailPresenterView ()
+@property (nonatomic, strong) UITableView            *tableView;
 @property (nonatomic, weak) id<AFOHPPresenterDelegate>delegate;
 @end
 
-@implementation AFOListPresenterView
+@implementation AFODetailPresenterView
 - (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
     if (self = [super init]) {
         _delegate = delegate;

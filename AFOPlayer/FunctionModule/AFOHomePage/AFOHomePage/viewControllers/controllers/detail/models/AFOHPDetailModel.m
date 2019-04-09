@@ -1,5 +1,5 @@
 //
-//  AFOHPDetailViewModel.m
+//  AFOHPDetailModel.m
 //  AFOHomePage
 //
 //  Created by xueguang xian on 2017/12/26.
@@ -7,17 +7,17 @@
 //
 
 #import <MediaPlayer/MPMediaItem.h>
-#import "AFOHPDetailViewModel.h"
+#import "AFOHPDetailModel.h"
 #import "AFOMPMediaQuery.h"
-@interface AFOHPDetailViewModel()
+@interface AFOHPDetailModel()
 @property (nonatomic, strong) AFOMPMediaQuery *mediaQuery;
 @end
-@implementation AFOHPDetailViewModel
+@implementation AFOHPDetailModel
 #pragma mark ------------ custom
 #pragma mark ------ 获取列表
 - (void)detailDataForValue:(NSString *)value
                       type:(id)type
-                     block:(detailArtistListBlock)block{
+                     block:(void(^)(NSArray *array))block{
     id strType = MPMediaItemPropertyArtist;
     if ([type integerValue] == 2) {
         strType = MPMediaItemPropertyAlbumTitle;
@@ -29,7 +29,7 @@
     }];
 }
 #pragma mark ------ 获取歌曲详情
-+ (void)songsDetails:(id)object block:(detailArtistListDictionaryBlock)block{
++ (void)songsDetails:(id)object block:(void(^)(NSDictionary *dictionary))block{
     if ([object isKindOfClass:[MPMediaItem  class]]){
         MPMediaItem *item = object;
         
@@ -56,14 +56,13 @@
     }
     id model = array[indexpath.row];
     __block NSURL *baseUrl = NULL;
-    [AFOHPDetailViewModel songsDetails:model block:^(NSDictionary *dictionary) {
+    [AFOHPDetailModel songsDetails:model block:^(NSDictionary *dictionary) {
         NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPVedioController" present:@"AFOHPDetailController" params:dictionary];
         baseUrl = [NSURL URLWithString:strBase];
     }];
     block(baseUrl);
 }
 #pragma mark ------------ property
-#pragma mark ------ mediaQuery
 - (AFOMPMediaQuery *)mediaQuery{
     if (!_mediaQuery) {
         _mediaQuery = [[AFOMPMediaQuery alloc] init];
