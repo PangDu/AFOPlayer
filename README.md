@@ -10,3 +10,7 @@ Overall engineering introduction。
 iOS播放器
 整体工程介绍:
 https://juejin.im/post/5c9a2b896fb9a070df1671dd
+
+AFOPlayer : Main project catalog （主工程目录）
+
+CompileLibrary: Integration libraries used （集成库）
