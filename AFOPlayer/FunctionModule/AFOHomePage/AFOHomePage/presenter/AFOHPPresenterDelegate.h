@@ -13,10 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AFOHPPresenterDelegate <NSObject>
 @optional
-- (void)bindingView:(UIView *)view target:(id)target;
+- (void)bindingView:(UIView *)view;
 - (void)unbundlingView:(UIView *)view;
 - (void)bindingController:(UIViewController *)controller target:(id)target;
 - (void)unbundlingController:(UIViewController *)controller;
+- (void)hookMethodTarget:(id)target selector:(SEL)selector;
 @end
 
 NS_ASSUME_NONNULL_END

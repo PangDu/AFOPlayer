@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AFOListPresenterBusiness : AFOHPPresenter
-- (void)hookMethodTarget:(id)target selector:(SEL)selector;
+@interface AFOListPresenterBusiness : AFOHPPresenter<UITableViewDelegate>
 - (void)receiverRouterMessage:(id)model block:(void(^)(NSString *title,
                                                        NSInteger index,
                                                        NSArray *array))block;
+- (id)delegateTarget;
+- (id)dataSourceTarget;
 @end
 
 NS_ASSUME_NONNULL_END

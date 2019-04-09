@@ -10,9 +10,9 @@
 #import "AFOHPListCell.h"
 #import "AFOHPListModel.h"
 @interface AFOHPListDataSource ()
-@property (nonatomic, assign) NSInteger              type;
-@property (nonatomic, strong) NSMutableArray        *dataArray;
-@property (nonatomic, strong) AFOHPListModel    *viewModel;
+@property (nonatomic, assign) NSInteger                         type;
+@property (nonatomic, strong) NSMutableArray                   *dataArray;
+@property (nonatomic, strong) AFOHPListModel                   *viewModel;
 @end
 
 @implementation AFOHPListDataSource

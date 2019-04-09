@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOListPresenterView : AFOHPPresenter
-@property (nonatomic, strong, readonly) UITableView   *tableView;
+@property (nonatomic, weak) id<AFOHPPresenterDelegate>delegate;
+- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate;
+- (void)bindingTableView;
+- (void)loadDataAction;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -39,6 +39,8 @@
 		247CADC620175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h in Headers */ = {isa = PBXBuildFile; fileRef = 247CADC420175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h */; };
 		247CADC720175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 247CADC520175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m */; };
 		24885956201ACB4700623E66 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24885957201ACB4700623E66 /* AFOFoundation.framework */; };
+		24895591225C7098006AF82B /* AFOHPListDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2489558F225C7098006AF82B /* AFOHPListDelegate.h */; };
+		24895592225C7098006AF82B /* AFOHPListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24895590225C7098006AF82B /* AFOHPListDelegate.m */; };
 		24898157200F38DF008FB71D /* AFOHPVedioController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24898155200F38DF008FB71D /* AFOHPVedioController.h */; };
 		24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24898156200F38DF008FB71D /* AFOHPVedioController.m */; };
 		2489815C200F3956008FB71D /* AFOHPDetailController+Router.h in Headers */ = {isa = PBXBuildFile; fileRef = 2489815A200F3955008FB71D /* AFOHPDetailController+Router.h */; };
@@ -122,6 +124,8 @@
 		247CADC420175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOHPAVPlayer+ChooseSong.h"; sourceTree = "<group>"; };
 		247CADC520175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOHPAVPlayer+ChooseSong.m"; sourceTree = "<group>"; };
 		24885957201ACB4700623E66 /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2489558F225C7098006AF82B /* AFOHPListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListDelegate.h; sourceTree = "<group>"; };
+		24895590225C7098006AF82B /* AFOHPListDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListDelegate.m; sourceTree = "<group>"; };
 		24898155200F38DF008FB71D /* AFOHPVedioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPVedioController.h; sourceTree = "<group>"; };
 		24898156200F38DF008FB71D /* AFOHPVedioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPVedioController.m; sourceTree = "<group>"; };
 		2489815A200F3955008FB71D /* AFOHPDetailController+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOHPDetailController+Router.h"; sourceTree = "<group>"; };
@@ -482,6 +486,8 @@
 				24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */,
 				24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */,
 				24AEB79E1FF133D100F017E9 /* AFOHPListDataSource.m */,
+				2489558F225C7098006AF82B /* AFOHPListDelegate.h */,
+				24895590225C7098006AF82B /* AFOHPListDelegate.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249797A01FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h in Headers */,
+				24895591225C7098006AF82B /* AFOHPListDelegate.h in Headers */,
 				24CFFB341FF1F27100C1E465 /* AFOHPDetailViewModel.h in Headers */,
 				243A8D2F1FF0DE94004BA1CE /* AFOMPMediaQuery.h in Headers */,
 				24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */,
@@ -610,6 +617,7 @@
 				24AEB79D1FF1338E00F017E9 /* AFOHPDetailDataSource.m in Sources */,
 				243A8D301FF0DE94004BA1CE /* AFOMPMediaQuery.m in Sources */,
 				24CFFB3A1FF200BC00C1E465 /* AFOHPDetailCell.m in Sources */,
+				24895592225C7098006AF82B /* AFOHPListDelegate.m in Sources */,
 				24CA985B1FE798D300CE9BB2 /* AFOHPListController.m in Sources */,
 				249797A71FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m in Sources */,
 				24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */,
