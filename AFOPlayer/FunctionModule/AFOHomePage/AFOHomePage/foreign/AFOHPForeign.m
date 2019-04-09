@@ -14,32 +14,26 @@
 @end
 
 @implementation AFOHPForeign
-#pragma mark ------------------ viewDidLoad
+#pragma mark ------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-#pragma mark ------------ 自定义方法
-#pragma mark ------ 首页界面
+#pragma mark ------ AFOHPMainController
 - (UIViewController *)returnHPController{
     return self.navigationController;
 }
-#pragma mark ------------ 系统方法
-
-#pragma mark -
+#pragma mark ------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-#pragma mark ------------ 属性
-#pragma mark ------ mainController
+#pragma mark ------------ property
 - (AFOHPMainController *)mainController{
     if (!_mainController) {
         _mainController = [[AFOHPMainController alloc]init];
     }
     return _mainController;
 }
-#pragma mark ------ navigationController
 - (AFOHPNavigationController *)navigationController{
     if (!_navigationController) {
         _navigationController = [[AFOHPNavigationController alloc]initWithRootViewController:self.mainController];
