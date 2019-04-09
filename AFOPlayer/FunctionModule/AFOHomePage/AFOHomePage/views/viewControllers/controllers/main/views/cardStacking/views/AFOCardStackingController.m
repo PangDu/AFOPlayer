@@ -30,8 +30,6 @@
     [self tableViewdidSelectRowAtIndexPathExchange];
     // Do any additional setup after loading the view.
 }
-#pragma mark ------------ custom
-#pragma mark ------------ API
 #pragma mark ------ UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 }
@@ -39,8 +37,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark ------------ 属性
-#pragma mark ------ cardStackDataSource
+#pragma mark ------------ property
 - (nullable AFOCardStackCollectionDataSource *)cardStackDataSource{
     if (!_cardStackDataSource) {
         _cardStackDataSource = [[AFOCardStackCollectionDataSource alloc]init];
@@ -48,28 +45,24 @@
     }
     return _cardStackDataSource;
 }
-#pragma mark ------ defaultLayout
 - (AFOCardStackDefaultLayout *)defaultLayout{
     if (!_defaultLayout) {
         _defaultLayout = [[AFOCardStackDefaultLayout alloc]init];
     }
     return _defaultLayout;
 }
-#pragma mark ------ selectedLayout
 - (AFOCardStackSelectedLayout *)selectedLayout{
     if (!_selectedLayout) {
         _selectedLayout = [[AFOCardStackSelectedLayout alloc]init];
     }
     return _selectedLayout;
 }
-#pragma mark ------ cardLayout
 - (UICollectionViewLayout *)cardLayout{
     if (!_cardLayout) {
         _cardLayout = [[UICollectionViewLayout alloc]init];
     }
     return _cardLayout;
 }
-#pragma mark ------ collectionView
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];

@@ -77,6 +77,8 @@
 		24CFFB341FF1F27100C1E465 /* AFOHPDetailModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB321FF1F27100C1E465 /* AFOHPDetailModel.h */; };
 		24CFFB391FF200BC00C1E465 /* AFOHPDetailCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB371FF200BC00C1E465 /* AFOHPDetailCell.h */; };
 		24CFFB3A1FF200BC00C1E465 /* AFOHPDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB381FF200BC00C1E465 /* AFOHPDetailCell.m */; };
+		24E0AE7A225CE18A009170D6 /* AFOMainPresenterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0AE78225CE18A009170D6 /* AFOMainPresenterView.h */; };
+		24E0AE7B225CE18A009170D6 /* AFOMainPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0AE79225CE18A009170D6 /* AFOMainPresenterView.m */; };
 		24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */; };
 		24E9B142201F507300DE5673 /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E9B143201F507300DE5673 /* AFOViews.framework */; };
 /* End PBXBuildFile section */
@@ -166,6 +168,8 @@
 		24CFFB321FF1F27100C1E465 /* AFOHPDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailModel.h; sourceTree = "<group>"; };
 		24CFFB371FF200BC00C1E465 /* AFOHPDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailCell.h; sourceTree = "<group>"; };
 		24CFFB381FF200BC00C1E465 /* AFOHPDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailCell.m; sourceTree = "<group>"; };
+		24E0AE78225CE18A009170D6 /* AFOMainPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMainPresenterView.h; sourceTree = "<group>"; };
+		24E0AE79225CE18A009170D6 /* AFOMainPresenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMainPresenterView.m; sourceTree = "<group>"; };
 		24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListDataSource.h; sourceTree = "<group>"; };
 		24E9B143201F507300DE5673 /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,22 +199,31 @@
 			path = detail;
 			sourceTree = "<group>";
 		};
-		2405E5FD1FEA498D00BAFF97 /* Models */ = {
+		2405E5FD1FEA498D00BAFF97 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				2405E5F91FEA497E00BAFF97 /* CardStackingModel.h */,
 				2405E5FA1FEA497E00BAFF97 /* CardStackingModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2405E5FE1FEA4A5600BAFF97 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
 				2405E5FF1FEA4A7600BAFF97 /* CardStackingViewModel.h */,
 				2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */,
 			);
-			path = ViewModels;
+			path = models;
+			sourceTree = "<group>";
+		};
+		2405E5FE1FEA4A5600BAFF97 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				249797951FE5F74C009AB645 /* Layout */,
+				2497979D1FE5F74C009AB645 /* AFOCardStackingController.h */,
+				2497979A1FE5F74C009AB645 /* AFOCardStackingController.m */,
+				241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */,
+				241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */,
+				249797941FE5F74C009AB645 /* AFOCardStackCollectionCell.h */,
+				2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */,
+				249797931FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h */,
+				2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		240BAB151FE1218800D58435 = {
@@ -337,10 +350,9 @@
 		24898149200F30F4008FB71D /* play */ = {
 			isa = PBXGroup;
 			children = (
+				2489814F200F3173008FB71D /* models */,
 				2489814E200F316A008FB71D /* views */,
-				2489814F200F3173008FB71D /* viewModel */,
-				24898155200F38DF008FB71D /* AFOHPVedioController.h */,
-				24898156200F38DF008FB71D /* AFOHPVedioController.m */,
+				24E0AE7D225CE44E009170D6 /* presenter */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -348,6 +360,8 @@
 		2489814E200F316A008FB71D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				24898155200F38DF008FB71D /* AFOHPVedioController.h */,
+				24898156200F38DF008FB71D /* AFOHPVedioController.m */,
 				24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */,
 				24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */,
 				2458D6762010263900D2058C /* AFOHPAVPlayerView.h */,
@@ -356,38 +370,32 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		2489814F200F3173008FB71D /* viewModel */ = {
+		2489814F200F3173008FB71D /* models */ = {
 			isa = PBXGroup;
 			children = (
-				24B13029201835B70082AA66 /* avPlayer */,
+				24479091200F7AD600445C62 /* AFOHPAVPlayer.h */,
+				24479092200F7AD600445C62 /* AFOHPAVPlayer.m */,
+				247CADC420175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h */,
+				247CADC520175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m */,
 			);
-			path = viewModel;
+			path = models;
 			sourceTree = "<group>";
 		};
 		2497978E1FE5F74C009AB645 /* cardStacking */ = {
 			isa = PBXGroup;
 			children = (
-				2405E5FD1FEA498D00BAFF97 /* Models */,
-				2405E5FE1FEA4A5600BAFF97 /* ViewModels */,
-				249797921FE5F74C009AB645 /* Controllers */,
+				2405E5FD1FEA498D00BAFF97 /* models */,
+				2405E5FE1FEA4A5600BAFF97 /* views */,
+				249797921FE5F74C009AB645 /* presenter */,
 			);
 			path = cardStacking;
 			sourceTree = "<group>";
 		};
-		249797921FE5F74C009AB645 /* Controllers */ = {
+		249797921FE5F74C009AB645 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				249797951FE5F74C009AB645 /* Layout */,
-				2497979D1FE5F74C009AB645 /* AFOCardStackingController.h */,
-				2497979A1FE5F74C009AB645 /* AFOCardStackingController.m */,
-				241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */,
-				241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */,
-				249797941FE5F74C009AB645 /* AFOCardStackCollectionCell.h */,
-				2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */,
-				249797931FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h */,
-				2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */,
 			);
-			path = Controllers;
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		249797951FE5F74C009AB645 /* Layout */ = {
@@ -425,22 +433,11 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		24B13029201835B70082AA66 /* avPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				24479091200F7AD600445C62 /* AFOHPAVPlayer.h */,
-				24479092200F7AD600445C62 /* AFOHPAVPlayer.m */,
-				247CADC420175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h */,
-				247CADC520175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m */,
-			);
-			path = avPlayer;
-			sourceTree = "<group>";
-		};
 		24CA98561FE7989100CE9BB2 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				245923B51FE136970094C3E0 /* AFOHPMainController.h */,
-				245923B61FE136970094C3E0 /* AFOHPMainController.m */,
+				24E0AE7C225CE413009170D6 /* views */,
+				24E0AE77225CE15A009170D6 /* presenter */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -470,17 +467,34 @@
 			isa = PBXGroup;
 			children = (
 				245923911FE131B60094C3E0 /* viewControllers */,
-				24DC53AF1FE3A920005B4A4D /* animation */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		24DC53AF1FE3A920005B4A4D /* animation */ = {
+		24E0AE77225CE15A009170D6 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				24E0AE78225CE18A009170D6 /* AFOMainPresenterView.h */,
+				24E0AE79225CE18A009170D6 /* AFOMainPresenterView.m */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		24E0AE7C225CE413009170D6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				245923B51FE136970094C3E0 /* AFOHPMainController.h */,
+				245923B61FE136970094C3E0 /* AFOHPMainController.m */,
 				2497978E1FE5F74C009AB645 /* cardStacking */,
 			);
-			path = animation;
+			path = views;
+			sourceTree = "<group>";
+		};
+		24E0AE7D225CE44E009170D6 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		24E41A5D1FF0F4BE00CA3285 /* models */ = {
@@ -533,6 +547,7 @@
 				24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */,
 				2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */,
 				245923B71FE136970094C3E0 /* AFOHPMainController.h in Headers */,
+				24E0AE7A225CE18A009170D6 /* AFOMainPresenterView.h in Headers */,
 				2489559E225C87D0006AF82B /* AFOHPDetailDelegate.h in Headers */,
 				249797A11FE5F74C009AB645 /* AFOCardStackCollectionCell.h in Headers */,
 				2459238F1FE131880094C3E0 /* AFOHPNavigationController.h in Headers */,
@@ -617,6 +632,7 @@
 				2489559B225C8700006AF82B /* AFODetailPresenterBusiness.m in Sources */,
 				249797A81FE5F74C009AB645 /* AFOCardStackCollectionCell.m in Sources */,
 				249797A21FE5F74C009AB645 /* AFOCardStackDefaultLayout.m in Sources */,
+				24E0AE7B225CE18A009170D6 /* AFOMainPresenterView.m in Sources */,
 				241EA61B1FF3A06800F3A222 /* AFOCardStackingController+Router.m in Sources */,
 				2405E6021FEA4A7600BAFF97 /* CardStackingViewModel.m in Sources */,
 				24A0F988225B83B7006CC24D /* AFOListPresenterView.m in Sources */,

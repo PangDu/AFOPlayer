@@ -17,7 +17,6 @@
 - (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
     if (self = [super init]) {
         _delegate = delegate;
-        [self bindingTableView];
     }
     return self;
 }
