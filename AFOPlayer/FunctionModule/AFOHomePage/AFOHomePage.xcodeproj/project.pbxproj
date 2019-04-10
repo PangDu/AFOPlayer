@@ -68,6 +68,10 @@
 		24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */; };
 		24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CA98581FE798D300CE9BB2 /* AFOHPListController.h */; };
 		24CA985B1FE798D300CE9BB2 /* AFOHPListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA98591FE798D300CE9BB2 /* AFOHPListController.m */; };
+		24CC7A94225D944C00874610 /* AFOHPPlayPresenterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CC7A92225D944C00874610 /* AFOHPPlayPresenterView.h */; };
+		24CC7A95225D944C00874610 /* AFOHPPlayPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CC7A93225D944C00874610 /* AFOHPPlayPresenterView.m */; };
+		24CC7A98225D945F00874610 /* AFOHPPlayPresenterBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CC7A96225D945F00874610 /* AFOHPPlayPresenterBusiness.h */; };
+		24CC7A99225D945F00874610 /* AFOHPPlayPresenterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CC7A97225D945F00874610 /* AFOHPPlayPresenterBusiness.m */; };
 		24CFFB301FF1EEDB00C1E465 /* AFOHPListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB2E1FF1EEDB00C1E465 /* AFOHPListModel.h */; };
 		24CFFB311FF1EEDB00C1E465 /* AFOHPListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */; };
 		24CFFB341FF1F27100C1E465 /* AFOHPDetailModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24CFFB321FF1F27100C1E465 /* AFOHPDetailModel.h */; };
@@ -161,6 +165,10 @@
 		24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayerBaseView.m; sourceTree = "<group>"; };
 		24CA98581FE798D300CE9BB2 /* AFOHPListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListController.h; sourceTree = "<group>"; };
 		24CA98591FE798D300CE9BB2 /* AFOHPListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListController.m; sourceTree = "<group>"; };
+		24CC7A92225D944C00874610 /* AFOHPPlayPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayPresenterView.h; sourceTree = "<group>"; };
+		24CC7A93225D944C00874610 /* AFOHPPlayPresenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayPresenterView.m; sourceTree = "<group>"; };
+		24CC7A96225D945F00874610 /* AFOHPPlayPresenterBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayPresenterBusiness.h; sourceTree = "<group>"; };
+		24CC7A97225D945F00874610 /* AFOHPPlayPresenterBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayPresenterBusiness.m; sourceTree = "<group>"; };
 		24CFFB2E1FF1EEDB00C1E465 /* AFOHPListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListModel.h; sourceTree = "<group>"; };
 		24CFFB2F1FF1EEDB00C1E465 /* AFOHPListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListModel.m; sourceTree = "<group>"; };
 		24CFFB321FF1F27100C1E465 /* AFOHPDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailModel.h; sourceTree = "<group>"; };
@@ -500,6 +508,10 @@
 		24E0AE7D225CE44E009170D6 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				24CC7A92225D944C00874610 /* AFOHPPlayPresenterView.h */,
+				24CC7A93225D944C00874610 /* AFOHPPlayPresenterView.m */,
+				24CC7A96225D945F00874610 /* AFOHPPlayPresenterBusiness.h */,
+				24CC7A97225D945F00874610 /* AFOHPPlayPresenterBusiness.m */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -547,6 +559,7 @@
 				24482103225B379200DC9207 /* AFOHPPresenter.h in Headers */,
 				24AFA166225AE4D90054C2A6 /* AFOHPPlayerBaseView.h in Headers */,
 				24895596225C86CF006AF82B /* AFODetailPresenterView.h in Headers */,
+				24CC7A98225D945F00874610 /* AFOHPPlayPresenterBusiness.h in Headers */,
 				2405E5FB1FEA497E00BAFF97 /* AFOCardStackingModel.h in Headers */,
 				24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */,
 				249797A41FE5F74C009AB645 /* AFOCardStackDefaultLayout.h in Headers */,
@@ -560,6 +573,7 @@
 				24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */,
 				2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */,
 				245923B71FE136970094C3E0 /* AFOHPMainController.h in Headers */,
+				24CC7A94225D944C00874610 /* AFOHPPlayPresenterView.h in Headers */,
 				24E0AE81225CE639009170D6 /* AFOCardPresenterView.h in Headers */,
 				24E0AE7A225CE18A009170D6 /* AFOMainPresenterView.h in Headers */,
 				24E0AE85225CE64C009170D6 /* AFOCardPresenterBusiness.h in Headers */,
@@ -659,9 +673,11 @@
 				24CA985B1FE798D300CE9BB2 /* AFOHPListController.m in Sources */,
 				24895597225C86CF006AF82B /* AFODetailPresenterView.m in Sources */,
 				249797A71FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m in Sources */,
+				24CC7A95225D944C00874610 /* AFOHPPlayPresenterView.m in Sources */,
 				24AEB79F1FF133D100F017E9 /* AFOHPListDataSource.m in Sources */,
 				245923901FE131880094C3E0 /* AFOHPNavigationController.m in Sources */,
 				24A0F98C225B83CE006CC24D /* AFOListPresenterBusiness.m in Sources */,
+				24CC7A99225D945F00874610 /* AFOHPPlayPresenterBusiness.m in Sources */,
 				24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */,
 				248955A1225C91A2006AF82B /* AFOHPDetailModel.m in Sources */,
 				24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */,

@@ -10,10 +10,14 @@
 #import "AFOHPAVPlayer+ChooseSong.h"
 #import "AFOHPAVPlayer.h"
 #import "AFOHPAVPlayerView.h"
+#import "AFOHPPlayPresenterView.h"
+#import "AFOHPPlayPresenterBusiness.h"
 @interface AFOHPVedioController ()<AFORouterManagerDelegate,AFOHPAVPlayerViewDelegate,AFOHPAVPlayerDelegate,AFOProgressSliderManagerDelegate>
 @property (nonatomic, strong) AFOHPAVPlayer             *hpAVPlayer;
 @property (nonatomic, strong) AFOProgressSliderManager  *sliderManager;
 @property (nonatomic, strong) AFOHPAVPlayerView         *hpAVPlayerView;
+@property (nonatomic, strong) AFOHPPlayPresenterView     *presenterView;
+@property (nonatomic, strong) AFOHPPlayPresenterBusiness *pressenterBusiness;
 @end
 
 @implementation AFOHPVedioController
@@ -66,6 +70,9 @@
         }];
     }];
 }
+- (void)progressValueChangeDelegate{
+    [self.sliderManager settingSliderPercent:self.sliderManager.sliderPercent];
+}
 #pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,6 +96,18 @@
         _hpAVPlayerView = [[AFOHPAVPlayerView alloc] initWithFrame:CGRectMake(0, 60, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) delegate:self];
     }
     return _hpAVPlayerView;
+}
+- (AFOHPPresenter *)presenterView{
+    if (!_presenterView) {
+        _presenterView = [[AFOHPPlayPresenterView alloc] init];
+    }
+    return _presenterView;
+}
+- (AFOHPPresenter *)pressenterBusiness{
+    if (!_pressenterBusiness) {
+        _pressenterBusiness = [[AFOHPPlayPresenterBusiness alloc] init];
+    }
+    return _pressenterBusiness;
 }
 - (void)dealloc{
     [self.sliderManager settingDisplayLink:YES];

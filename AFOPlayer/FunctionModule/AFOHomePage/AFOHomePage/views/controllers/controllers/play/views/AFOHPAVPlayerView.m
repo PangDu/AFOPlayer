@@ -138,10 +138,6 @@
 //    [self.sliderManager settingDisplayLink:!_playButton.selected];
 //    [self.avPlayer selectMusicPlayer:sender.tag];
 }
-#pragma mark ------ 手动滑动
-- (void)progressValueChange{
-//    [self.delegate progressValueChangeDelegate:self.sliderManager.sliderPercent];
-}
 #pragma mark ------------ AFOHPAVPlayerDelegate
 - (void)audioOperationPlay:(id)model{
     if (model) {

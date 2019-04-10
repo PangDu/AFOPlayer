@@ -10,20 +10,12 @@
 
 @interface AFODetailPresenterView ()
 @property (nonatomic, strong) UITableView            *tableView;
-@property (nonatomic, weak) id<AFOHPPresenterDelegate>delegate;
 @end
 
 @implementation AFODetailPresenterView
-- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
-    if (self = [super init]) {
-        _delegate = delegate;
-        [self bindingTableView];
-    }
-    return self;
-}
 #pragma mark ------ bindingView
 - (void)bindingTableView{
-    [self.delegate bindingView:self.tableView];
+    [self.presenterDelegate bindingView:self.tableView];
 }
 #pragma mark ------ reloadData
 - (void)loadDataAction{

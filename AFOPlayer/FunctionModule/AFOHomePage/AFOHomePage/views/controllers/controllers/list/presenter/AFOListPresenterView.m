@@ -10,19 +10,12 @@
 
 @interface AFOListPresenterView ()
 @property (nonatomic, strong) UITableView   *tableView;
-@property (nonatomic, weak) id<AFOHPPresenterDelegate>delegate;
 @end
 
 @implementation AFOListPresenterView
-- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
-    if (self = [super init]) {
-        _delegate = delegate;
-    }
-    return self;
-}
 #pragma mark ------ bindingView
 - (void)bindingTableView{
-    [self.delegate bindingView:self.tableView];
+    [self.presenterDelegate bindingView:self.tableView];
 }
 #pragma mark ------ reloadData
 - (void)loadDataAction{

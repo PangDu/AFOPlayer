@@ -10,9 +10,16 @@
 @interface AFOHPPresenter ()
 @property (nonatomic, strong, readwrite) UIView            *presenterView;
 @property (nonatomic, strong, readwrite) UIViewController  *controller;
+@property (nonatomic, weak, readwrite) id<AFOHPPresenterDelegate>presenterDelegate;
 @end
 
 @implementation AFOHPPresenter
+- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
+    if (self = [super init]) {
+        _presenterDelegate = delegate;
+    }
+    return self;
+}
 #pragma mark ------ initWithView
 - (instancetype)initWithView:(UIView *)view{
     if (self = [super init]) {

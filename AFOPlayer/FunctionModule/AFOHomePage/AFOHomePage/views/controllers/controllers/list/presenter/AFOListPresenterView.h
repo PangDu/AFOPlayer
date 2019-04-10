@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOListPresenterView : AFOHPPresenter
-- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate;
 - (void)bindingTableView;
 - (void)loadDataAction;
 @end

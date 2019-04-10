@@ -9,17 +9,10 @@
 #import "AFOMainPresenterView.h"
 @interface AFOMainPresenterView ()
 @property (nonatomic, strong) AFOCardStackingController *cardStacking;
-@property (nonatomic, weak) id<AFOHPPresenterDelegate>   delegate;
 @end
 @implementation AFOMainPresenterView
-- (instancetype)initWithDelegate:(id<AFOHPPresenterDelegate>)delegate{
-    if (self = [super init]) {
-        _delegate = delegate;
-    }
-    return self;
-}
 - (void)bindingCardStacking{
-    [self.delegate bindingController:self.cardStacking];
+    [self.presenterDelegate bindingController:self.cardStacking];
 }
 #pragma mark ------ property
 - (AFOCardStackingController *)cardStacking{
