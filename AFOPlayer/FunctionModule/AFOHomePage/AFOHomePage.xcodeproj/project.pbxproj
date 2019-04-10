@@ -396,10 +396,7 @@
 			children = (
 				24898155200F38DF008FB71D /* AFOHPVedioController.h */,
 				24898156200F38DF008FB71D /* AFOHPVedioController.m */,
-				24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */,
-				24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */,
-				2458D6762010263900D2058C /* AFOHPPlayerView.h */,
-				2458D6772010263900D2058C /* AFOHPPlayerView.m */,
+				24AF987A225E317F00CF3E97 /* play */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -469,6 +466,17 @@
 				24AEB79B1FF1338E00F017E9 /* AFOHPDetailDataSource.m */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		24AF987A225E317F00CF3E97 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */,
+				24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */,
+				2458D6762010263900D2058C /* AFOHPPlayerView.h */,
+				2458D6772010263900D2058C /* AFOHPPlayerView.m */,
+			);
+			path = play;
 			sourceTree = "<group>";
 		};
 		24CA98561FE7989100CE9BB2 /* main */ = {
