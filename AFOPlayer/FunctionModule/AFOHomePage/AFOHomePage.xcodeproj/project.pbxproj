@@ -11,13 +11,9 @@
 		24033CAE1FE904D80001DD63 /* AFOHPDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24033CAC1FE904D80001DD63 /* AFOHPDetailController.m */; };
 		24033CAF1FE906570001DD63 /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24033CB01FE906570001DD63 /* AFORouter.framework */; };
 		24033CB21FE9066A0001DD63 /* AFORouter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24033CB01FE906570001DD63 /* AFORouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2405E5FB1FEA497E00BAFF97 /* CardStackingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2405E5F91FEA497E00BAFF97 /* CardStackingModel.h */; };
-		2405E5FC1FEA497E00BAFF97 /* CardStackingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405E5FA1FEA497E00BAFF97 /* CardStackingModel.m */; };
-		2405E6011FEA4A7600BAFF97 /* CardStackingViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2405E5FF1FEA4A7600BAFF97 /* CardStackingViewModel.h */; };
-		2405E6021FEA4A7600BAFF97 /* CardStackingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */; };
+		2405E5FB1FEA497E00BAFF97 /* AFOCardStackingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2405E5F91FEA497E00BAFF97 /* AFOCardStackingModel.h */; };
+		2405E5FC1FEA497E00BAFF97 /* AFOCardStackingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405E5FA1FEA497E00BAFF97 /* AFOCardStackingModel.m */; };
 		240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */ = {isa = PBXBuildFile; fileRef = 240BAB221FE1218800D58435 /* AFOHomePage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		241EA61A1FF3A06800F3A222 /* AFOCardStackingController+Router.h in Headers */ = {isa = PBXBuildFile; fileRef = 241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */; };
-		241EA61B1FF3A06800F3A222 /* AFOCardStackingController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */; };
 		2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */; };
 		2437D9BD1FF3329E00E12235 /* AFOHPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437D9BB1FF3329E00E12235 /* AFOHPListCell.m */; };
 		243A8D2F1FF0DE94004BA1CE /* AFOMPMediaQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 243A8D2D1FF0DE94004BA1CE /* AFOMPMediaQuery.h */; };
@@ -79,6 +75,12 @@
 		24CFFB3A1FF200BC00C1E465 /* AFOHPDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFFB381FF200BC00C1E465 /* AFOHPDetailCell.m */; };
 		24E0AE7A225CE18A009170D6 /* AFOMainPresenterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0AE78225CE18A009170D6 /* AFOMainPresenterView.h */; };
 		24E0AE7B225CE18A009170D6 /* AFOMainPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0AE79225CE18A009170D6 /* AFOMainPresenterView.m */; };
+		24E0AE81225CE639009170D6 /* AFOCardPresenterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0AE7F225CE639009170D6 /* AFOCardPresenterView.h */; };
+		24E0AE82225CE639009170D6 /* AFOCardPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0AE80225CE639009170D6 /* AFOCardPresenterView.m */; };
+		24E0AE85225CE64C009170D6 /* AFOCardPresenterBusiness.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0AE83225CE64C009170D6 /* AFOCardPresenterBusiness.h */; };
+		24E0AE86225CE64C009170D6 /* AFOCardPresenterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0AE84225CE64C009170D6 /* AFOCardPresenterBusiness.m */; };
+		24E0AE89225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0AE87225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h */; };
+		24E0AE8A225CE6A6009170D6 /* AFOCardStackCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0AE88225CE6A6009170D6 /* AFOCardStackCollectionDelegate.m */; };
 		24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */; };
 		24E9B142201F507300DE5673 /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E9B143201F507300DE5673 /* AFOViews.framework */; };
 /* End PBXBuildFile section */
@@ -100,14 +102,10 @@
 		24033CAB1FE904D80001DD63 /* AFOHPDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPDetailController.h; sourceTree = "<group>"; };
 		24033CAC1FE904D80001DD63 /* AFOHPDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailController.m; sourceTree = "<group>"; };
 		24033CB01FE906570001DD63 /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2405E5F91FEA497E00BAFF97 /* CardStackingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardStackingModel.h; sourceTree = "<group>"; };
-		2405E5FA1FEA497E00BAFF97 /* CardStackingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardStackingModel.m; sourceTree = "<group>"; };
-		2405E5FF1FEA4A7600BAFF97 /* CardStackingViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardStackingViewModel.h; sourceTree = "<group>"; };
-		2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardStackingViewModel.m; sourceTree = "<group>"; };
+		2405E5F91FEA497E00BAFF97 /* AFOCardStackingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOCardStackingModel.h; sourceTree = "<group>"; };
+		2405E5FA1FEA497E00BAFF97 /* AFOCardStackingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOCardStackingModel.m; sourceTree = "<group>"; };
 		240BAB1F1FE1218800D58435 /* AFOHomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOHomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240BAB221FE1218800D58435 /* AFOHomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHomePage.h; sourceTree = "<group>"; };
-		241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOCardStackingController+Router.h"; sourceTree = "<group>"; };
-		241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOCardStackingController+Router.m"; sourceTree = "<group>"; };
 		2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListCell.h; sourceTree = "<group>"; };
 		2437D9BB1FF3329E00E12235 /* AFOHPListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPListCell.m; sourceTree = "<group>"; };
 		243A8D2D1FF0DE94004BA1CE /* AFOMPMediaQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMPMediaQuery.h; sourceTree = "<group>"; };
@@ -170,6 +168,12 @@
 		24CFFB381FF200BC00C1E465 /* AFOHPDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPDetailCell.m; sourceTree = "<group>"; };
 		24E0AE78225CE18A009170D6 /* AFOMainPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMainPresenterView.h; sourceTree = "<group>"; };
 		24E0AE79225CE18A009170D6 /* AFOMainPresenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMainPresenterView.m; sourceTree = "<group>"; };
+		24E0AE7F225CE639009170D6 /* AFOCardPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOCardPresenterView.h; sourceTree = "<group>"; };
+		24E0AE80225CE639009170D6 /* AFOCardPresenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOCardPresenterView.m; sourceTree = "<group>"; };
+		24E0AE83225CE64C009170D6 /* AFOCardPresenterBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOCardPresenterBusiness.h; sourceTree = "<group>"; };
+		24E0AE84225CE64C009170D6 /* AFOCardPresenterBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOCardPresenterBusiness.m; sourceTree = "<group>"; };
+		24E0AE87225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOCardStackCollectionDelegate.h; sourceTree = "<group>"; };
+		24E0AE88225CE6A6009170D6 /* AFOCardStackCollectionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOCardStackCollectionDelegate.m; sourceTree = "<group>"; };
 		24E41A5E1FF0F4FB00CA3285 /* AFOHPListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListDataSource.h; sourceTree = "<group>"; };
 		24E9B143201F507300DE5673 /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -202,10 +206,12 @@
 		2405E5FD1FEA498D00BAFF97 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				2405E5F91FEA497E00BAFF97 /* CardStackingModel.h */,
-				2405E5FA1FEA497E00BAFF97 /* CardStackingModel.m */,
-				2405E5FF1FEA4A7600BAFF97 /* CardStackingViewModel.h */,
-				2405E6001FEA4A7600BAFF97 /* CardStackingViewModel.m */,
+				2405E5F91FEA497E00BAFF97 /* AFOCardStackingModel.h */,
+				2405E5FA1FEA497E00BAFF97 /* AFOCardStackingModel.m */,
+				249797931FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h */,
+				2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */,
+				24E0AE87225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h */,
+				24E0AE88225CE6A6009170D6 /* AFOCardStackCollectionDelegate.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -216,12 +222,8 @@
 				249797951FE5F74C009AB645 /* Layout */,
 				2497979D1FE5F74C009AB645 /* AFOCardStackingController.h */,
 				2497979A1FE5F74C009AB645 /* AFOCardStackingController.m */,
-				241EA6181FF3A06800F3A222 /* AFOCardStackingController+Router.h */,
-				241EA6191FF3A06800F3A222 /* AFOCardStackingController+Router.m */,
 				249797941FE5F74C009AB645 /* AFOCardStackCollectionCell.h */,
 				2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */,
-				249797931FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h */,
-				2497979B1FE5F74C009AB645 /* AFOCardStackCollectionDataSource.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -277,13 +279,13 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
-		245923911FE131B60094C3E0 /* viewControllers */ = {
+		245923911FE131B60094C3E0 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				245923931FE131E20094C3E0 /* controllers */,
 				245923921FE131C70094C3E0 /* navigation */,
 			);
-			path = viewControllers;
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		245923921FE131C70094C3E0 /* navigation */ = {
@@ -394,6 +396,10 @@
 		249797921FE5F74C009AB645 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				24E0AE7F225CE639009170D6 /* AFOCardPresenterView.h */,
+				24E0AE80225CE639009170D6 /* AFOCardPresenterView.m */,
+				24E0AE83225CE64C009170D6 /* AFOCardPresenterBusiness.h */,
+				24E0AE84225CE64C009170D6 /* AFOCardPresenterBusiness.m */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 		24CA98561FE7989100CE9BB2 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				24E0AE7E225CE5F0009170D6 /* models */,
 				24E0AE7C225CE413009170D6 /* views */,
 				24E0AE77225CE15A009170D6 /* presenter */,
 			);
@@ -466,7 +473,7 @@
 		24DC53AE1FE3A910005B4A4D /* views */ = {
 			isa = PBXGroup;
 			children = (
-				245923911FE131B60094C3E0 /* viewControllers */,
+				245923911FE131B60094C3E0 /* controllers */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -495,6 +502,13 @@
 			children = (
 			);
 			path = presenter;
+			sourceTree = "<group>";
+		};
+		24E0AE7E225CE5F0009170D6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		24E41A5D1FF0F4BE00CA3285 /* models */ = {
@@ -527,19 +541,18 @@
 				24A0F98B225B83CE006CC24D /* AFOListPresenterBusiness.h in Headers */,
 				240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */,
 				247CADC620175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h in Headers */,
-				2405E6011FEA4A7600BAFF97 /* CardStackingViewModel.h in Headers */,
 				24A0F98E225B84A8006CC24D /* AFOHPPresenterDelegate.h in Headers */,
 				24033CAD1FE904D80001DD63 /* AFOHPDetailController.h in Headers */,
 				2489559A225C8700006AF82B /* AFODetailPresenterBusiness.h in Headers */,
-				241EA61A1FF3A06800F3A222 /* AFOCardStackingController+Router.h in Headers */,
 				24482103225B379200DC9207 /* AFOHPPresenter.h in Headers */,
 				24AFA166225AE4D90054C2A6 /* AFOHPPlayerBaseView.h in Headers */,
 				24895596225C86CF006AF82B /* AFODetailPresenterView.h in Headers */,
-				2405E5FB1FEA497E00BAFF97 /* CardStackingModel.h in Headers */,
+				2405E5FB1FEA497E00BAFF97 /* AFOCardStackingModel.h in Headers */,
 				24AEB79C1FF1338E00F017E9 /* AFOHPDetailDataSource.h in Headers */,
 				249797A41FE5F74C009AB645 /* AFOCardStackDefaultLayout.h in Headers */,
 				249797A51FE5F74C009AB645 /* AFOCardStackSelectedLayout.h in Headers */,
 				24898157200F38DF008FB71D /* AFOHPVedioController.h in Headers */,
+				24E0AE89225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h in Headers */,
 				245923BD1FE1371F0094C3E0 /* AFOHPForeign.h in Headers */,
 				24CFFB391FF200BC00C1E465 /* AFOHPDetailCell.h in Headers */,
 				249797A91FE5F74C009AB645 /* AFOCardStackingController.h in Headers */,
@@ -547,7 +560,9 @@
 				24E41A601FF0F4FB00CA3285 /* AFOHPListDataSource.h in Headers */,
 				2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */,
 				245923B71FE136970094C3E0 /* AFOHPMainController.h in Headers */,
+				24E0AE81225CE639009170D6 /* AFOCardPresenterView.h in Headers */,
 				24E0AE7A225CE18A009170D6 /* AFOMainPresenterView.h in Headers */,
+				24E0AE85225CE64C009170D6 /* AFOCardPresenterBusiness.h in Headers */,
 				2489559E225C87D0006AF82B /* AFOHPDetailDelegate.h in Headers */,
 				249797A11FE5F74C009AB645 /* AFOCardStackCollectionCell.h in Headers */,
 				2459238F1FE131880094C3E0 /* AFOHPNavigationController.h in Headers */,
@@ -628,14 +643,14 @@
 				24479094200F7AD600445C62 /* AFOHPAVPlayer.m in Sources */,
 				24482104225B379200DC9207 /* AFOHPPresenter.m in Sources */,
 				245923BE1FE1371F0094C3E0 /* AFOHPForeign.m in Sources */,
-				2405E5FC1FEA497E00BAFF97 /* CardStackingModel.m in Sources */,
+				2405E5FC1FEA497E00BAFF97 /* AFOCardStackingModel.m in Sources */,
+				24E0AE82225CE639009170D6 /* AFOCardPresenterView.m in Sources */,
 				2489559B225C8700006AF82B /* AFODetailPresenterBusiness.m in Sources */,
 				249797A81FE5F74C009AB645 /* AFOCardStackCollectionCell.m in Sources */,
 				249797A21FE5F74C009AB645 /* AFOCardStackDefaultLayout.m in Sources */,
 				24E0AE7B225CE18A009170D6 /* AFOMainPresenterView.m in Sources */,
-				241EA61B1FF3A06800F3A222 /* AFOCardStackingController+Router.m in Sources */,
-				2405E6021FEA4A7600BAFF97 /* CardStackingViewModel.m in Sources */,
 				24A0F988225B83B7006CC24D /* AFOListPresenterView.m in Sources */,
+				24E0AE8A225CE6A6009170D6 /* AFOCardStackCollectionDelegate.m in Sources */,
 				24AEB79D1FF1338E00F017E9 /* AFOHPDetailDataSource.m in Sources */,
 				243A8D301FF0DE94004BA1CE /* AFOMPMediaQuery.m in Sources */,
 				2489559F225C87D0006AF82B /* AFOHPDetailDelegate.m in Sources */,
@@ -652,6 +667,7 @@
 				24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */,
 				2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */,
 				24CFFB311FF1EEDB00C1E465 /* AFOHPListModel.m in Sources */,
+				24E0AE86225CE64C009170D6 /* AFOCardPresenterBusiness.m in Sources */,
 				249797A31FE5F74C009AB645 /* AFOCardStackSelectedLayout.m in Sources */,
 				247CADC720175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.m in Sources */,
 				249797A61FE5F74C009AB645 /* AFOCardStackingController.m in Sources */,
