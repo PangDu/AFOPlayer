@@ -1,36 +1,48 @@
 //
-//  AFOHPAVPlayerView.m
+//  AFOHPPlayerView.m
 //  AFOHomePage
 //
 //  Created by xueguang xian on 2018/1/18.
 //  Copyright © 2018年 AFO. All rights reserved.
 //
 
-#import "AFOHPAVPlayerView.h"
-@interface AFOHPAVPlayerView ()<AFOHPAVPlayerViewDelegate>
+#import "AFOHPPlayerView.h"
+@interface AFOHPPlayerView ()<AFOHPAVPlayerViewDelegate>
 @property (nonatomic, assign, readwrite) CGSize          imageSize;
 @property (nonatomic, weak) id<AFOHPAVPlayerViewDelegate> delegate;
 @end
 
-@implementation AFOHPAVPlayerView
+@implementation AFOHPPlayerView
 #pragma mark ------ initWithFrame
 - (instancetype)initWithFrame:(CGRect)frame delegate:(id)sender{
     if (self = [super initWithFrame:frame]) {
         _delegate = sender;
-        [self viewsFrame];
+        [self addSubBaseview];
     }
     return self;
 }
-#pragma mark ------------
+#pragma mark ------ addSubBaseview
+- (void)addSubBaseview{
+    ///---
+    [self addSubview:self.backImageView];
+    ///--- revolveImageView
+    [self addSubview:self.revolveImageView];
+    ///--- playTimeLabel
+    [self addSubview:self.playTimeLabel];
+    ///--- totalTimeLabel
+    [self addSubview:self.totalTimeLabel];
+    ///--- playButton
+    [self addSubview:self.playButton];
+    ///--- onButton
+    [self addSubview:self.onButton];
+    ///--- nextButton
+    [self addSubview:self.nextButton];
+    ///---
+    [self viewsFrame];
+}
+#pragma mark ------------ viewsFrame
 - (void)viewsFrame{
     WeakObject(self);
-    ///------ revolveImageView
-    [self.revolveImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        StrongObject(self);
-        make.centerX.mas_equalTo(self.mas_centerX);
-        make.top.mas_equalTo (100);
-        make.width.height.mas_equalTo(260);
-    }];
     ///---
     [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         StrongObject(self);
@@ -38,6 +50,13 @@
         make.centerY.mas_equalTo(self.mas_centerY);
         make.width.mas_equalTo(self.mas_width);
         make.height.mas_equalTo(self.mas_height);
+    }];
+    ///------ revolveImageView
+    [self.revolveImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        StrongObject(self);
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.top.mas_equalTo (100);
+        make.width.height.mas_equalTo(260);
     }];
     ///--- playTimeLabel
     [self.playTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,24 +108,12 @@
         make.centerX.mas_equalTo(self.mas_centerX);
     }];
     ///---
-    self.backImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_backImage.jpeg"]];
-    ///---
-    self.imageSize = self.revolveImageView.frame.size;
+    self.imageSize = CGSizeMake(260, 260);
     ///---
     [self runBlockAction];
 }
 - (void)runBlockAction{
     WeakObject(self);
-    ///---
-    self.block = ^(UIImage *image) {
-        StrongObject(self);
-        if (!image) {
-            self.revolveImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_ album.jpeg"]];
-        }else{
-            self.revolveImageView.image = image;
-        }
-    };
-    ///---
     self.timeBlock = ^(NSString *totalTime,NSString *playTime) {
         StrongObject(self);
         self.totalTimeLabel.text = totalTime;
@@ -150,6 +157,6 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
-    NSLog(@"dealloc %@",NSStringFromClass([AFOHPAVPlayerView class]));
+    NSLog(@"dealloc %@",NSStringFromClass([AFOHPPlayerView class]));
 }
 @end

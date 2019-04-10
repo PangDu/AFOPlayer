@@ -7,71 +7,43 @@
 //
 
 #import "AFOHPVedioController.h"
-#import "AFOHPAVPlayer+ChooseSong.h"
-#import "AFOHPAVPlayer.h"
-#import "AFOHPAVPlayerView.h"
 #import "AFOHPPlayPresenterView.h"
 #import "AFOHPPlayPresenterBusiness.h"
-@interface AFOHPVedioController ()<AFORouterManagerDelegate,AFOHPAVPlayerViewDelegate,AFOHPAVPlayerDelegate,AFOProgressSliderManagerDelegate>
-@property (nonatomic, strong) AFOHPAVPlayer             *hpAVPlayer;
-@property (nonatomic, strong) AFOProgressSliderManager  *sliderManager;
-@property (nonatomic, strong) AFOHPAVPlayerView         *hpAVPlayerView;
+@interface AFOHPVedioController ()<AFORouterManagerDelegate,AFOHPPresenterDelegate,AFOHPPlayPresenterViewDelegate,AFOHPPlayPresenterBusinessDelegate>
 @property (nonatomic, strong) AFOHPPlayPresenterView     *presenterView;
 @property (nonatomic, strong) AFOHPPlayPresenterBusiness *pressenterBusiness;
 @end
 
 @implementation AFOHPVedioController
+#pragma mark ------------ viewDidLoad
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.presenterView bindingPlayerView];
+}
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model
                                         parameters:(NSDictionary *)parameters{
     self.title = [parameters objectForKey:@"title"];
-    ///---
+    [self.pressenterBusiness receiverRouterMessage:model parameters:parameters];
+}
+#pragma mark ------ AFOHPPresenterDelegate
+- (void)bindingView:(UIView *)view{
+    [self.view addSubview:view];
+}
+#pragma mark ------ AFOHPPlayPresenterViewDelegate
+- (void)musicPlayActionDelegate:(BOOL)isPlay{
+    [self.pressenterBusiness musicPlayAction:isPlay];
+}
+- (void)updateProgressSliderDelegate{
     WeakObject(self);
-    [self.sliderManager progressSliderManager:^(AFOProgressSlider *slider) {
+    [self.pressenterBusiness musicPlayTimerCallBack:^(NSTimeInterval currentTime, NSTimeInterval totalTime) {
         StrongObject(self);
-        self.hpAVPlayerView.sliderBlock(slider);
-    }];
-    ///---
-    self.hpAVPlayer.currentItem = [self.hpAVPlayer getCurrentSongImage:model dictionary:parameters];
-    [self.hpAVPlayer addPlayerItem:[self.hpAVPlayer getCurrentSongImage:model dictionary:parameters]];
-    
-    self.hpAVPlayerView.block([AFOHPAVPlayer albumImageWithSize:self.hpAVPlayerView.imageSize object:[self.hpAVPlayer getCurrentSongImage:model dictionary:parameters]]);
-    [self.view addSubview:self.hpAVPlayerView];
-}
-#pragma mark ------ AFOHPAVPlayerViewDelegate
-- (void)playMusicActionDelegate:(BOOL)isPlay{
-    [self.sliderManager settingDisplayLink:isPlay];
-    [self.hpAVPlayer settingAVPlayerPause:isPlay];
-}
-#pragma mark ------ AFOHPAVPlayerDelegate
-- (void)audioTotalTime:(NSString *)totalTime{
-    [self.sliderManager settingDisplayLink:NO];
-}
-- (void)audioPlayWithEnter{
-    [self.hpAVPlayer selectMusicPlayer:0];
-}
-- (void)audioOperationPlay:(id)model{
-    
-}
-#pragma mark ------ AFOProgressSliderManagerDelegate
-- (void)displayLinkUpdateDelegate{
-    WeakObject(self);
-    [self.hpAVPlayer updateProgressSlider:^(NSTimeInterval currentTime, NSTimeInterval totalTime) {
-        StrongObject(self);
-        [self.sliderManager settingProgressSlider:currentTime total:totalTime block:^(BOOL isEnd) {
-            if (isEnd) {
-                [self.hpAVPlayerView settingDefaultTimer];
-                [self.hpAVPlayer selectMusicPlayer:AFOHPAVPlayerSelectMusicNext];
-            }else{
-                self.hpAVPlayerView.timeBlock([NSString stringWithFormat:@"%@",
-                                               [self.hpAVPlayer formatPlayTime:totalTime]],[NSString stringWithFormat:@"%@",
-                                                                                              [self.hpAVPlayer formatPlayTime:currentTime]]);
-            }
-        }];
+        [self.presenterView setttingPlayTimer:currentTime totalTime:totalTime];
     }];
 }
-- (void)progressValueChangeDelegate{
-    [self.sliderManager settingSliderPercent:self.sliderManager.sliderPercent];
+#pragma mark ------ AFOHPPlayPresenterBusinessDelegate
+- (void)passTotalTime:(NSString *)totalTime{
+    [self.presenterView settingTotalTime:totalTime];
 }
 #pragma mark ------------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
@@ -79,39 +51,19 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark ------- property
-- (AFOHPAVPlayer *)hpAVPlayer{
-    if (!_hpAVPlayer) {
-        _hpAVPlayer = [[AFOHPAVPlayer alloc] initWithDelegate:self];
-    }
-    return _hpAVPlayer;
-}
-- (AFOProgressSliderManager *)sliderManager{
-    if (!_sliderManager) {
-        _sliderManager = [[AFOProgressSliderManager alloc] initWithDelegate:self];
-    }
-    return _sliderManager;
-}
-- (AFOHPAVPlayerView *)hpAVPlayerView{
-    if (!_hpAVPlayerView) {
-        _hpAVPlayerView = [[AFOHPAVPlayerView alloc] initWithFrame:CGRectMake(0, 60, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) delegate:self];
-    }
-    return _hpAVPlayerView;
-}
 - (AFOHPPresenter *)presenterView{
     if (!_presenterView) {
-        _presenterView = [[AFOHPPlayPresenterView alloc] init];
+        _presenterView = [[AFOHPPlayPresenterView alloc] initWithDelegate:self];
     }
     return _presenterView;
 }
 - (AFOHPPresenter *)pressenterBusiness{
     if (!_pressenterBusiness) {
-        _pressenterBusiness = [[AFOHPPlayPresenterBusiness alloc] init];
+        _pressenterBusiness = [[AFOHPPlayPresenterBusiness alloc] initWithDelegate:self];
     }
     return _pressenterBusiness;
 }
 - (void)dealloc{
-    [self.sliderManager settingDisplayLink:YES];
-    [self.sliderManager freeDisplayLink];
     NSLog(@"dealloc %@",NSStringFromClass([AFOHPVedioController class]));
 }
 @end

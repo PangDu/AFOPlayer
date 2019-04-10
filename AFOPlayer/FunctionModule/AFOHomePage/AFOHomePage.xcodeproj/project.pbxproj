@@ -13,6 +13,8 @@
 		24033CB21FE9066A0001DD63 /* AFORouter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24033CB01FE906570001DD63 /* AFORouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2405E5FB1FEA497E00BAFF97 /* AFOCardStackingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2405E5F91FEA497E00BAFF97 /* AFOCardStackingModel.h */; };
 		2405E5FC1FEA497E00BAFF97 /* AFOCardStackingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405E5FA1FEA497E00BAFF97 /* AFOCardStackingModel.m */; };
+		240B82C0225DE6AC00F2DBA8 /* AFOHPPlayPresenterViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 240B82BF225DE6AC00F2DBA8 /* AFOHPPlayPresenterViewDelegate.h */; };
+		240B82C2225DE70A00F2DBA8 /* AFOHPPlayPresenterBusinessDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 240B82C1225DE70A00F2DBA8 /* AFOHPPlayPresenterBusinessDelegate.h */; };
 		240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */ = {isa = PBXBuildFile; fileRef = 240BAB221FE1218800D58435 /* AFOHomePage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2437D9BC1FF3329E00E12235 /* AFOHPListCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */; };
 		2437D9BD1FF3329E00E12235 /* AFOHPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437D9BB1FF3329E00E12235 /* AFOHPListCell.m */; };
@@ -22,8 +24,8 @@
 		24479094200F7AD600445C62 /* AFOHPAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24479092200F7AD600445C62 /* AFOHPAVPlayer.m */; };
 		24482103225B379200DC9207 /* AFOHPPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 24482101225B379200DC9207 /* AFOHPPresenter.h */; };
 		24482104225B379200DC9207 /* AFOHPPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24482102225B379200DC9207 /* AFOHPPresenter.m */; };
-		2458D6782010263900D2058C /* AFOHPAVPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2458D6762010263900D2058C /* AFOHPAVPlayerView.h */; };
-		2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2458D6772010263900D2058C /* AFOHPAVPlayerView.m */; };
+		2458D6782010263900D2058C /* AFOHPPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2458D6762010263900D2058C /* AFOHPPlayerView.h */; };
+		2458D6792010263900D2058C /* AFOHPPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2458D6772010263900D2058C /* AFOHPPlayerView.m */; };
 		2458D6B420102D9100D2058C /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2458D6B520102D9100D2058C /* AFOGitHub.framework */; };
 		2459238F1FE131880094C3E0 /* AFOHPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2459238D1FE131880094C3E0 /* AFOHPNavigationController.h */; };
 		245923901FE131880094C3E0 /* AFOHPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459238E1FE131880094C3E0 /* AFOHPNavigationController.m */; };
@@ -108,6 +110,8 @@
 		24033CB01FE906570001DD63 /* AFORouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFORouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2405E5F91FEA497E00BAFF97 /* AFOCardStackingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOCardStackingModel.h; sourceTree = "<group>"; };
 		2405E5FA1FEA497E00BAFF97 /* AFOCardStackingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOCardStackingModel.m; sourceTree = "<group>"; };
+		240B82BF225DE6AC00F2DBA8 /* AFOHPPlayPresenterViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayPresenterViewDelegate.h; sourceTree = "<group>"; };
+		240B82C1225DE70A00F2DBA8 /* AFOHPPlayPresenterBusinessDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayPresenterBusinessDelegate.h; sourceTree = "<group>"; };
 		240BAB1F1FE1218800D58435 /* AFOHomePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOHomePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240BAB221FE1218800D58435 /* AFOHomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHomePage.h; sourceTree = "<group>"; };
 		2437D9BA1FF3329E00E12235 /* AFOHPListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPListCell.h; sourceTree = "<group>"; };
@@ -118,8 +122,8 @@
 		24479092200F7AD600445C62 /* AFOHPAVPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPAVPlayer.m; sourceTree = "<group>"; };
 		24482101225B379200DC9207 /* AFOHPPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPresenter.h; sourceTree = "<group>"; };
 		24482102225B379200DC9207 /* AFOHPPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPresenter.m; sourceTree = "<group>"; };
-		2458D6762010263900D2058C /* AFOHPAVPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPAVPlayerView.h; sourceTree = "<group>"; };
-		2458D6772010263900D2058C /* AFOHPAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPAVPlayerView.m; sourceTree = "<group>"; };
+		2458D6762010263900D2058C /* AFOHPPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPPlayerView.h; sourceTree = "<group>"; };
+		2458D6772010263900D2058C /* AFOHPPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPPlayerView.m; sourceTree = "<group>"; };
 		2458D6B520102D9100D2058C /* AFOGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2459238D1FE131880094C3E0 /* AFOHPNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOHPNavigationController.h; sourceTree = "<group>"; };
 		2459238E1FE131880094C3E0 /* AFOHPNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOHPNavigationController.m; sourceTree = "<group>"; };
@@ -234,6 +238,26 @@
 				2497979C1FE5F74C009AB645 /* AFOCardStackCollectionCell.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		240B82C3225DE8D300F2DBA8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				240B82BF225DE6AC00F2DBA8 /* AFOHPPlayPresenterViewDelegate.h */,
+				24CC7A92225D944C00874610 /* AFOHPPlayPresenterView.h */,
+				24CC7A93225D944C00874610 /* AFOHPPlayPresenterView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		240B82C4225DE8DD00F2DBA8 /* business */ = {
+			isa = PBXGroup;
+			children = (
+				240B82C1225DE70A00F2DBA8 /* AFOHPPlayPresenterBusinessDelegate.h */,
+				24CC7A96225D945F00874610 /* AFOHPPlayPresenterBusiness.h */,
+				24CC7A97225D945F00874610 /* AFOHPPlayPresenterBusiness.m */,
+			);
+			path = business;
 			sourceTree = "<group>";
 		};
 		240BAB151FE1218800D58435 = {
@@ -374,8 +398,8 @@
 				24898156200F38DF008FB71D /* AFOHPVedioController.m */,
 				24AFA164225AE4D90054C2A6 /* AFOHPPlayerBaseView.h */,
 				24AFA165225AE4D90054C2A6 /* AFOHPPlayerBaseView.m */,
-				2458D6762010263900D2058C /* AFOHPAVPlayerView.h */,
-				2458D6772010263900D2058C /* AFOHPAVPlayerView.m */,
+				2458D6762010263900D2058C /* AFOHPPlayerView.h */,
+				2458D6772010263900D2058C /* AFOHPPlayerView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -508,10 +532,8 @@
 		24E0AE7D225CE44E009170D6 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				24CC7A92225D944C00874610 /* AFOHPPlayPresenterView.h */,
-				24CC7A93225D944C00874610 /* AFOHPPlayPresenterView.m */,
-				24CC7A96225D945F00874610 /* AFOHPPlayPresenterBusiness.h */,
-				24CC7A97225D945F00874610 /* AFOHPPlayPresenterBusiness.m */,
+				240B82C3225DE8D300F2DBA8 /* view */,
+				240B82C4225DE8DD00F2DBA8 /* business */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -543,13 +565,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240B82C0225DE6AC00F2DBA8 /* AFOHPPlayPresenterViewDelegate.h in Headers */,
 				249797A01FE5F74C009AB645 /* AFOCardStackCollectionDataSource.h in Headers */,
 				24895591225C7098006AF82B /* AFOHPListDelegate.h in Headers */,
 				24CFFB341FF1F27100C1E465 /* AFOHPDetailModel.h in Headers */,
 				243A8D2F1FF0DE94004BA1CE /* AFOMPMediaQuery.h in Headers */,
 				24CA985A1FE798D300CE9BB2 /* AFOHPListController.h in Headers */,
 				24A0F987225B83B7006CC24D /* AFOListPresenterView.h in Headers */,
-				2458D6782010263900D2058C /* AFOHPAVPlayerView.h in Headers */,
+				2458D6782010263900D2058C /* AFOHPPlayerView.h in Headers */,
 				24A0F98B225B83CE006CC24D /* AFOListPresenterBusiness.h in Headers */,
 				240BAB241FE1218800D58435 /* AFOHomePage.h in Headers */,
 				247CADC620175FB900F73A5D /* AFOHPAVPlayer+ChooseSong.h in Headers */,
@@ -567,6 +590,7 @@
 				24898157200F38DF008FB71D /* AFOHPVedioController.h in Headers */,
 				24E0AE89225CE6A6009170D6 /* AFOCardStackCollectionDelegate.h in Headers */,
 				245923BD1FE1371F0094C3E0 /* AFOHPForeign.h in Headers */,
+				240B82C2225DE70A00F2DBA8 /* AFOHPPlayPresenterBusinessDelegate.h in Headers */,
 				24CFFB391FF200BC00C1E465 /* AFOHPDetailCell.h in Headers */,
 				249797A91FE5F74C009AB645 /* AFOCardStackingController.h in Headers */,
 				24CFFB301FF1EEDB00C1E465 /* AFOHPListModel.h in Headers */,
@@ -613,7 +637,7 @@
 		240BAB161FE1218800D58435 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = AFO;
 				TargetAttributes = {
 					240BAB1E1FE1218800D58435 = {
@@ -628,6 +652,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 240BAB151FE1218800D58435;
 			productRefGroup = 240BAB201FE1218800D58435 /* Products */;
@@ -681,7 +706,7 @@
 				24AFA167225AE4D90054C2A6 /* AFOHPPlayerBaseView.m in Sources */,
 				248955A1225C91A2006AF82B /* AFOHPDetailModel.m in Sources */,
 				24898158200F38DF008FB71D /* AFOHPVedioController.m in Sources */,
-				2458D6792010263900D2058C /* AFOHPAVPlayerView.m in Sources */,
+				2458D6792010263900D2058C /* AFOHPPlayerView.m in Sources */,
 				24CFFB311FF1EEDB00C1E465 /* AFOHPListModel.m in Sources */,
 				24E0AE86225CE64C009170D6 /* AFOCardPresenterBusiness.m in Sources */,
 				249797A31FE5F74C009AB645 /* AFOCardStackSelectedLayout.m in Sources */,
@@ -710,6 +735,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -717,6 +743,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -768,6 +795,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -775,6 +803,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

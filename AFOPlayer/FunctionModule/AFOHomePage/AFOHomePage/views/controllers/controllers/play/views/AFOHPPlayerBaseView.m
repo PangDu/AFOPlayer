@@ -8,30 +8,6 @@
 
 #import "AFOHPPlayerBaseView.h"
 @implementation AFOHPPlayerBaseView
-#pragma mark ------ initWithFrame
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        [self addSubBaseview];
-    }
-    return self;
-}
-#pragma mark ------ addSubBaseview
-- (void)addSubBaseview{
-    ///---
-    [self addSubview:self.backImageView];
-    ///--- revolveImageView
-    [self addSubview:self.revolveImageView];
-    ///--- playTimeLabel
-    [self addSubview:self.playTimeLabel];
-    ///--- totalTimeLabel
-    [self addSubview:self.totalTimeLabel];
-    ///--- playButton
-    [self addSubview:self.playButton];
-    ///--- onButton
-    [self addSubview:self.onButton];
-    ///--- nextButton
-    [self addSubview:self.nextButton];
-}
 #pragma mark ------ playMusicAction
 - (void)playMusicAction:(UIButton *)sender{
 }
@@ -48,19 +24,19 @@
 #pragma mark ------------ property
 - (UIImageView *)revolveImageView{
     if (!_revolveImageView) {
-        _revolveImageView = [[UIImageView alloc] init];
+        _revolveImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_iconMusic.jpeg"]]];
         [_revolveImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
         _revolveImageView.contentMode =  UIViewContentModeScaleAspectFill;
         _revolveImageView.clipsToBounds  = YES;
         _revolveImageView.layer.cornerRadius = 130;
         _revolveImageView.layer.masksToBounds = YES;
-        _revolveImageView.backgroundColor = [UIColor grayColor];
+        _revolveImageView.backgroundColor = [UIColor whiteColor];
     }
     return _revolveImageView;
 }
 - (UIImageView *)backImageView{
     if (!_backImageView) {
-        _backImageView = [[UIImageView alloc] init];
+        _backImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_backImage.jpeg"]]];
         [_backImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
         _backImageView.contentMode =  UIViewContentModeScaleAspectFill;
     }

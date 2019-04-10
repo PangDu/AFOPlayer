@@ -19,10 +19,8 @@
 @implementation AFOHPAVPlayer
 #pragma mark ------------ initialize
 + (void)initialize{
-    if (self == [AFOHPAVPlayer class]) {
-        [[AVAudioSession sharedInstance] setActive:YES error:nil];
-        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    }
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 #pragma mark ------------ initWithDelegate
 - (instancetype)initWithDelegate:(id)delegate{
@@ -66,18 +64,18 @@
 #pragma mark ------------ 添加AVPlayer
 - (void)addPlayerItem:(id)model{
     AVAsset *asset = [AVAsset assetWithURL:[AFOMPMediaQuery mediaItemPropertyAssetURL:model]];
-    _playerItem = [AVPlayerItem playerItemWithAsset:asset];
+    self.playerItem = [AVPlayerItem playerItemWithAsset:asset];
     //添加监听
-    [_playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
-    [_playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    _avPlayer = [AVPlayer playerWithPlayerItem:_playerItem];
+    [self.playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
+    [self.playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    self.avPlayer = [AVPlayer playerWithPlayerItem:self.playerItem];
 }
 #pragma mark------------ 监听回调
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     AVPlayerItem *playerItem = (AVPlayerItem *)object;
     
     if ([keyPath isEqualToString:@"loadedTimeRanges"]){
-        [self.delegate audioTotalTime:[self formatPlayTime:CMTimeGetSeconds(playerItem.duration)]];
+        [self.delegate audioTotalTime:[NSString formatPlayTime:CMTimeGetSeconds(playerItem.duration)]];
     }else if ([keyPath isEqualToString:@"status"]){
         if (playerItem.status == AVPlayerItemStatusReadyToPlay){
             [self.delegate audioPlayWithEnter];
@@ -102,13 +100,8 @@
                                         NSTimeInterval totalTime))block{
     block(CMTimeGetSeconds(self.avPlayer.currentTime), CMTimeGetSeconds(self.avPlayer.currentItem.duration));
 }
-#pragma mark ------ 时间转换成字符串
-- (NSString *)formatPlayTime:(NSTimeInterval)duration{
-    int minute = 0, hour = 0, secend = duration;
-    minute = (secend % 3600)/60;
-    hour = secend / 3600;
-    secend = secend % 60;
-    return [NSString stringWithFormat:@"%02d:%02d:%02d", hour, minute, secend];
+- (NSString *)totalTimer{
+    return [NSString formatPlayTime:CMTimeGetSeconds(self.avPlayer.currentItem.duration)];
 }
 #pragma mark ------
 - (NSTimeInterval)availableDurationWithplayerItem:(AVPlayerItem *)playerItem{

@@ -151,7 +151,6 @@
 - (void)setSliderPercent:(CGFloat)sliderPercent {
     if (_sliderPercent != sliderPercent) {
         _sliderPercent = sliderPercent;
-        
         self.value = _minValue + sliderPercent * (_maxValue - _minValue);
     }
 }

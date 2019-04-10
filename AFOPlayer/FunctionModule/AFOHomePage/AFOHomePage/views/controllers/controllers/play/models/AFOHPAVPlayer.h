@@ -28,8 +28,8 @@ typedef NS_ENUM(NSInteger, AFOHPAVPlayerSelectMusic){
 - (void)updateProgressSlider:(void (^) (NSTimeInterval currentTime,
                                         NSTimeInterval totalTime))block;
 - (void)selectMusicPlayer:(AFOHPAVPlayerSelectMusic)type;
-- (NSString *)formatPlayTime:(NSTimeInterval)duration;
 - (id)getCurrentSongImage:(id)model dictionary:(NSDictionary *)dictionary;
+- (NSString *)totalTimer;
 + (UIImage *)albumImageWithSize:(CGSize)size
                          object:(id)object;
 + (NSString *)songName:(id)object;

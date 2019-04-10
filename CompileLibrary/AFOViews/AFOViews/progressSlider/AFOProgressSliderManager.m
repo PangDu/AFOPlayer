@@ -38,13 +38,13 @@
 - (void)settingProgressSlider:(CGFloat)current
                         total:(CGFloat)total
                         block:(void (^)(BOOL isEnd))block{
-    self.progressSlider.sliderPercent = current / total;
     if (current < total) {
         self.displayLink.paused = NO;
-        [self settingSliderPercent:0.0];
+        [self settingSliderPercent:current / total];
         block(NO);
     }else if (current == total){
         self.displayLink.paused = YES;
+        [self settingSliderPercent:0.0];
         block(YES);
     }
 }

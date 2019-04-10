@@ -53,7 +53,6 @@
             self.albumImageView.image = [UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_album.jpeg"]];
         }else{
             self.albumImageView.image = image;
-            
         }
     };
 }
