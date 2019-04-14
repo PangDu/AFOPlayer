@@ -12,6 +12,7 @@
 @interface AFOCardPresenterView ()
 @property (nonatomic, strong) AFOCardStackDefaultLayout *defaultLayout;
 @property (nonatomic, strong) UICollectionView          *collectionView;
+@property (nonatomic, strong) UIImageView               *backImageView;
 @property (nonatomic, weak) id<AFOHPPresenterDelegate>   delegate;
 @end
 
@@ -25,6 +26,7 @@
 }
 #pragma mark ------ bindingCollectionView
 - (void)bindingCollectionView{
+    self.collectionView.backgroundView = self.backImageView;
     [self.delegate bindingView:self.collectionView];
 }
 #pragma mark ------ property
@@ -33,6 +35,14 @@
         _defaultLayout = [[AFOCardStackDefaultLayout alloc]init];
     }
     return _defaultLayout;
+}
+- (UIImageView *)backImageView{
+    if (!_backImageView) {
+        _backImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[NSBundle imageNameFromBundle:@"AFOHomePage.bundle" source:@"hp_homePageBack.jpg"]]];
+        [_backImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
+        _backImageView.contentMode =  UIViewContentModeScaleAspectFill;
+    }
+    return _backImageView;
 }
 - (UICollectionView *)collectionView{
     if (!_collectionView) {

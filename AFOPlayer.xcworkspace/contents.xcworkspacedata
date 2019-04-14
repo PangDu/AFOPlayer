@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CompileLibrary/AFOFoundation/AFOFoundation.xcodeproj">
+      location = "group:CompileLibrary/AFOViews/AFOViews.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:AFOPlayer/AFOPlayer.xcodeproj">
