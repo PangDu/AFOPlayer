@@ -1,0 +1,6 @@
+framework module AFOSQLite {
+  umbrella header "AFOSQLite.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AFOUIKit {
+  umbrella header "AFOUIKit.h"
+
+  export *
+  module * { export * }
+}

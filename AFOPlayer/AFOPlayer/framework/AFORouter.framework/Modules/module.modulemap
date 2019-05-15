@@ -1,0 +1,6 @@
+framework module AFORouter {
+  umbrella header "AFORouter.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AFOHomePage {
+  umbrella header "AFOHomePage.h"
+
+  export *
+  module * { export * }
+}

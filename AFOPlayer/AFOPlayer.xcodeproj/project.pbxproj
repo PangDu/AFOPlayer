@@ -20,8 +20,6 @@
 		2408BAE2200856870049060F /* AFOAppWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD4200856870049060F /* AFOAppWindow.m */; };
 		2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BAD7200856870049060F /* AFOAppTabBarController.m */; };
 		2408BAE4200856870049060F /* AFOAddControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408BADB200856870049060F /* AFOAddControllerModel.m */; };
-		2408BAEC20085BAF0049060F /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF020085BAF0049060F /* AFORouter.framework */; };
-		2408BAED20085BAF0049060F /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAF120085BAF0049060F /* AFOUIKit.framework */; };
 		2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BB38200877410049060F /* libsqlite3.tbd */; };
 		240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B10902007A5F70007F2F3 /* AppDelegate.m */; };
 		240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B10982007A5F70007F2F3 /* Assets.xcassets */; };
@@ -30,16 +28,29 @@
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253C22432CD900D51960 /* AFOHomePage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
-		242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FAA98205FA38400C82B66 /* AFOSetting.framework */; };
-		24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24373E5E2012CC8D00B7C9BD /* AFOGitHub.framework */; };
-		246EFE0E21BCB12C000C3C44 /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEE20085BAF0049060F /* AFOFFMpeg.framework */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
-		24898147200F2DA3008FB71D /* AFOHomePage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24898148200F2DA3008FB71D /* AFOHomePage.framework */; };
-		24926DBE21C155AC00639477 /* AFOPlaylist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2408BAEF20085BAF0049060F /* AFOPlaylist.framework */; };
-		24C3571721C0FDD500F187DE /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C3571621C0FDD500F187DE /* AFOFoundation.framework */; };
-		24D8F827201CB34700E99AAF /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8F828201CB34700E99AAF /* AFOViews.framework */; };
-		24D9406C21C692C4004D260D /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D9406B21C692C4004D260D /* AFOSQLite.framework */; };
-		24D979462244CA4E007253DB /* AFODelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D979452244CA4E007253DB /* AFODelegateExtension.framework */; };
+		24ECA5A4228C12FB00051DA6 /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA599228C12FB00051DA6 /* AFOViews.framework */; };
+		24ECA5A5228C12FB00051DA6 /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59A228C12FB00051DA6 /* AFOUIKit.framework */; };
+		24ECA5A6228C12FB00051DA6 /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59B228C12FB00051DA6 /* AFOFFMpeg.framework */; };
+		24ECA5A7228C12FB00051DA6 /* AFODelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59C228C12FB00051DA6 /* AFODelegateExtension.framework */; };
+		24ECA5A8228C12FB00051DA6 /* AFOPlaylist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59D228C12FB00051DA6 /* AFOPlaylist.framework */; };
+		24ECA5A9228C12FB00051DA6 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59E228C12FB00051DA6 /* AFOFoundation.framework */; };
+		24ECA5AA228C12FB00051DA6 /* AFOHomePage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA59F228C12FB00051DA6 /* AFOHomePage.framework */; };
+		24ECA5AB228C12FB00051DA6 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5A0228C12FB00051DA6 /* AFOSetting.framework */; };
+		24ECA5AC228C12FB00051DA6 /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5A1228C12FB00051DA6 /* AFORouter.framework */; };
+		24ECA5AD228C12FB00051DA6 /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5A2228C12FB00051DA6 /* AFOSQLite.framework */; };
+		24ECA5AE228C12FB00051DA6 /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5A3228C12FB00051DA6 /* AFOGitHub.framework */; };
+		24ECA5BB228C136100051DA6 /* AFOPlaylist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B0228C136100051DA6 /* AFOPlaylist.framework */; };
+		24ECA5BC228C136100051DA6 /* AFOSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B1228C136100051DA6 /* AFOSQLite.framework */; };
+		24ECA5BD228C136100051DA6 /* AFOViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B2228C136100051DA6 /* AFOViews.framework */; };
+		24ECA5BE228C136100051DA6 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B3228C136100051DA6 /* AFOFoundation.framework */; };
+		24ECA5BF228C136100051DA6 /* AFOFFMpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B4228C136100051DA6 /* AFOFFMpeg.framework */; };
+		24ECA5C0228C136100051DA6 /* AFORouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B5228C136100051DA6 /* AFORouter.framework */; };
+		24ECA5C1228C136100051DA6 /* AFOSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B6228C136100051DA6 /* AFOSetting.framework */; };
+		24ECA5C2228C136100051DA6 /* AFODelegateExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B7228C136100051DA6 /* AFODelegateExtension.framework */; };
+		24ECA5C3228C136100051DA6 /* AFOHomePage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B8228C136100051DA6 /* AFOHomePage.framework */; };
+		24ECA5C4228C136100051DA6 /* AFOUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5B9228C136100051DA6 /* AFOUIKit.framework */; };
+		24ECA5C5228C136100051DA6 /* AFOGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ECA5BA228C136100051DA6 /* AFOGitHub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +96,28 @@
 		24D8F828201CB34700E99AAF /* AFOViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D9406B21C692C4004D260D /* AFOSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D979452244CA4E007253DB /* AFODelegateExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFODelegateExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ECA599228C12FB00051DA6 /* AFOViews.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOViews.framework; path = ../framework/AFOViews.framework; sourceTree = "<group>"; };
+		24ECA59A228C12FB00051DA6 /* AFOUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOUIKit.framework; path = ../framework/AFOUIKit.framework; sourceTree = "<group>"; };
+		24ECA59B228C12FB00051DA6 /* AFOFFMpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOFFMpeg.framework; path = ../framework/AFOFFMpeg.framework; sourceTree = "<group>"; };
+		24ECA59C228C12FB00051DA6 /* AFODelegateExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFODelegateExtension.framework; path = ../framework/AFODelegateExtension.framework; sourceTree = "<group>"; };
+		24ECA59D228C12FB00051DA6 /* AFOPlaylist.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOPlaylist.framework; path = ../framework/AFOPlaylist.framework; sourceTree = "<group>"; };
+		24ECA59E228C12FB00051DA6 /* AFOFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOFoundation.framework; path = ../framework/AFOFoundation.framework; sourceTree = "<group>"; };
+		24ECA59F228C12FB00051DA6 /* AFOHomePage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOHomePage.framework; path = ../framework/AFOHomePage.framework; sourceTree = "<group>"; };
+		24ECA5A0228C12FB00051DA6 /* AFOSetting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOSetting.framework; path = ../framework/AFOSetting.framework; sourceTree = "<group>"; };
+		24ECA5A1228C12FB00051DA6 /* AFORouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFORouter.framework; path = ../framework/AFORouter.framework; sourceTree = "<group>"; };
+		24ECA5A2228C12FB00051DA6 /* AFOSQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOSQLite.framework; path = ../framework/AFOSQLite.framework; sourceTree = "<group>"; };
+		24ECA5A3228C12FB00051DA6 /* AFOGitHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFOGitHub.framework; path = ../framework/AFOGitHub.framework; sourceTree = "<group>"; };
+		24ECA5B0228C136100051DA6 /* AFOPlaylist.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOPlaylist.framework; sourceTree = "<group>"; };
+		24ECA5B1228C136100051DA6 /* AFOSQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOSQLite.framework; sourceTree = "<group>"; };
+		24ECA5B2228C136100051DA6 /* AFOViews.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOViews.framework; sourceTree = "<group>"; };
+		24ECA5B3228C136100051DA6 /* AFOFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = "<group>"; };
+		24ECA5B4228C136100051DA6 /* AFOFFMpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOFFMpeg.framework; sourceTree = "<group>"; };
+		24ECA5B5228C136100051DA6 /* AFORouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFORouter.framework; sourceTree = "<group>"; };
+		24ECA5B6228C136100051DA6 /* AFOSetting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOSetting.framework; sourceTree = "<group>"; };
+		24ECA5B7228C136100051DA6 /* AFODelegateExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFODelegateExtension.framework; sourceTree = "<group>"; };
+		24ECA5B8228C136100051DA6 /* AFOHomePage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOHomePage.framework; sourceTree = "<group>"; };
+		24ECA5B9228C136100051DA6 /* AFOUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOUIKit.framework; sourceTree = "<group>"; };
+		24ECA5BA228C136100051DA6 /* AFOGitHub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFOGitHub.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,27 +125,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */,
-				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
-				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
 				2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */,
-				24D979462244CA4E007253DB /* AFODelegateExtension.framework in Frameworks */,
-				24D9406C21C692C4004D260D /* AFOSQLite.framework in Frameworks */,
-				24926DBE21C155AC00639477 /* AFOPlaylist.framework in Frameworks */,
-				24C3571721C0FDD500F187DE /* AFOFoundation.framework in Frameworks */,
-				246EFE0E21BCB12C000C3C44 /* AFOFFMpeg.framework in Frameworks */,
-				242FAA97205FA38400C82B66 /* AFOSetting.framework in Frameworks */,
-				24D8F827201CB34700E99AAF /* AFOViews.framework in Frameworks */,
-				24373E5D2012CC8D00B7C9BD /* AFOGitHub.framework in Frameworks */,
-				24898147200F2DA3008FB71D /* AFOHomePage.framework in Frameworks */,
-				2408BAEC20085BAF0049060F /* AFORouter.framework in Frameworks */,
-				2408BAED20085BAF0049060F /* AFOUIKit.framework in Frameworks */,
+				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
+				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
+				2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */,
+				24ECA5A4228C12FB00051DA6 /* AFOViews.framework in Frameworks */,
+				24ECA5A5228C12FB00051DA6 /* AFOUIKit.framework in Frameworks */,
+				24ECA5A6228C12FB00051DA6 /* AFOFFMpeg.framework in Frameworks */,
+				24ECA5A7228C12FB00051DA6 /* AFODelegateExtension.framework in Frameworks */,
+				24ECA5A8228C12FB00051DA6 /* AFOPlaylist.framework in Frameworks */,
+				24ECA5A9228C12FB00051DA6 /* AFOFoundation.framework in Frameworks */,
+				24ECA5C4228C136100051DA6 /* AFOUIKit.framework in Frameworks */,
+				24ECA5BF228C136100051DA6 /* AFOFFMpeg.framework in Frameworks */,
+				24ECA5C3228C136100051DA6 /* AFOHomePage.framework in Frameworks */,
+				24ECA5C5228C136100051DA6 /* AFOGitHub.framework in Frameworks */,
+				24ECA5AA228C12FB00051DA6 /* AFOHomePage.framework in Frameworks */,
+				24ECA5AB228C12FB00051DA6 /* AFOSetting.framework in Frameworks */,
+				24ECA5C1228C136100051DA6 /* AFOSetting.framework in Frameworks */,
+				24ECA5AC228C12FB00051DA6 /* AFORouter.framework in Frameworks */,
+				24ECA5AD228C12FB00051DA6 /* AFOSQLite.framework in Frameworks */,
+				24ECA5AE228C12FB00051DA6 /* AFOGitHub.framework in Frameworks */,
+				24ECA5BC228C136100051DA6 /* AFOSQLite.framework in Frameworks */,
 				2404874820083C5F00D369FB /* OpenGLES.framework in Frameworks */,
 				2404874620083C4400D369FB /* VideoToolbox.framework in Frameworks */,
 				2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */,
 				2404874320083C2F00D369FB /* CoreMedia.framework in Frameworks */,
+				24ECA5C2228C136100051DA6 /* AFODelegateExtension.framework in Frameworks */,
+				24ECA5BE228C136100051DA6 /* AFOFoundation.framework in Frameworks */,
+				24ECA5BB228C136100051DA6 /* AFOPlaylist.framework in Frameworks */,
 				2404874420083C2F00D369FB /* CoreImage.framework in Frameworks */,
+				24ECA5BD228C136100051DA6 /* AFOViews.framework in Frameworks */,
 				2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */,
+				24ECA5C0228C136100051DA6 /* AFORouter.framework in Frameworks */,
 				2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +226,7 @@
 				2408BAC7200856870049060F /* views */,
 				2408BAD9200856870049060F /* models */,
 				2408BAD5200856870049060F /* controllers */,
+				24ECA5AF228C136100051DA6 /* framework */,
 				2413253A22432C8D00D51960 /* resources */,
 				2413253D22432DAC00D51960 /* AFOAppDelegate.h */,
 				2413253E22432DAC00D51960 /* AFOAppDelegate.m */,
@@ -206,6 +251,17 @@
 		24404A5B2007A91300BAC996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24ECA59C228C12FB00051DA6 /* AFODelegateExtension.framework */,
+				24ECA59B228C12FB00051DA6 /* AFOFFMpeg.framework */,
+				24ECA59E228C12FB00051DA6 /* AFOFoundation.framework */,
+				24ECA5A3228C12FB00051DA6 /* AFOGitHub.framework */,
+				24ECA59F228C12FB00051DA6 /* AFOHomePage.framework */,
+				24ECA59D228C12FB00051DA6 /* AFOPlaylist.framework */,
+				24ECA5A1228C12FB00051DA6 /* AFORouter.framework */,
+				24ECA5A0228C12FB00051DA6 /* AFOSetting.framework */,
+				24ECA5A2228C12FB00051DA6 /* AFOSQLite.framework */,
+				24ECA59A228C12FB00051DA6 /* AFOUIKit.framework */,
+				24ECA599228C12FB00051DA6 /* AFOViews.framework */,
 				2404874D20083C7600D369FB /* libiconv.tbd */,
 				2404874B20083C6D00D369FB /* libbz2.tbd */,
 				2404874920083C6700D369FB /* libz.tbd */,
@@ -230,6 +286,24 @@
 				2404873B20083C0F00D369FB /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24ECA5AF228C136100051DA6 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				24ECA5B0228C136100051DA6 /* AFOPlaylist.framework */,
+				24ECA5B1228C136100051DA6 /* AFOSQLite.framework */,
+				24ECA5B2228C136100051DA6 /* AFOViews.framework */,
+				24ECA5B3228C136100051DA6 /* AFOFoundation.framework */,
+				24ECA5B4228C136100051DA6 /* AFOFFMpeg.framework */,
+				24ECA5B5228C136100051DA6 /* AFORouter.framework */,
+				24ECA5B6228C136100051DA6 /* AFOSetting.framework */,
+				24ECA5B7228C136100051DA6 /* AFODelegateExtension.framework */,
+				24ECA5B8228C136100051DA6 /* AFOHomePage.framework */,
+				24ECA5B9228C136100051DA6 /* AFOUIKit.framework */,
+				24ECA5BA228C136100051DA6 /* AFOGitHub.framework */,
+			);
+			path = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,13 +526,15 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AFOPlayer",
+					"$(PROJECT_DIR)/AFOPlayer/framework",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AFOPlayer/resources/AFOPlayer.pch";
 				GENERATE_PROFILING_CODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AFOPlayer/framework";
 				INFOPLIST_FILE = AFOPlayer/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/AFOPlayer/framework";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-w",
@@ -480,13 +556,15 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AFOPlayer",
+					"$(PROJECT_DIR)/AFOPlayer/framework",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AFOPlayer/resources/AFOPlayer.pch";
 				GENERATE_PROFILING_CODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AFOPlayer/framework";
 				INFOPLIST_FILE = AFOPlayer/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/AFOPlayer/framework";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-w",

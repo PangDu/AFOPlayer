@@ -1,0 +1,6 @@
+framework module AFOGitHub {
+  umbrella header "AFOGitHub.h"
+
+  export *
+  module * { export * }
+}

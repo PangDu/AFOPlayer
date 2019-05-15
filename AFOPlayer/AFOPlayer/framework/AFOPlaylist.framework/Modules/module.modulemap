@@ -1,0 +1,6 @@
+framework module AFOPlaylist {
+  umbrella header "AFOPlaylist.h"
+
+  export *
+  module * { export * }
+}
