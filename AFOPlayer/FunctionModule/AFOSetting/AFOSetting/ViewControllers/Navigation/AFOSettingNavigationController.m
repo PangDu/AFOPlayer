@@ -16,7 +16,7 @@
 #pragma mark ------------------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarItem.title = AFOSETTINGTITLESTRING;
+    self.tabBarItem.title = @"设置";
     // Do any additional setup after loading the view.
 }
 

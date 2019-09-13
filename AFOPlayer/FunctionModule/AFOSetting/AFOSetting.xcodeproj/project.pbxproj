@@ -15,7 +15,6 @@
 		24E041301FE21ECF00BE0B5B /* AFOSettingMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0412E1FE21ECF00BE0B5B /* AFOSettingMainController.m */; };
 		24E041331FE21EF000BE0B5B /* AFOSettingForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E041311FE21EF000BE0B5B /* AFOSettingForeign.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24E041341FE21EF000BE0B5B /* AFOSettingForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E041321FE21EF000BE0B5B /* AFOSettingForeign.m */; };
-		24E041361FE21F6100BE0B5B /* AFOSettingStaticString.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E041351FE21F6100BE0B5B /* AFOSettingStaticString.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +28,6 @@
 		24E0412E1FE21ECF00BE0B5B /* AFOSettingMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOSettingMainController.m; sourceTree = "<group>"; };
 		24E041311FE21EF000BE0B5B /* AFOSettingForeign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOSettingForeign.h; sourceTree = "<group>"; };
 		24E041321FE21EF000BE0B5B /* AFOSettingForeign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOSettingForeign.m; sourceTree = "<group>"; };
-		24E041351FE21F6100BE0B5B /* AFOSettingStaticString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOSettingStaticString.h; sourceTree = "<group>"; };
-		24E8DAD521BBD969006F6579 /* AFOFFMpeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFFMpeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +63,6 @@
 			children = (
 				240BAB4C1FE1224600D58435 /* AFOSetting.h */,
 				24E041281FE21E7500BE0B5B /* Public */,
-				24E0412B1FE21E9600BE0B5B /* Models */,
 				2459239F1FE132EE0094C3E0 /* ViewControllers */,
 				240BAB4D1FE1224600D58435 /* Info.plist */,
 				24E041261FE21E2900BE0B5B /* AFOSetting.pch */,
@@ -95,7 +91,6 @@
 		245923AE1FE134030094C3E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24E8DAD521BBD969006F6579 /* AFOFFMpeg.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,14 +102,6 @@
 				24E041321FE21EF000BE0B5B /* AFOSettingForeign.m */,
 			);
 			path = Public;
-			sourceTree = "<group>";
-		};
-		24E0412B1FE21E9600BE0B5B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				24E041351FE21F6100BE0B5B /* AFOSettingStaticString.h */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		24E0412C1FE21EAD00BE0B5B /* Controllers */ = {
@@ -136,7 +123,6 @@
 				24E041331FE21EF000BE0B5B /* AFOSettingForeign.h in Headers */,
 				245923A31FE133120094C3E0 /* AFOSettingNavigationController.h in Headers */,
 				24E0412F1FE21ECF00BE0B5B /* AFOSettingMainController.h in Headers */,
-				24E041361FE21F6100BE0B5B /* AFOSettingStaticString.h in Headers */,
 				240BAB4E1FE1224600D58435 /* AFOSetting.h in Headers */,
 				24E041271FE21E2900BE0B5B /* AFOSetting.pch in Headers */,
 			);

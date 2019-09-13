@@ -1,0 +1,1 @@
+../../../AFOSetting/AFOSetting/Models/AFOSettingStaticString.h

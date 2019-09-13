@@ -1,0 +1,1 @@
+../../../AFOHomePage/AFOHomePage/views/controllers/controllers/detail/views/AFOHPDetailCell.h

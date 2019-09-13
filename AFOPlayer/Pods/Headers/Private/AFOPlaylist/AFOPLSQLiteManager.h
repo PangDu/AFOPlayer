@@ -1,0 +1,1 @@
+../../../AFOPlaylist/AFOPlaylist/viewModels/sqlite/AFOPLSQLiteManager.h

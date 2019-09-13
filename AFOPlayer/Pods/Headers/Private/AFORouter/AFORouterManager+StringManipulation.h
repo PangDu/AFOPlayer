@@ -1,0 +1,1 @@
+../../../AFORouter/AFORouter/Manager/Category/AFORouterManager+StringManipulation.h

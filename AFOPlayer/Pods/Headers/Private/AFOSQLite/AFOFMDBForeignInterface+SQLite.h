@@ -1,0 +1,1 @@
+../../../AFOSQLite/AFOSQLite/foreign/AFOFMDBForeignInterface+SQLite.h
