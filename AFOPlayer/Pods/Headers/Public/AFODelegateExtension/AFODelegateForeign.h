@@ -1,1 +1,1 @@
-../../../AFODelegateExtension/AFODelegateExtension/foreign/AFODelegateForeign.h
+../../../AFODelegateExtension/AFODelegateExtension/AFODelegateForeign.h

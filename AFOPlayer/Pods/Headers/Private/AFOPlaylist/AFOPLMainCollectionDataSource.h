@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/dataSource/AFOPLMainCollectionDataSource.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLMainCollectionDataSource.h

@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/navigation/AFOHPNavigationController.h
+../../../AFOHomePage/AFOHomePage/AFOHPNavigationController.h

@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/play/views/play/AFOHPPlayerBaseView.h
+../../../AFOHomePage/AFOHomePage/AFOHPPlayerBaseView.h

@@ -1,6 +1,0 @@
-framework module AFOViews {
-  umbrella header "AFOViews.h"
-
-  export *
-  module * { export * }
-}

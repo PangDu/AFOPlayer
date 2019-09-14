@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/models/AFOHPStaticString.h
+../../../AFOHomePage/AFOHomePage/AFOHPStaticString.h

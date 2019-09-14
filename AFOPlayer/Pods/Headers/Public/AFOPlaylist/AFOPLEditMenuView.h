@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/views/AFOPLEditMenuView.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLEditMenuView.h

@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/category/AFOPLMainControllerCategory.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLMainControllerCategory.h

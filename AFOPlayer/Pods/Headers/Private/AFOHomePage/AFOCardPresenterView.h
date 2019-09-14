@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/main/views/cardStacking/presenter/AFOCardPresenterView.h
+../../../AFOHomePage/AFOHomePage/AFOCardPresenterView.h

@@ -1,15 +1,8 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 target 'AFOPlayer' do
-  pod 'AFOUIKIT'
-  pod 'AFOFoundation','0.0.1'
-  pod 'AFOViews'
   pod 'AFOSQLite'
-  pod 'AFOGitHub'
-  pod 'AFORouter'
   pod 'AFODelegateExtension'
-  pod 'AFOFFMpeg'
   pod 'AFOHomePage'
-  pod 'AFOSetting'
   pod 'AFOPlaylist'
 end

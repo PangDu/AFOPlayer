@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/list/models/AFOHPListDataSource.h
+../../../AFOHomePage/AFOHomePage/AFOHPListDataSource.h

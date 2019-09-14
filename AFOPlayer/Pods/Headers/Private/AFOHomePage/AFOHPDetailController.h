@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/detail/views/AFOHPDetailController.h
+../../../AFOHomePage/AFOHomePage/AFOHPDetailController.h

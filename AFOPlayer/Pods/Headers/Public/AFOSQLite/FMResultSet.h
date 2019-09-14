@@ -1,1 +1,1 @@
-../../../AFOSQLite/AFOSQLite/FMDB/include/FMResultSet.h
+../../../AFOSQLite/AFOSQLite/FMResultSet.h

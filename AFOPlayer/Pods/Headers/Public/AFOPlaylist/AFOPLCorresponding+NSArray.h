@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/viewModels/corresponding/category/AFOPLCorresponding+NSArray.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLCorresponding+NSArray.h

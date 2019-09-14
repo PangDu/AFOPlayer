@@ -1,6 +1,0 @@
-framework module AFOSetting {
-  umbrella header "AFOSetting.h"
-
-  export *
-  module * { export * }
-}

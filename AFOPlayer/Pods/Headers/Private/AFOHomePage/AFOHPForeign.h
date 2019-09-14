@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/foreign/AFOHPForeign.h
+../../../AFOHomePage/AFOHomePage/AFOHPForeign.h

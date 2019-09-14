@@ -1,1 +1,1 @@
-../../../AFOViews/AFOViews/progressSlider/AFOProgressSlider.h
+../../../AFOViews/AFOViews/AFOProgressSlider.h

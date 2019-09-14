@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/models/AFOMPMediaQuery.h
+../../../AFOHomePage/AFOHomePage/AFOMPMediaQuery.h

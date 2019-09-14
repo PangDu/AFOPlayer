@@ -1,6 +1,0 @@
-framework module AFODelegateExtension {
-  umbrella header "AFODelegateExtension.h"
-
-  export *
-  module * { export * }
-}

@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/main/views/cardStacking/models/AFOCardStackCollectionDataSource.h
+../../../AFOHomePage/AFOHomePage/AFOCardStackCollectionDataSource.h

@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/category/jump/AFOPLMainController+Aspects.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLMainController+Aspects.h

@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/play/models/AFOHPAVPlayer.h
+../../../AFOHomePage/AFOHomePage/AFOHPAVPlayer.h

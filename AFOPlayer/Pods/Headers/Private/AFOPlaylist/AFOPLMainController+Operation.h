@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/category/operation/AFOPLMainController+Operation.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLMainController+Operation.h

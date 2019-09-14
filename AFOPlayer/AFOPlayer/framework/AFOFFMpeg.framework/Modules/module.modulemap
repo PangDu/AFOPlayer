@@ -1,6 +1,0 @@
-framework module AFOFFMpeg {
-  umbrella header "AFOFFMpeg.h"
-
-  export *
-  module * { export * }
-}

@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewModels/sharedFolders/AFODirectoryWatcher.h
+../../../AFOPlaylist/AFOPlaylist/AFODirectoryWatcher.h

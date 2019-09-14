@@ -1,1 +1,1 @@
-../../../AFOSQLite/AFOSQLite/FMDB/include/FMDatabase.h
+../../../AFOSQLite/AFOSQLite/FMDatabase.h

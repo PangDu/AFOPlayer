@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/play/presenter/business/AFOHPPlayPresenterBusinessDelegate.h
+../../../AFOHomePage/AFOHomePage/AFOHPPlayPresenterBusinessDelegate.h

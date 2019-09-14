@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/views/controllers/controllers/play/presenter/view/AFOHPPlayPresenterView.h
+../../../AFOHomePage/AFOHomePage/AFOHPPlayPresenterView.h

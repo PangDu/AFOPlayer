@@ -1,1 +1,1 @@
-../../../AFORouter/AFORouter/Manager/models/plist/AFORouterInfoplist.h
+../../../AFORouter/AFORouter/AFORouterInfoplist.h

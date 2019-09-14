@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewControllers/controllers/viewModels/corresponding/category/AFOPLCorresponding+SQLite.h
+../../../AFOPlaylist/AFOPlaylist/AFOPLCorresponding+SQLite.h
