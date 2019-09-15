@@ -7,7 +7,7 @@
 //
 
 #import "AFOHPNavigationController.h"
-
+#import "AFOHPStaticString.h"
 @interface AFOHPNavigationController ()
 
 @end

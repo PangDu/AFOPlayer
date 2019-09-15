@@ -7,6 +7,7 @@
 //
 
 #import "AFOHPPlayerBaseView.h"
+#import <AFOFoundation/AFOFoundation.h>
 @implementation AFOHPPlayerBaseView
 #pragma mark ------ playMusicAction
 - (void)playMusicAction:(UIButton *)sender{

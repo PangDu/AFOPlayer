@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/include/MASConstraint.h
+../../../AFOGitHub/AFOGitHub/Masonry/MASConstraint.h

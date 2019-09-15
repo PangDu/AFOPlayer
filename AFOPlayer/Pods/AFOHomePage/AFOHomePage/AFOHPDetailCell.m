@@ -7,6 +7,7 @@
 //
 
 #import "AFOHPDetailCell.h"
+#import <AFOFoundation/AFOFoundation.h>
 @interface AFOHPDetailCell ()
 @property (nonatomic, strong) UIImageView      *albumImageView;
 @property (nonatomic, strong) UILabel          *albumLB;

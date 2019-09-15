@@ -7,6 +7,7 @@
 //
 
 #import "AFOCardPresenterView.h"
+#import <AFOFoundation/AFOFoundation.h>
 #import "AFOCardStackDefaultLayout.h"
 #import "AFOCardStackCollectionCell.h"
 @interface AFOCardPresenterView ()

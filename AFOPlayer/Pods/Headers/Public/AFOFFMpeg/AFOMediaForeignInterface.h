@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/foreign/AFOMediaForeignInterface.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOMediaForeignInterface.h

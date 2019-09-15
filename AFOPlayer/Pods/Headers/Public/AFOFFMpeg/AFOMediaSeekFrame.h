@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/video/conditional/seekFrame/AFOMediaSeekFrame.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOMediaSeekFrame.h

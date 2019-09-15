@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/video/OpenGL/models/video/AFOVideoFrameYUV.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOVideoFrameYUV.h

@@ -9,7 +9,6 @@
 #import "AFOHPDetailDataSource.h"
 #import "AFOHPDetailModel.h"
 #import "AFOHPDetailCell.h"
-
 @interface AFOHPDetailDataSource ()
 @property (nonatomic, assign) NSInteger              type;
 @property (nonatomic, strong) NSMutableArray        *dataArray;

@@ -7,6 +7,8 @@
 //
 
 #import <MediaPlayer/MPMediaItem.h>
+#import <UIKit/UIKit.h>
+#import <AFORouter/AFORouter.h>
 #import "AFOHPDetailModel.h"
 #import "AFOMPMediaQuery.h"
 @interface AFOHPDetailModel()

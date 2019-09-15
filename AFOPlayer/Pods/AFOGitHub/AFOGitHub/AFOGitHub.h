@@ -15,8 +15,8 @@ FOUNDATION_EXPORT double AFOGitHubVersionNumber;
 FOUNDATION_EXPORT const unsigned char AFOGitHubVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AFOGitHub/PublicHeader.h>
-#import <AFOGitHub/Masonry.h>
 #import <AFOGitHub/Aspects.h>
+#import <AFOGitHub/Masonry.h>
 #import <AFOGitHub/SVPullToRefresh.h>
 #import <AFOGitHub/UIImageView+WebCache.h>
 #import <AFOGitHub/INTUAutoRemoveObserver.h>

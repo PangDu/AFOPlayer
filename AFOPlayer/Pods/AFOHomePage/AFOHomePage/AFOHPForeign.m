@@ -7,7 +7,8 @@
 //
 
 #import "AFOHPForeign.h"
-
+#import "AFOHPMainController.h"
+#import "AFOHPNavigationController.h"
 @interface AFOHPForeign ()
 @property (nonatomic, strong) AFOHPNavigationController *navigationController;
 @property (nonatomic, strong) AFOHPMainController       *mainController;

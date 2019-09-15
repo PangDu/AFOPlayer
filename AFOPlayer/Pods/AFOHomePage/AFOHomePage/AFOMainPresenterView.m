@@ -7,6 +7,7 @@
 //
 
 #import "AFOMainPresenterView.h"
+#import "AFOCardStackingController.h"
 @interface AFOMainPresenterView ()
 @property (nonatomic, strong) AFOCardStackingController *cardStacking;
 @end

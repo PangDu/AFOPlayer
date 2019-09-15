@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/queue/AFOMediaQueueManager.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOMediaQueueManager.h

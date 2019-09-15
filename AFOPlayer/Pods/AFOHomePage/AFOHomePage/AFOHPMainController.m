@@ -7,6 +7,7 @@
 //
 
 #import "AFOHPMainController.h"
+#import "AFOHPStaticString.h"
 #import "AFOMainPresenterView.h"
 @interface AFOHPMainController ()<AFOHPPresenterDelegate>
 @property (nonatomic, strong) AFOMainPresenterView *presenterView;

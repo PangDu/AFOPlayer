@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/video/OpenGL/AFOMediaFrameImport.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOMediaFrameImport.h

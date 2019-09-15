@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/time/AFOMediaTimer.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOMediaTimer.h

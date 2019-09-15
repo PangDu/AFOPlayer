@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/audio/AFOAudioManager.h
+../../../AFOFFMpeg/AFOFFMpeg/AFOAudioManager.h

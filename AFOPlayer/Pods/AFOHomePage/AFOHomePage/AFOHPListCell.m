@@ -7,7 +7,7 @@
 //
 
 #import "AFOHPListCell.h"
-
+#import <AFOFoundation/AFOFoundation.h>
 @interface AFOHPListCell ()
 @property (nonatomic, assign, readwrite) CGSize     imageSize;
 @property (nonatomic, strong) UIImageView          *albumImageView;

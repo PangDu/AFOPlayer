@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/include/NSArray+MASAdditions.h
+../../../AFOGitHub/AFOGitHub/Masonry/NSArray+MASAdditions.h

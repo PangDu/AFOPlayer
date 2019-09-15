@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/include/ViewController+MASAdditions.h
+../../../AFOGitHub/AFOGitHub/Masonry/ViewController+MASAdditions.h

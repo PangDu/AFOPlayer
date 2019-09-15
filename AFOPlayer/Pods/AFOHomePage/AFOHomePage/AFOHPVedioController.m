@@ -7,6 +7,8 @@
 //
 
 #import "AFOHPVedioController.h"
+#import <AFORouter/AFORouter.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import "AFOHPPlayPresenterView.h"
 #import "AFOHPPlayPresenterBusiness.h"
 @interface AFOHPVedioController ()<AFORouterManagerDelegate,AFOHPPresenterDelegate,AFOHPPlayPresenterViewDelegate,AFOHPPlayPresenterBusinessDelegate>

@@ -20,9 +20,6 @@
 #import <AFOHomePage/AFOHomePage.h>
 /*----播放源------*/
 #import <AFOPlaylist/AFOPlaylist.h>
-/*------设置------*/
-#import <AFOSetting/AFOSetting.h>
-
 /*---------------------------------------------------------*/
 /*------ViewModels------*/
 #import "AFOAddControllerModel.h"

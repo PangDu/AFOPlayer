@@ -10,6 +10,7 @@
 #import "AFOHPAVPlayer+ChooseSong.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import "AFOMPMediaQuery.h"
 @interface AFOHPAVPlayer ()
 @property (nonatomic, strong) AVPlayer      *avPlayer;

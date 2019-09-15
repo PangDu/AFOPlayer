@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/GCDMulticastDelegate/GCDMulticastDelegate.h
+../../../AFOGitHub/AFOGitHub/GCDMulticastDelegate.h

@@ -7,6 +7,7 @@
 //
 
 #import "AFOCardStackCollectionCell.h"
+#import <AFOFoundation/AFOFoundation.h>
 @interface AFOCardStackCollectionCell ()
 @property (nonatomic, strong) UILabel       *titleLB;
 @property (nonatomic, strong) UIImageView   *backImageView;

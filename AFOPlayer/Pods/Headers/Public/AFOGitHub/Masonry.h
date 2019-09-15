@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/include/Masonry.h
+../../../AFOGitHub/AFOGitHub/Masonry/Masonry.h

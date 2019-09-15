@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/include/MASViewAttribute.h
+../../../AFOGitHub/AFOGitHub/Masonry/MASViewAttribute.h

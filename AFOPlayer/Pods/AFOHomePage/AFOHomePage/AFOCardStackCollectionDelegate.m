@@ -7,7 +7,7 @@
 //
 
 #import "AFOCardStackCollectionDelegate.h"
-
+#import <UIKit/UIKit.h>
 @implementation AFOCardStackCollectionDelegate
 #pragma mark ------ UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
