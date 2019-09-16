@@ -12,12 +12,12 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 /*------基础库------*/
-#import <AFOUIKit/AFOUIKit.h>
+//#import <AFOUIKit/AFOUIKit.h>
 #import <AFORouter/AFORouter.h>
 #import <AFODelegateExtension/AFODelegateExtension.h>
 /*---------------------------------------------------------*/
 /*------首页------*/
-#import <AFOHomePage/AFOHomePage.h>
+//#import <AFOHomePage/AFOHomePage.h>
 /*----播放源------*/
 #import <AFOPlaylist/AFOPlaylist.h>
 /*---------------------------------------------------------*/

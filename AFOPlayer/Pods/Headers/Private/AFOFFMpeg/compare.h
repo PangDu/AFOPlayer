@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/libYUV/include/libyuv/compare.h
+../../../AFOFFMpeg/AFOFFMpeg/libyuv/include/libyuv/compare.h

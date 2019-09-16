@@ -7,7 +7,7 @@
 //
 
 #import "AFOVideoFrameRGB.h"
-
+#import "AFOFFMpegHeader.h"
 @interface AFOVideoFrameRGB ()
 @property (nonatomic, assign, readwrite)    NSInteger       linesize;
 @property (nonatomic, strong, readwrite)    NSData         *RGB;

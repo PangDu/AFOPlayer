@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/libYUV/include/libyuv/mjpeg_decoder.h
+../../../AFOFFMpeg/AFOFFMpeg/libyuv/include/libyuv/mjpeg_decoder.h

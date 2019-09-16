@@ -20,9 +20,9 @@
 @implementation AFOAddControllerModel
 #pragma mark ------ 初始化
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController{
-    UIViewController *homePage = [self.hpPublicController returnHPController];
+ //   UIViewController *homePage = [self.hpPublicController returnHPController];
     UIViewController *playList = [self.playListForeign returnPlayListController];
-    [tabBarController setViewControllers:@[homePage,playList]];
+    [tabBarController setViewControllers:@[playList]];
 }
 #pragma mark ------ property
 - (AFOHPForeign *)hpPublicController{

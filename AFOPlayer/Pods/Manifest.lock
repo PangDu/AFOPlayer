@@ -1,32 +1,24 @@
 PODS:
   - AFODelegateExtension (0.0.7)
-  - AFOFFMpeg (0.0.5):
+  - AFOFFMpeg (0.0.11):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
-    - AFOSQLite
     - AFOUIKIT
     - AFOViews
   - AFOFoundation (1.0.6)
   - AFOGitHub (0.0.7)
-  - AFOHomePage (0.0.13):
-    - AFOFoundation
-    - AFOGitHub
-    - AFORouter
-    - AFOViews
   - AFOPlaylist (0.0.5):
     - AFOFFMpeg
     - AFOFoundation
     - AFORouter
     - AFOUIKIT
   - AFORouter (0.0.4)
-  - AFOSQLite (0.0.2)
   - AFOUIKIT (0.0.6)
   - AFOViews (0.0.2)
 
 DEPENDENCIES:
   - AFODelegateExtension
-  - AFOHomePage
   - AFOPlaylist
 
 SPEC REPOS:
@@ -35,25 +27,21 @@ SPEC REPOS:
     - AFOFFMpeg
     - AFOFoundation
     - AFOGitHub
-    - AFOHomePage
     - AFOPlaylist
     - AFORouter
-    - AFOSQLite
     - AFOUIKIT
     - AFOViews
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
-  AFOFFMpeg: 05753c09fd95ccfa7c421565fe06769fdedfb10a
+  AFOFFMpeg: 565838ebcf87d2120583075adc21cde6886a3c8f
   AFOFoundation: a5792ce9496c1665ae08918c1f9bb691ece3b291
   AFOGitHub: 72827902cb9b9409d35877482a7fa8b64e252e42
-  AFOHomePage: 0b9b1ec14af1109bf02b8a5f6f5f7260516928f5
   AFOPlaylist: 6b2564b3df3863c2aec50662c08d0c48e5c9aa76
   AFORouter: dc40925d83908af499af28b9c988efb56ea28f89
-  AFOSQLite: 04d2b21f795b4b18b7e38c231165ba1fc65f972b
   AFOUIKIT: 9feceb7972ab234f42e744e0efe783832805e3db
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
 
-PODFILE CHECKSUM: b82e8c12ad8ed7f29de298f473a7d5e81f0ede3f
+PODFILE CHECKSUM: d0b55b90c43ae25b922f6997b446cfdf6fff789e
 
 COCOAPODS: 1.7.5

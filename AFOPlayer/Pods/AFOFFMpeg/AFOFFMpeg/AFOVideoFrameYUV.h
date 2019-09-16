@@ -7,7 +7,7 @@
 //
 
 #import "AFOVideoFrame.h"
-
+#import "AFOFFMpegHeader.h"
 @interface AFOVideoFrameYUV : AFOVideoFrame
 @property (nonatomic, strong, readonly) NSData *luma;
 @property (nonatomic, strong, readonly) NSData *chromaB;

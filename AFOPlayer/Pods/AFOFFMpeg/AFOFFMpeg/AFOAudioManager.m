@@ -7,6 +7,7 @@
 //
 
 #import "AFOAudioManager.h"
+#import "AFOFFMpegHeader.h"
 #import "AFOAudioThreadDecoder.h"
 #import "AFOAudioSession.h"
 #import "AFOAudioDecoder.h"

@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/libYUV/include/libyuv/scale.h
+../../../AFOFFMpeg/AFOFFMpeg/libyuv/include/libyuv/scale.h

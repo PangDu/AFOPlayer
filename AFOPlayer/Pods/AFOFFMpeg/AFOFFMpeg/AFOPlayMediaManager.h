@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AFOFFMpegHeader.h"
 @protocol AFOPlayMediaManager <NSObject>
 @optional
 - (void)videoTimeStamp:(float)videoTime

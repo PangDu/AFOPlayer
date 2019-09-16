@@ -7,6 +7,7 @@
 //
 
 #import "AFOMediaManager.h"
+#import "AFOFFMpegHeader.h"
 #import "AFOMediaFrameImport.h"
 
 @interface  AFOMediaManager ()

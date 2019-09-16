@@ -7,7 +7,7 @@
 //
 
 #import "AFOMediaSeekFrame.h"
-
+#import "AFOFFMpegHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^MediaSeekFrameBlock)(NSError * error,

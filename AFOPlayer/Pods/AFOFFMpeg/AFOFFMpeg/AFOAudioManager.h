@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AFOFFMpegHeader.h"
 @protocol AFOAudioManagerDelegate <NSObject>
 @optional
 - (void)audioTimeStamp:(float)audioTime;

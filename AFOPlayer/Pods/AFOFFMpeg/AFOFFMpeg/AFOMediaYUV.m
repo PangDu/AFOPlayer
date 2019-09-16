@@ -6,6 +6,7 @@
 //  Copyright © 2018 AFO Science and technology Ltd. All rights reserved.
 //
 #import "AFOMediaYUV.h"
+#import "libyuv/include/libyuv.h"
 @interface AFOMediaYUV ()
 @property (nonatomic, assign) CVPixelBufferPoolRef pixelBufferPool;
 @property (nonatomic, assign) CVPixelBufferRef     pixelBuffer;

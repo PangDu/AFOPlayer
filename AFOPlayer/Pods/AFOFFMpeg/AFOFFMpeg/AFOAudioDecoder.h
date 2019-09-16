@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFOFFMpegHeader.h"
 typedef void(^audioTimeStampBlock)(float timeStamp);
 NS_ASSUME_NONNULL_BEGIN
 @interface AFOAudioDecoder : NSObject
