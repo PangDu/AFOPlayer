@@ -1,0 +1,1 @@
+../../../AFOSQLite/AFOSQLite/FMDatabaseAdditions.h

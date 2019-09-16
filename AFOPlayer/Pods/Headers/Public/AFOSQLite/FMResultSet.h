@@ -1,0 +1,1 @@
+../../../AFOSQLite/AFOSQLite/FMResultSet.h
