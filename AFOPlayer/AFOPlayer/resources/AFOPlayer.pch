@@ -17,9 +17,9 @@
 #import <AFODelegateExtension/AFODelegateExtension.h>
 /*---------------------------------------------------------*/
 /*------首页------*/
-//#import <AFOHomePage/AFOHomePage.h>
+#import <AFOHomePage/AFOHomePage.h>
 /*----播放源------*/
-#import <AFOPlaylist/AFOPlaylist.h>
+//#import <AFOPlaylist/AFOPlaylist.h>
 /*---------------------------------------------------------*/
 /*------ViewModels------*/
 #import "AFOAddControllerModel.h"
