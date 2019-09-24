@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/xtea.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/xtea.h

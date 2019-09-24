@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/lfg.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/lfg.h

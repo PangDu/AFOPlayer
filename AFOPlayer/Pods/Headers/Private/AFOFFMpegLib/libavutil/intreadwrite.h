@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/intreadwrite.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/intreadwrite.h

@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavcodec/qsv.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavcodec/qsv.h

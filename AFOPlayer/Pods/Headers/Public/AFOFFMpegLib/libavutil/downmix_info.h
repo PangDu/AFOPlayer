@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/downmix_info.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/downmix_info.h

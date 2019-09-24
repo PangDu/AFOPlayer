@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/pixfmt.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/pixfmt.h

@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/mathematics.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/mathematics.h

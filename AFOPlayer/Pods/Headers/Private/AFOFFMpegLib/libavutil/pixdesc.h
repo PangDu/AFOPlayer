@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/pixdesc.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/pixdesc.h

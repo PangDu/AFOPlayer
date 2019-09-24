@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/rational.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/rational.h

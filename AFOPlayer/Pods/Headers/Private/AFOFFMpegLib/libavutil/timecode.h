@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/timecode.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/timecode.h

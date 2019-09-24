@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/ripemd.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/ripemd.h

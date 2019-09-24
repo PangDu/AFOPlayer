@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/channel_layout.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/channel_layout.h

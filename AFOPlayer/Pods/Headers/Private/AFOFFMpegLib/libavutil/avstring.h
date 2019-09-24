@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/avstring.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/avstring.h

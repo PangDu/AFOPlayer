@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavcodec/dxva2.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavcodec/dxva2.h

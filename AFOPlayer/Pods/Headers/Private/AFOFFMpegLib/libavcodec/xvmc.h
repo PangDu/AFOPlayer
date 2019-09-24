@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavcodec/xvmc.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavcodec/xvmc.h

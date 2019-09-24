@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/random_seed.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/random_seed.h

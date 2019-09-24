@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/avassert.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/avassert.h

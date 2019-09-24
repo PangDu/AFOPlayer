@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavformat/version.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavformat/version.h

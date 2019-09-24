@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavformat/avio.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavformat/avio.h

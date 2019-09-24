@@ -10,7 +10,19 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpegLib (0.0.21)
+  - AFOFFMpegLib (0.0.22):
+    - AFOFFMpegLib/include (= 0.0.22)
+  - AFOFFMpegLib/include (0.0.22):
+    - AFOFFMpegLib/include/libavcodec (= 0.0.22)
+    - AFOFFMpegLib/include/libavformat (= 0.0.22)
+    - AFOFFMpegLib/include/libavutil (= 0.0.22)
+    - AFOFFMpegLib/include/libswresample (= 0.0.22)
+    - AFOFFMpegLib/include/libswscale (= 0.0.22)
+  - AFOFFMpegLib/include/libavcodec (0.0.22)
+  - AFOFFMpegLib/include/libavformat (0.0.22)
+  - AFOFFMpegLib/include/libavutil (0.0.22)
+  - AFOFFMpegLib/include/libswresample (0.0.22)
+  - AFOFFMpegLib/include/libswscale (0.0.22)
   - AFOFoundation (1.0.6)
   - AFOGitHub (0.0.10):
     - AFOGitHub/Aspects (= 0.0.10)
@@ -80,7 +92,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
   AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
-  AFOFFMpegLib: 49bc35739c34fd9cd6cac5551e614a0c64edb67d
+  AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
   AFOFoundation: a5792ce9496c1665ae08918c1f9bb691ece3b291
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
   AFOHomePage: 7d0923ae6c3c9406b8ab91d4e3f6617a3a1a6fd8

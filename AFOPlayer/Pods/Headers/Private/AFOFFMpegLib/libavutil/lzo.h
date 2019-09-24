@@ -1,1 +1,1 @@
-../../../../AFOFFMpegLib/contains/FFmpeg/include/libavutil/lzo.h
+../../../../AFOFFMpegLib/FFmpeg/include/libavutil/lzo.h
