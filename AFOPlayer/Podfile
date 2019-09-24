@@ -4,5 +4,5 @@ target 'AFOPlayer' do
   pod 'AFODelegateExtension'
   pod 'AFOHomePage'
   pod 'AFOUIKIT'
-  #pod 'AFOPlaylist'
+  pod 'AFOPlaylist'
 end

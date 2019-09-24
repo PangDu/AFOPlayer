@@ -51,7 +51,7 @@
 		2408BADB200856870049060F /* AFOAddControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAddControllerModel.m; sourceTree = "<group>"; };
 		2408BADC200856870049060F /* AFOAddControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAddControllerModel.h; sourceTree = "<group>"; };
 		2408BB38200877410049060F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		240B108C2007A5F70007F2F3 /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B108C2007A5F70007F2F3 /* 播放器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "播放器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B108F2007A5F70007F2F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		240B10902007A5F70007F2F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		240B10982007A5F70007F2F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		240B108D2007A5F70007F2F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				240B108C2007A5F70007F2F3 /* Player.app */,
+				240B108C2007A5F70007F2F3 /* 播放器.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			);
 			name = AFOPlayer;
 			productName = AFOPlayer;
-			productReference = 240B108C2007A5F70007F2F3 /* Player.app */;
+			productReference = 240B108C2007A5F70007F2F3 /* 播放器.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -464,7 +464,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
-				PRODUCT_NAME = Player;
+				PRODUCT_NAME = "播放器";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -494,7 +494,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
-				PRODUCT_NAME = Player;
+				PRODUCT_NAME = "播放器";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

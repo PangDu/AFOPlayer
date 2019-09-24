@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/INTUAutoRemoveObserver.h
+../../../AFOGitHub/AFOGitHub/INTUAutoRemoveObserver/INTUAutoRemoveObserver.h
