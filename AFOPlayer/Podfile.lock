@@ -55,115 +55,115 @@ PODS:
   - AFOGitHub/SDWebImage/include (0.0.10)
   - AFOGitHub/SDWebImage/lib (0.0.10)
   - AFOGitHub/UIScrollView (0.0.10)
-  - AFOHomePage (0.0.15):
+  - AFOHomePage (0.0.19):
     - AFOFoundation
     - AFOGitHub
-    - AFOHomePage/models (= 0.0.15)
-    - AFOHomePage/presenter (= 0.0.15)
-    - AFOHomePage/views (= 0.0.15)
+    - AFOHomePage/models (= 0.0.19)
+    - AFOHomePage/presenter (= 0.0.19)
+    - AFOHomePage/views (= 0.0.19)
     - AFORouter
     - AFOViews
-  - AFOHomePage/models (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/presenter (0.0.15):
+  - AFOHomePage/models (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFOHomePage/views/detail (= 0.0.15)
-    - AFOHomePage/views/list (= 0.0.15)
-    - AFOHomePage/views/main (= 0.0.15)
-    - AFOHomePage/views/play (= 0.0.15)
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/views/detail (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFOHomePage/views/detail/models (= 0.0.15)
-    - AFOHomePage/views/detail/presenters (= 0.0.15)
-    - AFOHomePage/views/detail/views (= 0.0.15)
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/views/detail/models (0.0.15):
+  - AFOHomePage/presenter (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/detail/presenters (0.0.15):
+  - AFOHomePage/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail (= 0.0.19)
+    - AFOHomePage/views/list (= 0.0.19)
+    - AFOHomePage/views/main (= 0.0.19)
+    - AFOHomePage/views/play (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail/models (= 0.0.19)
+    - AFOHomePage/views/detail/presenters (= 0.0.19)
+    - AFOHomePage/views/detail/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/models (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/detail/views (0.0.15):
+  - AFOHomePage/views/detail/presenters (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/list (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFOHomePage/views/list/models (= 0.0.15)
-    - AFOHomePage/views/list/presenters (= 0.0.15)
-    - AFOHomePage/views/list/views (= 0.0.15)
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/views/list/models (0.0.15):
+  - AFOHomePage/views/detail/views (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/list/presenters (0.0.15):
+  - AFOHomePage/views/list (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/list/models (= 0.0.19)
+    - AFOHomePage/views/list/presenters (= 0.0.19)
+    - AFOHomePage/views/list/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/models (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/list/views (0.0.15):
+  - AFOHomePage/views/list/presenters (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/main (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFOHomePage/views/main/models (= 0.0.15)
-    - AFOHomePage/views/main/views (= 0.0.15)
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/views/main/models (0.0.15):
+  - AFOHomePage/views/list/views (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/main/views (0.0.15):
+  - AFOHomePage/views/main (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/main/models (= 0.0.19)
+    - AFOHomePage/views/main/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main/models (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/play (0.0.15):
-    - AFOFoundation
-    - AFOGitHub
-    - AFOHomePage/views/play/models (= 0.0.15)
-    - AFOHomePage/views/play/presenters (= 0.0.15)
-    - AFOHomePage/views/play/views (= 0.0.15)
-    - AFORouter
-    - AFOViews
-  - AFOHomePage/views/play/models (0.0.15):
+  - AFOHomePage/views/main/views (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/play/presenters (0.0.15):
+  - AFOHomePage/views/play (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/play/models (= 0.0.19)
+    - AFOHomePage/views/play/presenters (= 0.0.19)
+    - AFOHomePage/views/play/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/models (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
     - AFOViews
-  - AFOHomePage/views/play/views (0.0.15):
+  - AFOHomePage/views/play/presenters (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/views (0.0.19):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
@@ -217,7 +217,7 @@ SPEC CHECKSUMS:
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
   AFOFoundation: 984bbc3d77ca72b5fa604b879065a12c108567fb
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
-  AFOHomePage: f59ed468801959915451cb9c4beb6b4964f3a29e
+  AFOHomePage: 8300454f693358c0f61b10d0e73c7a0ef7081622
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFOPlaylist: 70526c046df7d0e93ff63b762a1317e08fb383e2
   AFORouter: dc40925d83908af499af28b9c988efb56ea28f89
