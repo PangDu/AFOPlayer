@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOCardPresenterView.h
+../../../AFOHomePage/AFOHomePage/views/main/views/AFOCardPresenterView.h

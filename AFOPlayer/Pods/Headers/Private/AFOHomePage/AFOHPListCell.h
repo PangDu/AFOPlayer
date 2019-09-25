@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOHPListCell.h
+../../../AFOHomePage/AFOHomePage/views/list/views/AFOHPListCell.h

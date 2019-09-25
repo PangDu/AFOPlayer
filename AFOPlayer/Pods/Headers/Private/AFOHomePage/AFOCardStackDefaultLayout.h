@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOCardStackDefaultLayout.h
+../../../AFOHomePage/AFOHomePage/views/main/views/AFOCardStackDefaultLayout.h

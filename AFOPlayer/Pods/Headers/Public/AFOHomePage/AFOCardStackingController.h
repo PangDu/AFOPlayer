@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOCardStackingController.h
+../../../AFOHomePage/AFOHomePage/views/main/views/AFOCardStackingController.h

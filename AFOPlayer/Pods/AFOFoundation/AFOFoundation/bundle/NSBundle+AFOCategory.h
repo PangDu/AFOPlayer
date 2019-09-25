@@ -11,4 +11,6 @@
 @interface NSBundle (AFOCategory)
 + (NSString *)imageNameFromBundle:(NSString *)bundleName
                            source:(NSString *)sourceName;
++ (NSBundle *)bundleWithBundleName:(NSString *)bundleName
+                           podName:(NSString *)podName;
 @end

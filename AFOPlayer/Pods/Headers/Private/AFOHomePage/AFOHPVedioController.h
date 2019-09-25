@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOHPVedioController.h
+../../../AFOHomePage/AFOHomePage/views/play/views/AFOHPVedioController.h

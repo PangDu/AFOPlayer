@@ -7,7 +7,6 @@
 //
 
 #import "AFOHPNavigationController.h"
-#import "AFOHPStaticString.h"
 @interface AFOHPNavigationController ()
 
 @end
@@ -16,7 +15,7 @@
 #pragma mark ------------------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarItem.title = AFOHPTITLESTRING;
+    self.tabBarItem.title = @"首页";
     // Do any additional setup after loading the view.
 }
 #pragma mark ------------ didReceiveMemoryWarning

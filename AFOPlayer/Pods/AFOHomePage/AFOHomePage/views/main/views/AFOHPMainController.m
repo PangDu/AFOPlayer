@@ -7,7 +7,6 @@
 //
 
 #import "AFOHPMainController.h"
-#import "AFOHPStaticString.h"
 #import "AFOMainPresenterView.h"
 @interface AFOHPMainController ()<AFOHPPresenterDelegate>
 @property (nonatomic, strong) AFOMainPresenterView *presenterView;
@@ -17,7 +16,7 @@
 #pragma mark ------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = AFOHPTITLESTRING;
+    self.title = @"首页";
     [self.presenterView bindingCardStacking];
 }
 #pragma mark ------ didReceiveMemoryWarning

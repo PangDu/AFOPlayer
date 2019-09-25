@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFODetailPresenterView.h
+../../../AFOHomePage/AFOHomePage/views/detail/presenters/AFODetailPresenterView.h

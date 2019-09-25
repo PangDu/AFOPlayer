@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOHPDetailDelegate.h
+../../../AFOHomePage/AFOHomePage/views/detail/models/AFOHPDetailDelegate.h

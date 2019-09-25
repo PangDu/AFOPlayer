@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFODetailPresenterBusiness.h
+../../../AFOHomePage/AFOHomePage/views/detail/presenters/AFODetailPresenterBusiness.h

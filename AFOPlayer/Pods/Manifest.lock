@@ -23,7 +23,21 @@ PODS:
   - AFOFFMpegLib/include/libavutil (0.0.22)
   - AFOFFMpegLib/include/libswresample (0.0.22)
   - AFOFFMpegLib/include/libswscale (0.0.22)
-  - AFOFoundation (1.0.6)
+  - AFOFoundation (1.0.7):
+    - AFOFoundation/array (= 1.0.7)
+    - AFOFoundation/bundle (= 1.0.7)
+    - AFOFoundation/define (= 1.0.7)
+    - AFOFoundation/dictionary (= 1.0.7)
+    - AFOFoundation/sandbox (= 1.0.7)
+    - AFOFoundation/string (= 1.0.7)
+    - AFOFoundation/weak (= 1.0.7)
+  - AFOFoundation/array (1.0.7)
+  - AFOFoundation/bundle (1.0.7)
+  - AFOFoundation/define (1.0.7)
+  - AFOFoundation/dictionary (1.0.7)
+  - AFOFoundation/sandbox (1.0.7)
+  - AFOFoundation/string (1.0.7)
+  - AFOFoundation/weak (1.0.7)
   - AFOGitHub (0.0.10):
     - AFOGitHub/Aspects (= 0.0.10)
     - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
@@ -41,7 +55,115 @@ PODS:
   - AFOGitHub/SDWebImage/include (0.0.10)
   - AFOGitHub/SDWebImage/lib (0.0.10)
   - AFOGitHub/UIScrollView (0.0.10)
-  - AFOHomePage (0.0.14):
+  - AFOHomePage (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/models (= 0.0.15)
+    - AFOHomePage/presenter (= 0.0.15)
+    - AFOHomePage/views (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/models (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/presenter (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail (= 0.0.15)
+    - AFOHomePage/views/list (= 0.0.15)
+    - AFOHomePage/views/main (= 0.0.15)
+    - AFOHomePage/views/play (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail/models (= 0.0.15)
+    - AFOHomePage/views/detail/presenters (= 0.0.15)
+    - AFOHomePage/views/detail/views (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/models (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/presenters (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/views (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/list/models (= 0.0.15)
+    - AFOHomePage/views/list/presenters (= 0.0.15)
+    - AFOHomePage/views/list/views (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/models (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/presenters (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/views (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/main/models (= 0.0.15)
+    - AFOHomePage/views/main/views (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main/models (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main/views (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/play/models (= 0.0.15)
+    - AFOHomePage/views/play/presenters (= 0.0.15)
+    - AFOHomePage/views/play/views (= 0.0.15)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/models (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/presenters (0.0.15):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/views (0.0.15):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
@@ -93,9 +215,9 @@ SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
   AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
-  AFOFoundation: a5792ce9496c1665ae08918c1f9bb691ece3b291
+  AFOFoundation: 984bbc3d77ca72b5fa604b879065a12c108567fb
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
-  AFOHomePage: 7d0923ae6c3c9406b8ab91d4e3f6617a3a1a6fd8
+  AFOHomePage: f59ed468801959915451cb9c4beb6b4964f3a29e
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFOPlaylist: 70526c046df7d0e93ff63b762a1317e08fb383e2
   AFORouter: dc40925d83908af499af28b9c988efb56ea28f89

@@ -26,7 +26,6 @@
 		240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */; };
 		240B109F2007A5F70007F2F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B109E2007A5F70007F2F3 /* main.m */; };
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
-		2413253C22432CD900D51960 /* AFOHomePage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
 		897A4093F332FDFB44B76D36 /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */; };
@@ -60,7 +59,6 @@
 		240B109E2007A5F70007F2F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2413253D22432DAC00D51960 /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
 		2413253E22432DAC00D51960 /* AFOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegate.m; sourceTree = "<group>"; };
-		24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOHomePage.bundle; sourceTree = "<group>"; };
 		2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppTabBarController+AFOAutoRotate.h"; sourceTree = "<group>"; };
 		2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppTabBarController+AFOAutoRotate.m"; sourceTree = "<group>"; };
 		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				24AF675E201B616500AB5537 /* AFOPlayer.bundle */,
-				24373E5F2012DE3800B7C9BD /* AFOHomePage.bundle */,
 				240B10982007A5F70007F2F3 /* Assets.xcassets */,
 				240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */,
 				240B109D2007A5F70007F2F3 /* Info.plist */,
@@ -215,6 +212,7 @@
 				240B10882007A5F70007F2F3 /* Sources */,
 				240B10892007A5F70007F2F3 /* Frameworks */,
 				240B108A2007A5F70007F2F3 /* Resources */,
+				426F63BB37CB4F984F05FCEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */,
-				2413253C22432CD900D51960 /* AFOHomePage.bundle in Resources */,
 				240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */,
 				240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */,
 			);
@@ -278,6 +275,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		426F63BB37CB4F984F05FCEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/AFOHomePage/AFOHomePage.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AFOHomePage.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9BD9E0D2C5514C4CD486DC57 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

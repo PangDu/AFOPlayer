@@ -1,1 +1,1 @@
-../../../AFOHomePage/AFOHomePage/AFOHPAVPlayer+ChooseSong.h
+../../../AFOHomePage/AFOHomePage/views/play/models/AFOHPAVPlayer+ChooseSong.h
