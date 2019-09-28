@@ -3721,22 +3721,6 @@
 			};
 			name = Debug;
 		};
-		184F69C6A378FF963F977B29BB9CB482 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F225ADE48EA77CE4B281C7FD5DCFA4C7 /* AFOHomePage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AFOHomePage";
-				INFOPLIST_FILE = "Target Support Files/AFOHomePage/ResourceBundle-AFOHomePage-AFOHomePage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = AFOHomePage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		1EDFB7A519E3A30B3217FBE5592B6897 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 901C3F3A287B80441B0DBD322E9A3AD9 /* libxvidcore.xcconfig */;
@@ -3747,22 +3731,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1F9AB9E5EE51612DC84DA93611E9A59F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F225ADE48EA77CE4B281C7FD5DCFA4C7 /* AFOHomePage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AFOHomePage";
-				INFOPLIST_FILE = "Target Support Files/AFOHomePage/ResourceBundle-AFOHomePage-AFOHomePage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = AFOHomePage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -3870,6 +3838,23 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		394936B95396465D7DD318A9671DA7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F225ADE48EA77CE4B281C7FD5DCFA4C7 /* AFOHomePage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AFOHomePage";
+				IBSC_MODULE = AFOHomePage;
+				INFOPLIST_FILE = "Target Support Files/AFOHomePage/ResourceBundle-AFOHomePage-AFOHomePage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AFOHomePage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		4AC6C7A0AB868E157536651D8E896D2D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4344,6 +4329,23 @@
 			};
 			name = Debug;
 		};
+		E70F33DF97A48D83E9108F5CF9E943AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F225ADE48EA77CE4B281C7FD5DCFA4C7 /* AFOHomePage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AFOHomePage";
+				IBSC_MODULE = AFOHomePage;
+				INFOPLIST_FILE = "Target Support Files/AFOHomePage/ResourceBundle-AFOHomePage-AFOHomePage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AFOHomePage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		E9C0EE4F49A3EFF1C2CC92A6CA9B04D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF13A2FE93FE7114CBD3178C46C34EAF /* FMDB.xcconfig */;
@@ -4546,8 +4548,8 @@
 		DB3D4DC14EE7C5CFCEA5AA80CABB7A04 /* Build configuration list for PBXNativeTarget "AFOHomePage-AFOHomePage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F9AB9E5EE51612DC84DA93611E9A59F /* Debug */,
-				184F69C6A378FF963F977B29BB9CB482 /* Release */,
+				394936B95396465D7DD318A9671DA7AA /* Debug */,
+				E70F33DF97A48D83E9108F5CF9E943AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

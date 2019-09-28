@@ -480,6 +480,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -510,6 +512,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

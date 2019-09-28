@@ -191,10 +191,9 @@ DEPENDENCIES:
   - AFODelegateExtension
   - AFOHomePage
   - AFOPlaylist
-  - AFOUIKIT
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFODelegateExtension
     - AFOFFMpeg
     - AFOFFMpegLib
@@ -228,6 +227,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 18f07a01320657d114e75d38aa52d78e47ed10fe
+PODFILE CHECKSUM: b82e8c12ad8ed7f29de298f473a7d5e81f0ede3f
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.0
