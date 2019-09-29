@@ -1,2 +1,0 @@
-# AFOSQLite
-sqlite

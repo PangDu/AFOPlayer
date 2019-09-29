@@ -1,1 +1,0 @@
-../../../AFOViews/AFOViews/AFOProgressSliderManager.h
