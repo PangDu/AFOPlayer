@@ -4,7 +4,7 @@ Play video in multiple ways。
 Overall engineering introduction。
 
 
-
+组件化开发，pod管理组件。
 通过FFmpeg解码视频。
 使用多种方式去播放视频。
 iOS播放器
