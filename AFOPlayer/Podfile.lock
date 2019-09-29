@@ -1,3 +1,238 @@
-PODFILE CHECKSUM: 8360b3db764db38a5234b9da56e841482d549f79
+PODS:
+  - AFODelegateExtension (0.0.7)
+  - AFOFFMpeg (0.1.0):
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpegLib (0.0.22):
+    - AFOFFMpegLib/include (= 0.0.22)
+  - AFOFFMpegLib/include (0.0.22):
+    - AFOFFMpegLib/include/libavcodec (= 0.0.22)
+    - AFOFFMpegLib/include/libavformat (= 0.0.22)
+    - AFOFFMpegLib/include/libavutil (= 0.0.22)
+    - AFOFFMpegLib/include/libswresample (= 0.0.22)
+    - AFOFFMpegLib/include/libswscale (= 0.0.22)
+  - AFOFFMpegLib/include/libavcodec (0.0.22)
+  - AFOFFMpegLib/include/libavformat (0.0.22)
+  - AFOFFMpegLib/include/libavutil (0.0.22)
+  - AFOFFMpegLib/include/libswresample (0.0.22)
+  - AFOFFMpegLib/include/libswscale (0.0.22)
+  - AFOFoundation (1.0.7):
+    - AFOFoundation/array (= 1.0.7)
+    - AFOFoundation/bundle (= 1.0.7)
+    - AFOFoundation/define (= 1.0.7)
+    - AFOFoundation/dictionary (= 1.0.7)
+    - AFOFoundation/sandbox (= 1.0.7)
+    - AFOFoundation/string (= 1.0.7)
+    - AFOFoundation/weak (= 1.0.7)
+  - AFOFoundation/array (1.0.7)
+  - AFOFoundation/bundle (1.0.7)
+  - AFOFoundation/define (1.0.7)
+  - AFOFoundation/dictionary (1.0.7)
+  - AFOFoundation/sandbox (1.0.7)
+  - AFOFoundation/string (1.0.7)
+  - AFOFoundation/weak (1.0.7)
+  - AFOGitHub (0.0.10):
+    - AFOGitHub/Aspects (= 0.0.10)
+    - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
+    - AFOGitHub/INTUAutoRemoveObserver (= 0.0.10)
+    - AFOGitHub/Masonry (= 0.0.10)
+    - AFOGitHub/SDWebImage (= 0.0.10)
+    - AFOGitHub/UIScrollView (= 0.0.10)
+  - AFOGitHub/Aspects (0.0.10)
+  - AFOGitHub/GCDMulticastDelegate (0.0.10)
+  - AFOGitHub/INTUAutoRemoveObserver (0.0.10)
+  - AFOGitHub/Masonry (0.0.10)
+  - AFOGitHub/SDWebImage (0.0.10):
+    - AFOGitHub/SDWebImage/include (= 0.0.10)
+    - AFOGitHub/SDWebImage/lib (= 0.0.10)
+  - AFOGitHub/SDWebImage/include (0.0.10)
+  - AFOGitHub/SDWebImage/lib (0.0.10)
+  - AFOGitHub/UIScrollView (0.0.10)
+  - AFOHomePage (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/models (= 0.0.19)
+    - AFOHomePage/presenter (= 0.0.19)
+    - AFOHomePage/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/models (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/presenter (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail (= 0.0.19)
+    - AFOHomePage/views/list (= 0.0.19)
+    - AFOHomePage/views/main (= 0.0.19)
+    - AFOHomePage/views/play (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail/models (= 0.0.19)
+    - AFOHomePage/views/detail/presenters (= 0.0.19)
+    - AFOHomePage/views/detail/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/models (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/presenters (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/detail/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/list/models (= 0.0.19)
+    - AFOHomePage/views/list/presenters (= 0.0.19)
+    - AFOHomePage/views/list/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/models (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/presenters (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/list/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/main/models (= 0.0.19)
+    - AFOHomePage/views/main/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main/models (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/main/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/play/models (= 0.0.19)
+    - AFOHomePage/views/play/presenters (= 0.0.19)
+    - AFOHomePage/views/play/views (= 0.0.19)
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/models (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/presenters (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOHomePage/views/play/views (0.0.19):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOViews
+  - AFOlibyuv (0.0.6)
+  - AFOPlaylist (0.0.15):
+    - AFOFFMpeg
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSQLite
+    - AFOUIKIT
+  - AFORouter (0.0.5):
+    - AFORouter/manager (= 0.0.5)
+    - AFORouter/router (= 0.0.5)
+  - AFORouter/manager (0.0.5):
+    - AFOFoundation
+    - AFORouter/router
+  - AFORouter/router (0.0.5)
+  - AFOSQLite (0.0.10):
+    - FMDB
+  - AFOUIKIT (0.0.6)
+  - AFOViews (0.0.2)
+  - AFOx264 (0.0.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - libxvidcore (0.0.1)
+
+DEPENDENCIES:
+  - AFODelegateExtension
+  - AFOHomePage
+  - AFOPlaylist
+
+SPEC REPOS:
+  trunk:
+    - AFODelegateExtension
+    - AFOFFMpeg
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage
+    - AFOlibyuv
+    - AFOPlaylist
+    - AFORouter
+    - AFOSQLite
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - FMDB
+    - libxvidcore
+
+SPEC CHECKSUMS:
+  AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
+  AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
+  AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
+  AFOFoundation: 984bbc3d77ca72b5fa604b879065a12c108567fb
+  AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
+  AFOHomePage: 8300454f693358c0f61b10d0e73c7a0ef7081622
+  AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
+  AFOPlaylist: 70526c046df7d0e93ff63b762a1317e08fb383e2
+  AFORouter: 3a8127932ac9b64de09a7735dc2f43807cd9a813
+  AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
+  AFOUIKIT: 9feceb7972ab234f42e744e0efe783832805e3db
+  AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
+  AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
+
+PODFILE CHECKSUM: b82e8c12ad8ed7f29de298f473a7d5e81f0ede3f
 
 COCOAPODS: 1.8.0
