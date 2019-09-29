@@ -5,9 +5,7 @@
 //  Created by xueguang xian on 2017/12/20.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
-
-#import <AFORouter/AFORouter.h>
-
+#import "AFORouterManager.h"
 @interface AFORouterManager (StringManipulation)
 
 /**

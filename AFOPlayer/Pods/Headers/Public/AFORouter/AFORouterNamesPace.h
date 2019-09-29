@@ -1,1 +1,1 @@
-../../../AFORouter/AFORouter/AFORouterNamesPace.h
+../../../AFORouter/AFORouter/manager/AFORouterNamesPace.h

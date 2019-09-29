@@ -1,1 +1,1 @@
-../../../AFORouter/AFORouter/AFORouterManager+StringManipulation.h
+../../../AFORouter/AFORouter/manager/AFORouterManager+StringManipulation.h

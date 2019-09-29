@@ -8,6 +8,7 @@
 
 #import "AFORouterManager.h"
 #import <UIKit/UIKit.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import "JLRoutes.h"
 #import "AFORouterManager+StringManipulation.h"
 #import "AFORouterInfoplist.h"
@@ -52,14 +53,15 @@
 }
 #pragma mark ------ 添加跳转规则
 - (void)loadRotesFile{
-    __weak typeof(self) weakSelf = self;
+    WeakObject(self);
     [self.routes addRoute:@"/push/:presentController/:pushController"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        StrongObject(self)
         ///------
         Class classPush = NSClassFromString(parameters[@"pushController"]);
         UIViewController *nextController = [[classPush alloc] init];
         nextController.hidesBottomBarWhenPushed = YES;
-        UIViewController *currentController = [weakSelf currentViewController];
-        [weakSelf addSenderControllerRouterManagerDelegate:nextController present:currentController parameters:parameters];
+        UIViewController *currentController = [self currentViewController];
+        [self addSenderControllerRouterManagerDelegate:nextController present:currentController parameters:parameters];
         [currentController.navigationController pushViewController:nextController animated:YES];
         return YES;
     }];

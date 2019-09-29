@@ -6,6 +6,7 @@
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "AFORouterManager+StringManipulation.h"
 
 @implementation AFORouterManager (StringManipulation)

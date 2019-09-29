@@ -1,1 +1,1 @@
-../../../AFORouter/AFORouter/AFORouterManagerDelegate.h
+../../../AFORouter/AFORouter/manager/AFORouterManagerDelegate.h
