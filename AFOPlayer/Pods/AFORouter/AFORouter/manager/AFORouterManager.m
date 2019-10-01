@@ -32,12 +32,6 @@
     return shareInstance;
 }
 #pragma mark ------
-+ (void)initialize{
-    if (self == [AFORouterManager class]) {
-        [self loadNotification];
-    }
-}
-#pragma mark ------
 + (void)loadNotification{
     [[AFORouterManager shareInstance] readRouterScheme];
     [[AFORouterManager shareInstance] loadRotesFile];
@@ -54,10 +48,10 @@
 #pragma mark ------ 添加跳转规则
 - (void)loadRotesFile{
     WeakObject(self);
-    [self.routes addRoute:@"/push/:presentController/:pushController"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+    [self.routes addRoute:@"/:modelName/:current/:next/:action"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
         StrongObject(self)
         ///------
-        Class classPush = NSClassFromString(parameters[@"pushController"]);
+        Class classPush = NSClassFromString(parameters[@"next"]);
         UIViewController *nextController = [[classPush alloc] init];
         nextController.hidesBottomBarWhenPushed = YES;
         UIViewController *currentController = [self currentViewController];
@@ -124,7 +118,41 @@
                                    params:(NSDictionary *)dictionary{
     return [self settingPushControllerRouter:controller present:present scheme:self.strScheme params:dictionary];
 }
+#pragma mark ------
+- (NSString *)settingRoutesParameters:(NSDictionary *)dictionary{
+    NSString *strResult;
+    NSString *strBase = [self.strScheme stringByAppendingString:@"://"];
+    strBase = [strBase stringByAppendingString:dictionary[@"modelName"]];
+    NSString *controller = dictionary[@"controller"];
+    NSString *present = dictionary[@"present"];
+    NSString *action = dictionary[@"action"];
+    if (controller != nil && present != nil) {
+        strResult = [[self slashString:strBase] stringByAppendingString:present];
+        strResult = [[self slashString:strResult] stringByAppendingString:controller];
+        strResult = [[self slashString:strResult] stringByAppendingString:action];
+    }else{
+        strResult = [strBase stringByAppendingString:controller];
+        strResult = [[self slashString:strResult] stringByAppendingString:action];
+    }
+    if (dictionary.count > 0) {
+        strResult = [self addQueryStringToUrl:strResult params:[self paramesDictionary:dictionary]];
+    }
+    return strResult;
+}
+- (NSString *)slashString:(NSString *)baseString{
+    
+    return [baseString stringByAppendingString:@"/"];
+}
+- (NSDictionary *)paramesDictionary:(NSDictionary *)dictionary{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+    [dic removeObjectsForKeys:@[@"modelName",@"action",@"present"]];
+    return dic;
+}
 #pragma mark ------ UIApplicationDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AFORouterManager loadNotification];
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
     return [self routeURL:url];
 }

@@ -17,6 +17,9 @@ FOUNDATION_EXPORT const unsigned char AFOFoundationVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <AFOFoundation/PublicHeader.h>
 
 #import <AFOFoundation/NSString+Formatting.h>
+#import <AFOFoundation/NSString+Dictionary.h>
+#import <AFOFoundation/NSString+URLSchemes.h>
+#import <AFOFoundation/NSString+URLParameter.h>
 
 #import <AFOFoundation/AFOWeakInstance.h>
 

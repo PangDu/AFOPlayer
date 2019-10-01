@@ -59,4 +59,12 @@
  @param controller <#controller description#>
  */
 - (void)settingRooterController:(id)controller;
+
+/**
+ <#Description#>
+
+ @param dictionary <#dictionary description#>
+ @return <#return value description#>
+ */
+- (NSString *)settingRoutesParameters:(NSDictionary *)dictionary;
 @end

@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/controller/viewModel/AFOPLCorrespondingCategory.h
+../../../AFOPlaylist/AFOPlaylist/controller/viewModel/category/AFOPLCorrespondingCategory.h
