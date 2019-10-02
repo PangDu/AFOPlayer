@@ -9,6 +9,7 @@
 #import "AFOCardPresenterBusiness.h"
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFORouter/AFORouter.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import "AFOCardStackingModel.h"
 #import "AFOCardStackCollectionDelegate.h"
 #import "AFOCardStackCollectionDataSource.h"
@@ -33,10 +34,12 @@
         if (indexPath.row == 3) {
             strController = @"AFOHPDetailController";
         }
-        ///------
-        NSString *baseStr = [[AFORouterManager shareInstance] settingPushControllerRouter:strController present:@"AFOCardStackingController" params:[self.stackingModel dictionaryIndex:indexPath.row]];
-        NSURL *url = [NSURL URLWithString:baseStr];
-        [[UIApplication sharedApplication] openURL:url];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:[self.stackingModel dictionaryIndex:indexPath.row]];
+        [dic setObject:@"homePage" forKey:@"modelName"];
+        [dic setObject:@"AFOCardStackingController" forKey:@"current"];
+        [dic setObject:strController forKey:@"next"];
+        [dic setObject:@"push" forKey:@"action"];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString settingRoutesParameters:dic]]];
     } error:NULL];
 }
 #pragma mark ------ UICollectionViewDelegate

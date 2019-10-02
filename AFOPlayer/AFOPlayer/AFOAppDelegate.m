@@ -34,7 +34,6 @@
     if (!_tabBarController) {
         _tabBarController = [[AFOAppTabBarController alloc] init];
         [self.addModel controllerInitialization:_tabBarController];
-        [[AFORouterManager shareInstance] settingRooterController:self.tabBarController];
     }
     return _tabBarController;
 }

@@ -23,3 +23,5 @@ FOUNDATION_EXPORT const unsigned char AFOUIKitVersionString[];
 #import <AFOUIKit/AFOWindow.h>
 #import <AFOUIKit/AFOCollectionView.h>
 #import <AFOUIKit/AFOCollectionViewLayout.h>
+/************************************/
+#import <AFOUIKit/UIViewController+CurrentController.h>

@@ -84,8 +84,14 @@
     if (string == nil || string.length < 1) {
         return nil;
     }
-    NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPDetailController" present:NSStringFromClass([self class]) params:@{@"value": string,@"type" : @(self.type)}];
-    return [NSURL URLWithString:strBase];
+    return [NSURL URLWithString:[NSString settingRoutesParameters:@{
+                                                                    @"modelName" : @"homePage",
+                                                                    @"current" : NSStringFromClass([self class]),
+                                                                    @"next" : @"AFOHPDetailController",
+                                                                    @"action" :@"push",
+                                                                    @"value" : string,
+                                                                    @"type" : @(self.type)
+                                                                    }]];
 }
 #pragma mark ------------ property
 - (NSMutableArray *)artistsArray{

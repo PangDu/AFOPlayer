@@ -2,9 +2,10 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 target 'AFOPlayer' do
   pod 'AFODelegateExtension'
+  pod 'AFOUIKIT', :git => '/Users/xianxueguang/Documents/GitHub/AFOUIKIT'
   pod 'AFOFoundation', :git => '/Users/xianxueguang/Documents/GitHub/AFOFoundation'
   pod 'AFORouter', :git => '/Users/xianxueguang/Documents/GitHub/AFORouter'
   pod 'AFOPlaylist',  :git => '/Users/xianxueguang/Documents/GitHub/AFOPlaylist'
-  pod 'AFOHomePage'
+  pod 'AFOHomePage', :git =>'/Users/xianxueguang/Documents/GitHub/AFOHomePage'
   #  pod 'AFOPlaylist'
 end

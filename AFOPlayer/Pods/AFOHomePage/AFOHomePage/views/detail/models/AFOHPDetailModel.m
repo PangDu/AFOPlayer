@@ -8,6 +8,7 @@
 
 #import <MediaPlayer/MPMediaItem.h>
 #import <UIKit/UIKit.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import <AFORouter/AFORouter.h>
 #import "AFOHPDetailModel.h"
 #import "AFOMPMediaQuery.h"
@@ -59,8 +60,13 @@
     id model = array[indexpath.row];
     __block NSURL *baseUrl = NULL;
     [AFOHPDetailModel songsDetails:model block:^(NSDictionary *dictionary) {
-        NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPVedioController" present:@"AFOHPDetailController" params:dictionary];
-        baseUrl = [NSURL URLWithString:strBase];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+        [dic setObject:@"modelName" forKey:@"homePage"];
+        [dic setObject:@"current" forKey:@"AFOHPVedioController"];
+        [dic setObject:@"next" forKey:@"AFOHPDetailController"];
+        [dic setObject:@"action" forKey:@"push"];
+//        NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPVedioController" present:@"AFOHPDetailController" params:dictionary];
+        baseUrl = [NSURL URLWithString:[NSString settingRoutesParameters:dic]];
     }];
     block(baseUrl);
 }
