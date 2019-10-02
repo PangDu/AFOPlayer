@@ -11,9 +11,8 @@
 #import <AFOUIKIT/UIViewController+CurrentController.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import "JLRoutes.h"
-#import "AFORouterManagerDelegate.h"
 #import "AFORouterActionContext.h"
-@interface AFORouterManager ()<AFORouterManagerDelegate,UIApplicationDelegate>
+@interface AFORouterManager ()<UIApplicationDelegate>
 @property (nonatomic, strong) JLRoutes                  *routes;
 @end
 
@@ -57,7 +56,6 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark ------ property
 - (JLRoutes *)routes{

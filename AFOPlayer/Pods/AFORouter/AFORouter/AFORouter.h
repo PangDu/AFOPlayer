@@ -15,7 +15,6 @@ FOUNDATION_EXPORT double AFORouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char AFORouterVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AFORouter/PublicHeader.h>
-#import <AFORouter/AFORouterNamesPace.h>
 #import <AFORouter/AFORouterManager.h>
 #import <AFORouter/AFORouterManagerDelegate.h>
 

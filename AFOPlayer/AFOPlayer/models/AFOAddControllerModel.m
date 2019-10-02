@@ -8,33 +8,27 @@
 
 #import "AFOAddControllerModel.h"
 @interface AFOAddControllerModel ()
-/**
- 首页
- */
-@property (nullable, nonatomic, strong) AFOHPForeign *hpPublicController;
-/**
- 播放列表
- */
-@property (nullable, nonatomic, strong) AFOPlayListForeign *playListForeign;
+
+@property (nullable, nonatomic, strong) NSArray<NSString *> *controllerArray;
 @end
 @implementation AFOAddControllerModel
 #pragma mark ------ 初始化
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController{
-    UIViewController *homePage = [self.hpPublicController returnHPController];
-    UIViewController *playList = [self.playListForeign returnPlayListController];
-    [tabBarController setViewControllers:@[homePage,playList]];
+    [self.controllerArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        Class class = NSClassFromString(obj);
+        id controller = [[class alloc] init];
+        if ([controller respondsToSelector:@selector(returnController)]) {
+                id show   = [controller performSelector:@selector(returnController)];
+            [tabBarController addChildViewController:show];
+        }
+    }];
 }
 #pragma mark ------ property
-- (AFOHPForeign *)hpPublicController{
-    if (!_hpPublicController) {
-        _hpPublicController = [[AFOHPForeign alloc]init];
+- (NSArray *)controllerArray{
+    if (!_controllerArray) {
+        _controllerArray = @[@"AFOHPForeign",
+                             @"AFOPlayListForeign"];
     }
-    return _hpPublicController;
-}
-- (AFOPlayListForeign *)playListForeign{
-    if (!_playListForeign) {
-        _playListForeign = [[AFOPlayListForeign alloc]init];
-    }
-    return _playListForeign;
+    return _controllerArray;
 }
 @end

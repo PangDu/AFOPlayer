@@ -7,5 +7,5 @@
 //
 #import <UIKit/UIKit.h>
 @interface AFOPlayListForeign : UIViewController
-- (UIViewController *)returnPlayListController;
+- (UIViewController *)returnController;
 @end

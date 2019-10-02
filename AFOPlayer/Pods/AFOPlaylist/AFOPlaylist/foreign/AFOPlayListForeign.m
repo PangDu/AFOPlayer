@@ -16,7 +16,7 @@
 @end
 @implementation AFOPlayListForeign
 #pragma mark ------ add controller
-- (UIViewController *)returnPlayListController{
+- (UIViewController *)returnController{
     return self.navigationController;
 }
 #pragma mark ------ didReceiveMemoryWarning

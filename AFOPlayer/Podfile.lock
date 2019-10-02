@@ -233,13 +233,13 @@ CHECKOUT OPTIONS:
     :commit: 0e0e903002c8c86c2622bb07ad289afa466a72ba
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFOHomePage:
-    :commit: 3d31e0147386b87d614b94650d19737f716ea2c2
+    :commit: 1c9c55b36cdd9828951500fb03adcbe763eec479
     :git: "/Users/xianxueguang/Documents/GitHub/AFOHomePage"
   AFOPlaylist:
-    :commit: 85dbeedeed858b52f26451f47196b547ba3b62a4
+    :commit: 3f250483c67574bfc948b32dc37eca26949df5f2
     :git: "/Users/xianxueguang/Documents/GitHub/AFOPlaylist"
   AFORouter:
-    :commit: 22f161f6f05bcee6a41f6d06aab9147683bb383d
+    :commit: 8caf23b56be917383f42881f7fa9ef0027db2938
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
   AFOUIKIT:
     :commit: 63c9740e4d1c97868c8a354c1ac5d928ca24c9f9

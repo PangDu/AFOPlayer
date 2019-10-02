@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 }
 #pragma mark ------ AFOHPMainController
-- (UIViewController *)returnHPController{
+- (UIViewController *)returnController{
     return self.navigationController;
 }
 #pragma mark ------ didReceiveMemoryWarning

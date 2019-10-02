@@ -10,5 +10,5 @@
 
 @interface AFOHPForeign : UIViewController
 
-- (UIViewController *)returnHPController;
+- (UIViewController *)returnController;
 @end
