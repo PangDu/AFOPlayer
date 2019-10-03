@@ -29,7 +29,6 @@
     return self;
 }
 #pragma mark ------------ custom
-#pragma mark ------
 - (void)addSubviews:(CGRect)frame{
     self.backgroundColor = [UIColor yellowColor];
     ///------

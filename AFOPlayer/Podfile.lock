@@ -1,6 +1,6 @@
 PODS:
   - AFODelegateExtension (0.0.7)
-  - AFOFFMpeg (0.1.0):
+  - AFOFFMpeg (0.1.1):
     - AFOFFMpegLib
     - AFOFoundation
     - AFOGitHub
@@ -197,6 +197,7 @@ PODS:
 
 DEPENDENCIES:
   - AFODelegateExtension
+  - AFOFFMpeg (from `/Users/xianxueguang/Documents/GitHub/AFOFFMpeg`)
   - AFOFoundation (from `/Users/xianxueguang/Documents/GitHub/AFOFoundation`)
   - AFOHomePage (from `/Users/xianxueguang/Documents/GitHub/AFOHomePage`)
   - AFOPlaylist (from `/Users/xianxueguang/Documents/GitHub/AFOPlaylist`)
@@ -206,7 +207,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFODelegateExtension
-    - AFOFFMpeg
     - AFOFFMpegLib
     - AFOGitHub
     - AFOlibyuv
@@ -217,6 +217,8 @@ SPEC REPOS:
     - libxvidcore
 
 EXTERNAL SOURCES:
+  AFOFFMpeg:
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOFFMpeg"
   AFOFoundation:
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFOHomePage:
@@ -229,14 +231,17 @@ EXTERNAL SOURCES:
     :git: "/Users/xianxueguang/Documents/GitHub/AFOUIKIT"
 
 CHECKOUT OPTIONS:
+  AFOFFMpeg:
+    :commit: 091771be1946f40afb176e17e9d7ad1ce6eb28d3
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOFFMpeg"
   AFOFoundation:
     :commit: 0e0e903002c8c86c2622bb07ad289afa466a72ba
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFOHomePage:
-    :commit: 1c9c55b36cdd9828951500fb03adcbe763eec479
+    :commit: 60ec7feda7e0e021ce1780fb40a50f3a1a2495f1
     :git: "/Users/xianxueguang/Documents/GitHub/AFOHomePage"
   AFOPlaylist:
-    :commit: 3f250483c67574bfc948b32dc37eca26949df5f2
+    :commit: 45a6a39ad14b438e23699759c21af7b8c9ca8999
     :git: "/Users/xianxueguang/Documents/GitHub/AFOPlaylist"
   AFORouter:
     :commit: 8caf23b56be917383f42881f7fa9ef0027db2938
@@ -247,7 +252,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
-  AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
+  AFOFFMpeg: d9091d07f8eb712a1d92e2552b9ae44a2d0b0d8a
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
   AFOFoundation: 3908d8d762ce86095d411062b3f23897c848b63e
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
@@ -262,6 +267,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 6a74192beab03a3933dfc730194b7d39df3d663c
+PODFILE CHECKSUM: 35f685ae84484b9d8f7ab40a7f7303717e974078
 
 COCOAPODS: 1.8.0

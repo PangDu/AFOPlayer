@@ -61,10 +61,10 @@
     __block NSURL *baseUrl = NULL;
     [AFOHPDetailModel songsDetails:model block:^(NSDictionary *dictionary) {
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
-        [dic setObject:@"modelName" forKey:@"homePage"];
-        [dic setObject:@"current" forKey:@"AFOHPVedioController"];
-        [dic setObject:@"next" forKey:@"AFOHPDetailController"];
-        [dic setObject:@"action" forKey:@"push"];
+        [dic setObject:@"homePage" forKey:@"modelName"];
+        [dic setObject:@"AFOHPDetailController"  forKey:@"current"];
+        [dic setObject:@"AFOHPVedioController" forKey:@"next"];
+        [dic setObject:@"push" forKey:@"action"];
 //        NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPVedioController" present:@"AFOHPDetailController" params:dictionary];
         baseUrl = [NSURL URLWithString:[NSString settingRoutesParameters:dic]];
     }];

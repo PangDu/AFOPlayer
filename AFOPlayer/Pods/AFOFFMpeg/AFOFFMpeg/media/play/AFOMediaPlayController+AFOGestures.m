@@ -18,14 +18,12 @@
 
 @implementation AFOMediaPlayController (AFOGestures)
 #pragma mark ------------ property
-#pragma mark ------ mediaView
 - (void)setMediaView:(AFOMediaView *)mediaView{
     objc_setAssociatedObject(self, @selector(setMediaView:), mediaView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (AFOMediaView *)mediaView{
     return objc_getAssociatedObject(self, @selector(setMediaView:));
 }
-#pragma mark ------ isShow
 - (void)setIsShow:(NSNumber *)isShow{
     objc_setAssociatedObject(self, @selector(setIsShow:), isShow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

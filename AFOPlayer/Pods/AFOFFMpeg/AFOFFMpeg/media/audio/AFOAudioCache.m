@@ -7,8 +7,6 @@
 //
 
 #import "AFOAudioCache.h"
-#import "AFOAudioQueue.h"
-
 #define AFO_DEFAULT_MEDIACACHE_CAP_ZERO     0
 #define AFO_DEFAULT_MEDIACACHE_CAP          80
 #define AFO_DEFAULT_MEDIACACHE_MARK_CAP     2
@@ -18,7 +16,6 @@
 @property (nonatomic, assign) NSInteger      capacity;
 @property (nonatomic, assign) NSInteger      markCapacity;
 @property (nonatomic, assign) NSTimeInterval timeOut;
-@property (nonnull, nonatomic, strong) AFOAudioQueue *audioQueue;
 @end
 
 @implementation AFOAudioCache
@@ -42,12 +39,6 @@
     return self;
 }
 #pragma mark ------ attribute
-- (AFOAudioQueue *)audioQueue{
-    if (!_audioQueue) {
-        _audioQueue = [[AFOAudioQueue alloc] init];
-    }
-    return _audioQueue;
-}
 #pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"AFOAudioCache dealloc");

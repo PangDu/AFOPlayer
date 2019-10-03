@@ -11,11 +11,9 @@
 #import <AFOFoundation/AFOFoundation.h>
 #import "AFOMediaPlayControllerCategory.h"
 #import "AFOVideoAudioManager.h"
-#import "AFOMediaOpenGLView.h"
 @interface AFOMediaPlayController ()<AFORouterManagerDelegate>
 @property (nonatomic, strong) AFOVideoAudioManager       *mediaManager;
 @property (nonatomic, copy)   NSString                   *strPath;
-@property (nonatomic, strong) AFOMediaOpenGLView         *openGLView;
 @property (nonatomic, assign) UIInterfaceOrientationMask  orientation;
 @end
 
@@ -50,7 +48,6 @@
 }
 #pragma mark ------
 - (void)playerVedioWithPath:(NSString *)path{
-    ///------
     WeakObject(self);
     [self.mediaManager displayVedioForPath:path block:^(NSError * _Nullable error, UIImage * _Nullable image, NSString * _Nullable totalTime, NSString * _Nullable currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         StrongObject(self);
@@ -60,7 +57,6 @@
     }];
 }
 #pragma mark ------------ system
-#pragma mark ------
 - (BOOL)shouldAutorotate{
     return YES;
 }
@@ -73,7 +69,6 @@
 #pragma mark ------ didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 #pragma mark ------------ property
 - (AFOVideoAudioManager *)mediaManager{

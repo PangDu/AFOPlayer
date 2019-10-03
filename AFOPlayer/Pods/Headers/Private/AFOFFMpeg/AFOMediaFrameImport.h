@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/mediaFrame/AFOMediaFrameImport.h
+../../../AFOFFMpeg/AFOFFMpeg/media/format/AFOMediaFrameImport.h

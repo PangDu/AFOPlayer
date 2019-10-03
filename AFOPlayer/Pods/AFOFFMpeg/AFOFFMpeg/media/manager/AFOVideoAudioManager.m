@@ -10,8 +10,7 @@
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import "AFOMediaConditional.h"
-#import "AFOPlayMediaManager.h"
-#import "AFOAudioManager.h"
+#import "AFONewMediaManager.h"
 /* no AV sync correction is done if below the minimum AV sync threshold */
 #define AV_SYNC_THRESHOLD_MIN 0.04
 /* AV sync correction is done if above the maximum AV sync threshold */
@@ -24,20 +23,12 @@
 @interface AFOVideoAudioManager ()<AFOAudioManagerDelegate,AFOPlayMediaManager>{
     AVCodec             *avCodecVideo;
     AVCodec             *avCodecAudio;
-    AVFormatContext     *avFormatContext;
+    AVFormatContext     *avVideoFormatContext;
+    AVFormatContext     *avAudioFormatContext;
     AVCodecContext      *avCodecContextVideo;
     AVCodecContext      *avCcodecContextAudio;
 }
-@property (nonatomic, assign)            NSInteger  videoStream;
-@property (nonatomic, assign)            NSInteger  audioStream;
-@property (nonatomic, assign)            float      audioTimeStamp;
-@property (nonatomic, assign)            float      videoTimeStamp;
-@property (nonatomic, assign)            float      videoPosition;
-@property (nonatomic, assign)            CGFloat    tickCorrectionTime;
-@property (nonatomic, assign)            float      tickCorrectionPosition;
-@property (nonatomic, assign)            float      frameRate;
-@property (nonnull, nonatomic, strong)   AFOAudioManager      *audioManager;
-@property (nonnull, nonatomic, strong)   AFOPlayMediaManager  *videoManager;
+
 @end
 
 @implementation AFOVideoAudioManager
@@ -50,20 +41,21 @@
 #pragma mark ------ add method
 - (void)registerBaseMethod:(NSString *)path{
     [INTUAutoRemoveObserver addObserver:self selector:@selector(stopAudioNotifacation:) name:@"AFOMediaStopManager" object:nil];
-    ///------
-    avFormatContext = avformat_alloc_context();
-    avformat_open_input(&avFormatContext, [path UTF8String], NULL, NULL);
     ///------------ video
+    avVideoFormatContext = avformat_alloc_context();
+    avformat_open_input(&avVideoFormatContext, [path UTF8String], NULL, NULL);
     avCodecContextVideo = avcodec_alloc_context3(NULL);
-    avcodec_parameters_to_context(avCodecContextVideo, avFormatContext -> streams[self.videoStream] -> codecpar);
+    avcodec_parameters_to_context(avCodecContextVideo, avVideoFormatContext -> streams[self.videoStream] -> codecpar);
     ///------ Find the decoder for the video stream.
     avCodecVideo = avcodec_find_decoder(avCodecContextVideo -> codec_id);
     ///------ Open codec
     avcodec_open2(avCodecContextVideo, avCodecVideo, NULL);
     
     ///------------ audio
+    avAudioFormatContext = avformat_alloc_context();
+    avformat_open_input(&avAudioFormatContext, [path UTF8String], NULL, NULL);
     avCcodecContextAudio = avcodec_alloc_context3(NULL);
-    avcodec_parameters_to_context(avCcodecContextAudio, avFormatContext -> streams[self.audioStream] -> codecpar);
+    avcodec_parameters_to_context(avCcodecContextAudio, avAudioFormatContext -> streams[self.audioStream] -> codecpar);
     ///------ Find the decoder for the video stream.
     avCodecAudio = avcodec_find_decoder(avCcodecContextAudio -> codec_id);
     ///------ Open codec
@@ -84,12 +76,15 @@
     }];
     ///------
     [self registerBaseMethod:strPath];
+    ///------ play audio
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.audioManager audioFormatContext:self->avAudioFormatContext codecContext:self->avCcodecContextAudio index:self.audioStream];
+        [self playAudio];
+    });
     ///------ display video
-    [self.videoManager displayVedioFormatContext:avFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
+    [self.videoManager displayVedioFormatContext:avVideoFormatContext codecContext:avCodecContextVideo index:self.videoStream block:^(NSError *error, UIImage *image, NSString *totalTime, NSString *currentTime, NSInteger totalSeconds, NSUInteger cuttentSeconds) {
         block(error,image,totalTime,currentTime,totalSeconds,cuttentSeconds);
     }];
-    ///------ play audio
-//    [self.audioManager audioCodec:avCodecAudio formatContext:avFormatContext codecContext:avCcodecContextAudio index:self.audioStream];
 }
 - (void)playAudio{
     [self.audioManager playAudio];
@@ -107,7 +102,7 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self correctionTime];
     });
-//    [self playAudio];
+    [self playAudio];
 }
 - (CGFloat)tickCorrection{
     const NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];
@@ -135,7 +130,7 @@
     self.videoTimeStamp = videoTime;
     self.videoPosition = position;
     self.frameRate = frameRate;
-    [self correctionTime];
+   [self correctionTime];
 }
 #pragma mark ------ attribute
 - (AFOAudioManager *)audioManager{
@@ -144,9 +139,9 @@
     }
     return _audioManager;
 }
-- (AFOPlayMediaManager *)videoManager{
+- (AFOMediaManager *)videoManager{
     if (!_videoManager) {
-        _videoManager = [[AFOPlayMediaManager alloc] initWithDelegate:self];
+        _videoManager = [[AFOMediaManager alloc] initWithDelegate:self];
     }
     return _videoManager;
 }

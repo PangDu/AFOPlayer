@@ -80,13 +80,15 @@
         string = [self artistsNameIndex:indexPath.row];
     }else if(self.type == 2){
         string = [self albumTitleNameIndex:indexPath.row];
+    }else if(self.type == 0){
+        string = [self artistsNameIndex:indexPath.row];
     }
     if (string == nil || string.length < 1) {
         return nil;
     }
     return [NSURL URLWithString:[NSString settingRoutesParameters:@{
                                                                     @"modelName" : @"homePage",
-                                                                    @"current" : NSStringFromClass([self class]),
+                                                                    @"current" : @"AFOHPListController",
                                                                     @"next" : @"AFOHPDetailController",
                                                                     @"action" :@"push",
                                                                     @"value" : string,

@@ -36,7 +36,7 @@
         }
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:[self.stackingModel dictionaryIndex:indexPath.row]];
         [dic setObject:@"homePage" forKey:@"modelName"];
-        [dic setObject:@"AFOCardStackingController" forKey:@"current"];
+        [dic setObject:@"AFOHPMainController" forKey:@"current"];
         [dic setObject:strController forKey:@"next"];
         [dic setObject:@"push" forKey:@"action"];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString settingRoutesParameters:dic]]];

@@ -1,5 +1,5 @@
 //
-//  AFOMediaQueueManager.h
+//  AFOCountdownManager.h
 //  AFOPlayer
 //
 //  Created by xueguang xian on 2017/12/31.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AFOMediaQueueManager : NSObject
+@interface AFOCountdownManager : NSObject
 @property (nonatomic, strong)     dispatch_queue_t     queues;
 
 /**

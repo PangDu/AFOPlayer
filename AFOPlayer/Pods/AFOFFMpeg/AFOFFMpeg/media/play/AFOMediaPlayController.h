@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 @interface AFOMediaPlayController : UIViewController
-
+- (void)playerVedioWithPath:(NSString *)path;
 @end

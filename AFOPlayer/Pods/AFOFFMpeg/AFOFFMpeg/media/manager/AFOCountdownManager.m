@@ -6,15 +6,15 @@
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 
-#import "AFOMediaQueueManager.h"
+#import "AFOCountdownManager.h"
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
-@interface AFOMediaQueueManager ()
+@interface AFOCountdownManager ()
 @property (nonatomic, strong)     dispatch_source_t    sourceTimer;
 @end
 
 
-@implementation AFOMediaQueueManager
+@implementation AFOCountdownManager
 #pragma mark ------------ init
 - (instancetype)init{
     if (self = [super init]) {

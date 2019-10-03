@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/decoder/AFOAudioThreadDecoder.h
+../../../AFOFFMpeg/AFOFFMpeg/media/audio/AFOAudioThreadDecoder.h

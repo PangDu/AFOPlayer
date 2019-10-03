@@ -66,7 +66,7 @@
     }
     return 1;
 }
-#pragma mark ------ attribute
+#pragma mark ------ property
 - (AFOAudioThreadDecoder *)threadDecoder{
     if (!_threadDecoder) {
         _threadDecoder = [[AFOAudioThreadDecoder alloc] init];
