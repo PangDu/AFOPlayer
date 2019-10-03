@@ -1,2 +1,0 @@
-# libxvidcore
-libxvidcore for ios
