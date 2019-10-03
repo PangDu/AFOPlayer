@@ -1,0 +1,1 @@
+../../../AFOFoundation/AFOFoundation/string/NSString+URLSchemes.h
