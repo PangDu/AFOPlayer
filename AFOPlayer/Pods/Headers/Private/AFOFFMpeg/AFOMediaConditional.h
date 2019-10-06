@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/AFOMediaConditional.h
+../../../AFOFFMpeg/AFOFFMpeg/media/AFOMediaConditional.h

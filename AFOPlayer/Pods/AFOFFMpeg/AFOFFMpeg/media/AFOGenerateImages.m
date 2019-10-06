@@ -154,7 +154,6 @@
     CFRelease(cgImage);
 }
 #pragma mark ------------ property
-#pragma mark ------ patchQueue
 - (dispatch_queue_t)patchQueue{
     if (!_patchQueue) {
         _patchQueue = dispatch_queue_create("com.AFOMediaManager.queue", DISPATCH_QUEUE_PRIORITY_DEFAULT);

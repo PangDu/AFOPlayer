@@ -1,6 +1,79 @@
 PODS:
   - AFODelegateExtension (0.0.7)
-  - AFOFFMpeg (0.1.1):
+  - AFOFFMpeg (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpeg/audio (= 0.1.2)
+    - AFOFFMpeg/error (= 0.1.2)
+    - AFOFFMpeg/manager (= 0.1.2)
+    - AFOFFMpeg/media (= 0.1.2)
+    - AFOFFMpeg/play (= 0.1.2)
+    - AFOFFMpeg/screenshots (= 0.1.2)
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/audio (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/error (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/manager (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/media (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/play (0.1.2):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/screenshots (0.1.2):
+    - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
     - AFOGitHub
@@ -23,21 +96,21 @@ PODS:
   - AFOFFMpegLib/include/libavutil (0.0.22)
   - AFOFFMpegLib/include/libswresample (0.0.22)
   - AFOFFMpegLib/include/libswscale (0.0.22)
-  - AFOFoundation (1.0.8):
-    - AFOFoundation/array (= 1.0.8)
-    - AFOFoundation/bundle (= 1.0.8)
-    - AFOFoundation/define (= 1.0.8)
-    - AFOFoundation/dictionary (= 1.0.8)
-    - AFOFoundation/sandbox (= 1.0.8)
-    - AFOFoundation/string (= 1.0.8)
-    - AFOFoundation/weak (= 1.0.8)
-  - AFOFoundation/array (1.0.8)
-  - AFOFoundation/bundle (1.0.8)
-  - AFOFoundation/define (1.0.8)
-  - AFOFoundation/dictionary (1.0.8)
-  - AFOFoundation/sandbox (1.0.8)
-  - AFOFoundation/string (1.0.8)
-  - AFOFoundation/weak (1.0.8)
+  - AFOFoundation (1.0.9):
+    - AFOFoundation/array (= 1.0.9)
+    - AFOFoundation/bundle (= 1.0.9)
+    - AFOFoundation/define (= 1.0.9)
+    - AFOFoundation/dictionary (= 1.0.9)
+    - AFOFoundation/sandbox (= 1.0.9)
+    - AFOFoundation/string (= 1.0.9)
+    - AFOFoundation/weak (= 1.0.9)
+  - AFOFoundation/array (1.0.9)
+  - AFOFoundation/bundle (1.0.9)
+  - AFOFoundation/define (1.0.9)
+  - AFOFoundation/dictionary (1.0.9)
+  - AFOFoundation/sandbox (1.0.9)
+  - AFOFoundation/string (1.0.9)
+  - AFOFoundation/weak (1.0.9)
   - AFOGitHub (0.0.10):
     - AFOGitHub/Aspects (= 0.0.10)
     - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
@@ -220,9 +293,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
-  AFOFFMpeg: d9091d07f8eb712a1d92e2552b9ae44a2d0b0d8a
+  AFOFFMpeg: 1cb2d4d765f0f732f6a0a375f4ea282fdd21aec8
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
-  AFOFoundation: 3908d8d762ce86095d411062b3f23897c848b63e
+  AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
   AFOHomePage: b7982810421d9ffd8d86eb1d278ecc8d03280747
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85

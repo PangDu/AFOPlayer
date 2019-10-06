@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AFOCountDownManagerDelegate.h"
 @interface AFOCountdownManager : NSObject
-@property (nonatomic, strong)     dispatch_queue_t     queues;
-
+@property (nonatomic, weak) id<AFOCountDownManagerDelegate>delegate;
 /**
  <#Description#>
 

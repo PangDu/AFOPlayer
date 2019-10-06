@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/manager/AFOMediaManager.h
+../../../AFOFFMpeg/AFOFFMpeg/media/AFOMediaManager.h

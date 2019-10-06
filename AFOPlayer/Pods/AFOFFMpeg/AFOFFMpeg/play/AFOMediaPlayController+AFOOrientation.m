@@ -21,7 +21,4 @@
         [invocation invoke];
     }
 }
-- (void)dealloc{
-    NSLog(@"dealloc AFOMediaPlayController+AFOOrientation");
-}
 @end

@@ -85,7 +85,4 @@
 - (void)buttonTouchActionDelegate:(BOOL)isSuspended{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaQueueManagerTimerNotifaction:" object:@(!isSuspended)];
 }
-- (void)dealloc{
-    NSLog(@"dealloc AFOMediaPlayController+AFOGestures");
-}
 @end

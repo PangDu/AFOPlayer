@@ -7,8 +7,8 @@
 //
 
 #import "AFOMediaManager.h"
-#import <AFOGitHub/AFOGitHub.h>
-#import <AFOFoundation/AFOFoundation.h>
+#import <AFOGitHub/INTUAutoRemoveObserver.h>
+#import <AFOFoundation/AFOWeakInstance.h>
 #import "AFOMediaTimer.h"
 #import "AFOGenerateImages.h"
 #import "AFOMediaErrorCodeManager.h"
@@ -39,11 +39,16 @@
 @implementation AFOMediaManager
 
 #pragma mark ------ init
+- (instancetype)init{
+    if (self = [super init]) {
+     [INTUAutoRemoveObserver addObserver:self selector:@selector(freeResources) name:@"AFOPlayMediaManagerFreeResources" object:nil];
+    }
+    return self;
+}
 - (instancetype)initWithDelegate:(id<AFOPlayMediaManager>)delegate{
     if (self = [super init]) {
         _delegate = delegate;
         _isRelease = NO;
-        [INTUAutoRemoveObserver addObserver:self selector:@selector(freeResources) name:@"AFOPlayMediaManagerFreeResources" object:nil];
     }
     return self;
 }
@@ -66,8 +71,7 @@
                   weakself.duration,
                   weakself.nowTime + 1);
             //
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaStopManager" object:nil];
-            [weakself freeResources];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaSuspendedManager" object:nil];
             return ;
         }else{
             if ([weakself avReadFrame:weakself.videoStream]) {
@@ -106,7 +110,6 @@
                 while (!avcodec_receive_frame(avCodecContext, avFrame)) {
                     double frameRate = av_q2d([self avStream] -> avg_frame_rate);
                     frameRate += avFrame->repeat_pict * (frameRate * 0.5);
- //                   [self.delegate videoTimeStamp:av_frame_get_best_effort_timestamp(avFrame) * av_q2d([self avStream] -> time_base) position:_videoTimeBase frameRate:frameRate];
                     self.nowTime = self.currentTime;
                     av_packet_unref(&packet);
                     return YES;
@@ -117,6 +120,13 @@
         }
     }
     return YES;
+}
+#pragma mark ------ AFOCountDownManagerDelegate
+- (void)vedioFilePlayingDelegate{
+    [self.delegate videoNowPlayingDelegate];
+}
+- (void)vedioFileFinishDelegate{
+    [self.delegate videoFinishPlayingDelegate];
 }
 #pragma mark ------ 释放资源
 - (void)freeResources{
@@ -181,4 +191,6 @@
     [self freeResources];
     NSLog(@"AFOPlayMediaManager dealloc");
 }
+//                    [self.delegate videoTimeStamp:av_frame_get_best_effort_timestamp(avFrame) * av_q2d([self avStream] -> time_base) position:_videoTimeBase frameRate:frameRate];
+
 @end

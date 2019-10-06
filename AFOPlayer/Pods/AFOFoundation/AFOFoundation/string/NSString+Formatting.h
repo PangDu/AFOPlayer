@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Formatting)
++ (NSString *)md5HexDigest:(NSString *)input;
 + (NSString *)formatPlayTime:(NSTimeInterval)duration;
 @end
 

@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/AFOGenerateImages.h
+../../../AFOFFMpeg/AFOFFMpeg/media/AFOGenerateImages.h

@@ -69,7 +69,6 @@
    [self.delegate buttonTouchActionDelegate:isSuspended];
 }
 #pragma mark ------------ property
-#pragma mark ------ playImageView
 - (UIImageView *)playImageView{
     if (!_playImageView){
         _playImageView = [[UIImageView alloc] initWithFrame:CGRectZero];

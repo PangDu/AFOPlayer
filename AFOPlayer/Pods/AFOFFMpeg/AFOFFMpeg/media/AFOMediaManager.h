@@ -14,6 +14,8 @@
 - (void)videoTimeStamp:(float)videoTime
               position:(float)position
              frameRate:(float)frameRate;
+- (void)videoNowPlayingDelegate;
+- (void)videoFinishPlayingDelegate;
 @end
 /**
  <#Description#>

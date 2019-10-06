@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/viewModels/AFOMediaThumbnail.h
+../../../AFOFFMpeg/AFOFFMpeg/screenshots/AFOMediaThumbnail.h
