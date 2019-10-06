@@ -6,7 +6,7 @@
 //  Copyright © 2018年 AFO Science and technology Ltd. All rights reserved.
 //
 
-#import <AFOFFMpeg/AFOFFMpeg.h>
+#import "AFOMediaPlayController.h"
 
 @interface AFOMediaPlayController (AFOOrientation)
 - (void)settingControllerOrientation;

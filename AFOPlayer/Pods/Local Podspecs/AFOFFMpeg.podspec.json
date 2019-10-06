@@ -15,8 +15,8 @@
     "git": "https://github.com/PangDuTechnology/AFOFFMpeg.git",
     "tag": "0.1.1"
   },
-  "source_files": "AFOFFMpeg/**/*.{h,m}",
-  "public_header_files": "AFOFFMpeg/**/*.h",
+  "source_files": "AFOFFMpeg/*.{h,m}",
+  "public_header_files": "AFOFFMpeg/*.h",
   "frameworks": [
     "VideoToolbox",
     "CoreMedia",
@@ -46,6 +46,9 @@
     "AFOViews": [
 
     ],
+    "AFODelegateExtension": [
+
+    ],
     "AFOFFMpegLib": [
 
     ],
@@ -58,5 +61,37 @@
     "AFOx264": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "play",
+      "source_files": "AFOFFMpeg/play/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/play/*.h"
+    },
+    {
+      "name": "media",
+      "source_files": "AFOFFMpeg/media/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/media/*.h"
+    },
+    {
+      "name": "screenshots",
+      "source_files": "AFOFFMpeg/screenshots/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/screenshots/*.h"
+    },
+    {
+      "name": "audio",
+      "source_files": "AFOFFMpeg/audio/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/audio/*.h"
+    },
+    {
+      "name": "error",
+      "source_files": "AFOFFMpeg/error/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/error/*.h"
+    },
+    {
+      "name": "manager",
+      "source_files": "AFOFFMpeg/manager/*.{h,m}",
+      "public_header_files": "AFOFFMpeg/manager/*.h"
+    }
+  ]
 }

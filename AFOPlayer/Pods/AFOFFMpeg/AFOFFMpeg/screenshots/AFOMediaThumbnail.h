@@ -34,11 +34,4 @@
  @return <#return value description#>
  */
 + (NSString *)imageNameFromPath:(NSString *)path name:(NSString *)name;
-/**
- <#Description#>
-
- @param input <#input description#>
- @return <#return value description#>
- */
-+ (NSString *)md5HexDigest:(NSString *)input;
 @end

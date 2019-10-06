@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/media/manager/AFOCountdownManager.h
+../../../AFOFFMpeg/AFOFFMpeg/media/AFOCountdownManager.h

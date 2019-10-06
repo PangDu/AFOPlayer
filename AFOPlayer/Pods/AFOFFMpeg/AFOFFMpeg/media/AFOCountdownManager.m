@@ -11,9 +11,9 @@
 #import <AFOFoundation/AFOFoundation.h>
 @interface AFOCountdownManager ()
 @property (nonatomic, strong)     dispatch_source_t    sourceTimer;
+@property (nonatomic, assign)       BOOL               isFinish;
+@property (nonatomic, assign)       BOOL               isSuspend;
 @end
-
-
 @implementation AFOCountdownManager
 #pragma mark ------------ init
 - (instancetype)init{
@@ -30,21 +30,26 @@
         BOOL isPause = [number boolValue];
         if (isPause) {
             if (_sourceTimer) {
+                //---
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaSuspendedManager" object:nil];
+                //---
                 dispatch_suspend(_sourceTimer);
+                self.isSuspend = YES;
             }
         }else{
             if (_sourceTimer) {
-                dispatch_resume(_sourceTimer);
+                self.isSuspend = NO;
+                if (!self.isFinish) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaStartManagerNotifacation" object:nil];
+                }else{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFORestartMeidaFileNotification" object:nil];
+                }
             }
         }
     }
 }
 - (void)AFOMediaQueueManagerTimerCancel{
-    if (_sourceTimer) {
-        dispatch_source_cancel(_sourceTimer);
-    }
 }
-#pragma mark ------------ custom
 #pragma mark ------ 倒计时
 - (void)addCountdownActionFps:(float)fps
                      duration:(int64_t)time
@@ -58,14 +63,18 @@
     dispatch_source_set_event_handler(self.sourceTimer, ^{
         StrongObject(self);
         if(timeout <= 0){ //倒计时结束，关闭
+            self.isFinish = YES;
             block(@(YES));
-            dispatch_source_cancel(self.sourceTimer);
+            dispatch_suspend(self.sourceTimer);
         } else {
+            self.isFinish = NO;
             timeout--;
             block(@(NO));
         }
     });
-    dispatch_resume(self.sourceTimer);
+    if (_sourceTimer) {
+        dispatch_resume(self.sourceTimer);
+    }
 }
 #pragma mark ------------ property
 - (dispatch_source_t)sourceTimer{
@@ -75,6 +84,10 @@
     return _sourceTimer;
 }
 - (void)dealloc{
-    NSLog(@"AFOMediaQueueManager dealloc");
+    if (_isFinish || _isSuspend) {
+        dispatch_resume(_sourceTimer);
+    }
+    dispatch_source_cancel(_sourceTimer);
+    NSLog(@"AFOCountdownManager dealloc");
 }
 @end

@@ -109,7 +109,6 @@
     [self.delegate buttonTouchActionDelegate:sender.selected];
 }
 #pragma mark ------------ property
-#pragma mark ------ playButton
 - (UIButton *)playButton{
     if (!_playButton){
         _playButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -119,7 +118,6 @@
     }
     return _playButton;
 }
-#pragma mark ------ nowLabel
 - (UILabel *)timeLabel{
     if (!_timeLabel) {
         _timeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -129,7 +127,6 @@
     }
     return _timeLabel;
 }
-#pragma mark ------ sliderManager
 - (AFOProgressSliderManager *)sliderManager{
     if (!_sliderManager) {
         _sliderManager = [[AFOProgressSliderManager alloc] init];

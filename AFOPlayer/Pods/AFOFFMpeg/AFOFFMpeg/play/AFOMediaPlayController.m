@@ -9,10 +9,11 @@
 #import "AFOMediaPlayController.h"
 #import <AFORouter/AFORouter.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOGitHub/INTUAutoRemoveObserver.h>
 #import "AFOMediaPlayControllerCategory.h"
-#import "AFOVideoAudioManager.h"
+#import "AFOTotalDispatchManager.h"
 @interface AFOMediaPlayController ()<AFORouterManagerDelegate>
-@property (nonatomic, strong) AFOVideoAudioManager       *mediaManager;
+@property (nonatomic, strong) AFOTotalDispatchManager       *mediaManager;
 @property (nonatomic, copy)   NSString                   *strPath;
 @property (nonatomic, assign) UIInterfaceOrientationMask  orientation;
 @end
@@ -26,16 +27,20 @@
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaQueueManagerTimerCancel" object:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaStopManager" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AFOMediaSuspendedManager" object:nil];
 }
 #pragma mark ------------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [INTUAutoRemoveObserver addObserver:self selector:@selector(restartMediaFile) name:@"AFORestartMeidaFileNotification" object:nil];
 }
 #pragma mark ------
 - (void)viewWillLayoutSubviews{
    [self addMeidaView];
+}
+- (void)restartMediaFile{
+    [self playerVedioWithPath:self.strPath];
 }
 #pragma mark ------ AFORouterManagerDelegate
 - (void)didReceiverRouterManagerDelegate:(id)model{
@@ -71,9 +76,9 @@
     [super didReceiveMemoryWarning];
 }
 #pragma mark ------------ property
-- (AFOVideoAudioManager *)mediaManager{
+- (AFOTotalDispatchManager *)mediaManager{
     if (!_mediaManager){
-        _mediaManager = [[AFOVideoAudioManager alloc] init];
+        _mediaManager = [[AFOTotalDispatchManager alloc] init];
     }
     return _mediaManager;
 }
