@@ -291,8 +291,16 @@ PODS:
   - AFOSQLite (0.0.10):
     - FMDB
   - AFOUIKIT (0.0.7):
+    - AFOUIKIT/collectionView (= 0.0.7)
+    - AFOUIKIT/navigationController (= 0.0.7)
+    - AFOUIKIT/tabBarController (= 0.0.7)
     - AFOUIKIT/viewController (= 0.0.7)
+    - AFOUIKIT/window (= 0.0.7)
+  - AFOUIKIT/collectionView (0.0.7)
+  - AFOUIKIT/navigationController (0.0.7)
+  - AFOUIKIT/tabBarController (0.0.7)
   - AFOUIKIT/viewController (0.0.7)
+  - AFOUIKIT/window (0.0.7)
   - AFOViews (0.0.2)
   - AFOx264 (0.0.1)
   - FMDB (2.7.5):
@@ -353,7 +361,7 @@ CHECKOUT OPTIONS:
     :commit: eca43f2842cc9144a3acf37d9529e02a1f661841
     :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
   AFOUIKIT:
-    :commit: 1a822c665d2eab4887c772f600c0a291abd2cb5a
+    :commit: c8a5834c6123ab20e5348a6794e4fa72a73217f8
     :git: "/Users/piccolo/Documents/GitHub/AFOUIKIT"
 
 SPEC CHECKSUMS:
@@ -368,7 +376,7 @@ SPEC CHECKSUMS:
   AFORouter: ce325a989fded002cfcbb6a60ea864abcfca0aa9
   AFOSchedulerCore: e67576eb67f1e252498368ff4f84844736f5af15
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
-  AFOUIKIT: b1e12d14891b02f23c5dd3808db57ee6873e5c15
+  AFOUIKIT: be550806311b90f2fcba1f14a2b7c4ad1d51351b
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
   AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a

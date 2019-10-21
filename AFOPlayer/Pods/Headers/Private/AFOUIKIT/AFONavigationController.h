@@ -1,1 +1,1 @@
-../../../AFOUIKIT/AFOUIKIT/AFONavigationController.h
+../../../AFOUIKIT/AFOUIKIT/navigationController/AFONavigationController.h

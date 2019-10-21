@@ -20,6 +20,26 @@
   "requires_arc": true,
   "subspecs": [
     {
+      "name": "collectionView",
+      "source_files": "AFOUIKIT/collectionView/*.{h,m}",
+      "public_header_files": "AFOUIKIT/collectionView/*.h"
+    },
+    {
+      "name": "navigationController",
+      "source_files": "AFOUIKIT/navigationController/*.{h,m}",
+      "public_header_files": "AFOUIKIT/navigationController/*.h"
+    },
+    {
+      "name": "tabBarController",
+      "source_files": "AFOUIKIT/tabBarController/*.{h,m}",
+      "public_header_files": "AFOUIKIT/tabBarController/*.h"
+    },
+    {
+      "name": "window",
+      "source_files": "AFOUIKIT/window/*.{h,m}",
+      "public_header_files": "AFOUIKIT/window/*.h"
+    },
+    {
       "name": "viewController",
       "source_files": "AFOUIKIT/viewController/*.{h,m}",
       "public_header_files": "AFOUIKIT/viewController/*.h"

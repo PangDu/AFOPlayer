@@ -1,1 +1,1 @@
-../../../AFOUIKIT/AFOUIKIT/AFOCollectionViewLayout.h
+../../../AFOUIKIT/AFOUIKIT/collectionView/AFOCollectionViewLayout.h

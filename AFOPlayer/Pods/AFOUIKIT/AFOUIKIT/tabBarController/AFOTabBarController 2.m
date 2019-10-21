@@ -77,7 +77,7 @@
     return NO;
 }
 - (UIInterfaceOrientationMask)tabBarControllerSupportedInterfaceOrientations:(UITabBarController *)tabBarController {
-    return tabBarController.selectedViewController.supportedInterfaceOrientations;
+    return UIInterfaceOrientationMaskPortrait;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

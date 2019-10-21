@@ -1,1 +1,1 @@
-../../../AFOUIKIT/AFOUIKIT/AFOViewController.h
+../../../AFOUIKIT/AFOUIKIT/viewController/AFOViewController.h
