@@ -22,6 +22,9 @@
 }
 #pragma mark ------ AFOHPMainController
 - (UIViewController *)returnController{
+    return self.navigationController.visibleViewController;
+}
+- (UINavigationController *)returnNavigationController{
     return self.navigationController;
 }
 #pragma mark ------ didReceiveMemoryWarning

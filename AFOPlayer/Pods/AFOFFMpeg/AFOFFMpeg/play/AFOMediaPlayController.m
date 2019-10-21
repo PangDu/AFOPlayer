@@ -10,9 +10,10 @@
 #import <AFORouter/AFORouter.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOGitHub/INTUAutoRemoveObserver.h>
+#import <AFOSchedulerCore/AFOSchedulerPassValueDelegate.h>
 #import "AFOMediaPlayControllerCategory.h"
 #import "AFOTotalDispatchManager.h"
-@interface AFOMediaPlayController ()<AFORouterManagerDelegate>
+@interface AFOMediaPlayController ()<AFOSchedulerPassValueDelegate>
 @property (nonatomic, strong) AFOTotalDispatchManager       *mediaManager;
 @property (nonatomic, copy)   NSString                   *strPath;
 @property (nonatomic, assign) UIInterfaceOrientationMask  orientation;
@@ -42,8 +43,8 @@
 - (void)restartMediaFile{
     [self playerVedioWithPath:self.strPath];
 }
-#pragma mark ------ AFORouterManagerDelegate
-- (void)didReceiverRouterManagerDelegate:(id)model{
+#pragma mark ------ AFOSchedulerPassValueDelegate
+- (void)schedulerReceiverRouterManagerDelegate:(id)model{
     NSDictionary *parameters = model;
     NSString *value = parameters[@"value"];
     self.orientation = [[parameters objectForKey:@"direction"] integerValue];

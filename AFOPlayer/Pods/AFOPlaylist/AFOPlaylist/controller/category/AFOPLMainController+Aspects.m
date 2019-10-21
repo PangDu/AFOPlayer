@@ -9,6 +9,7 @@
 #import "AFOPLMainController+Aspects.h"
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOSchedulerCore/AFOSchedulerBaseClass+AFOPlayList.h>
 #import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
@@ -30,8 +31,5 @@
         NSString *base = [NSString settingRoutesParameters:dictionary];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
     } error:NULL];
-}
-- (void)dealloc{
-    NSLog(@"AFOPLMainController+Aspects dealloc");
 }
 @end

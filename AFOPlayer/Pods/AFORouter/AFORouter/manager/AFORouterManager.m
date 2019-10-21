@@ -8,10 +8,9 @@
 
 #import "AFORouterManager.h"
 #import <UIKit/UIKit.h>
-#import <AFOUIKIT/UIViewController+CurrentController.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOSchedulerCore/AFOSchedulerBaseClass+AFORouter.h>
 #import "JLRoutes.h"
-#import "AFORouterActionContext.h"
 @interface AFORouterManager ()<UIApplicationDelegate>
 @property (nonatomic, strong) JLRoutes                  *routes;
 @end
@@ -28,19 +27,10 @@
 }
 #pragma mark ------ 添加跳转规则
 - (void)loadRotesFile{
-    WeakObject(self);
     [self.routes addRoute:@"/:modelName/:current/:next/:action"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
-        StrongObject(self)
-        AFORouterActionContext *action = [[AFORouterActionContext alloc] initAction:parameters[@"action"]];
-        [action currentController:[UIViewController currentViewController] nextController:[self nextController:parameters] parameter:parameters];
+        [AFOSchedulerBaseClass schedulerRouterJumpPassingParameters:parameters];
         return YES;
     }];
-}
-- (UIViewController *)nextController:(NSDictionary *)parameters{
-    Class class = NSClassFromString(parameters[@"next"]);
-    UIViewController *controller = [[class alloc] init];
-    controller.hidesBottomBarWhenPushed = YES;
-    return controller;
 }
 #pragma mark ------ 匹配URL
 - (BOOL)routeURL:(NSURL *)url{
@@ -56,6 +46,7 @@
 }
 #pragma mark ------ dealloc
 - (void)dealloc{
+    NSLog(@"AFORouterManager dealloc");
 }
 #pragma mark ------ property
 - (JLRoutes *)routes{

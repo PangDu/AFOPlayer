@@ -9,9 +9,10 @@
 #import "AFOHPListController.h"
 #import <AFORouter/AFORouter.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOSchedulerCore/AFOSchedulerPassValueDelegate.h>
 #import "AFOListPresenterView.h"
 #import "AFOListPresenterBusiness.h"
-@interface AFOHPListController ()<AFORouterManagerDelegate,AFOHPPresenterDelegate>
+@interface AFOHPListController ()<AFOSchedulerPassValueDelegate,AFOHPPresenterDelegate>
 @property (nonatomic, strong) AFOListPresenterView           *presenterView;
 @property (nonatomic, strong) AFOListPresenterBusiness       *presenterBusiness;
 @end
@@ -23,7 +24,7 @@
     [self.presenterView bindingTableView];
 }
 #pragma mark ------ AFORouterManagerDelegate
-- (void)didReceiverRouterManagerDelegate:(id)model{
+- (void)schedulerReceiverRouterManagerDelegate:(id)model{
     WeakObject(self);
     [self.presenterBusiness receiverRouterMessage:model block:^(NSString * _Nonnull title, NSInteger index,NSArray *_Nonnull array) {
         StrongObject(self);

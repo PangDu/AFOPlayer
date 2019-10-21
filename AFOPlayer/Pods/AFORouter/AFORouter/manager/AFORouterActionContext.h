@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 @interface AFORouterActionContext : NSObject
-- (instancetype)initAction:(NSString *)strAction;
-- (void)currentController:(UIViewController *)current
-           nextController:(UIViewController *)next
-                parameter:(NSDictionary *)paramenter;
+- (void)passingCurrentController:(UIViewController *)current
+                  nextController:(NSString *)next
+                      parameters:(NSDictionary *)paramenter;
 @end
 
 NS_ASSUME_NONNULL_END

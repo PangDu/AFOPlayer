@@ -96,21 +96,21 @@ PODS:
   - AFOFFMpegLib/include/libavutil (0.0.22)
   - AFOFFMpegLib/include/libswresample (0.0.22)
   - AFOFFMpegLib/include/libswscale (0.0.22)
-  - AFOFoundation (1.0.8):
-    - AFOFoundation/array (= 1.0.8)
-    - AFOFoundation/bundle (= 1.0.8)
-    - AFOFoundation/define (= 1.0.8)
-    - AFOFoundation/dictionary (= 1.0.8)
-    - AFOFoundation/sandbox (= 1.0.8)
-    - AFOFoundation/string (= 1.0.8)
-    - AFOFoundation/weak (= 1.0.8)
-  - AFOFoundation/array (1.0.8)
-  - AFOFoundation/bundle (1.0.8)
-  - AFOFoundation/define (1.0.8)
-  - AFOFoundation/dictionary (1.0.8)
-  - AFOFoundation/sandbox (1.0.8)
-  - AFOFoundation/string (1.0.8)
-  - AFOFoundation/weak (1.0.8)
+  - AFOFoundation (1.0.9):
+    - AFOFoundation/array (= 1.0.9)
+    - AFOFoundation/bundle (= 1.0.9)
+    - AFOFoundation/define (= 1.0.9)
+    - AFOFoundation/dictionary (= 1.0.9)
+    - AFOFoundation/sandbox (= 1.0.9)
+    - AFOFoundation/string (= 1.0.9)
+    - AFOFoundation/weak (= 1.0.9)
+  - AFOFoundation/array (1.0.9)
+  - AFOFoundation/bundle (1.0.9)
+  - AFOFoundation/define (1.0.9)
+  - AFOFoundation/dictionary (1.0.9)
+  - AFOFoundation/sandbox (1.0.9)
+  - AFOFoundation/string (1.0.9)
+  - AFOFoundation/weak (1.0.9)
   - AFOGitHub (0.0.10):
     - AFOGitHub/Aspects (= 0.0.10)
     - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
@@ -135,16 +135,19 @@ PODS:
     - AFOHomePage/presenter (= 0.0.20)
     - AFOHomePage/views (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/models (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/presenter (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views (0.0.20):
     - AFOFoundation
@@ -154,6 +157,7 @@ PODS:
     - AFOHomePage/views/main (= 0.0.20)
     - AFOHomePage/views/play (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/detail (0.0.20):
     - AFOFoundation
@@ -162,21 +166,25 @@ PODS:
     - AFOHomePage/views/detail/presenters (= 0.0.20)
     - AFOHomePage/views/detail/views (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/detail/models (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/detail/presenters (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/detail/views (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/list (0.0.20):
     - AFOFoundation
@@ -185,21 +193,25 @@ PODS:
     - AFOHomePage/views/list/presenters (= 0.0.20)
     - AFOHomePage/views/list/views (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/list/models (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/list/presenters (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/list/views (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/main (0.0.20):
     - AFOFoundation
@@ -207,16 +219,19 @@ PODS:
     - AFOHomePage/views/main/models (= 0.0.20)
     - AFOHomePage/views/main/views (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/main/models (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/main/views (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/play (0.0.20):
     - AFOFoundation
@@ -225,21 +240,25 @@ PODS:
     - AFOHomePage/views/play/presenters (= 0.0.20)
     - AFOHomePage/views/play/views (= 0.0.20)
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/play/models (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/play/presenters (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOHomePage/views/play/views (0.0.20):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOViews
   - AFOlibyuv (0.0.6)
   - AFOPlaylist (0.0.16):
@@ -247,15 +266,28 @@ PODS:
     - AFOFoundation
     - AFOGitHub
     - AFORouter
+    - AFOSchedulerCore
     - AFOSQLite
     - AFOUIKIT
-  - AFORouter (0.0.7):
-    - AFORouter/manager (= 0.0.7)
-    - AFORouter/router (= 0.0.7)
-  - AFORouter/manager (0.0.7):
+  - AFORouter (0.0.8):
+    - AFORouter/manager (= 0.0.8)
+    - AFORouter/router (= 0.0.8)
+    - AFOSchedulerCore
+  - AFORouter/manager (0.0.8):
     - AFOFoundation
     - AFORouter/router
-  - AFORouter/router (0.0.7)
+    - AFOSchedulerCore
+  - AFORouter/router (0.0.8):
+    - AFOSchedulerCore
+  - AFOSchedulerCore (0.0.1):
+    - AFOSchedulerCore/homePage (= 0.0.1)
+    - AFOSchedulerCore/playList (= 0.0.1)
+    - AFOSchedulerCore/rooter (= 0.0.1)
+    - AFOSchedulerCore/scheduler (= 0.0.1)
+  - AFOSchedulerCore/homePage (0.0.1)
+  - AFOSchedulerCore/playList (0.0.1)
+  - AFOSchedulerCore/rooter (0.0.1)
+  - AFOSchedulerCore/scheduler (0.0.1)
   - AFOSQLite (0.0.10):
     - FMDB
   - AFOUIKIT (0.0.7):
@@ -270,22 +302,21 @@ PODS:
 
 DEPENDENCIES:
   - AFODelegateExtension
-  - AFOFFMpeg (from `/Users/xianxueguang/Documents/GitHub/AFOFFMpeg`)
-  - AFOFoundation (from `/Users/xianxueguang/Documents/GitHub/AFOFoundation`)
-  - AFOHomePage
-  - AFOPlaylist
+  - AFOFFMpeg (from `/Users/piccolo/Documents/GitHub/AFOFFMpeg`)
+  - AFOHomePage (from `/Users/piccolo/Documents/GitHub/AFOHomePage`)
+  - AFOPlaylist (from `/Users/piccolo/Documents/GitHub/AFOPlaylist`)
+  - AFORouter (from `/Users/piccolo/Documents/GitHub/AFORouter`)
+  - AFOSchedulerCore (from `/Users/piccolo/Documents/GitHub/AFOSchedulerCore`)
+  - AFOUIKIT (from `/Users/piccolo/Documents/GitHub/AFOUIKIT`)
 
 SPEC REPOS:
   trunk:
     - AFODelegateExtension
     - AFOFFMpegLib
+    - AFOFoundation
     - AFOGitHub
-    - AFOHomePage
     - AFOlibyuv
-    - AFOPlaylist
-    - AFORouter
     - AFOSQLite
-    - AFOUIKIT
     - AFOViews
     - AFOx264
     - FMDB
@@ -293,28 +324,49 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AFOFFMpeg:
-    :git: "/Users/xianxueguang/Documents/GitHub/AFOFFMpeg"
-  AFOFoundation:
-    :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
+    :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
+  AFOHomePage:
+    :git: "/Users/piccolo/Documents/GitHub/AFOHomePage"
+  AFOPlaylist:
+    :git: "/Users/piccolo/Documents/GitHub/AFOPlaylist"
+  AFORouter:
+    :git: "/Users/piccolo/Documents/GitHub/AFORouter"
+  AFOSchedulerCore:
+    :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
+  AFOUIKIT:
+    :git: "/Users/piccolo/Documents/GitHub/AFOUIKIT"
 
 CHECKOUT OPTIONS:
   AFOFFMpeg:
-    :commit: 51f86ea8679baaff02bf83f708a97b35ac911fbe
-    :git: "/Users/xianxueguang/Documents/GitHub/AFOFFMpeg"
-  AFOFoundation:
-    :commit: 71832d9272aa2600361a5c15e8b185a6624383ea
-    :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
+    :commit: 7879d8a54a42e2ea0f5d2891efd556b4f6337021
+    :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
+  AFOHomePage:
+    :commit: bf08672a22f10b8d4e32020a28ee7056de1f66ca
+    :git: "/Users/piccolo/Documents/GitHub/AFOHomePage"
+  AFOPlaylist:
+    :commit: ff1017fb773b894cd355bb7551cebc40fd84419a
+    :git: "/Users/piccolo/Documents/GitHub/AFOPlaylist"
+  AFORouter:
+    :commit: 68df70eab6943e4cdc10752f4ae12d0735375258
+    :git: "/Users/piccolo/Documents/GitHub/AFORouter"
+  AFOSchedulerCore:
+    :commit: eca43f2842cc9144a3acf37d9529e02a1f661841
+    :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
+  AFOUIKIT:
+    :commit: 1a822c665d2eab4887c772f600c0a291abd2cb5a
+    :git: "/Users/piccolo/Documents/GitHub/AFOUIKIT"
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
   AFOFFMpeg: a1d408babe6678c73bbe21d16832fb47844dcd9f
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
-  AFOFoundation: 3908d8d762ce86095d411062b3f23897c848b63e
+  AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
-  AFOHomePage: b7982810421d9ffd8d86eb1d278ecc8d03280747
+  AFOHomePage: ceb1966d328fccdfb48b34a1737e120784d90322
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
-  AFOPlaylist: 402a8b8a508cb4ab9f64cd4d1c3f439e8230a88b
-  AFORouter: fcac92f2ce1751694559b6e937e22b0f238b196a
+  AFOPlaylist: 91cd8477e9de4f55cf65bfd81e0c19fc358c8678
+  AFORouter: ce325a989fded002cfcbb6a60ea864abcfca0aa9
+  AFOSchedulerCore: e67576eb67f1e252498368ff4f84844736f5af15
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
   AFOUIKIT: b1e12d14891b02f23c5dd3808db57ee6873e5c15
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
@@ -322,6 +374,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: c8ceb82ae8dc22b61e0615ff2ad62306de3df8c0
+PODFILE CHECKSUM: 28203139e44aa4a031fe1afc4f2c222e521b1b67
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.8.3

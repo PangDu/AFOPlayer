@@ -1,6 +1,6 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/AFORouter
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/AFORouter" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFOFoundation" "${PODS_ROOT}/Headers/Public/AFORouter" "$(SDKROOT)/AFORouter/router/*.h","$(SDKROOT)/AFORouter/manager/*.h"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/AFORouter" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFOFoundation" "${PODS_ROOT}/Headers/Public/AFORouter" "${PODS_ROOT}/Headers/Public/AFOSchedulerCore"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

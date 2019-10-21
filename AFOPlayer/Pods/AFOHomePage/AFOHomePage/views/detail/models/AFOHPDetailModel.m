@@ -65,7 +65,6 @@
         [dic setObject:@"AFOHPDetailController"  forKey:@"current"];
         [dic setObject:@"AFOHPVedioController" forKey:@"next"];
         [dic setObject:@"push" forKey:@"action"];
-//        NSString *strBase = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOHPVedioController" present:@"AFOHPDetailController" params:dictionary];
         baseUrl = [NSURL URLWithString:[NSString settingRoutesParameters:dic]];
     }];
     block(baseUrl);

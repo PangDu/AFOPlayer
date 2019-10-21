@@ -59,8 +59,4 @@
 - (NSArray *)dataArray{
     return objc_getAssociatedObject(self, @selector(setDataArray:));
 }
-#pragma mark ------ dealloc
-- (void)dealloc{
-    NSLog(@"AFOPLMainController+AFOPLMainManager dealloc");
-}
 @end

@@ -9,9 +9,10 @@
 #import "AFOHPVedioController.h"
 #import <AFORouter/AFORouter.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOSchedulerCore/AFOSchedulerPassValueDelegate.h>
 #import "AFOHPPlayPresenterView.h"
 #import "AFOHPPlayPresenterBusiness.h"
-@interface AFOHPVedioController ()<AFORouterManagerDelegate,AFOHPPresenterDelegate,AFOHPPlayPresenterViewDelegate,AFOHPPlayPresenterBusinessDelegate>
+@interface AFOHPVedioController ()<AFOHPPresenterDelegate,AFOHPPlayPresenterViewDelegate,AFOHPPlayPresenterBusinessDelegate,AFOSchedulerPassValueDelegate>
 @property (nonatomic, strong) AFOHPPlayPresenterView     *presenterView;
 @property (nonatomic, strong) AFOHPPlayPresenterBusiness *pressenterBusiness;
 @end
@@ -23,8 +24,8 @@
     [self.presenterView bindingPlayerView];
 }
 #pragma mark ------ AFORouterManagerDelegate
-- (void)didReceiverRouterManagerDelegate:(id)model
-                                        parameters:(NSDictionary *)parameters{
+- (void)schedulerReceiverRouterManagerDelegate:(id)model
+                                    parameters:(NSDictionary *)parameters{
     self.title = [parameters objectForKey:@"title"];
     [self.pressenterBusiness receiverRouterMessage:model parameters:parameters];
 }

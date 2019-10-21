@@ -11,7 +11,7 @@
 @implementation AFORouterPresentAction
 #pragma mark ------ AFORouterActionDelegate
 - (void)currentController:(UIViewController *)current
-           nextController:(UIViewController *)next
+           nextController:(NSString *)next
                 parameter:(nonnull NSDictionary *)paramenter{
     
 }

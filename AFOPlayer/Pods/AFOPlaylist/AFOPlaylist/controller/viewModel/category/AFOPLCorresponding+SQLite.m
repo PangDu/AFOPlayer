@@ -44,7 +44,4 @@
         block(isSucess);
     }];
 }
-- (void)dealloc{
-    NSLog(@"AFOPLCorresponding+SQLite dealloc");
-}
 @end

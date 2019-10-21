@@ -14,10 +14,12 @@
 @implementation AFORouterPushAction
 #pragma mark ------ 
 - (void)currentController:(UIViewController *)current
-           nextController:(UIViewController *)next
+           nextController:(NSString *)next
                 parameter:(nonnull NSDictionary *)paramenter{
-    next.hidesBottomBarWhenPushed = YES;
-    [self addControllerAction:next present:current parameters:paramenter];
-    [current.navigationController pushViewController:next animated:YES];
+    Class class = NSClassFromString(next);
+    UIViewController *controller = [[class alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [AFOSchedulerBaseClass schedulerController:current present:controller parameters:paramenter];
+    [current.navigationController pushViewController:controller animated:YES];
 }
 @end

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AFOHPForeign : UIViewController
-
 - (UIViewController *)returnController;
+- (UINavigationController *)returnNavigationController;
 @end

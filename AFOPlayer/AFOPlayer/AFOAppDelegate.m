@@ -8,11 +8,12 @@
 
 #import "AFOAppDelegate.h"
 @interface AFOAppDelegate ()
+@property (nonatomic, strong)   UINavigationController  *navigationController;
 @property (nonatomic, strong)   AFOAddControllerModel   *addModel;
 @end
 @implementation AFOAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = self.navigationController;
     [[AFODelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance]];
     [self.window makeKeyAndVisible];
     return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
@@ -29,6 +30,12 @@
         _addModel = [[AFOAddControllerModel alloc] init];
     }
     return _addModel;
+}
+- (UINavigationController *)navigationController{
+    if (!_navigationController) {
+        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabBarController];
+    }
+    return _navigationController;
 }
 - (AFOAppTabBarController *)tabBarController{
     if (!_tabBarController) {
