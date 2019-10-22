@@ -14,14 +14,16 @@
 @implementation AFOAddControllerModel
 #pragma mark ------ 初始化
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController{
+    __block NSMutableArray *array = [[NSMutableArray alloc] init];
     [self.controllerArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         Class class = NSClassFromString(obj);
         id controller = [[class alloc] init];
         if ([controller respondsToSelector:@selector(returnController)]) {
                 id show   = [controller performSelector:@selector(returnController)];
-            [tabBarController addChildViewController:show];
+            [array addObjectAFOAbnormal:show];
         }
     }];
+    [tabBarController setViewControllers:array];
 }
 #pragma mark ------ property
 - (NSArray *)controllerArray{
