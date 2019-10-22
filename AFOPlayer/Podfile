@@ -1,10 +1,9 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 target 'AFOPlayer' do
-  pod 'AFODelegateExtension'
-  pod 'AFOHomePage'
-  pod 'AFOUIKIT'
-  pod 'AFOFFMpeg'
-  pod 'AFORouter'
-  pod 'AFOPlaylist'
+  
+#  pod 'AFODelegateExtension'
+#  pod 'AFOHomePage'
+#  pod 'AFOPlaylist', :git =>'/Users/piccolo/Documents/GitHub/AFOPlaylist'
+#  
 end
