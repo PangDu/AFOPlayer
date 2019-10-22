@@ -1,2 +1,0 @@
-# AFOUIKIT
-UIKIT

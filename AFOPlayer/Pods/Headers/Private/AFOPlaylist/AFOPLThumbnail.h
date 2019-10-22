@@ -1,1 +1,0 @@
-../../../AFOPlaylist/AFOPlaylist/viewModels/sql/AFOPLThumbnail.h
