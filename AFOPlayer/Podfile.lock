@@ -1,0 +1,364 @@
+PODS:
+  - AFODelegateExtension (0.0.7)
+  - AFOFFMpeg (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpeg/audio (= 0.1.4)
+    - AFOFFMpeg/error (= 0.1.4)
+    - AFOFFMpeg/manager (= 0.1.4)
+    - AFOFFMpeg/media (= 0.1.4)
+    - AFOFFMpeg/play (= 0.1.4)
+    - AFOFFMpeg/screenshots (= 0.1.4)
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/audio (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/error (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/manager (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/media (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/play (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/screenshots (0.1.4):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpegLib (0.0.22):
+    - AFOFFMpegLib/include (= 0.0.22)
+  - AFOFFMpegLib/include (0.0.22):
+    - AFOFFMpegLib/include/libavcodec (= 0.0.22)
+    - AFOFFMpegLib/include/libavformat (= 0.0.22)
+    - AFOFFMpegLib/include/libavutil (= 0.0.22)
+    - AFOFFMpegLib/include/libswresample (= 0.0.22)
+    - AFOFFMpegLib/include/libswscale (= 0.0.22)
+  - AFOFFMpegLib/include/libavcodec (0.0.22)
+  - AFOFFMpegLib/include/libavformat (0.0.22)
+  - AFOFFMpegLib/include/libavutil (0.0.22)
+  - AFOFFMpegLib/include/libswresample (0.0.22)
+  - AFOFFMpegLib/include/libswscale (0.0.22)
+  - AFOFoundation (1.0.9):
+    - AFOFoundation/array (= 1.0.9)
+    - AFOFoundation/bundle (= 1.0.9)
+    - AFOFoundation/define (= 1.0.9)
+    - AFOFoundation/dictionary (= 1.0.9)
+    - AFOFoundation/sandbox (= 1.0.9)
+    - AFOFoundation/string (= 1.0.9)
+    - AFOFoundation/weak (= 1.0.9)
+  - AFOFoundation/array (1.0.9)
+  - AFOFoundation/bundle (1.0.9)
+  - AFOFoundation/define (1.0.9)
+  - AFOFoundation/dictionary (1.0.9)
+  - AFOFoundation/sandbox (1.0.9)
+  - AFOFoundation/string (1.0.9)
+  - AFOFoundation/weak (1.0.9)
+  - AFOGitHub (0.0.10):
+    - AFOGitHub/Aspects (= 0.0.10)
+    - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
+    - AFOGitHub/INTUAutoRemoveObserver (= 0.0.10)
+    - AFOGitHub/Masonry (= 0.0.10)
+    - AFOGitHub/SDWebImage (= 0.0.10)
+    - AFOGitHub/UIScrollView (= 0.0.10)
+  - AFOGitHub/Aspects (0.0.10)
+  - AFOGitHub/GCDMulticastDelegate (0.0.10)
+  - AFOGitHub/INTUAutoRemoveObserver (0.0.10)
+  - AFOGitHub/Masonry (0.0.10)
+  - AFOGitHub/SDWebImage (0.0.10):
+    - AFOGitHub/SDWebImage/include (= 0.0.10)
+    - AFOGitHub/SDWebImage/lib (= 0.0.10)
+  - AFOGitHub/SDWebImage/include (0.0.10)
+  - AFOGitHub/SDWebImage/lib (0.0.10)
+  - AFOGitHub/UIScrollView (0.0.10)
+  - AFOHomePage (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/models (= 0.0.21)
+    - AFOHomePage/presenter (= 0.0.21)
+    - AFOHomePage/views (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/models (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/presenter (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail (= 0.0.21)
+    - AFOHomePage/views/list (= 0.0.21)
+    - AFOHomePage/views/main (= 0.0.21)
+    - AFOHomePage/views/play (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/detail (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/detail/models (= 0.0.21)
+    - AFOHomePage/views/detail/presenters (= 0.0.21)
+    - AFOHomePage/views/detail/views (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/detail/models (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/detail/presenters (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/detail/views (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/list (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/list/models (= 0.0.21)
+    - AFOHomePage/views/list/presenters (= 0.0.21)
+    - AFOHomePage/views/list/views (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/list/models (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/list/presenters (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/list/views (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/main (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/main/models (= 0.0.21)
+    - AFOHomePage/views/main/views (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/main/models (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/main/views (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/play (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage/views/play/models (= 0.0.21)
+    - AFOHomePage/views/play/presenters (= 0.0.21)
+    - AFOHomePage/views/play/views (= 0.0.21)
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/play/models (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/play/presenters (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOHomePage/views/play/views (0.0.21):
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOViews
+  - AFOlibyuv (0.0.6)
+  - AFOPlaylist (0.0.16):
+    - AFOFFMpeg
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSQLite
+    - AFOUIKIT
+  - AFORouter (0.0.9):
+    - AFORouter/manager (= 0.0.9)
+    - AFORouter/router (= 0.0.9)
+    - AFOSchedulerCore
+  - AFORouter/manager (0.0.9):
+    - AFOFoundation
+    - AFORouter/router
+    - AFOSchedulerCore
+  - AFORouter/router (0.0.9):
+    - AFOSchedulerCore
+  - AFOSchedulerCore (0.0.2):
+    - AFOSchedulerCore/homePage (= 0.0.2)
+    - AFOSchedulerCore/playList (= 0.0.2)
+    - AFOSchedulerCore/rooter (= 0.0.2)
+    - AFOSchedulerCore/scheduler (= 0.0.2)
+  - AFOSchedulerCore/homePage (0.0.2)
+  - AFOSchedulerCore/playList (0.0.2)
+  - AFOSchedulerCore/rooter (0.0.2)
+  - AFOSchedulerCore/scheduler (0.0.2)
+  - AFOSQLite (0.0.10):
+    - FMDB
+  - AFOUIKIT (0.0.8):
+    - AFOUIKIT/collectionView (= 0.0.8)
+    - AFOUIKIT/navigationController (= 0.0.8)
+    - AFOUIKIT/tabBarController (= 0.0.8)
+    - AFOUIKIT/viewController (= 0.0.8)
+    - AFOUIKIT/window (= 0.0.8)
+  - AFOUIKIT/collectionView (0.0.8)
+  - AFOUIKIT/navigationController (0.0.8)
+  - AFOUIKIT/tabBarController (0.0.8)
+  - AFOUIKIT/viewController (0.0.8)
+  - AFOUIKIT/window (0.0.8)
+  - AFOViews (0.0.2)
+  - AFOx264 (0.0.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - libxvidcore (0.0.1)
+
+DEPENDENCIES:
+  - AFODelegateExtension
+  - AFOFFMpeg
+  - AFOHomePage
+  - AFOPlaylist
+  - AFORouter
+  - AFOUIKIT
+
+SPEC REPOS:
+  trunk:
+    - AFODelegateExtension
+    - AFOFFMpeg
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOHomePage
+    - AFOlibyuv
+    - AFOPlaylist
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOSQLite
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - FMDB
+    - libxvidcore
+
+SPEC CHECKSUMS:
+  AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
+  AFOFFMpeg: 44ec437324260c4e7c8ae78928650a346c95acec
+  AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
+  AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
+  AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
+  AFOHomePage: 3ee8475a7cf80fd40fc3b58160ca7370407e8c50
+  AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
+  AFOPlaylist: 402a8b8a508cb4ab9f64cd4d1c3f439e8230a88b
+  AFORouter: 99bfe2584c36053acb8601ed91751b8a6b7461a8
+  AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
+  AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
+  AFOUIKIT: 087c5e0c26482b0f415b8b3b698405b6d97826fb
+  AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
+  AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
+
+PODFILE CHECKSUM: c47fe32670caa5e87032c77efc2387402c06ee4b
+
+COCOAPODS: 1.8.3

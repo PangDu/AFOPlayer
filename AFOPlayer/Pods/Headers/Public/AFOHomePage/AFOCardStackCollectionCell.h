@@ -1,0 +1,1 @@
+../../../AFOHomePage/AFOHomePage/views/main/views/AFOCardStackCollectionCell.h

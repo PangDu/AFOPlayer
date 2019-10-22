@@ -1,0 +1,1 @@
+../../../AFOFFMpeg/AFOFFMpeg/screenshots/AFOMediaSeekFrame.h
