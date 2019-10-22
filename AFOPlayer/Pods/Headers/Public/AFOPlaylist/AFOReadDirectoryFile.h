@@ -1,1 +1,0 @@
-../../../AFOPlaylist/AFOPlaylist/viewModels/sharedFolders/AFOReadDirectoryFile.h

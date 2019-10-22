@@ -1,1 +1,0 @@
-../../../../AFOFFMpegLib/FFmpeg/include/libavutil/stereo3d.h
