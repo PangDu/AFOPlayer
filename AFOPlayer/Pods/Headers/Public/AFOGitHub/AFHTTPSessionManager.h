@@ -1,0 +1,1 @@
+../../../AFOGitHub/AFOGitHub/AFNetworking/AFNetworking/AFHTTPSessionManager.h
