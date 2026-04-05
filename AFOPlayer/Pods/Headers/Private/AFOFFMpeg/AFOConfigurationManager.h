@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/manager/AFOConfigurationManager.h
+../../../../../../AFOFFMpeg/AFOFFMpeg/manager/AFOConfigurationManager.h

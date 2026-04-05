@@ -1,7 +1,14 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
+
 target 'AFOPlayer' do
   pod 'AFODelegateExtension'
   pod 'AFOHomePage'
-  pod 'AFOPlaylist'
+  # pod 'AFOPlaylist'
+  pod 'AFOPlaylist', :path => '../../AFOPlaylist'
+  
+  pod 'AFOFFMpeg', :path => '../../AFOFFMpeg'
+  pod 'AFOFoundation', :path => '../../AFOFoundation'
+  pod 'AFORouter', :path => '../../AFORouter'
+  pod 'AFOSchedulerCore', :path => '../../AFOSchedulerCore'
 end

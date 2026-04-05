@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/viewModels/sql/AFOPLSQLiteManager.h
+../../../../../../AFOPlaylist/AFOPlaylist/viewModels/sql/AFOPLSQLiteManager.h

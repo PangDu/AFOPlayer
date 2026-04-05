@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/screenshots/AFOMediaSeekFrame.h
+../../../../../../AFOFFMpeg/AFOFFMpeg/screenshots/AFOMediaSeekFrame.h

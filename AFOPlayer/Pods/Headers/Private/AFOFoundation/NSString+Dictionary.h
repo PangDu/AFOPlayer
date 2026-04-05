@@ -1,1 +1,1 @@
-../../../AFOFoundation/AFOFoundation/string/NSString+Dictionary.h
+../../../../../../AFOFoundation/AFOFoundation/string/NSString+Dictionary.h

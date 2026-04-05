@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/controller/main/AFOPLMainCollectionCell.h
+../../../../../../AFOPlaylist/AFOPlaylist/controller/main/AFOPLMainCollectionCell.h
