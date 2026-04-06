@@ -2,7 +2,6 @@
 #import "AFOAppTabBarController.h"
 #import "AFOAddControllerModel.h"
 #import "AFORouterManager.h"
-
 // 声明 AFOMediaPlayController 以避免编译警告
 @interface AFOMediaPlayController : UIViewController
 @end
