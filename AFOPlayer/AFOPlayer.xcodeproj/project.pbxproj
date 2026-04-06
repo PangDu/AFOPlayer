@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14E2AF242F83573200C851BA /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2AF232F83573200C851BA /* libobjc.tbd */; };
+		14F6917B2F83D61B004BD718 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917A2F83D61B004BD718 /* Metal.framework */; };
+		14F6917D2F83D632004BD718 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917C2F83D632004BD718 /* MetalKit.framework */; };
 		2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873B20083C0F00D369FB /* AVFoundation.framework */; };
 		2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873D20083C1A00D369FB /* AudioToolbox.framework */; };
 		2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873F20083C2F00D369FB /* CoreGraphics.framework */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		14E2AF232F83573200C851BA /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
+		14F6917A2F83D61B004BD718 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		14F6917C2F83D632004BD718 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		2404873B20083C0F00D369FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2404873D20083C1A00D369FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2404873F20083C2F00D369FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +83,8 @@
 				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
 				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
 				2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */,
+				14F6917D2F83D632004BD718 /* MetalKit.framework in Frameworks */,
+				14F6917B2F83D61B004BD718 /* Metal.framework in Frameworks */,
 				2404874820083C5F00D369FB /* OpenGLES.framework in Frameworks */,
 				2404874620083C4400D369FB /* VideoToolbox.framework in Frameworks */,
 				2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */,
@@ -179,6 +185,8 @@
 		24404A5B2007A91300BAC996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14F6917C2F83D632004BD718 /* MetalKit.framework */,
+				14F6917A2F83D61B004BD718 /* Metal.framework */,
 				14E2AF232F83573200C851BA /* libobjc.tbd */,
 				2404874D20083C7600D369FB /* libiconv.tbd */,
 				2404874B20083C6D00D369FB /* libbz2.tbd */,
