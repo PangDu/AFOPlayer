@@ -15,7 +15,6 @@
 			dependencies = (
 			);
 			name = AFOFFMpegLib;
-			productName = AFOFFMpegLib;
 		};
 		8A645BA55C8E66AF09E2A53751F8B8AB /* AFOlibyuv */ = {
 			isa = PBXAggregateTarget;
@@ -25,7 +24,6 @@
 			dependencies = (
 			);
 			name = AFOlibyuv;
-			productName = AFOlibyuv;
 		};
 		E418045366D1ADABCBF36CEA0CBBBCEB /* libxvidcore */ = {
 			isa = PBXAggregateTarget;
@@ -35,7 +33,6 @@
 			dependencies = (
 			);
 			name = libxvidcore;
-			productName = libxvidcore;
 		};
 		EB98DCE6B32CFB8D0BFC83B5CA27A0F1 /* AFOx264 */ = {
 			isa = PBXAggregateTarget;
@@ -45,7 +42,6 @@
 			dependencies = (
 			);
 			name = AFOx264;
-			productName = AFOx264;
 		};
 /* End PBXAggregateTarget section */
 
@@ -780,7 +776,7 @@
 		04C79B97D644980EDA59A335F02404CA /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = FFmpeg/include/libavutil/dict.h; sourceTree = "<group>"; };
 		04F7EDF05307C00044F29BC3A53E4147 /* JLRParsingUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRParsingUtilities.h; path = AFORouter/router/JLRParsingUtilities.h; sourceTree = "<group>"; };
 		0542CED685FE3A962CDE1543CEF92D84 /* convert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = convert.h; path = libyuv/include/libyuv/convert.h; sourceTree = "<group>"; };
-		05A1D3325B71FD656ED56759BA5AD7FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		05A1D3325B71FD656ED56759BA5AD7FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		05A880B6066808EDA34121802A630366 /* AFOHPPresenterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPPresenterDelegate.h; path = AFOHomePage/presenter/AFOHPPresenterDelegate.h; sourceTree = "<group>"; };
 		05B6D6EC76631FAC7651B1FE5CBCFE22 /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "AFOGitHub/SDWebImage/include/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		05F246424561BBD174275D79D11A9EA7 /* AFOFFMpeg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFFMpeg.debug.xcconfig; sourceTree = "<group>"; };
@@ -801,7 +797,7 @@
 		0BADF418DD115AD22B4D6D23CA132DCB /* AFOHPDetailModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPDetailModel.h; path = AFOHomePage/views/detail/models/AFOHPDetailModel.h; sourceTree = "<group>"; };
 		0BB16C0B7571D56A761BD4F5E8E5CF8C /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "AFOGitHub/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		0BBB1A5814E633FFDE4F855CCE749F92 /* swscale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swscale.h; path = FFmpeg/include/libswscale/swscale.h; sourceTree = "<group>"; };
-		0BBDC50095551F4425357E6FCDD52BED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0BBDC50095551F4425357E6FCDD52BED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		0C12D8F74274D1D705BB81AA20E1DE10 /* AFODelegateExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFODelegateExtension-prefix.pch"; sourceTree = "<group>"; };
 		0C5D2F396FBE830018A290238AD87AFC /* AFORouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFORouter.release.xcconfig; sourceTree = "<group>"; };
 		0D3F891732C51CA2557C2C5E77B35989 /* des.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des.h; path = FFmpeg/include/libavutil/des.h; sourceTree = "<group>"; };
@@ -817,17 +813,13 @@
 		14B1D2ED108C21BBBF0115E0E52442A5 /* AFOMediaTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaTimer.h; path = AFOFFMpeg/media/AFOMediaTimer.h; sourceTree = "<group>"; };
 		14C9597BC65FDA36888F2A8CCB0EADB8 /* AFODelegateForeign.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFODelegateForeign.h; path = AFODelegateExtension/AFODelegateForeign.h; sourceTree = "<group>"; };
 		14EA4D195E12029AD8490347891E6A0E /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log.h; path = FFmpeg/include/libavutil/log.h; sourceTree = "<group>"; };
-		14F9FAAF2F838CF400D98EA3 /* UIViewController+DebugLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DebugLifecycle.h"; sourceTree = "<group>"; };
-		14F9FAB02F838CF400D98EA3 /* AFOMediaPlayController+HideTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOMediaPlayController+HideTabBar.m"; sourceTree = "<group>"; };
-		14F9FAB12F838CF400D98EA3 /* AFOMediaPlayController+HideTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOMediaPlayController+HideTabBar.h"; sourceTree = "<group>"; };
-		14F9FAB22F838CF400D98EA3 /* UIViewController+DebugLifecycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DebugLifecycle.m"; sourceTree = "<group>"; };
 		16929C06C6DE90919954199F42A9D850 /* AFOListPresenterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOListPresenterView.h; path = AFOHomePage/views/list/presenters/AFOListPresenterView.h; sourceTree = "<group>"; };
 		173CC2C6666D91F372083FC343C09F20 /* AFODirectoryWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFODirectoryWatcher.m; sourceTree = "<group>"; };
 		17463A24E06F428F3C9B434A25E33E96 /* rotate_row.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rotate_row.h; path = libyuv/include/libyuv/rotate_row.h; sourceTree = "<group>"; };
 		1798B7A36CC1E4BB5E1DD4187E50A5A4 /* SVPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVPullToRefresh.h; path = AFOGitHub/UIScrollView/SVPullToRefresh.h; sourceTree = "<group>"; };
 		1856C4E4FD4F7D5440C232FF47144D32 /* AFOViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOViews.release.xcconfig; sourceTree = "<group>"; };
 		18844041ACBC5FE538FC66237E846768 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "AFOGitHub/SDWebImage/include/UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		18BB61399DD0F725B18983F8C0946B8B /* AFOUIKIT.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFOUIKIT.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		18BB61399DD0F725B18983F8C0946B8B /* AFOUIKIT.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFOUIKIT.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18C8CA77F89256A4DD45A485B9784556 /* libx264.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libx264.a; path = x264/lib/libx264.a; sourceTree = "<group>"; };
 		19537AFE6DB6CD0F379FF7FE0F7A90DB /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "AFOGitHub/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		19CD586C2E7BD0D48F8F8EFE7E5B8FA7 /* rotate_argb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rotate_argb.h; path = libyuv/include/libyuv/rotate_argb.h; sourceTree = "<group>"; };
@@ -880,9 +872,9 @@
 		2BBFAEB483C2B639293B518A319C3779 /* AFOx264.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOx264.debug.xcconfig; sourceTree = "<group>"; };
 		2BC5FDB4B762E81C45842A28133E54AA /* JLRRouteDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteDefinition.h; path = AFORouter/router/JLRRouteDefinition.h; sourceTree = "<group>"; };
 		2C4158F5E9AD29AB5D7548BABCE6D48A /* AFOPlaylist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOPlaylist.release.xcconfig; sourceTree = "<group>"; };
-		2C8FE0A4E4CC9563E4AF164443FD790D /* hp_backImage.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_backImage.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_backImage.jpeg; sourceTree = "<group>"; };
+		2C8FE0A4E4CC9563E4AF164443FD790D /* hp_backImage.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_backImage.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_backImage.jpeg; sourceTree = "<group>"; };
 		2D82939FC1A56DCB43202F45C10CAD16 /* AFOHPPlayerBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPPlayerBaseView.h; path = AFOHomePage/views/play/views/AFOHPPlayerBaseView.h; sourceTree = "<group>"; };
-		2E7A22DCBD32F4017628B5612C591B23 /* hp_homePageBack.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_homePageBack.jpg; path = AFOHomePage/AFOHomePage.bundle/hp_homePageBack.jpg; sourceTree = "<group>"; };
+		2E7A22DCBD32F4017628B5612C591B23 /* hp_homePageBack.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_homePageBack.jpg; path = AFOHomePage/AFOHomePage.bundle/hp_homePageBack.jpg; sourceTree = "<group>"; };
 		2E8C6B2654D1B4FA64C48AD5980F706C /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SVInfiniteScrolling.m"; path = "AFOGitHub/UIScrollView/UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		2E9D1AD03300B8BE21044B0B08EC9B0A /* AFOPLMainCollectionDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainCollectionDataSource.m; sourceTree = "<group>"; };
 		2EBE57CC358DF201451D5C8C91D3C189 /* basic_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = basic_types.h; path = libyuv/include/libyuv/basic_types.h; sourceTree = "<group>"; };
@@ -948,7 +940,7 @@
 		44B5B00ACDD42CC5CAAC6D2DD4802A8D /* pixfmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixfmt.h; path = FFmpeg/include/libavutil/pixfmt.h; sourceTree = "<group>"; };
 		44E1BB958884CB6B3CA3949172F2025F /* compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compare.h; path = libyuv/include/libyuv/compare.h; sourceTree = "<group>"; };
 		4503A281CE056050CE8AC6B6DACA4E7A /* AFOMediaPlayController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaPlayController.m; path = AFOFFMpeg/play/AFOMediaPlayController.m; sourceTree = "<group>"; };
-		4543B8D8B436C0B782A196827600D4E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4543B8D8B436C0B782A196827600D4E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		45CCF0487F74CB6DC4F65B6B32C8BEE7 /* AFOMPMediaQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMPMediaQuery.m; path = AFOHomePage/models/AFOMPMediaQuery.m; sourceTree = "<group>"; };
 		45EB6B233C3A33491324BFE48CCCB628 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "AFOGitHub/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		46353A3C4EFE9ACF5EC959D03B5CCAC5 /* AFOConfigurationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOConfigurationManager.m; path = AFOFFMpeg/manager/AFOConfigurationManager.m; sourceTree = "<group>"; };
@@ -959,7 +951,7 @@
 		498C8AD5B340B8772A0EE0D11A13CCC4 /* AFOAudioThreadDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioThreadDecoder.h; path = AFOFFMpeg/audio/AFOAudioThreadDecoder.h; sourceTree = "<group>"; };
 		49C998D757AABB7524050492711245E5 /* vdpau.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vdpau.h; path = FFmpeg/include/libavcodec/vdpau.h; sourceTree = "<group>"; };
 		4A7C39B2453655733025CCD478C37053 /* AFOPLCorresponding+SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+SQLite.h"; sourceTree = "<group>"; };
-		4AD762B8CE6D32AD4F10005B37DAE910 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4AD762B8CE6D32AD4F10005B37DAE910 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4B1BB2BC2124D3EB59FB5EBD4810FADA /* AFOAudioOutPut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioOutPut.h; path = AFOFFMpeg/audio/AFOAudioOutPut.h; sourceTree = "<group>"; };
 		4BB0203605CC197048078F56FD36B5D4 /* AFOSchedulerBaseClass+AFORouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOSchedulerBaseClass+AFORouter.m"; path = "AFOSchedulerCore/rooter/AFOSchedulerBaseClass+AFORouter.m"; sourceTree = "<group>"; };
 		4C004B17C2F1EAFD570530F6179A160A /* time.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time.h; path = FFmpeg/include/libavutil/time.h; sourceTree = "<group>"; };
@@ -972,7 +964,7 @@
 		4F46D2A924194BF1B0F4CB81A4641B05 /* AFOHPListCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOHPListCell.m; path = AFOHomePage/views/list/views/AFOHPListCell.m; sourceTree = "<group>"; };
 		4FB1AE1568EDEF3F147B36766D19FA00 /* pixdesc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixdesc.h; path = FFmpeg/include/libavutil/pixdesc.h; sourceTree = "<group>"; };
 		4FF6267FA3C255B3A2D997FF2CD4080C /* AFOUIKIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOUIKIT.release.xcconfig; sourceTree = "<group>"; };
-		50116452C5550D6B73906510A54C0AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50116452C5550D6B73906510A54C0AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		510794E01F35453DD93567EE3E2E7602 /* AFORouterActionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterActionContext.h; path = AFORouter/manager/AFORouterActionContext.h; sourceTree = "<group>"; };
 		511DD90C22DE4DB1D4F59983CC49D3B0 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = FFmpeg/include/libavutil/version.h; sourceTree = "<group>"; };
 		518303F7E3816FF5B1B13FA26EC4978F /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FBKVOController.m"; path = "AFOGitHub/FBKVOController/NSObject+FBKVOController.m"; sourceTree = "<group>"; };
@@ -982,7 +974,7 @@
 		52802CE8434FBF322B8A8E20556B9DF9 /* AFOConfigurationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOConfigurationManager.h; path = AFOFFMpeg/manager/AFOConfigurationManager.h; sourceTree = "<group>"; };
 		52B040BF77FD5B3F82CC0FF7064A16A5 /* AFOMediaSeekFrame+Conditional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOMediaSeekFrame+Conditional.m"; path = "AFOFFMpeg/screenshots/AFOMediaSeekFrame+Conditional.m"; sourceTree = "<group>"; };
 		52F68E19F4263379E8F897862F628FBD /* JLRRouteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteRequest.h; path = AFORouter/router/JLRRouteRequest.h; sourceTree = "<group>"; };
-		539C5D8F69203ECE4014CB4FEDBD7034 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = AFOHomePage/AFOHomePage.bundle/en.lproj; sourceTree = "<group>"; };
+		539C5D8F69203ECE4014CB4FEDBD7034 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = AFOHomePage/AFOHomePage.bundle/en.lproj; sourceTree = "<group>"; };
 		53B41C1E8AB62BF48437A49731D5D4EE /* AFOHPVedioController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOHPVedioController.m; path = AFOHomePage/views/play/views/AFOHPVedioController.m; sourceTree = "<group>"; };
 		53F88A91CE2078FEC589D7377623374C /* AFOFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFoundation.release.xcconfig; sourceTree = "<group>"; };
 		5480243D907DCED5EE5FBB9489DA57CE /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "AFOGitHub/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
@@ -1065,7 +1057,7 @@
 		70B6089D91FF402088575737AD2204F2 /* hwcontext_qsv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hwcontext_qsv.h; path = FFmpeg/include/libavutil/hwcontext_qsv.h; sourceTree = "<group>"; };
 		70C3CF0A86E645FA271D6662F5C9A86C /* AFOMediaErrorString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaErrorString.h; path = AFOFFMpeg/error/AFOMediaErrorString.h; sourceTree = "<group>"; };
 		7107AF1AA92DE77CCFF71DE3566D7F9B /* AFOMediaErrorCodeManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaErrorCodeManager.m; path = AFOFFMpeg/error/AFOMediaErrorCodeManager.m; sourceTree = "<group>"; };
-		71D1BB209E937F9AD954650826C94680 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		71D1BB209E937F9AD954650826C94680 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		73A9ABD04084896B3331918E81F68650 /* AFOPLMainCellDefaultLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainCellDefaultLayout.m; sourceTree = "<group>"; };
 		759407F612B0B6893968FF83167DC52F /* AFODelegateExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFODelegateExtension.release.xcconfig; sourceTree = "<group>"; };
 		75E17BBE8840962483C0428D5603F8D5 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
@@ -1097,10 +1089,10 @@
 		834A504317D17054AF2F8F7B7C0FAD12 /* AFOFMDBForeignInterface+Dictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOFMDBForeignInterface+Dictionary.m"; path = "AFOSQLite/privite/AFOFMDBForeignInterface+Dictionary.m"; sourceTree = "<group>"; };
 		83DDAEB299AA649296C1B52C580E5588 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = AFOGitHub/Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		846431102ED06AC04F18C763EDE46066 /* Pods-AFOPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFOPlayer-dummy.m"; sourceTree = "<group>"; };
-		8488DC170175A193B7D760716EBE159A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8488DC170175A193B7D760716EBE159A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		848B558F155565ECDA53C92EB65E37F4 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = FFmpeg/include/libavutil/tree.h; sourceTree = "<group>"; };
 		84C9302F82A9F4401A81166E9FCE12D5 /* AFODetailPresenterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFODetailPresenterView.h; path = AFOHomePage/views/detail/presenters/AFODetailPresenterView.h; sourceTree = "<group>"; };
-		84DA28A1EBFAD9CA692AB462B886F001 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84DA28A1EBFAD9CA692AB462B886F001 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8544ABA9A3190BDA76E03DFC17A49BBB /* AFOHPAVPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPAVPlayer.h; path = AFOHomePage/views/play/models/AFOHPAVPlayer.h; sourceTree = "<group>"; };
 		85928F7D76A3A05CE67000E65C110628 /* AFOUIKIT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOUIKIT-prefix.pch"; sourceTree = "<group>"; };
 		85B74FEF1E1ECEE0CFB78AD9F7D08CD0 /* libswresample.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libswresample.a; path = FFmpeg/lib/libswresample.a; sourceTree = "<group>"; };
@@ -1117,12 +1109,12 @@
 		89EEB905F84B9E04BDED8E3D929F1F8D /* AFOUIKIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOUIKIT.debug.xcconfig; sourceTree = "<group>"; };
 		8A39D44FB03C9DD5BA4475BD5073A248 /* libxvidcore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libxvidcore.debug.xcconfig; sourceTree = "<group>"; };
 		8A6E77A22A7E8EAEA07D81A6155B62C6 /* AFOCardStackCollectionCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCardStackCollectionCell.m; path = AFOHomePage/views/main/views/AFOCardStackCollectionCell.m; sourceTree = "<group>"; };
-		8AA1A2CE8E08C169D6A0DD6EE9C9E565 /* AFOSchedulerCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFOSchedulerCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8AA1A2CE8E08C169D6A0DD6EE9C9E565 /* AFOSchedulerCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFOSchedulerCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8B6ADA92A259FC4B31DD7E5D15BAA7BA /* AFOHomePage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOHomePage-prefix.pch"; sourceTree = "<group>"; };
 		8B9E9604B342FB3EEB8B55B89131DBDD /* AFOMediaForeignInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaForeignInterface.h; path = AFOFFMpeg/AFOMediaForeignInterface.h; sourceTree = "<group>"; };
 		8BEFA887B91CCF8219B166AE962EA215 /* AFOGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOGitHub.debug.xcconfig; sourceTree = "<group>"; };
 		8C6005B5E37F11AD4F49776AEB93A437 /* AFOSchedulerBaseClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOSchedulerBaseClass.h; path = AFOSchedulerCore/scheduler/AFOSchedulerBaseClass.h; sourceTree = "<group>"; };
-		8CE1F41CFD8C0D509B9F1386D575998F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8CE1F41CFD8C0D509B9F1386D575998F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8D1911083919F7CDB5ED4B98B551FE13 /* AFOCardPresenterBusiness.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCardPresenterBusiness.m; path = AFOHomePage/views/main/models/AFOCardPresenterBusiness.m; sourceTree = "<group>"; };
 		8D3791E6B14FA333776BF633EA6A52B9 /* common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common.h; path = FFmpeg/include/libavutil/common.h; sourceTree = "<group>"; };
 		8D64332B47589A4D3041C2D0A825B571 /* AFOViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOViews.debug.xcconfig; sourceTree = "<group>"; };
@@ -1169,7 +1161,7 @@
 		9D2838654CB307E9503CF1BF727903A6 /* AFOHPDetailModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOHPDetailModel.m; path = AFOHomePage/views/detail/models/AFOHPDetailModel.m; sourceTree = "<group>"; };
 		9D4957EFA6FDDF21084EB89772370EA9 /* timecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timecode.h; path = FFmpeg/include/libavutil/timecode.h; sourceTree = "<group>"; };
 		9D74159E198798B12AEB9839BA39BEC0 /* AFOViews */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AFOViews; path = libAFOViews.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC79D3C49ECD810F46ED682ECA7494D /* AFOVideoFrameYUV.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOVideoFrameYUV.m; path = AFOFFMpeg/media/AFOVideoFrameYUV.m; sourceTree = "<group>"; };
 		9DC918ED3BA3225DFDC18D0709B5C3E0 /* cpu_id.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu_id.h; path = libyuv/include/libyuv/cpu_id.h; sourceTree = "<group>"; };
 		9DD390404CA789527E50C5C2307D387A /* timestamp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timestamp.h; path = FFmpeg/include/libavutil/timestamp.h; sourceTree = "<group>"; };
@@ -1189,12 +1181,12 @@
 		A31A8E311B5C4827A4FC3D0669905CAD /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Aspects.m; path = AFOGitHub/Aspects/Aspects.m; sourceTree = "<group>"; };
 		A36FC512C2178B0F9413F661A04924C4 /* NSMutableArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.m"; sourceTree = "<group>"; };
 		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* FMDB */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = FMDB; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A468BFE8E358A3FD0C62B8FE51C86E6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A468BFE8E358A3FD0C62B8FE51C86E6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		A4B406E22D0BD8257D6F692330F72BA1 /* AFOUIKIT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOUIKIT-dummy.m"; sourceTree = "<group>"; };
 		A4C353BB4B4B0B24EE9255F83B2DEA57 /* adler32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = adler32.h; path = FFmpeg/include/libavutil/adler32.h; sourceTree = "<group>"; };
 		A64F70456671C33D2562266642A96A9D /* AFOAudioDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioDecoder.m; path = AFOFFMpeg/audio/AFOAudioDecoder.m; sourceTree = "<group>"; };
 		A68CA69324582DCEDA3C65F456785CE8 /* AFOListPresenterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOListPresenterView.m; path = AFOHomePage/views/list/presenters/AFOListPresenterView.m; sourceTree = "<group>"; };
-		A6D6153A0E0640AC237283C4E3BA7C2B /* AFORouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFORouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6D6153A0E0640AC237283C4E3BA7C2B /* AFORouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFORouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A716CFA524BD44E08D92B5D927B6CA01 /* AFOListPresenterBusiness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOListPresenterBusiness.h; path = AFOHomePage/views/list/presenters/AFOListPresenterBusiness.h; sourceTree = "<group>"; };
 		A71E4BE8C25BDADD7EA8C9327BE5E346 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = AFOGitHub/SDWebImage/include/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		A77B15D02383F1FC87E90FD65B14D1A5 /* AFOCardStackSelectedLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCardStackSelectedLayout.m; path = AFOHomePage/views/main/views/AFOCardStackSelectedLayout.m; sourceTree = "<group>"; };
@@ -1238,7 +1230,7 @@
 		B70D8651C102ECDC1F42BD79275131AD /* Pods-AFOPlayer */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-AFOPlayer"; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76A900BA78046C0808EFC1CDA7875E5 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = AFOGitHub/SDWebImage/include/SDWebImageCompat.h; sourceTree = "<group>"; };
 		B79247FF42FE9CA8274F897A04D6A347 /* AFOHPListDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPListDelegate.h; path = AFOHomePage/views/list/models/AFOHPListDelegate.h; sourceTree = "<group>"; };
-		B7F8C71B27941C020126217A3AEAAC3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B7F8C71B27941C020126217A3AEAAC3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		B8180E1B014BDB051C2DDB684D6041FE /* AFOPLMainController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainController.m; sourceTree = "<group>"; };
 		B9B5F025E191793F95ABACFE1BB88F11 /* AFOHPNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPNavigationController.h; path = AFOHomePage/views/AFOHPNavigationController.h; sourceTree = "<group>"; };
 		B9C5412A709A235F5913BB710B253D81 /* AFOMediaPlayController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaPlayController.h; path = AFOFFMpeg/play/AFOMediaPlayController.h; sourceTree = "<group>"; };
@@ -1287,11 +1279,11 @@
 		CD978B3149ED6E9849600633D07FBB75 /* NSFileManager+AFOOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOOperation.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.m"; sourceTree = "<group>"; };
 		CD9DDE080C8C05C3261DDBDD6AFDE75E /* AFOCardStackingModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCardStackingModel.m; path = AFOHomePage/views/main/models/AFOCardStackingModel.m; sourceTree = "<group>"; };
 		CE20B9E3CEC33349BB759532BEC0733C /* AFOReadDirectoryFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFOReadDirectoryFile.h; sourceTree = "<group>"; };
-		CE33C4361E9179295501D27AB29AED26 /* hp_albumImage.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_albumImage.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_albumImage.jpeg; sourceTree = "<group>"; };
+		CE33C4361E9179295501D27AB29AED26 /* hp_albumImage.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_albumImage.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_albumImage.jpeg; sourceTree = "<group>"; };
 		CE962952CDE6F38C79DAFC446C7568C8 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "AFOGitHub/Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		CF81BB705E7569B35FE398312D6D858C /* qsv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qsv.h; path = FFmpeg/include/libavcodec/qsv.h; sourceTree = "<group>"; };
 		CFCD644EB56DE410BE5781B2F14AC4CF /* AFOHPPlayPresenterViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOHPPlayPresenterViewDelegate.h; path = AFOHomePage/views/play/presenters/AFOHPPlayPresenterViewDelegate.h; sourceTree = "<group>"; };
-		D06B0313EA153CAD8EB7C070D2FA5F39 /* AFOFFMpeg.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFOFFMpeg.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D06B0313EA153CAD8EB7C070D2FA5F39 /* AFOFFMpeg.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFOFFMpeg.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D0736B3027406534C6F03E0B91F71E56 /* AFOPLMainCellDefaultLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFOPLMainCellDefaultLayout.h; sourceTree = "<group>"; };
 		D0AA7269D66884E6F1F9AD523357E8AD /* AFOHPPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOHPPlayerView.m; path = AFOHomePage/views/play/views/AFOHPPlayerView.m; sourceTree = "<group>"; };
 		D0B0F23F2E392C7AB6440E46B94EEA3E /* AFOGitHub-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOGitHub-dummy.m"; sourceTree = "<group>"; };
@@ -1320,7 +1312,7 @@
 		DA45E5B3DDB5E1E55439D7C6E0AD59CE /* AFODelegateExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFODelegateExtension-dummy.m"; sourceTree = "<group>"; };
 		DA92C0C9C9D079706E82B9E1DE387AD8 /* AFOMacroDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMacroDefinition.h; path = AFOFoundation/define/AFOMacroDefinition.h; sourceTree = "<group>"; };
 		DABAFA4E5CA1DF6A5E4B9CC9487182E5 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Aspects.h; path = AFOGitHub/Aspects/Aspects.h; sourceTree = "<group>"; };
-		DB18E7611818FB100BB371D3FC77C98C /* hp_artist.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_artist.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_artist.jpeg; sourceTree = "<group>"; };
+		DB18E7611818FB100BB371D3FC77C98C /* hp_artist.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_artist.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_artist.jpeg; sourceTree = "<group>"; };
 		DB3BFEA3D08A9AD35E11E31E9922FC87 /* AFOFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOFoundation-prefix.pch"; sourceTree = "<group>"; };
 		DC2607E969F7B563104B372944536164 /* avconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avconfig.h; path = FFmpeg/include/libavutil/avconfig.h; sourceTree = "<group>"; };
 		DC61E1FCDDF0068158DEA2A24FFE174B /* AFOAudioManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioManager.h; path = AFOFFMpeg/audio/AFOAudioManager.h; sourceTree = "<group>"; };
@@ -1352,7 +1344,7 @@
 		E8DA46CE2553F24D4129155E13686FD6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "AFOGitHub/Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		EAF3E255E6F7E107507F7D9D1917FA50 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "AFOGitHub/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		EB4BB903756AB72D746922B5D184E17E /* Pods-AFOPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFOPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EBEFA6D176132355AA3DB76EED22B128 /* AFOFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFOFoundation.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EBEFA6D176132355AA3DB76EED22B128 /* AFOFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFOFoundation.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EC81C46162BF3D07DFC8DC520C330883 /* aes_ctr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ctr.h; path = FFmpeg/include/libavutil/aes_ctr.h; sourceTree = "<group>"; };
 		ED940CB4591B8FF9C92573F5F1BB97AB /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "AFOGitHub/SDWebImage/include/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		ED99CD69C075510E37DFDD5FA1B024F1 /* AFOGitHub-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOGitHub-prefix.pch"; sourceTree = "<group>"; };
@@ -1361,7 +1353,7 @@
 		EE98601988522FBDE7DDE10AAC0C8671 /* AFONavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFONavigationController.h; path = AFOUIKIT/navigationController/AFONavigationController.h; sourceTree = "<group>"; };
 		EEB9416AB63EA56F700124AE696FF841 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
 		EF2CF0FFC723F05BAD0A9CF810A0AA8F /* AFOFFMpeg-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOFFMpeg-dummy.m"; sourceTree = "<group>"; };
-		EF2FBD51B0269F97E7E6E18A9C3007D2 /* hp_album.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_album.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_album.jpeg; sourceTree = "<group>"; };
+		EF2FBD51B0269F97E7E6E18A9C3007D2 /* hp_album.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_album.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_album.jpeg; sourceTree = "<group>"; };
 		EF6DC7C05C2F837189BAD681CA4BA4F3 /* AFOSchedulerCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOSchedulerCore.debug.xcconfig; sourceTree = "<group>"; };
 		F06573751E5AFEDA67A1F53C47FE7017 /* tea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tea.h; path = FFmpeg/include/libavutil/tea.h; sourceTree = "<group>"; };
 		F0707C016476FFD35F9C25AE92AD35EB /* JLRoutes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRoutes.h; path = AFORouter/router/JLRoutes.h; sourceTree = "<group>"; };
@@ -1369,13 +1361,13 @@
 		F0E95E3A61AB6FB311936CED722E1922 /* row.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = row.h; path = libyuv/include/libyuv/row.h; sourceTree = "<group>"; };
 		F12010A3AC300B9A15B692A90E318EC7 /* parseutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parseutils.h; path = FFmpeg/include/libavutil/parseutils.h; sourceTree = "<group>"; };
 		F180C7EB387BEBDAA102C710A34B5B7E /* avfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfft.h; path = FFmpeg/include/libavcodec/avfft.h; sourceTree = "<group>"; };
-		F1ECA4B25D8446F5F4CDA379069BC656 /* hp_iconMusic.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_iconMusic.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_iconMusic.jpeg; sourceTree = "<group>"; };
+		F1ECA4B25D8446F5F4CDA379069BC656 /* hp_iconMusic.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_iconMusic.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_iconMusic.jpeg; sourceTree = "<group>"; };
 		F2C40A383978FA1E21FC8D9BDC04B2F4 /* AFOFFMpegLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFFMpegLib.release.xcconfig; sourceTree = "<group>"; };
 		F39383F0AADA6BCF727C03C26374B1B7 /* AFOUIKIT */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AFOUIKIT; path = libAFOUIKIT.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3988A47CB19ECD58F92BC167A9A0838 /* AFOHPDetailDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOHPDetailDataSource.m; path = AFOHomePage/views/detail/models/AFOHPDetailDataSource.m; sourceTree = "<group>"; };
 		F3A3F961D7608B537BFE31201B8D6592 /* AFOWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOWindow.m; path = AFOUIKIT/window/AFOWindow.m; sourceTree = "<group>"; };
 		F3B771AB7E165875BA08B08C1D7DD3D9 /* AFOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOFoundation.h; path = AFOFoundation/AFOFoundation.h; sourceTree = "<group>"; };
-		F44C223464D68635559180E5644C0A95 /* hp_allMusic.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_allMusic.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_allMusic.jpeg; sourceTree = "<group>"; };
+		F44C223464D68635559180E5644C0A95 /* hp_allMusic.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_allMusic.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_allMusic.jpeg; sourceTree = "<group>"; };
 		F470AE054EF1A7A22D19F45A70529FAB /* video_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = video_common.h; path = libyuv/include/libyuv/video_common.h; sourceTree = "<group>"; };
 		F4889BEA9C9F8546EF8B740AA120D18F /* lzo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lzo.h; path = FFmpeg/include/libavutil/lzo.h; sourceTree = "<group>"; };
 		F4D2DDD327F7EC15A3AE519370392619 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "AFOGitHub/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
@@ -1399,12 +1391,12 @@
 		FB940CA8CC7EC45A51E78DDB9B86C029 /* intreadwrite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intreadwrite.h; path = FFmpeg/include/libavutil/intreadwrite.h; sourceTree = "<group>"; };
 		FBBAD5B3D33A4BD69D6535A0EDEB1FC1 /* spherical.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = spherical.h; path = FFmpeg/include/libavutil/spherical.h; sourceTree = "<group>"; };
 		FCA32269C2CC9D40F47A3ECA8E1F09A2 /* AFOMediaFrameImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaFrameImport.h; path = AFOFFMpeg/media/AFOMediaFrameImport.h; sourceTree = "<group>"; };
-		FD16AFF7EF5596310358F1F55BCA085F /* AFOPlaylist.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AFOPlaylist.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD16AFF7EF5596310358F1F55BCA085F /* AFOPlaylist.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AFOPlaylist.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD52A75EEE080F94FB1A1E3DE9ADAB7B /* AFOMediaControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaControlView.m; path = AFOFFMpeg/play/AFOMediaControlView.m; sourceTree = "<group>"; };
 		FDE7AA3E88CC8A86431E69225642D84F /* AFORouterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterManager.h; path = AFORouter/manager/AFORouterManager.h; sourceTree = "<group>"; };
 		FE119211CC1F4DACC7FE5B10DE50A635 /* AFOCardStackDefaultLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOCardStackDefaultLayout.h; path = AFOHomePage/views/main/views/AFOCardStackDefaultLayout.h; sourceTree = "<group>"; };
 		FEDEA39009A832FA0E942D9564CF6FAB /* AFOTotalDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOTotalDispatchManager.h; path = AFOFFMpeg/manager/AFOTotalDispatchManager.h; sourceTree = "<group>"; };
-		FF1B6A3EE155F40B80E5BED6588DF563 /* hp_list.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = hp_list.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_list.jpeg; sourceTree = "<group>"; };
+		FF1B6A3EE155F40B80E5BED6588DF563 /* hp_list.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = hp_list.jpeg; path = AFOHomePage/AFOHomePage.bundle/hp_list.jpeg; sourceTree = "<group>"; };
 		FFD2DF90F44E1A4D7D87DF9399A096E2 /* AFOCountdownManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCountdownManager.m; path = AFOFFMpeg/media/AFOCountdownManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1527,6 +1519,7 @@
 				D122A8FBC217BD9D444775AFD0837551 /* include */,
 				44445B2B523E031626DBA597F62FBCAD /* Support Files */,
 			);
+			name = AFOFFMpegLib;
 			path = AFOFFMpegLib;
 			sourceTree = "<group>";
 		};
@@ -1549,6 +1542,7 @@
 				CB701433AC98A5AAD36F983CAEF2F5CA /* standard */,
 				FFD7FCBCB0D804882AB276AACDB54B36 /* Support Files */,
 			);
+			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
@@ -1595,19 +1589,8 @@
 				93DF03704757FC4DEE6D5BEDEB5E2742 /* Frameworks */,
 				32E7DDF1AC26550061CE92B21A574DCD /* Support Files */,
 			);
+			name = AFOlibyuv;
 			path = AFOlibyuv;
-			sourceTree = "<group>";
-		};
-		14F9FAAE2F838CF400D98EA3 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				14F9FAAF2F838CF400D98EA3 /* UIViewController+DebugLifecycle.h */,
-				14F9FAB22F838CF400D98EA3 /* UIViewController+DebugLifecycle.m */,
-				14F9FAB12F838CF400D98EA3 /* AFOMediaPlayController+HideTabBar.h */,
-				14F9FAB02F838CF400D98EA3 /* AFOMediaPlayController+HideTabBar.m */,
-			);
-			name = Categories;
-			path = AFOFFMpeg/play/Categories;
 			sourceTree = "<group>";
 		};
 		157028EE501CA8C4A4AE846B52317760 /* tabBarController */ = {
@@ -1655,6 +1638,7 @@
 				7ED2BA5258F806FFD2F0E5C7062A2D57 /* AFOSQLite.h */,
 				CC40804E383F75AAC871D391C8A059C2 /* Support Files */,
 			);
+			name = AFOSQLite;
 			path = AFOSQLite;
 			sourceTree = "<group>";
 		};
@@ -1669,6 +1653,7 @@
 				8DDD1E5BAF39B4C1D1FE0F2F4587CA66 /* AFOPLMainController+Operation.m */,
 				6A9B1D4BC0F5FBF000D3AB182EB66C27 /* AFOPLMainControllerCategory.h */,
 			);
+			name = category;
 			path = category;
 			sourceTree = "<group>";
 		};
@@ -1771,6 +1756,7 @@
 				B4040A95DF91B12971A0E9303F9AB39E /* AFOPLMainController.h */,
 				B8180E1B014BDB051C2DDB684D6041FE /* AFOPLMainController.m */,
 			);
+			name = main;
 			path = main;
 			sourceTree = "<group>";
 		};
@@ -1804,6 +1790,7 @@
 				C4F79E8AAD4826A2687F5745FE79AE3C /* AFOPLCorresponding+SQLite.m */,
 				1F8BF5AA8FE5DA22ECED8F5F5A577416 /* AFOPLCorrespondingCategory.h */,
 			);
+			name = category;
 			path = category;
 			sourceTree = "<group>";
 		};
@@ -1863,6 +1850,7 @@
 				10EDA43A2DA8E81B40300513EE291373 /* Support Files */,
 				C9B903AB33C81F45020C9B4ED44DA97A /* views */,
 			);
+			name = AFOHomePage;
 			path = AFOHomePage;
 			sourceTree = "<group>";
 		};
@@ -1890,7 +1878,6 @@
 		3EFC20EFC90E0B638A8E42ECE90171AA /* play */ = {
 			isa = PBXGroup;
 			children = (
-				14F9FAAE2F838CF400D98EA3 /* Categories */,
 				11F310748DB4E0A1B86063E29AC4E544 /* AFOMediaControlView.h */,
 				FD52A75EEE080F94FB1A1E3DE9ADAB7B /* AFOMediaControlView.m */,
 				B9C5412A709A235F5913BB710B253D81 /* AFOMediaPlayController.h */,
@@ -2142,6 +2129,7 @@
 				9687500F56D16B7E5166A230BD893E3C /* AFOViews.h */,
 				CF079E3132738B3E6F9E34636AB20EE0 /* Support Files */,
 			);
+			name = AFOViews;
 			path = AFOViews;
 			sourceTree = "<group>";
 		};
@@ -2246,6 +2234,7 @@
 				2A9D71587357EBFB1113F9539719DFF8 /* AFOPLMainFolderManager.h */,
 				622EBE9EE0C26B286E141522A85E40BB /* AFOPLMainFolderManager.m */,
 			);
+			name = folder;
 			path = folder;
 			sourceTree = "<group>";
 		};
@@ -2308,6 +2297,7 @@
 				6F0BB12D37E959EB14093D2467B143AF /* AFOPLThumbnail.h */,
 				709414B0D5E87230287F32B8FEA0077E /* AFOPLThumbnail.m */,
 			);
+			name = sql;
 			path = sql;
 			sourceTree = "<group>";
 		};
@@ -2319,6 +2309,7 @@
 				1E7D253C773C90C6A3FBED0C36745A62 /* Frameworks */,
 				E5D7D693677EA4F2FD6923F3E7A52EBE /* Support Files */,
 			);
+			name = AFOx264;
 			path = AFOx264;
 			sourceTree = "<group>";
 		};
@@ -2694,6 +2685,7 @@
 				CE20B9E3CEC33349BB759532BEC0733C /* AFOReadDirectoryFile.h */,
 				65588147F2D2A37EFB36A8DE64371835 /* AFOReadDirectoryFile.m */,
 			);
+			name = sharedFolders;
 			path = sharedFolders;
 			sourceTree = "<group>";
 		};
@@ -2893,6 +2885,7 @@
 				7039C0AD1D83A9AD4F3A8E66C951C59D /* AFOPLMainManager.m */,
 				2BE6124CD0160A8A0FB5C93F5DFF8D25 /* category */,
 			);
+			name = viewModel;
 			path = viewModel;
 			sourceTree = "<group>";
 		};
@@ -2993,6 +2986,7 @@
 				9679E2CA7E8624138264812233B59F16 /* AFODelegateForeign.m */,
 				38AACD947CE3607DFEDB3BD479D46ED2 /* Support Files */,
 			);
+			name = AFODelegateExtension;
 			path = AFODelegateExtension;
 			sourceTree = "<group>";
 		};
@@ -3086,6 +3080,7 @@
 				1FE8782DB0E2E698307E57DFC3ABFA59 /* Frameworks */,
 				8B13BFED874074F02755F5ACA61521E4 /* Support Files */,
 			);
+			name = libxvidcore;
 			path = libxvidcore;
 			sourceTree = "<group>";
 		};
@@ -3139,6 +3134,7 @@
 				21F1B5734FBED6CB314C11AABB775D72 /* Support Files */,
 				5CFB395F9D8AFA0F7903397B35C0DD03 /* UIScrollView */,
 			);
+			name = AFOGitHub;
 			path = AFOGitHub;
 			sourceTree = "<group>";
 		};
@@ -3773,6 +3769,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = BB78EFB2258AD1ADA08BF504F8EB5B9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4829,7 +4827,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
