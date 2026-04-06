@@ -3,7 +3,7 @@ inhibit_all_warnings!
 
 target 'AFOPlayer' do
   pod 'AFODelegateExtension'
-  pod 'AFOHomePage'
+  #pod 'AFOHomePage'
   # pod 'AFOPlaylist'
   pod 'AFOPlaylist', :path => '../../AFOPlaylist'
   

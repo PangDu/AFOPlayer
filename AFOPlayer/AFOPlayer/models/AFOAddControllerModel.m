@@ -27,9 +27,12 @@
 }
 #pragma mark ------ property
 - (NSArray *)controllerArray{
+//    if (!_controllerArray) {
+//        _controllerArray = @[@"AFOHPForeign",
+//                             @"AFOPlayListForeign"];
+//    }
     if (!_controllerArray) {
-        _controllerArray = @[@"AFOHPForeign",
-                             @"AFOPlayListForeign"];
+        _controllerArray = @[@"AFOPlayListForeign"];
     }
     return _controllerArray;
 }

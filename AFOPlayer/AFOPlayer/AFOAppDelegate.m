@@ -2,9 +2,6 @@
 #import "AFOAppTabBarController.h"
 #import "AFOAddControllerModel.h"
 #import "AFORouterManager.h"
-// 声明 AFOMediaPlayController 以避免编译警告
-@interface AFOMediaPlayController : UIViewController
-@end
 
 @interface AFOAppDelegate ()
 @property (nonatomic, strong)   AFOAddControllerModel   *addModel;
@@ -30,38 +27,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.rootViewController = self.tabBarController;
-
-    // 添加KVO观察者
-    [self.tabBarController addObserver:self
-                            forKeyPath:@"selectedViewController"
-                               options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                               context:nil];
-
     [[AFODelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance]];
     [self.window makeKeyAndVisible];
     return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
-
-// KVO 回调方法
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary<NSKeyValueChangeKey,id> *)change
-                       context:(void *)context {
-    if ([keyPath isEqualToString:@"selectedViewController"]) {
-        UIViewController *selectedVC = [change objectForKey:NSKeyValueChangeNewKey];
-        if ([selectedVC isKindOfClass:NSClassFromString(@"AFOMediaPlayController")]) {
-            self.tabBarController.tabBar.hidden = YES;
-        } else {
-            self.tabBarController.tabBar.hidden = NO;
-        }
-    }
-}
-
-- (void)dealloc {
-    // 移除KVO观察者
-    [self.tabBarController removeObserver:self forKeyPath:@"selectedViewController"];
-}
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
     return [[AFODelegateForeign shareInstance]application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }

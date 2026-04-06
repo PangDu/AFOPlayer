@@ -1,2 +1,0 @@
-# AFOHomePage
-main View
