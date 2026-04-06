@@ -331,6 +331,7 @@ DEPENDENCIES:
   - AFOPlaylist (from `../../AFOPlaylist`)
   - AFORouter (from `../../AFORouter`)
   - AFOSchedulerCore (from `../../AFOSchedulerCore`)
+  - AFOUIKIT (from `../../AFOUIKIT`)
 
 SPEC REPOS:
   trunk:
@@ -340,7 +341,6 @@ SPEC REPOS:
     - AFOHomePage
     - AFOlibyuv
     - AFOSQLite
-    - AFOUIKIT
     - AFOViews
     - AFOx264
     - FMDB
@@ -357,6 +357,8 @@ EXTERNAL SOURCES:
     :path: "../../AFORouter"
   AFOSchedulerCore:
     :path: "../../AFOSchedulerCore"
+  AFOUIKIT:
+    :path: "../../AFOUIKIT"
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
@@ -376,6 +378,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: b3c8e0bcf80714e708085f1f39607c8d033c82d3
+PODFILE CHECKSUM: c2bad1c3cb4c68c2f22b30a16544e489f20678e0
 
 COCOAPODS: 1.16.2

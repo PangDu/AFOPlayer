@@ -1,1 +1,1 @@
-../../../AFOUIKIT/AFOUIKIT/tabBarController/AFOTabBarController.h
+../../../../../../AFOUIKIT/AFOUIKIT/tabBarController/AFOTabBarController.h

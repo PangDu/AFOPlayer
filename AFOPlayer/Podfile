@@ -11,4 +11,5 @@ target 'AFOPlayer' do
   pod 'AFOFoundation', :path => '../../AFOFoundation'
   pod 'AFORouter', :path => '../../AFORouter'
   pod 'AFOSchedulerCore', :path => '../../AFOSchedulerCore'
+  pod 'AFOUIKIT',:path => '../../AFOUIKIT'
 end

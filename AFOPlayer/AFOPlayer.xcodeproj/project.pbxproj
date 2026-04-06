@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E2AF222F83528C00C851BA /* UIViewController+DebugLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E2AF212F83528C00C851BA /* UIViewController+DebugLifecycle.m */; };
 		2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873B20083C0F00D369FB /* AVFoundation.framework */; };
 		2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873D20083C1A00D369FB /* AudioToolbox.framework */; };
 		2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873F20083C2F00D369FB /* CoreGraphics.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E2AF202F83528C00C851BA /* UIViewController+DebugLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DebugLifecycle.h"; sourceTree = "<group>"; };
+		14E2AF212F83528C00C851BA /* UIViewController+DebugLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DebugLifecycle.m"; sourceTree = "<group>"; };
 		2404873B20083C0F00D369FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2404873D20083C1A00D369FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2404873F20083C2F00D369FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14E2AF1F2F83528C00C851BA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				14E2AF202F83528C00C851BA /* UIViewController+DebugLifecycle.h */,
+				14E2AF212F83528C00C851BA /* UIViewController+DebugLifecycle.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		2408BAC7200856870049060F /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +162,7 @@
 		240B108E2007A5F70007F2F3 /* AFOPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				14E2AF1F2F83528C00C851BA /* Categories */,
 				2408BAC7200856870049060F /* views */,
 				2408BAD9200856870049060F /* models */,
 				2408BAD5200856870049060F /* controllers */,
@@ -323,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */,
+				14E2AF222F83528C00C851BA /* UIViewController+DebugLifecycle.m in Sources */,
 				2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */,
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
 				240B109F2007A5F70007F2F3 /* main.m in Sources */,
