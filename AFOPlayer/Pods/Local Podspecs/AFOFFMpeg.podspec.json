@@ -47,8 +47,7 @@
     {
       "name": "play",
       "source_files": "AFOFFMpeg/play/*.{h,m}",
-      "public_header_files": "AFOFFMpeg/play/*.h",
-      "resources": "AFOFFMpeg/play/*.metal"
+      "public_header_files": "AFOFFMpeg/play/*.h"
     },
     {
       "name": "media",

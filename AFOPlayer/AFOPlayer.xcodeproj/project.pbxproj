@@ -10,6 +10,7 @@
 		14E2AF242F83573200C851BA /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2AF232F83573200C851BA /* libobjc.tbd */; };
 		14F6917B2F83D61B004BD718 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917A2F83D61B004BD718 /* Metal.framework */; };
 		14F6917D2F83D632004BD718 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917C2F83D632004BD718 /* MetalKit.framework */; };
+		14FA625F2F852AE5006DD680 /* AFOMetalShaders.metal in Resources */ = {isa = PBXBuildFile; fileRef = 14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */; };
 		2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873B20083C0F00D369FB /* AVFoundation.framework */; };
 		2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873D20083C1A00D369FB /* AudioToolbox.framework */; };
 		2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873F20083C2F00D369FB /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 		14E2AF232F83573200C851BA /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
 		14F6917A2F83D61B004BD718 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		14F6917C2F83D632004BD718 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = AFOMetalShaders.metal; sourceTree = "<group>"; };
 		2404873B20083C0F00D369FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2404873D20083C1A00D369FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2404873F20083C2F00D369FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +176,7 @@
 			children = (
 				24AF675E201B616500AB5537 /* AFOPlayer.bundle */,
 				240B10982007A5F70007F2F3 /* Assets.xcassets */,
+				14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */,
 				240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */,
 				240B109D2007A5F70007F2F3 /* Info.plist */,
 				240B109E2007A5F70007F2F3 /* main.m */,
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FA625F2F852AE5006DD680 /* AFOMetalShaders.metal in Resources */,
 				2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */,
 				240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */,
 				240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */,
@@ -294,12 +298,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh",
-				"${PODS_ROOT}/../../../AFOFFMpeg/AFOFFMpeg/play/AFOMetalShaders.metal",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB_Privacy.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AFOMetalShaders.metal",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FMDB_Privacy.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
