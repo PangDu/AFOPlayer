@@ -186,9 +186,11 @@ PODS:
   - AFOUIKIT/window (0.0.8)
   - AFOViews (0.0.2)
   - AFOx264 (0.0.1)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
+  - FMDB (2.7.12):
+    - FMDB/standard (= 2.7.12)
+  - FMDB/Core (2.7.12)
+  - FMDB/standard (2.7.12):
+    - FMDB/Core
   - libxvidcore (0.0.1)
 
 DEPENDENCIES:
@@ -240,9 +242,9 @@ SPEC CHECKSUMS:
   AFOUIKIT: 087c5e0c26482b0f415b8b3b698405b6d97826fb
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
   AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 2beebf21d5edf5e33cb1f7ca74b0ac8cbf5d48d4
+PODFILE CHECKSUM: 9c3b4e2cb4a5a584ee48be41358d57c8ee1409dd
 
 COCOAPODS: 1.16.2
