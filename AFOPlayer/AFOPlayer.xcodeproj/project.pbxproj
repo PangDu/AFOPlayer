@@ -294,10 +294,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh",
+				"${PODS_ROOT}/../../../AFOFFMpeg/AFOFFMpeg/play/AFOMetalShaders.metal",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB_Privacy.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AFOMetalShaders.metal",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FMDB_Privacy.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

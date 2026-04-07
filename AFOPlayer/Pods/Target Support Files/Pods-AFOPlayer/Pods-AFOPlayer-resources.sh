@@ -97,9 +97,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/../../../AFOFFMpeg/AFOFFMpeg/play/AFOMetalShaders.metal"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB_Privacy.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/../../../AFOFFMpeg/AFOFFMpeg/play/AFOMetalShaders.metal"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB_Privacy.bundle"
 fi
 
