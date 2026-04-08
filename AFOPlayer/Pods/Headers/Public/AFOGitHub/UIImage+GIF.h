@@ -1,1 +1,0 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/UIImage+GIF.h

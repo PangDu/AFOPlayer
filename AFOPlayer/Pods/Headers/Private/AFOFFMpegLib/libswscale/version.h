@@ -1,1 +1,0 @@
-../../../../AFOFFMpegLib/FFmpeg/include/libswscale/version.h
