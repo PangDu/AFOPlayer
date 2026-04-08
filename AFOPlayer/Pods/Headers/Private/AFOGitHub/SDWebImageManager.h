@@ -1,0 +1,1 @@
+../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageManager.h
