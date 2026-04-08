@@ -32,10 +32,11 @@
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
-		897A4093F332FDFB44B76D36 /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */; };
+		3A37F28A4A8E55978792CB90 /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A65528F307EE7D35F0DA24 /* libPods-AFOPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068641A92C462BE2AD4F4CD4 /* Pods-AFOPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		14E2AF232F83573200C851BA /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
 		14F6917A2F83D61B004BD718 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		14F6917C2F83D632004BD718 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
@@ -70,9 +71,8 @@
 		2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppTabBarController+AFOAutoRotate.h"; sourceTree = "<group>"; };
 		2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppTabBarController+AFOAutoRotate.m"; sourceTree = "<group>"; };
 		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
-		47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.release.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		69A65528F307EE7D35F0DA24 /* libPods-AFOPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7548536B09274565819B58 /* Pods-AFOPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.release.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				2404874420083C2F00D369FB /* CoreImage.framework in Frameworks */,
 				2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */,
 				2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */,
-				897A4093F332FDFB44B76D36 /* libPods-AFOPlayer.a in Frameworks */,
+				3A37F28A4A8E55978792CB90 /* libPods-AFOPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 				2404874020083C2F00D369FB /* CoreMedia.framework */,
 				2404873D20083C1A00D369FB /* AudioToolbox.framework */,
 				2404873B20083C0F00D369FB /* AVFoundation.framework */,
-				BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */,
+				69A65528F307EE7D35F0DA24 /* libPods-AFOPlayer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 		9674A06D8A02C8DC5EA24183 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */,
-				47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */,
+				068641A92C462BE2AD4F4CD4 /* Pods-AFOPlayer.debug.xcconfig */,
+				BF7548536B09274565819B58 /* Pods-AFOPlayer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -223,11 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 240B10A22007A5F70007F2F3 /* Build configuration list for PBXNativeTarget "AFOPlayer" */;
 			buildPhases = (
-				9BD9E0D2C5514C4CD486DC57 /* [CP] Check Pods Manifest.lock */,
+				48740CA1E34932A7E6CC46DD /* [CP] Check Pods Manifest.lock */,
 				240B10882007A5F70007F2F3 /* Sources */,
 				240B10892007A5F70007F2F3 /* Frameworks */,
 				240B108A2007A5F70007F2F3 /* Resources */,
-				342A96153C3C95C3811CE18E /* [CP] Copy Pods Resources */,
+				0EF2F063E3833ACF43E5590F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,7 +291,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		342A96153C3C95C3811CE18E /* [CP] Copy Pods Resources */ = {
+		0EF2F063E3833ACF43E5590F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,7 +309,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BD9E0D2C5514C4CD486DC57 /* [CP] Check Pods Manifest.lock */ = {
+		48740CA1E34932A7E6CC46DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,7 +472,7 @@
 		};
 		240B10A32007A5F70007F2F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */;
+			baseConfigurationReference = 068641A92C462BE2AD4F4CD4 /* Pods-AFOPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_DEBUG_INFORMATION_LEVEL = default;
@@ -504,7 +504,7 @@
 		};
 		240B10A42007A5F70007F2F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */;
+			baseConfigurationReference = BF7548536B09274565819B58 /* Pods-AFOPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_DEBUG_INFORMATION_LEVEL = default;
