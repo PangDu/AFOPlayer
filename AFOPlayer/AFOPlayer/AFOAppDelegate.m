@@ -27,6 +27,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.rootViewController = self.tabBarController;
+    // Hold a strong reference to AFOMediaPlayController to prevent premature deallocation
     [[AFODelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance]];
     [self.window makeKeyAndVisible];
     return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
