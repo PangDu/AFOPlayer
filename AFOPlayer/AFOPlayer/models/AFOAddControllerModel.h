@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AFODelegateExtension/AFOTabRootControllerProviding.h>
 
 @class AFOAppTabBarController;
 

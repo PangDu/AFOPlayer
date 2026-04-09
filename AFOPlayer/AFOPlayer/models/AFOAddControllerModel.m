@@ -39,9 +39,7 @@
 
 - (nullable UIViewController *)rootViewControllerFromTabFactory:(id)instance {
     UIViewController *show = nil;
-    if ([instance conformsToProtocol:@protocol(AFOTabRootControllerProviding)]) {
-        show = [(id<AFOTabRootControllerProviding>)instance returnController];
-    } else if ([instance respondsToSelector:@selector(returnController)]) {
+    if ([instance respondsToSelector:@selector(returnController)]) {
         // 兼容未显式声明协议的模块（如外部 Pod）
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

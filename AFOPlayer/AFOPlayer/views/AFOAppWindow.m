@@ -12,6 +12,5 @@
 @end
 @implementation AFOAppWindow
 - (void)dealloc{
-//    NSLog(@"dealloc AFOAppWindow");
 }
 @end
