@@ -14,16 +14,18 @@
 @implementation AFOAddControllerModel
 #pragma mark ------ 初始化
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController{
-    __block NSMutableArray *array = [[NSMutableArray alloc] init];
-    [self.controllerArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSString *obj in self.controllerArray) {
         Class class = NSClassFromString(obj);
-        id controller = [[class alloc] init];
-        if ([controller respondsToSelector:@selector(returnController)]) {
-                id show   = [controller performSelector:@selector(returnController)];
-            [array addObjectAFOAbnormal:show];
+        if (class) {
+            id controller = [[class alloc] init];
+            if ([controller respondsToSelector:@selector(returnController)]) {
+                id show = [controller performSelector:@selector(returnController)];
+                [array addObject:show];
+            }
         }
-    }];
-    [tabBarController setViewControllers:array];
+    }
+    tabBarController.viewControllers = array;
 }
 #pragma mark ------ property
 - (NSArray *)controllerArray{
@@ -32,7 +34,7 @@
 //                             @"AFOPlayListForeign"];
 //    }
     if (!_controllerArray) {
-        _controllerArray = @[@"AFOPlayListForeign"];
+        _controllerArray = @[@"AFOPLMainController"];
     }
     return _controllerArray;
 }

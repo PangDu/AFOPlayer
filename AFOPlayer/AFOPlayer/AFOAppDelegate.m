@@ -19,17 +19,27 @@
 - (AFOAppTabBarController *)tabBarController {
     if (!_tabBarController) {
         _tabBarController = [[AFOAppTabBarController alloc] init];
-        [self.addModel controllerInitialization:_tabBarController];
+        // [self.addModel controllerInitialization:_tabBarController]; // 移到 AFOAppTabBarController 的 viewDidLoad
     }
     return _tabBarController;
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.rootViewController = self.tabBarController;
+
+    self.window.rootViewController = self.tabBarController; // 暂时注释掉TabBarController的设置
+
+    NSLog(@"AFOAppDelegate: window.rootViewController: %@", self.window.rootViewController);
+    NSLog(@"AFOAppDelegate: window.isKeyWindow: %d", self.window.isKeyWindow);
+    NSLog(@"AFOAppDelegate: window.hidden: %d", self.window.hidden);
+
     // Hold a strong reference to AFOMediaPlayController to prevent premature deallocation
     [[AFODelegateForeign shareInstance] addImplementationQueueTarget:(id<UIApplicationDelegate>)[AFORouterManager shareInstance]];
     [self.window makeKeyAndVisible];
+
+    NSLog(@"AFOAppDelegate: After makeKeyAndVisible - window.isKeyWindow: %d", self.window.isKeyWindow);
+    NSLog(@"AFOAppDelegate: After makeKeyAndVisible - window.hidden: %d", self.window.hidden);
+
     return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
