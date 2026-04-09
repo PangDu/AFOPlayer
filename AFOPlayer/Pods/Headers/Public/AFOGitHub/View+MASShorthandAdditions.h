@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/Masonry/View+MASShorthandAdditions.h
+../../../../../../AFOGitHub/AFOGitHub/Masonry/View+MASShorthandAdditions.h

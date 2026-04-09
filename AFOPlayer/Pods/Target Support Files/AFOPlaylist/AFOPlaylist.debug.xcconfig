@@ -10,5 +10,5 @@ PODS_TARGET_SRCROOT = ${PODS_ROOT}/../../../AFOPlaylist
 PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_ROOT}/AFOFFMpegLib/FFmpeg/lib" "${PODS_ROOT}/AFOGitHub/AFOGitHub/SDWebImage/lib" "${PODS_ROOT}/AFOlibyuv/libyuv/lib" "${PODS_ROOT}/AFOx264/x264/lib" "${PODS_ROOT}/libxvidcore/libxvidcore/lib"
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_ROOT}/../../../AFOGitHub/AFOGitHub/SDWebImage/lib" "${PODS_ROOT}/AFOFFMpegLib/FFmpeg/lib" "${PODS_ROOT}/AFOlibyuv/libyuv/lib" "${PODS_ROOT}/AFOx264/x264/lib" "${PODS_ROOT}/libxvidcore/libxvidcore/lib"
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

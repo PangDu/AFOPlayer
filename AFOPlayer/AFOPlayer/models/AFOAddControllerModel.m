@@ -6,8 +6,6 @@
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 
-#import "AFOAddControllerModel.h"
-
 #import "AFOAppTabBarController.h"
 #import <UIKit/UIKit.h>
 

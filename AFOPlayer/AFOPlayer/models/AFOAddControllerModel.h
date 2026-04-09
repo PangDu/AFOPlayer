@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFODelegateExtension/AFOTabRootControllerProviding.h>
 
 @class AFOAppTabBarController;
-
-/// Tab 根控制器需实现此方法（建议在业务类上声明遵循本协议，便于静态检查）。
-@protocol AFOTabRootControllerProviding <NSObject>
-- (UIViewController *)returnController;
-@end
 
 @interface AFOAddControllerModel : NSObject
 

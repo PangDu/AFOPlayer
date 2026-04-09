@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageImageIOCoder.h
+../../../../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageImageIOCoder.h
