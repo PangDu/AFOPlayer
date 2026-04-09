@@ -2,6 +2,7 @@
 #import "AFOAppTabBarController.h"
 #import "AFOAddControllerModel.h"
 #import "AFORouterManager.h"
+#import "AFOMemoryPressure.h"
 
 @interface AFOAppDelegate ()
 
@@ -78,6 +79,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+#if DEBUG
+    NSLog(@"AFOAppDelegate: applicationDidReceiveMemoryWarning");
+#endif
+    [[NSNotificationCenter defaultCenter] postNotificationName:AFOApplicationDidReceiveMemoryWarningNotification
+                                                        object:application
+                                                      userInfo:nil];
 }
 
 @end

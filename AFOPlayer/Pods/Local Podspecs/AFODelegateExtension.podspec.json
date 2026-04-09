@@ -15,7 +15,7 @@
     "git": "https://github.com/PangDuTechnology/AFODelegateExtension.git",
     "tag": "0.0.7"
   },
-  "source_files": "AFODelegateExtension/**/*.{h,m}",
-  "public_header_files": "AFODelegateExtension/**/*.h",
+  "source_files": "AFODelegateExtension/*.{h,m}",
+  "public_header_files": "AFODelegateExtension/*.h",
   "requires_arc": true
 }

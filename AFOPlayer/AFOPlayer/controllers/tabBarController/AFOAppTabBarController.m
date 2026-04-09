@@ -29,6 +29,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+#if DEBUG
+    NSLog(@"AFOAppTabBarController: didReceiveMemoryWarning");
+#endif
 }
 
 #pragma mark - 旋转

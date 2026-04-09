@@ -11,6 +11,4 @@
 @interface AFOAppWindow ()
 @end
 @implementation AFOAppWindow
-- (void)dealloc{
-}
 @end
