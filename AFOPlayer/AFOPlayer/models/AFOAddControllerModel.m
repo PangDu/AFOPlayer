@@ -1,5 +1,5 @@
 //
-//  AFOAppWindowViewModel.m
+//  AFOAddControllerModel.m
 //  AFOPlayer
 //
 //  Created by xueguang xian on 2017/12/13.
@@ -7,35 +7,62 @@
 //
 
 #import "AFOAddControllerModel.h"
+
+#import "AFOAppTabBarController.h"
+#import <UIKit/UIKit.h>
+
 @interface AFOAddControllerModel ()
 
-@property (nullable, nonatomic, strong) NSArray<NSString *> *controllerArray;
+@property (nullable, nonatomic, copy) NSArray<NSString *> *controllerArray;
+
 @end
+
 @implementation AFOAddControllerModel
-#pragma mark ------ 初始化
-- (void)controllerInitialization:(AFOAppTabBarController *)tabBarController{
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (NSString *obj in self.controllerArray) {
-        Class class = NSClassFromString(obj);
-        if (class) {
-            id controller = [[class alloc] init];
-            if ([controller respondsToSelector:@selector(returnController)]) {
-                id show = [controller performSelector:@selector(returnController)];
-                [array addObject:show];
-            }
+
+#pragma mark - Public
+
+- (void)controllerInitialization:(AFOAppTabBarController *)tabBarController {
+    NSMutableArray<UIViewController *> *array = [NSMutableArray array];
+    for (NSString *className in self.controllerArray) {
+        Class cls = NSClassFromString(className);
+        if (!cls) {
+            continue;
+        }
+        id instance = [[cls alloc] init];
+        UIViewController *root = [self rootViewControllerFromTabFactory:instance];
+        if (root) {
+            [array addObject:root];
         }
     }
-    tabBarController.viewControllers = array;
+    tabBarController.viewControllers = [array copy];
 }
-#pragma mark ------ property
-- (NSArray *)controllerArray{
-//    if (!_controllerArray) {
-//        _controllerArray = @[@"AFOHPForeign",
-//                             @"AFOPlayListForeign"];
-//    }
+
+#pragma mark - Private
+
+- (nullable UIViewController *)rootViewControllerFromTabFactory:(id)instance {
+    UIViewController *show = nil;
+    if ([instance conformsToProtocol:@protocol(AFOTabRootControllerProviding)]) {
+        show = [(id<AFOTabRootControllerProviding>)instance returnController];
+    } else if ([instance respondsToSelector:@selector(returnController)]) {
+        // 兼容未显式声明协议的模块（如外部 Pod）
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        show = [instance performSelector:@selector(returnController)];
+#pragma clang diagnostic pop
+    }
+    if ([show isKindOfClass:[UIViewController class]]) {
+        return show;
+    }
+    return nil;
+}
+
+#pragma mark - Properties
+
+- (NSArray<NSString *> *)controllerArray {
     if (!_controllerArray) {
         _controllerArray = @[@"AFOPLMainController"];
     }
     return _controllerArray;
 }
+
 @end

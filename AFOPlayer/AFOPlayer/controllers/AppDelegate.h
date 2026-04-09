@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AFOAppWindow.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) AFOAppWindow              *window;
 @end
