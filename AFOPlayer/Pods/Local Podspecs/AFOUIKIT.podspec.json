@@ -43,6 +43,11 @@
       "name": "viewController",
       "source_files": "AFOUIKIT/viewController/*.{h,m}",
       "public_header_files": "AFOUIKIT/viewController/*.h"
+    },
+    {
+      "name": "uiimage",
+      "source_files": "AFOUIKIT/uiimage/*.{h,m}",
+      "public_header_files": "AFOUIKIT/uiimage/*.h"
     }
   ]
 }

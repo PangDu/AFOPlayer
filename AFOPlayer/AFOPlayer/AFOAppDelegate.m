@@ -2,7 +2,6 @@
 #import "AFOAppTabBarController.h"
 #import "AFOAddControllerModel.h"
 #import "AFORouterManager.h"
-#import "AFOMemoryPressure.h"
 
 @interface AFOAppDelegate ()
 
@@ -85,9 +84,6 @@
 #if DEBUG
     NSLog(@"AFOAppDelegate: applicationDidReceiveMemoryWarning");
 #endif
-    [[NSNotificationCenter defaultCenter] postNotificationName:AFOApplicationDidReceiveMemoryWarningNotification
-                                                        object:application
-                                                      userInfo:nil];
 }
 
 @end

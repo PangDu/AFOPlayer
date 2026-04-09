@@ -177,11 +177,13 @@ PODS:
     - AFOUIKIT/collectionView (= 0.0.8)
     - AFOUIKIT/navigationController (= 0.0.8)
     - AFOUIKIT/tabBarController (= 0.0.8)
+    - AFOUIKIT/uiimage (= 0.0.8)
     - AFOUIKIT/viewController (= 0.0.8)
     - AFOUIKIT/window (= 0.0.8)
   - AFOUIKIT/collectionView (0.0.8)
   - AFOUIKIT/navigationController (0.0.8)
   - AFOUIKIT/tabBarController (0.0.8)
+  - AFOUIKIT/uiimage (0.0.8)
   - AFOUIKIT/viewController (0.0.8)
   - AFOUIKIT/window (0.0.8)
   - AFOViews (0.0.2)
@@ -244,7 +246,7 @@ SPEC CHECKSUMS:
   AFORouter: 56a608df04dbfb17afeb59376d025af055bdafc9
   AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
-  AFOUIKIT: 087c5e0c26482b0f415b8b3b698405b6d97826fb
+  AFOUIKIT: 6651a7729d4b584b6a9f13135c5775145f5ec318
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
   AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
   FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6

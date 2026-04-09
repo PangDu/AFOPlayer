@@ -32,7 +32,6 @@
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
-		A1B2C3D42F90000100AF0001 /* AFOMemoryPressure.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D32F90000100AF0001 /* AFOMemoryPressure.m */; };
 		A1B2C3D72F90000100AF0002 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D62F90000100AF0002 /* ImageIO.framework */; };
 		B2AE60309D4F5C383ADD60EB /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */; };
 /* End PBXBuildFile section */
@@ -75,8 +74,6 @@
 		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
 		53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA26D668BCB205E33B8C39 /* Pods-AFOPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.release.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		A1B2C3D12F90000100AF0000 /* AFOMemoryPressure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOMemoryPressure.h; sourceTree = "<group>"; };
-		A1B2C3D32F90000100AF0001 /* AFOMemoryPressure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOMemoryPressure.m; sourceTree = "<group>"; };
 		A1B2C3D62F90000100AF0002 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -167,7 +164,6 @@
 		240B108E2007A5F70007F2F3 /* AFOPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2C3DA2F90000100AF00FF /* utilities */,
 				2408BAC7200856870049060F /* views */,
 				2408BAD9200856870049060F /* models */,
 				2408BAD5200856870049060F /* controllers */,
@@ -222,15 +218,6 @@
 				9AEA26D668BCB205E33B8C39 /* Pods-AFOPlayer.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		A1B2C3DA2F90000100AF00FF /* utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D12F90000100AF0000 /* AFOMemoryPressure.h */,
-				A1B2C3D32F90000100AF0001 /* AFOMemoryPressure.m */,
-			);
-			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B2C3D42F90000100AF0001 /* AFOMemoryPressure.m in Sources */,
 				2408BAE3200856870049060F /* AFOAppTabBarController.m in Sources */,
 				2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */,
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
