@@ -56,7 +56,7 @@
 
 - (NSArray<NSString *> *)controllerArray {
     if (!_controllerArray) {
-        _controllerArray = @[@"AFOPLMainController"];
+        _controllerArray = @[ @"AFOPLMainController" ];
     }
     return _controllerArray;
 }

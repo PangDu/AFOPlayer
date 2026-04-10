@@ -152,15 +152,15 @@ PODS:
     - AFOSchedulerCore
     - AFOSQLite
     - AFOUIKIT
-  - AFORouter (0.0.9):
-    - AFORouter/manager (= 0.0.9)
-    - AFORouter/router (= 0.0.9)
+  - AFORouter (0.0.13):
+    - AFORouter/manager (= 0.0.13)
+    - AFORouter/router (= 0.0.13)
     - AFOSchedulerCore
-  - AFORouter/manager (0.0.9):
+  - AFORouter/manager (0.0.13):
     - AFOFoundation
     - AFORouter/router
     - AFOSchedulerCore
-  - AFORouter/router (0.0.9):
+  - AFORouter/router (0.0.13):
     - AFOSchedulerCore
   - AFOSchedulerCore (0.0.2):
     - AFOSchedulerCore/homePage (= 0.0.2)
@@ -243,7 +243,7 @@ SPEC CHECKSUMS:
   AFOGitHub: cc0f08eec5c410cfdd83a876d00cec3f59bc0c39
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFOPlaylist: 5273cf8da3e9e891a0ac16fc4049cc6ff973d436
-  AFORouter: 56a608df04dbfb17afeb59376d025af055bdafc9
+  AFORouter: e7ecdd2023d64a99f56b8db96987955a73a363b7
   AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
   AFOUIKIT: 6651a7729d4b584b6a9f13135c5775145f5ec318

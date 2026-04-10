@@ -15,6 +15,7 @@
 #import <AFOUIKIT/AFOUIKIT.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFORouter/AFORouter.h>
+#import <AFORouter/AFORouting.h>
 #import <AFODelegateExtension/AFODelegateExtension.h>
 /*---------------------------------------------------------*/
 /*------首页------*/

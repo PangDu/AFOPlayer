@@ -1,6 +1,6 @@
 {
   "name": "AFORouter",
-  "version": "0.0.9",
+  "version": "0.0.13",
   "summary": "The router.",
   "description": "Used to pass values between pages.",
   "homepage": "https://github.com/PangDuTechnology/AFORouter.git",
@@ -13,10 +13,20 @@
   },
   "source": {
     "git": "https://github.com/PangDuTechnology/AFORouter.git",
-    "tag": "0.0.9"
+    "tag": "0.0.13"
   },
-  "source_files": "AFORouter/AFORouter.h",
-  "public_header_files": "AFORouter/AFORouter.h",
+  "source_files": [
+    "AFORouter/AFORouter.h",
+    "AFORouter/AFORouting.{h,m}"
+  ],
+  "public_header_files": [
+    "AFORouter/AFORouter.h",
+    "AFORouter/AFORouting.h"
+  ],
+  "default_subspecs": [
+    "router",
+    "manager"
+  ],
   "requires_arc": true,
   "dependencies": {
     "AFOSchedulerCore": []
