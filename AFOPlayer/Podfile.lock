@@ -152,6 +152,7 @@ PODS:
     - AFOSchedulerCore
     - AFOSQLite
     - AFOUIKIT
+    - FMDB (~> 2.7)
   - AFOPlaylist/Tests (0.0.19):
     - AFOFFMpeg
     - AFOFoundation
@@ -160,6 +161,7 @@ PODS:
     - AFOSchedulerCore
     - AFOSQLite
     - AFOUIKIT
+    - FMDB (~> 2.7)
   - AFORouter (0.0.13):
     - AFORouter/manager (= 0.0.13)
     - AFORouter/router (= 0.0.13)
@@ -251,7 +253,7 @@ SPEC CHECKSUMS:
   AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: cc0f08eec5c410cfdd83a876d00cec3f59bc0c39
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
-  AFOPlaylist: aee474de8a6eabc91b1f9fdfcc42a9e5cc373f1e
+  AFOPlaylist: b0d541178da69868e09b6c8535c50f29450f519d
   AFORouter: e7ecdd2023d64a99f56b8db96987955a73a363b7
   AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392

@@ -26,6 +26,9 @@
     "AFOUIKIT": [],
     "AFOFFMpeg": [],
     "AFOSQLite": [],
+    "FMDB": [
+      "~> 2.7"
+    ],
     "AFOGitHub": []
   },
   "testspecs": [

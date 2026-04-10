@@ -55,22 +55,22 @@
 		048792472041858B410302851BFDC84D /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E1396A17570608B2342F5BFA63A8D0 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		04898B7DAB3282FFB82BC900647D4570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		06155E4C551F962DD19491A43C993EE6 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = F4525C78390ABFF4176F2A08121460D1 /* UIScrollView+SVInfiniteScrolling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		066EA67A89C94170B2D7E301C6AC3B1B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6A572984BF41D4BF87809BE418BEAC /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		07BD93361DC62A5A93133BB1041ACB11 /* AFOMediaTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = D7330EDF45ED1B5A6F97418DBB982F21 /* AFOMediaTimer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		07E28F62D9E342D019230768DD076446 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = F47039188AAA94C5A833AB587C3D18E1 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		08E7C09932C64AC91C81E1359183AB75 /* AFOPLSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE2DA8BBDC0634AAB9AB8F5B357F36 /* AFOPLSQLiteManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0A4627D19BAC71432B8608279D354C3D /* AFOSchedulerBaseClass+AFOPlayList.h in Headers */ = {isa = PBXBuildFile; fileRef = 54ACEB4D8533610EC2577811493C0371 /* AFOSchedulerBaseClass+AFOPlayList.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0A9E412303416078C3121EA03F70DF46 /* AFOMetalVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = D637D268269C21A28D2C719C4137092B /* AFOMetalVideoView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0AA85F2859E77746A6ECD740927F5D7A /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CA25F9A937BF66D64FD8A1FB0ACC57 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0AB2D59B0BA3762F7409185F1A1A35B6 /* AFOWeakInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E745C4AAAD17E6930D6B54A58A9E388 /* AFOWeakInstance.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0B067C0914D77455D600201A60CA475A /* AFOPLMainCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C47545A5056066C3E136340C7E559A /* AFOPLMainCollectionDataSource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0AC547665EB39EE56B354A904A3A1525 /* AFOPLCorresponding+GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A375647FC2431070118A5632BD97008 /* AFOPLCorresponding+GCD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B6F1BD7331DC2A48212A4AAC372A336 /* AFOPLThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E2F2B498AA067B436372EF3F1D6677 /* AFOPLThumbnail.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B9845C1D1C163B8A9F663F988D1608B /* AFOPLCorresponding+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 5332A57DA4ABCEEE7BDA2227B84C9DD3 /* AFOPLCorresponding+GCD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0C449E90E2B21A5ED75309BD9C104245 /* AFOMediaView.h in Headers */ = {isa = PBXBuildFile; fileRef = 08455EDE033B7B35177F392A8836119B /* AFOMediaView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E120D43B78832779B671ECFD38C1751 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2984A1BEF29809C838F4539F5C0655E1 /* FMDB-dummy.m */; };
+		0D56D95E41C8F95EE15E8DC15ED2B445 /* AFOFMDBForeignInterface+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9FE44FFFC9C7AC5A98665B1638336 /* AFOFMDBForeignInterface+Dictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0D66ADE52846B0E5770D340EDC2701D5 /* AFOReadDirectoryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7A08EE3F8C60C00D11046C72E88C2 /* AFOReadDirectoryFile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0D88A673C72E978AB84909F23F1481C4 /* AFOPLSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE2DA8BBDC0634AAB9AB8F5B357F36 /* AFOPLSQLiteManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F44CC2067B7340F0A8FF73BAF3BC820 /* FBKVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = A3D32A5E9BA6DB373BC4A073DB163832 /* FBKVOController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		10005743B18D6673F92B29F0299F0A2B /* AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A716A7A5F0E63630922022DA43146BDF /* AFOPLMainManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1041A2B166D97280F27F938B54CEFE9D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D80553F7C5A6A1854954FCB55264733 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		10AB6A3CE1243B5ECB9BB9B350AA954A /* AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD02AB0AE38811E317E6E707EA02114 /* AFOPLMainManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F94E6CCC29AD139B7EF559586DD1B62 /* AFOPLMainCellDefaultLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD15ADCA9EAB564F74E87883E4552323 /* AFOPLMainCellDefaultLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		10E148F5F45745B3409E43305B9C22E5 /* NSObject+AFOScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CA37B69016BE6282004AB3A06C6F82 /* NSObject+AFOScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		10EE2B4EA36369FF6279D88FBA1F6301 /* AFOFMDBForeignInterface+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F338EC9819A6556B33D230ECA7AF956 /* AFOFMDBForeignInterface+Dictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		110A65D4838C1856D19DEA51A31BBC11 /* SDWebImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1841A57BF42101CCA552A747DC70EE /* SDWebImageCodersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		11D824D6B2DA03F91D5824527F3EE17D /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 37FFE307FE02DD602070A97247F926CC /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1289BC6D8D406CE35D896F68463F0B44 /* AFOSchedulerBaseClass+AFORouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C041A9A4DF79FF08ECF8FB7DC7F13CB0 /* AFOSchedulerBaseClass+AFORouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -78,15 +78,17 @@
 		13BD962751D013CEBFD2DC41C772B9B3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A2964D11DE125CC8C541C236D4F31BE2 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		14426CC3CD5FB1759AE7815C3CF6AA22 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B7088EB6412AF996C1E1D92E30C61474 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		15232D1528927C1FD08917DA2906516D /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C9EEE4CC3C4010CCA4ABA39CD6E3BB /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15B53C76CCEA4B631E6F087B6823A4AA /* AFOPLSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C6EC945202B2ABF8F951FFC9DEFCDF9F /* AFOPLSQLiteManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		179A739C553E1870507184FC53BDF4B2 /* AFOAudioThreadDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4465EF9BDCD83A9673DDBA4A015FEBF3 /* AFOAudioThreadDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		184426150C0C27662045F5A838C284A9 /* AFOPLPlaylistRoutingDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5972468D7AB1D1938F1A661B6F9E06CB /* AFOPLPlaylistRoutingDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1817E9220990F6B5A5015466227C5159 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6A572984BF41D4BF87809BE418BEAC /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		193585A86EF8A64B9F9CCD5BA2ACD358 /* AFOPLMainFolderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F506C0CFD14376CE13BEDE105EC31 /* AFOPLMainFolderManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1992DDD3B10622848C52F39C69CBE7E2 /* AFOProgressSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E312BABB073F93D11CC60C237D8A593 /* AFOProgressSlider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1A66E06AF569C2CE1B67B9562605B0F8 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCD4B9D6D3EAA200C4927A8B8EEF04D /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1AF3AB89782A3F75501A6B3888E5889F /* AFOVideoFrameYUV.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE3F859641929C6E115A4226FC43DF9 /* AFOVideoFrameYUV.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1B21833A937B6E925FC9CA2D5FBB3681 /* NSArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF7321494ECED4FB7420AE41AD1858E /* NSArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1B89CF355B6BD7D8F2E502436C6DA36B /* AFODelegateForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CA150F20F8B958A804F66090D4CF8E /* AFODelegateForeign.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1BD5FD4F1C74A5FF2E336236251C5322 /* AFOPLMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BDDD01EBC247448EBCA959E57345C6 /* AFOPLMainController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1BDBBDD0F34ECDF839DF156E0E4F56AD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD11834211137E7D8C114767A4EE039 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1CBA388098FB3598D4984DE6926F11A6 /* AFOPLCorresponding+GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A375647FC2431070118A5632BD97008 /* AFOPLCorresponding+GCD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D11DDBDD5F69130630583B5C8F270E6 /* AFONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED2DF49423C7A168FF35917EEBBBBAA /* AFONavigationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D71AA39CF7EA0BE59DB2BF59290A5D9 /* AFOPLMainListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51271420B9B88DF489065694DF1329 /* AFOPLMainListViewModelTests.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1DE3EACE26CACDBFFD2DF7723241FE43 /* AFOGitHub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4365DFCFC0825F4C2E28F3ABA7C939E4 /* AFOGitHub-dummy.m */; };
@@ -98,73 +100,71 @@
 		23DD220F9F92A428FC667804C73C38BE /* AFOMediaForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C056B974E9396CDB78F7EC708FE0033 /* AFOMediaForeignInterface.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2430DECDFC434AA8609FA3EE3CFFEF05 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5CDCFA2EFCFF8666E7137B6D23B4E3 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		24B94CE9F662EC09133A8473556B4585 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FD1D464A35FCBB3ECA0525D9D099811 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		263EC4478987D2A58DE0CD86D1FBCEB2 /* AFOPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = BB50877FFC87B33C726E07B35358DCB5 /* AFOPlaylist.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26ABC7C8E75834F469B4FB48CE146ED6 /* AFOFMDBForeignInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = DE54CBE17801D791332F68BA42A36815 /* AFOFMDBForeignInterface.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27787054874916632198E67136ACC5A3 /* AFOFMDBForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DD6E501B248123E55DC6DC015EBFD /* AFOFMDBForeignInterface.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		27B1DF1B0274CCBF9E6B70EF298BFF5D /* NSString+URLSchemes.h in Headers */ = {isa = PBXBuildFile; fileRef = C2937E783659382717D5FD577C4B7D1F /* NSString+URLSchemes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		27D9B43DB4620255FA2D50FD7EFFB347 /* NSFileManager+AFOSandBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 855613600713D8D39AD41F901B1F4294 /* NSFileManager+AFOSandBox.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		27E5B4CE8D4C472B8F7868008787D4E7 /* NSString+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F98419F012024BD9FDF4F07ED36CCDE /* NSString+Formatting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		282F5AD0DBAC52FB35F214FA8D955168 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7924D61E8CEADBA4E18B96C0DE3A71E0 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		28ECE8E11CE673BDDFD993BFA8552CB4 /* AFODirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E138DF58D4F9EC9DAE9AE961DC9EDDA /* AFODirectoryWatcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28D8CDDC5816C3285A2209ABD2AD70D9 /* AFOPLCorresponding+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFA40053C1A73FC816650AC586644F1 /* AFOPLCorresponding+SQLite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		28F5C261030D65D3EF984DE1E3971527 /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E26EEE03C65D113B9F615C1C8B6242 /* JLRRouteRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		296BD922385706FDF52B0AB79130F992 /* AFOSchedulerCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD80E172DCC4616CB787D80ECA1CE92 /* AFOSchedulerCore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B7B9F0522B6B8F5D6EF6AD5F69F8CAD /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B41401E9FC2FAE3DAC765C4ACE424E /* FMResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2CE9D9C8959AFD60BC2F210DD2037425 /* AFORouterTypeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = FF75530F5F290532163790255518E265 /* AFORouterTypeAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2D0E8442378358F847C4FC355A23FB00 /* AFOPLCorresponding.m in Sources */ = {isa = PBXBuildFile; fileRef = 60502B5B65F6D145928924EC3FB7FFDC /* AFOPLCorresponding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D14F3EC7EB7D8FA93A21A30AE42CBF7 /* AFOMediaPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A69C39D3569E297A1BC9A8762FC5A7 /* AFOMediaPlayController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D6195757630240A724781EE94686A11 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E8CA9E440022902AD06E640BAC56F /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E90F7733DAB25528AC8345827997DED /* AFOSQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4F4041C457ABAAF6063005EF18FEB5 /* AFOSQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2EDCC3C05D1932E7D8F25343C4A1C009 /* AFOMediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C993DF494A9E2220429A991A50306638 /* AFOMediaManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2EF3A4BD7A5DB7B16B6EF29B83BAA317 /* AFOPLMainListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D9283476455ADA5348C33319DB50DE7B /* AFOPLMainListViewModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2F2A4EEA2E7CFA10D3B2AC9D139E5B81 /* INTUAutoRemoveObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F10AB4AC7FABFD49BF184C233C793C /* INTUAutoRemoveObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2F2AE8487BD83319F364C356CE6BAA6F /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B41401E9FC2FAE3DAC765C4ACE424E /* FMResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2F7B85BD363EED5C161C714AB2DBEAB5 /* AFOPlayListNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F57E5E72193B20883B7A0F038FB74C80 /* AFOPlayListNavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2FACE84605BA63C6254997B539C9FE63 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA469E86C5348B3656D7A121A13E856 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2FC6E7B1492FAA1B278BC35BCC42CB58 /* AFOPLMainCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B1D3B065A518423A8D481CC4A3345BE /* AFOPLMainCollectionCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		311E552052F0511980E3434A10704397 /* JLRRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B8977ACDDB15281CB0C734918977CD47 /* JLRRouteRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3309D308EEE980A5A0A4B88E77A9F559 /* AFOCountdownManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7F5E7B1ECE65090451E99DBFAA89BE /* AFOCountdownManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		33143C7B26221413335406981B8B1040 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F330D5851C2A4F3AA5A4854CD7BB49BD /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		33228A19523A9A4310C783AD327FDCF8 /* AFOMediaFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A811B4A85923ED42FF0B0A55763BBA /* AFOMediaFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3349C052F5D0D8B44F889F67113B648C /* AFOPLMainController+AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C9E2C25F166B74B86A0488EEBA2F53 /* AFOPLMainController+AFOPLMainManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		353B2073E404230AE86B576AE07ADA3B /* AFOPLMainEditorLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEE6664844B22A87C4648CFFA3849B /* AFOPLMainEditorLogic.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		35A2889666D63BE3BDAAE7FB0C42989F /* AFOReadDirectoryFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F6836BE68DFC450755F54E5AC8580B15 /* AFOReadDirectoryFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		35E3F295B55C7FFF0ECBE194EB8418F7 /* AFOWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EF434B6080DD6667CD530E2629569A17 /* AFOWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		364DFA5EE9CE91716218FA3CA4444875 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3322B3F185FB292370BDC2B6F7A5AF6E /* FMDB.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3692D8E1F68C7586FFA4ECBFD9415961 /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F45B573C35256C4CF1CAFCA3F6B78570 /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		379DEBAC52AF9AE3ED27A8F20F9A27A3 /* AFOMediaForeignInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E40EA6A3C31168AE4498C8F638B823B /* AFOMediaForeignInterface.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3821F47EB490C124C70A8F481CFC9809 /* AFOReadDirectoryFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F6836BE68DFC450755F54E5AC8580B15 /* AFOReadDirectoryFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38270FDC00BFC95D761F7F43C8141270 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB702D4811E317CFEBF1E0963F95E04F /* AFHTTPSessionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		38A2A79B744B1793404DF709E29F8F2F /* AFOPLMainCellDefaultLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD15ADCA9EAB564F74E87883E4552323 /* AFOPLMainCellDefaultLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3B454ED24A5538EECC94E788791B5BDA /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED6954435651A075690B526FB4815E9 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B6111F9D50C645B0FB708D108DA4AF0 /* AFOPlaylist-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A126B4B448C0929C99C96CBB645C0 /* AFOPlaylist-dummy.m */; };
 		3CA96D921470C801BD1FC73FD9E1DFFB /* UIViewController+CurrentController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6842227BFAB450B83DE82C6FE44AED8 /* UIViewController+CurrentController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3D20E397983E7110E6F18BD649916BD6 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 773D3AEC9A32A22CD1BBA6F80E28046B /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DDEBEBA847847A655576A1F301C6BB5 /* AFOSQLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB8A3433E56A417C9104AE0949B316 /* AFOSQLite-dummy.m */; };
 		3EE6E4F104A44B065E0E6C498553029B /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1408BB7BF0DD0AAA2EA09A8ECDB7BE /* FBKVOController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3FE64D36CB52F78C73088B4387D13D85 /* SDWebImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7D4CD8242B3A302AAAA1C68BFF7C3A /* SDWebImageFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		402AEFDD2EB6C6A35D713EA9C2DF3228 /* AFOCountdownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3936A422417C8D75C862F8C741A7A8F8 /* AFOCountdownManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4150544748321689C22CCAFF943EBFCD /* AFOPLMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BDDD01EBC247448EBCA959E57345C6 /* AFOPLMainController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		40F0051BC6463992FFA55E055C02F060 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BB385BA75BC123C57FB189CA17736E /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		414E1C5F7C4E569218A32D9BA173639F /* AFOPLCorresponding+SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F68876587521C7209781D2D14B7EDE /* AFOPLCorresponding+SQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4175D7A834F09261CFD2AB44296ECAEC /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E36B5FEF3465FF55F0814768020F84 /* UIProgressView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		429991ED3046B265821246AA3C326875 /* UIScrollView+SVInfiniteScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = D8FC74A71E268D37671B7EB74DFAF927 /* UIScrollView+SVInfiniteScrolling.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		43D828399E2FA3E77BD8F2E7666A3041 /* AFOMediaFrameImport.h in Headers */ = {isa = PBXBuildFile; fileRef = B21F80986798871B518FE6305113BA5B /* AFOMediaFrameImport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		43E76820804C9CBB837E0C43B3BD13D8 /* AFOMediaSeekFrame+Conditional.h in Headers */ = {isa = PBXBuildFile; fileRef = ED7EBE02686DDE68D6900351CC9F32B7 /* AFOMediaSeekFrame+Conditional.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		45068F23280E5B24E7349F1FE75E28EC /* AFORouterActionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E435B199658380C136090BE0AB4C28 /* AFORouterActionContext.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		45B6979824432950504C4D0606C12BBC /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF58ECF6A45FE7686F45C82A79B0F6D /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		45C6FDAE486F075CA62FBAE4436A8DFF /* AFOPLMainEditorLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEE6664844B22A87C4648CFFA3849B /* AFOPLMainEditorLogic.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		45FAAC90510417C4E5B8161639D8040C /* AFOTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = A0DFA3132C6D656840D7BDABB3A05B42 /* AFOTabBarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		463D48BFB230E27DA5B39E8D0169C63E /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E73B8F5D2727DFCB7BD74907358203 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46E1B96913694A49F452C60D73583390 /* NSString+URLSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = 012837FCA661FED1A6AE6E7E9547705E /* NSString+URLSchemes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		47166ED8D48CAEDB03CD4B2737C1BAA0 /* AFOSQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4F4041C457ABAAF6063005EF18FEB5 /* AFOSQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4737AE60AA2966A32D3146D3BD427358 /* AFOProgressSliderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD013D6AC84B0AACBDCF39044EF3F35 /* AFOProgressSliderManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		48761D83C7781B9E0233AB0765500D06 /* UIImage+AFOMemorySafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E232FE86607E915B6C0F6EB1C8F89D1 /* UIImage+AFOMemorySafe.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4A8852FFFEDFFF4B66FD83621F133882 /* AFOSchedulerInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 04080A67B46AED24CE91D100CA869E81 /* AFOSchedulerInvocation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4AE70DBC1BC128BCC6B4F5D35DC3125F /* AFORouterPresentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0BFD0E3DB1F857B09E886A30932A /* AFORouterPresentAction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C8CAC7C79C80D33F791C126BEAA363F /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FA66CFCD0EA7157A3059CFC7FC61E3 /* FMDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4D21E8A9721DFC00BB48F2DDF02274E8 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14D68C2E5967C5833F1AB7C11D26B7AF /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4E6A9B3FFBC4C1051CBE02A8ADCED85E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F330D5851C2A4F3AA5A4854CD7BB49BD /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4E8B2260EAD46FB85A6298077D217845 /* AFOTotalDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB5FA721BED8796B84616390CCDD775 /* AFOTotalDispatchManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4EAE567DFF99FC0C774541911FE4DA08 /* AFOPLThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E2F2B498AA067B436372EF3F1D6677 /* AFOPLThumbnail.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F29A1EE61C4FDE5A12247B406CE26A2 /* AFOPLMainCellDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9F7831B6D98781CA042346A8B18637 /* AFOPLMainCellDefaultLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		50DE5751F63D49B5E630260F1482C0EF /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 28491CDF4744B1933D86CF88325486FE /* UIWebView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		51D838DE5CFB125325A2A1A91F8F7F39 /* AFORouting.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE7821A4D74A83D3852AE033D8EF755 /* AFORouting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		51F0E75520B0B0834C0E922C6BADC652 /* AFOFMDBForeignInterface+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FE7D34F6F22410DC7157DCAC22091C /* AFOFMDBForeignInterface+SQLite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5292E3A724C180AA0B36F44B43E1CC5F /* AFOPLMainListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F73D080FE40E4890CA457EEB2DC16F /* AFOPLMainListViewModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		52970E96B9484D682518F16D0D4F2435 /* NSObject+AFOScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6E1C4A869F04C033C257A7179AD4D /* NSObject+AFOScheduler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		53D3EF6928C81400706451BB5F95B63A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 669AAB8513C108C9190857E075D2D2B8 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		529A7AF89EDD0AD29F6ABE8FC3559148 /* AFOPLThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 73CD64C9EB6708587547E1E63B062F9C /* AFOPLThumbnail.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		54CDB8588BA66020E56AA9A4E0B164B0 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = E2C63481BDDF9F69004941F063C994C8 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		55AEC69317DF4EC4DB997311EEE49615 /* AFOViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 007E65A6202EEE1D9197435B0C046A3B /* AFOViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		55C220E828CD67BC8E621278DC1C09B5 /* AFOPLThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 73CD64C9EB6708587547E1E63B062F9C /* AFOPLThumbnail.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		55FC0A724428C6DBDF7A913E85474D8D /* AFORouterTypeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B52722C2EB4061ACFE4A0E328F358B2 /* AFORouterTypeAction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5634A268A9022A2D7F45B3B77903BD4C /* AFOMediaErrorCodeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEFF1BA229F8B062630260782ABEF2B /* AFOMediaErrorCodeManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5657FC82D49BCA0649E6AF3E1C956BB3 /* AFOMediaConditional.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D13677B039C91334E4ACFFD7B6C2 /* AFOMediaConditional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		568BBC918E8C978007F8B884E508E5B4 /* AFOFMDBForeignInterface+SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 032719E487D5D9E1C1D5C4C2CDC144AC /* AFOFMDBForeignInterface+SQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5739D0C049FA7EB0C2DBEAA1E20E9948 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E9EF64DA6A0CDB7BEDC5E26946601 /* AFURLRequestSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		576B505B97C25F33583286CD5776A65D /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5D499E204733A0FF43A24DFE1E1C2F /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5796A23F98C3334984460C346DD9A75D /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 829733C8454951D0CF7A98CA1FB15F08 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -180,7 +180,7 @@
 		603E0B460466AD48D90C983A71B7AF53 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8E9DBEA0515B3886F69D2975273195 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		60A6E898A00AB689284D84BA09DCA561 /* NSDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD1A8BF384B939C78CC9902406800B2 /* NSDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		61317193CE237109EB748CFB95AE82C7 /* AFOAudioPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AA35761C42D564911195E87596C2E1 /* AFOAudioPacket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		614802D2FD8D94757F0AC5A2FA01F2ED /* AFOPLMainControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B6CA4436CF54575F56EF865F7EA7586A /* AFOPLMainControllerCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		618C3B2958A9F99EC8D7D963E1110997 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = F47039188AAA94C5A833AB587C3D18E1 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		61A7B6CC618B29E5FF8FB25E957FAD1D /* AFORouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BED841C0D22F19512EA8EE2398E23950 /* AFORouterManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		625168C24FFD723118FA5707359309CB /* GCDMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFAF719EE384F51288CB7B661D9AC9 /* GCDMulticastDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		626349FEB5524D27B344188B08014600 /* AFOAudioThreadDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AEEF7D58643861D813AC7A6346137C /* AFOAudioThreadDecoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -197,8 +197,8 @@
 		68CC684CF01D300713CB6C7B1540A6BD /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F7CB6044DAF0965CCE951842787EB768 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6999D40564BD0768B0CF0E691B52AB58 /* AFOGenerateImages.h in Headers */ = {isa = PBXBuildFile; fileRef = A2179D9A8520C88531312DD850A90188 /* AFOGenerateImages.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6A36412A0803DEE55BB75359B6AD4D60 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2C64B9931568CE353D972EE0204EC /* AFNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6AABB299443C4903FFFEDECF03D907A0 /* AFOPlayListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F0C506D0858A2AD1210FC8C049E83 /* AFOPlayListNavigationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6B6F2B90DA89CA104ED6C8112498ECDB /* AFOFFMpeg-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B3F3F81059D587E0F258A4CEBD6C6E /* AFOFFMpeg-dummy.m */; };
-		6B863A3C5816DB3760162D17A354B81F /* AFOPLCorresponding+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFA40053C1A73FC816650AC586644F1 /* AFOPLCorresponding+SQLite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6BEE9C1C98208008CB3791534B2C3998 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C87C3F1FD0F455B113964EC68B463347 /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6CD78A603216658D13FF8E5A10C1A77C /* NSString+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9246C4E333ABA7C5024FAF79650E3BA3 /* NSString+Dictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6D03566315E42836D8FE1B74DCCED3F0 /* AFOMediaPlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E52EB4D7BE19FB15D793B4F8F1D4612 /* AFOMediaPlayController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -206,143 +206,140 @@
 		6DA8A1E1DDAAEEC5F1B82533F85A9C00 /* AFOMediaSeekFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AB8F29B57789FDE924C7E6D683FDEB /* AFOMediaSeekFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6E4BA1156093EFB7846571BA148F2EBD /* AFOMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD13FA8E2796632D4B03B426F69F261 /* AFOMediaManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7001A1A1AF9DAA42EDEA1FD7755F1F86 /* AFOSchedulerBaseClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 720A361EC53AE33A08B234A9D2452682 /* AFOSchedulerBaseClass.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7148C0EF77B9350EF4FBB3663A14B2C0 /* AFOPLMainCollectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C6C03C21EABF2B542B99BA5C174F8D /* AFOPLMainCollectionDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7195C41251C975622CC2123CC9D3FCB0 /* AFOPLEditMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F4ADDF4BF47C19E8E1F2834C952102 /* AFOPLEditMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		71AE26AB606F6AB85B6EE9807F890DEF /* AFOSchedulerBaseClass+AFOHomePage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0A9D4085C1835CBBBA059D9C9493D0 /* AFOSchedulerBaseClass+AFOHomePage.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		74E3F17FB863021EDAA49C0B688B7A50 /* AFOPLEditMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F4ADDF4BF47C19E8E1F2834C952102 /* AFOPLEditMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		73A38B804C3C65C6D3FB41C708F7E1CD /* AFOPLMainCellDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9F7831B6D98781CA042346A8B18637 /* AFOPLMainCellDefaultLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		740F0E6D4CC3F2FB70D7185E587D9B74 /* AFOPLEditMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D487D03E1FDF65F6020C438A8C103F8 /* AFOPLEditMenuView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7590E70BC811049818383F3D208C19C4 /* AFOSchedulerBaseClass+AFORouter.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB00768E2D9B21170F6A85623A619CA /* AFOSchedulerBaseClass+AFORouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		761074AA740831109F37794E2D67F075 /* AFOAudioOutPut.m in Sources */ = {isa = PBXBuildFile; fileRef = AB81A3F55E00C5437374B0FA5DDAF994 /* AFOAudioOutPut.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		76EE5CC39A5C452A0D7AC98E6A0194CA /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F1F7A9EADC8C5F835BC9A08799E0C364 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		772494948DA7703D44D3A685BEAE1FB0 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2984A1BEF29809C838F4539F5C0655E1 /* FMDB-dummy.m */; };
 		785BBA11E917D03AFD412A5D1B501A83 /* AFOMediaYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = A1114F5B2167E5C4D1BCD6803E0E9670 /* AFOMediaYUV.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		795B38DE197B6C33E641C4AA9D1A3165 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BB385BA75BC123C57FB189CA17736E /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7A48CFAADE55BBE9A32C8C700639836A /* AFOCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59FFBC1E90CAE1838A0F7A94F9E64D35 /* AFOCollectionView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7B28B527D7B1B10C62AFC19078C094B6 /* AFOMediaSeekFrame+Conditional.m in Sources */ = {isa = PBXBuildFile; fileRef = 08687E505F7E3C4240DBBE276605B409 /* AFOMediaSeekFrame+Conditional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7B31D95CC976F09486553BE77562A82E /* JLRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CC150FCB570C0EA7C3AAD3F662794F4 /* JLRoutes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7BA7AC76FB00ABB27828CB2793604E5F /* AFOPlayListForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9877D8300DF0EF79FAE3DD38D7D1D /* AFOPlayListForeign.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C27C238185707049223DA8DE7CDDA84 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8B2DBE1145C52A110438EFDFAB41F1 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7CD866CAC73278BD8CFFF505E8E30966 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B6D910C8FF2FD1AFF7934D33681D2A /* UIButton+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7DFB187C35F980F438B8DDAD692CAD4D /* AFOPLSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C6EC945202B2ABF8F951FFC9DEFCDF9F /* AFOPLSQLiteManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7EAEFA8C5A6D61DBD2BB7434822E4204 /* AFOPLMainListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F73D080FE40E4890CA457EEB2DC16F /* AFOPLMainListViewModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7F8BCE65D905A6DD6536B1A774B1F7E4 /* AFOSchedulerPassValueDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF99C5722685C9E96BE7B06EC156A40 /* AFOSchedulerPassValueDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		82A8FF4C27A7F586A8BFE864F8AE5C57 /* AFOMediaPlayController+AFOOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8868D2F67124A8AA21786996962B68 /* AFOMediaPlayController+AFOOrientation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8377AC4A5B04D724FE89996ABA0711E8 /* AFOFMDBForeignInterface+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9FE44FFFC9C7AC5A98665B1638336 /* AFOFMDBForeignInterface+Dictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		851C6936C4102EE4F07A560470AD70C9 /* NSFileManager+AFOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E5F77D0CDC35FCF0EC2FB3F24A8010 /* NSFileManager+AFOOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		86E3AB3164FB3C4DB28C780B65C6DA01 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 647C2AA70BAC40C9DBFA030A5A0FF3D7 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		87E2AD253E682FF5B800CF357685EFA1 /* AFOSchedulerCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BA91EEF9F4F1F625021325F4D99E49 /* AFOSchedulerCore-dummy.m */; };
+		884CA01959BE4BDD6B9CB78CEA9C0BA6 /* AFOFMDBForeignInterface+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FE7D34F6F22410DC7157DCAC22091C /* AFOFMDBForeignInterface+SQLite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		88705C96FDEC186F01A809AE8021AB5C /* AFOMediaThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 03981DDF812AE355956A3A9F31FBB128 /* AFOMediaThumbnail.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88C031A932E5151A7E915E72FFBB91D3 /* AFOPLMainCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B1D3B065A518423A8D481CC4A3345BE /* AFOPLMainCollectionCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		894EA23B0F05F0EE90C032F49069EAD3 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27CEFE57414A5AAC7C099464390BBA /* UIActivityIndicatorView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		89971F0DE51413C1CB9C532868F528CA /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EF42439516A494C3355B06828BF5195B /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		89E916FFE3AB1F9FED234A3D3ED68EB9 /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E884B42662EA990637CBE1FE177D706 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		89EC345CDB48054EE30B0A21C20180D6 /* AFOCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A44632D316DED94B493D6A61DA214E3A /* AFOCollectionViewLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8A2EFEFA1A0817611E9BC1F1C45C8C1D /* AFOFMDBForeignInterface+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F338EC9819A6556B33D230ECA7AF956 /* AFOFMDBForeignInterface+Dictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8B9FE332C01AC86967FC4CF2D3319C95 /* AFORouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE1BE41B50C9FA2432F8F271E7802 /* AFORouter-dummy.m */; };
+		8C5E5BC662346CD5088ECCFC62BA4FFB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C255BBF8846D5ECF0FF27936C89379 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8C9F61E8584F2B3DE7BC7BCA1F052C9F /* UIViewController+CurrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 053637CC9721C295C3EFE99F1A1FD3A2 /* UIViewController+CurrentController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8CFEDB34991FBBB3D9DF0F2B0D9289F3 /* AFODirectoryWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2043346D6AC9E5546A7B4955E57F5B87 /* AFODirectoryWatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8D968AE0CBD994C07711ABD2C7558C00 /* NSDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 399922673053179A898A5DF25AE541A6 /* NSDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8DDAF215ED2A37E3B7270A7726DF9C38 /* AFOConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 369E1A23F55BB9D6874BBFF11AC9C27A /* AFOConfigurationManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E0D8958928B4E035FE1243E895A0369 /* AFOPLCorresponding.h in Headers */ = {isa = PBXBuildFile; fileRef = 462C01C468D7C7E24C6E99FE4358B3E2 /* AFOPLCorresponding.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8E5EAA6DA442EC8988306FD2121A5F48 /* AFOAudioDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6014DC95B7191533B4DB787723B93207 /* AFOAudioDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8F957A8CD7BFA4F77472B8BA28C3625A /* AFOPLMainFolderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B84A5DF02ADAE7F5EF8638F51CF96965 /* AFOPLMainFolderManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8FD1F21D2D3BA70BB13C127A633B1C66 /* AFOMediaPlayControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCCCC02B66696486F4AA31AACF52FE9 /* AFOMediaPlayControllerCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		90E6D6BAAF3C7A8AD85D5C51791C30F7 /* AFOCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E55CBE0D25894C1B9B3B7AE195AED4 /* AFOCollectionView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		916CFBD4DBE84439FAAD8F5A5D62ABFB /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73898DDB0264ED38170032FB256F8999 /* AFAutoPurgingImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		91E7668B3E731A2B632D39F8879539F2 /* AFOPLMainController+AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C9E2C25F166B74B86A0488EEBA2F53 /* AFOPLMainController+AFOPLMainManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		93727331DD445B64E4365F16D1E7DD25 /* AFOVideoFrameRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E12566C9E4FB7AC9A61EB9263FADEA /* AFOVideoFrameRGB.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9379DFB7FB5F19441448359D09603B68 /* AFODirectoryWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2043346D6AC9E5546A7B4955E57F5B87 /* AFODirectoryWatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9416A7A0BC6E52EB00E873C374C1C3BD /* AFOAudioOutPut.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA85311AE8A56F41E936985F1367059 /* AFOAudioOutPut.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		95C89B8AD0AAD8A5AF1CAE0EF07EB7FF /* JLRRouteDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CAD3B8E0CAEB71FE2032FF164D05704 /* JLRRouteDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95D31B36505F7177BF6C9A4EB965594D /* AFOPLMainCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C47545A5056066C3E136340C7E559A /* AFOPLMainCollectionDataSource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9608601FCD686676ACF44386F848A9BB /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = B6A2AAD725E70A701F349B6872995312 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97569B50F35BB1F0F81021493CC1D9C0 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1AF9E57E7EC3E923F9522A7F7FEE46 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		97AFAFB6552CFD47830EE9F500DBB026 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C255BBF8846D5ECF0FF27936C89379 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		97BA3BA4B02B9AF1324EB6F77D487719 /* AFONavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CC14DF2C3AC2B9386B582B49931091 /* AFONavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97EC03F0412AC49343C8BF6BC8772937 /* AFOPLMainCollectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C6C03C21EABF2B542B99BA5C174F8D /* AFOPLMainCollectionDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9873C368A3FC6ECF220F3E40C09FF595 /* Pods-AFOPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 846431102ED06AC04F18C763EDE46066 /* Pods-AFOPlayer-dummy.m */; };
-		9AD8E9CFA555C19E542BCCDE86284E36 /* AFOPLEditMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D487D03E1FDF65F6020C438A8C103F8 /* AFOPLEditMenuView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9B444B90AEDA4013E99E6CEB82B3ADEC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C85A01CEB08872030AA55F99304DA81 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B8FE7535732B65B11BD6E27C2F80E6E /* AFOPLCorrespondingCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F381A02B072FFCE76AFC196881A5BC1 /* AFOPLCorrespondingCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BE50C88A95CA301A19E19A8E5C2FF61 /* AFOPLMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70CC0241BB3EFE5CF336300F5E5BD1B /* AFOPLMainCollectionCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9C4F6217C577D3F7F9F91841185549A9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2D85FF2B2A0C24337A184FA14685B /* UIRefreshControl+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9C535D3DDE83B7C00598F8855C6BEA56 /* AFOCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3337609B02C602778E4CB8F012A34A08 /* AFOCollectionViewLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9CABC0049BD7FD27CC0F078D647B7054 /* AFOGenerateImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DA8FADE21288C079269C4339B767A /* AFOGenerateImages.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9CB3022F5BDD2988CCB4F1178AD1D1CC /* AFOSchedulerBaseClass+AFOHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 151A8BBB5CAD802151C5ED71CE84C58E /* AFOSchedulerBaseClass+AFOHomePage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D974F28E77063C6FF4BD5E8DC30AA74 /* AFOPLCorresponding+NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = BF26E730C8E27F3DFE8BD64714200653 /* AFOPLCorresponding+NSArray.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9DB523ED0BE89E01688D20BE9BDB142B /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D332C556C9A54B6BCCC56380D2BD7A7 /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9F3E240D69A69F54E7B2FBBCB338503D /* AFOProgressSliderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E0133A5FCD47465F3FA498E5F01649BA /* AFOProgressSliderManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A0A18B4C32A865090FB21335C52DDFEA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8D90258FCC20D216CAF5050941C650DC /* PrivacyInfo.xcprivacy */; };
 		A12E60CA7D04E86DB2BD4CE0C1B5B0BD /* AFOVideoFrameYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 964A055BF582E3E3FA827D8B1B18244E /* AFOVideoFrameYUV.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A3FD6BB8C566222D01FCAD117F3ADCC3 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 669AAB8513C108C9190857E075D2D2B8 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A423BACB6A09CAB3BF9DC98B47F88DBB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D80553F7C5A6A1854954FCB55264733 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A4BF95EADD1137675FD141D16C7644D6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 106D0AA6FBFCFC5BC99942C95857683B /* AFURLSessionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A58FD0EBA9362137F6E5635C90DBBC2B /* AFOPlayListNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F57E5E72193B20883B7A0F038FB74C80 /* AFOPlayListNavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5D9F5FF35925C52A1DFB83329F83D46 /* AFOPLMainController+Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E175452EA8132BA0BD5CAE6461C1752 /* AFOPLMainController+Operation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A603E1F81F1AAD8D869C25EED2049B6E /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B469E19D9E1484D0F06F84C7FEA077 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A71CD1F671B95E30A4F84D7DB77C3EF4 /* AFOPLMainController+Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E175452EA8132BA0BD5CAE6461C1752 /* AFOPLMainController+Operation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A814B5ED7284EB15634AD5AC80B6A1D2 /* AFOViews.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E107AB2927658B7C8023B876F608389 /* AFOViews.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A8B4FDE69DC6A58CE16FBFF632740559 /* AFOFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B886A69EE287583277267ACDC86EB /* AFOFoundation-dummy.m */; };
 		A9B6E0291376D736C032773A2B9EEFF3 /* AFOFFMpeg.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2AE72741D0468F8FDA81DDBF5842F8 /* AFOFFMpeg.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A9C701355539E608CBFC3157B352D600 /* AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A716A7A5F0E63630922022DA43146BDF /* AFOPLMainManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AB84F5A42E948F06296B4F941B116D7D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B37A8531FF597CD49FA52619434F01F /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AE315743E360D5D850FC08BCF4E98F83 /* AFODelegateExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D12A1B7E00D0FDEF3F01BB18771D1E /* AFODelegateExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B06E527DA65CD6A59AED525080D8AED0 /* AFOSQLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB8A3433E56A417C9104AE0949B316 /* AFOSQLite-dummy.m */; };
-		B07B5A7C5E3B1FAAAD9310449324F82D /* AFOPlayListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F0C506D0858A2AD1210FC8C049E83 /* AFOPlayListNavigationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B142753F843955C9E53E9449DEBFB178 /* NSString+Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 9074C8407E10789A764205F4A174B401 /* NSString+Formatting.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B2242344E783B31EB5183AA857475951 /* JLRRouteHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A9AB674E29EE5462C12FAA612E7228 /* JLRRouteHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B28D7E0869CE6DC7C59A641E29BED542 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EFB311F65BEBCF38BAC2492C74C32B /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B31227AE25C02E9F01BB00E2202E5386 /* AFOPLCorresponding.m in Sources */ = {isa = PBXBuildFile; fileRef = 60502B5B65F6D145928924EC3FB7FFDC /* AFOPLCorresponding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B32B0CDCDD741EA642542F32AF9FA22E /* AFOMediaYUV.h in Headers */ = {isa = PBXBuildFile; fileRef = C10F63CEC776E9654CFEB9A3D18A1BFD /* AFOMediaYUV.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B3856D6DEDDAB88C3720A86899BD7CD2 /* AFOMediaTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CBD61080DE7F8E3E22F042A3FCAA0F /* AFOMediaTimer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B3AFFF42351A63D9298D9F119D9D259E /* AFOUIKIT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F885C84131D4DA0D70B81E42B8F21E7E /* AFOUIKIT-dummy.m */; };
 		B407B83CA43FFCF3A508842B0C5C90A7 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922B0DD8D3F89EAE86ACA41759D886A2 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B4A66AF9EDA8A687DC572EC1EBA89B3D /* AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD02AB0AE38811E317E6E707EA02114 /* AFOPLMainManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B4AEAA6BE5AD11BD5311E0264886D15F /* AFOPLMainListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D9283476455ADA5348C33319DB50DE7B /* AFOPLMainListViewModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B5E016AC6DA1360091983F259210960E /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A94F4C6E9B835E57B7E5BF1A7BA3BA44 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B6204E003E58A05ED345344B7A88A160 /* AFOMediaSeekFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830EFDD5727926B4D9CF5EA12E594B3 /* AFOMediaSeekFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B635B0D888E019DB7A84EBCB175CE1B3 /* AFOMediaThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 09603F247B2FC544617C45FBA58C6B24 /* AFOMediaThumbnail.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B65436CCD1DEE6E11493C7AB7267D59F /* NSString+URLParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = E85E35D972A828144AE1A05535926171 /* NSString+URLParameter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B6F1C9E57411E85428FBDC693BDF3F49 /* AFOPLCorrespondingCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F381A02B072FFCE76AFC196881A5BC1 /* AFOPLCorrespondingCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B8B4827470E02CFE2380F207A50F6751 /* AFOPLCorresponding+NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC13297007FAE60EB1D2FDB99B9FAE /* AFOPLCorresponding+NSArray.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B9262603F4E76EC0D689B8E4A4DE786C /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370E881D4148E4674F2924E71FA6C91 /* AFImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA32956BE25B77D887DD42AB161C3AA4 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B3497B280F0A8DCCE08518CC54628090 /* AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BB37DF0CF834866C92A75B7B95138855 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE209AB77F9D2C5492B34D843DB2026 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB976469EEE5614B83073786BFCB3354 /* AFOPlaylist-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A126B4B448C0929C99C96CBB645C0 /* AFOPlaylist-dummy.m */; };
+		BC43A7A591E3294DA22103920AA872C2 /* AFOPLMainControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B6CA4436CF54575F56EF865F7EA7586A /* AFOPLMainControllerCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BC6F9FD85EA4B311965B17560ECF7307 /* GCDMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDF9EC6EFD44D2F534FF2757DE9D20D /* GCDMulticastDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BD6C299CA123416CD1FE2F04DD424A3F /* AFOPLMainController+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35526D0021F8CB242DB48BE12A1DBC1E /* AFOPLMainController+Operation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BCAB0970DDC52DCB996614177632D6B3 /* AFOPLMainController.h in Headers */ = {isa = PBXBuildFile; fileRef = 656273BAC5BBA5671AA12D2BAA7D87D5 /* AFOPLMainController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BD8E739165A94E20C571DFA47535F115 /* AFORouterPushAction.h in Headers */ = {isa = PBXBuildFile; fileRef = B32F08272E00DF92D3E85E930A0B9A57 /* AFORouterPushAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE0FDA68373D4B2DEA67A3FC4695D766 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 22D37CD6B0FE9C732A288232C121C097 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BE65D73783FCDFF01C5400D2A9F7778B /* AFOPLCorresponding+NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = BF26E730C8E27F3DFE8BD64714200653 /* AFOPLCorresponding+NSArray.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE7334D9DA291CA98954188D2BE62C34 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD0F4B5A3FECF2655274E0CA86DE64 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BF4CA3913B7C9B400AF3F5E360D34BE1 /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8CF3D6365B0ADEC213DF24076CA416 /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BFAF1B43ED9D744889A3B5BCB6931E55 /* AFOMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = B37EE597E8677AE809AF83C46AA5ACC7 /* AFOMediaView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C04442D9FF0FECCD5DC94B36078C5A62 /* AFOWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 620A1F752BE7024D588D3EC0F3AA0AC3 /* AFOWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C062E0F9451E550F56860BE29A91BDD8 /* AFOAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F1F26AF541129988CB86B22A2178A2D9 /* AFOAudioManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C082845CBFDD743BCE29AF7491BB9959 /* AFOPLMainFolderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B84A5DF02ADAE7F5EF8638F51CF96965 /* AFOPLMainFolderManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C11AD79E1AC9B35870612677F243E479 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D89BCC8CE397B1AC99DC764C9797D92 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C25B39B597CC0D00819A62A41A57EDC5 /* NSFileManager+AFOOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CB541A6775F51178CFFF7F587CB6FF50 /* NSFileManager+AFOOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C2D294677F4B0FFEC574F1700340EDCC /* NSMutableArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2905D097F2658DB842E81A7AE6BA40 /* NSMutableArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C4C6DBB3CE5752ABFAED7F0BAA70761F /* AFOPLCorresponding+SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F68876587521C7209781D2D14B7EDE /* AFOPLCorresponding+SQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C52979E62D9DA097ECFA701423CCAED6 /* AFOPlayListForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9877D8300DF0EF79FAE3DD38D7D1D /* AFOPlayListForeign.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C5A408C9E25A1503FE8890F4E0440484 /* AFODelegateForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6B797446142F96AE0F6E3942F1D5D /* AFODelegateForeign.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C6E06D3CC66A28CFF6103A52B932ED45 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E189F4C841176BF0F0C1D7BD26895 /* NSObject+FBKVOController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C6E32F5B2279A6799EA69C8173C48D9C /* AFOMediaErrorString.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2773D9C14260F6C81D6D1E296C3417 /* AFOMediaErrorString.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C74EC42A03CFEBAD54EE7F26191E8463 /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863DBD1E9E031735CB547349E41D638 /* JLRoutes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C88AFA7248571E371501FA9E62215A48 /* AFOPLCorresponding+NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC13297007FAE60EB1D2FDB99B9FAE /* AFOPLCorresponding+NSArray.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C938CF6D666ADB9B0C1B52D3CDD40FC0 /* AFOAudioCache.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0388FB185E2641E3A0C6FF3B3F0DFC /* AFOAudioCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C95112BE24D3BA33A77A1C073ED9ED5C /* JLRRouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0B95AC73B0FFE889E89E54F437AAF /* JLRRouteResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CAD5377612556344A5010ECD03B75B44 /* AFOSchedulerInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A62D352E2EA2FDE9D66CDADF398BF81 /* AFOSchedulerInvocation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CCB4A994BAECE0E9B60899C49D57F1D2 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C82C3C861CB367A52D04411A1532B3 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CCB6FBD1979AD1EA7AD5C235C5354462 /* AFOMediaErrorCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6B0E1E821952C446413AF134890AC /* AFOMediaErrorCodeManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CCC28AFDD092391C3F2F0524E500DBEF /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = FDCA1EE8C9AF096AA2C9DF3B08CCC538 /* UIScrollView+SVPullToRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CDC8D36EA76ED2F45BCAA2E890E5146C /* AFOPLCorresponding+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 5332A57DA4ABCEEE7BDA2227B84C9DD3 /* AFOPLCorresponding+GCD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CDEA3E2490274B0CCFA6D4BA4717728B /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 791C1A53E20459F68222EFFFCF820E84 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CE726E8C1BB158C3E6FFD0055649F1E6 /* AFOMediaControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD3D1C959B1D887EBB5AEBBFC317AC /* AFOMediaControlView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CEF7916C07F25E03D601ADAF63359727 /* AFOReadDirectoryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7A08EE3F8C60C00D11046C72E88C2 /* AFOReadDirectoryFile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CF305ABCA6662C17A0C11C8701D64DA7 /* AFORouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B498E27306A5C7347F3ADF1591BA2934 /* AFORouterManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CFC2BA13123713E4D04CC45245BD1FF0 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D869A0B7796EC31BB0102E858EC8D55 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D17E37548061C6D253DCA94592431891 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42FD5254991D1FAABB0065EB6DB2D51A /* AFOPLMainController+AFOPLMainManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D412468D05726103514F87F1ED335CBA /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEAF61B676E1810EC158E8C195D32DF /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D463FF6E1E7464F212E8E47E0FBF5991 /* AFOMediaPlayController+AFOOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = B09EA880BA5E51F88D13E3F32481FC7A /* AFOMediaPlayController+AFOOrientation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D565050D8F606196E494D9774066E7CF /* AFOConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5893F90BAC3AC45C2969CAE1AB7A65 /* AFOConfigurationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D7B466C09EF079992D861AC62CBFB054 /* AFOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FCEB7C9BB50E81AD16B0A28A8EDC0 /* AFOViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D7BA4DCAAD17797DC9DF0711EFD263D5 /* AFOPLCorresponding.h in Headers */ = {isa = PBXBuildFile; fileRef = 462C01C468D7C7E24C6E99FE4358B3E2 /* AFOPLCorresponding.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D7EDA1692EE5A66B0731BEC8DD2944E5 /* AFOMetalVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4F538F876B6754FE284DCBC3F51ED /* AFOMetalVideoView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D8599897A6D8564F16C575806531E098 /* AFOPLMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70CC0241BB3EFE5CF336300F5E5BD1B /* AFOPLMainCollectionCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9391C82725833B031CDA3D5B889171B /* AFOAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D4E5D33E44BDC5F8E6347FC05EDC5 /* AFOAudioManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9C9DF1A40CEC4A540C3672B6D2D81C6 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 914D50E82847FC9B96376CD52C947A4F /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9E089EF36CFBF9C5E8F7D0D59F5513F /* AFOSchedulerBaseClass+AFOPlayList.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9A1E9ADE9F18A9D6F94662524839FA /* AFOSchedulerBaseClass+AFOPlayList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DD3342F69271F270EA3DAA279A89F36F /* AFOMediaPlayController+AFOGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD7D5E25E3E18E88B2544B8C542FA7 /* AFOMediaPlayController+AFOGestures.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DD4E7F2401F282B88296F5E277AA8E88 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 066716FFB443CE061AFEDE65ED8CEA76 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DDA00F6640EA99A17DA73DFE91709A6B /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FA66CFCD0EA7157A3059CFC7FC61E3 /* FMDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DDF4910C072E7F84A95C2CDEA07D45AD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 120AB8DBE510C8531A1C04B3E6AD6F28 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DE1B8B96BEA859C94882B46778FE0CD5 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5E40B34DFF4560747435BAB9B9A58C /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E14067701ED7DAA913C7D1C2E27A61D2 /* AFOPLMainController+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35526D0021F8CB242DB48BE12A1DBC1E /* AFOPLMainController+Operation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E19A55B2FDE4BDE0A6A8DC1CF76D6F7B /* AFOAudioSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E84568FEF59A794B4A0C61CC07A89E4 /* AFOAudioSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E2C966A415561B329D69CE920748A0D0 /* AFOMacroDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 747FE185931876F348FC47958367342A /* AFOMacroDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E2E2D7DAB0887133DC13B2BEFF3382FD /* SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 35996DC9B1B9BD823ED437EBD009524D /* SVPullToRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E406E140D9D909EF9DCAD40FAAE5F65F /* AFOPlayListForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 72164D9AE3B6EF44E97A4E0015A786DC /* AFOPlayListForeign.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E45EB3ACCC49124F64002CAAB79BAA84 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF2CD053627532C50E1D99ACC76FC25 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E4CD8CB2AA338C7A11B1D34674B3A8CF /* AFOPLMainController.h in Headers */ = {isa = PBXBuildFile; fileRef = 656273BAC5BBA5671AA12D2BAA7D87D5 /* AFOPLMainController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E52FA83E56BE6E12421358DA54D4F53E /* SDWebImageImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = AC96DDFDAB3DE4E4470B60A230A3B94C /* SDWebImageImageIOCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E553FB95771D6B5D3F2F28BF6EEA1C72 /* AFOPLMainFolderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F506C0CFD14376CE13BEDE105EC31 /* AFOPLMainFolderManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E64252D9A959D937406E45B0E705D006 /* JLRParsingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 595F81397EC675CD00A1AB5A1C5079CE /* JLRParsingUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E652137A199FB700EB17A093806A6054 /* AFOProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F950BA72A52F373E0554600A3B02 /* AFOProgressSlider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E81F1DC3856C33E96F8890C21473F207 /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B6C45D1DDD9FC8D0AE2B35DC50EE /* JLRRouteResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -350,10 +347,8 @@
 		E84434A06FAE5E82B3AA43AC34AC2ABD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A2EF2433A4993DF9D79C186835E284 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E8C964C757EFBB1BF73DAB912301A305 /* AFNetworkingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8678580A534FB20E1FD6E02F279B7A43 /* AFNetworkingHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E8F71EB92F950D13E8953FFB41208BA1 /* AFOVideoFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C85B03520C00C40D15361F3B6C837950 /* AFOVideoFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E9188D2678239A8CE59690AFE8866D12 /* AFOPLMainEditorLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 6949E148861615D8C376015CF556A1FE /* AFOPLMainEditorLogic.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9744C750D4CA2817BE610C1B8E24B5E /* AFOPlayListForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 72164D9AE3B6EF44E97A4E0015A786DC /* AFOPlayListForeign.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E9AF18C75AF9B7A4D1E87E8A15A9BBEA /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C942A5848153C440A3183A5D6937724 /* Aspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EB2A5E79651B69B9B0C1A2B0DB7E78C1 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3322B3F185FB292370BDC2B6F7A5AF6E /* FMDB.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EB68A308A1DFDAB80EABFD6E3B080460 /* AFOFMDBForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DD6E501B248123E55DC6DC015EBFD /* AFOFMDBForeignInterface.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EC91D1872371EA979FF204D5F7613848 /* AFORouterPresentAction.h in Headers */ = {isa = PBXBuildFile; fileRef = F295F179183F38B1ED5D4CF26AA8F012 /* AFORouterPresentAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		ECFEABFA20B7E694769631BBEE25939D /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA472AB5A6ECF82E8F1C5F828C19A7E5 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EDB60101B33515791DE5611816B7FE32 /* NSString+URLParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEC060F953B36E7DA3AF716909D12F3 /* NSString+URLParameter.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -361,18 +356,23 @@
 		EFF28CC62E70424E8A10304648966E27 /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = C975E848467E0C530109B72C5316CB15 /* JLRRouteDefinition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F05C9F38D96545557067AD8BBCBC66DE /* AFOFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E391B0419176D298901D6C84EB0722 /* AFOFoundation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F390F169175A5A6E1C24924F9098FDB4 /* NSString+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA33C5C418B60DCA606965CF770F45 /* NSString+Dictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F48108342E60A040575A85644458A5A2 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8D90258FCC20D216CAF5050941C650DC /* PrivacyInfo.xcprivacy */; };
 		F57C032E89658BDC0C8040B151715ECA /* AFOMediaPlayController+AFOGestures.h in Headers */ = {isa = PBXBuildFile; fileRef = FB469E6533B090EC3789A51C353F2602 /* AFOMediaPlayController+AFOGestures.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F5889FF77CCA72EFDD6A7013BC49FA54 /* AFOPLMainEditorLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 6949E148861615D8C376015CF556A1FE /* AFOPLMainEditorLogic.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F640B377BEC99CB2574025E9D094631A /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEAF61B676E1810EC158E8C195D32DF /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F68646B93B7E84B0D4A94DCECA277314 /* NSBundle+AFOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AF528A313495697CEAE6C5E26A5AE4 /* NSBundle+AFOCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F70D2B2DEDF22A9BE173630469E86513 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42FD5254991D1FAABB0065EB6DB2D51A /* AFOPLMainController+AFOPLMainManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F70DB11763EBAC626291B1CA465B068E /* AFOAudioPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 48925282188A9A6EBE5C236C016565AD /* AFOAudioPacket.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F7B144BA0C3B9E06F68A508B53B744E3 /* NSArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = D807B168BDE7D77CB7E360598914B15D /* NSArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7BBE2C293A1EAC76F47B278B14CABCB /* AFOPLPlaylistRoutingDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5972468D7AB1D1938F1A661B6F9E06CB /* AFOPLPlaylistRoutingDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F7C9B51C549B147346FFA6F55A0F281A /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E14E2614596E4763D485DAE589EA6FFB /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F86393E29029465C2352B10808EDFD17 /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A65C6C351F99FC1D03D2A0D95F25985 /* JLRRouteHandler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F888D905865EBB162D80550A67991E34 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7947E852A351E093820DDF914F819E /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FA0E41F9DEE57EB282401B799A4F737E /* AFOGitHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BB02E236C2BC6CAE79BE311BA7A415D /* AFOGitHub.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA0FD01C3AB0AC38350F507EAB17E7FE /* AFOPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = BB50877FFC87B33C726E07B35358DCB5 /* AFOPlaylist.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FA96C83F7F4A02A091180FAFCF93F350 /* AFORouterPushAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BEC85C78E0575EA2AE034837A7E01 /* AFORouterPushAction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FB6D468727135E2597846951B2041042 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA15FCC1E4F1F866744AC8E47534DF6 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FBCE804CF8519B3928117D356053BBA3 /* AFOFMDBForeignInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = DE54CBE17801D791332F68BA42A36815 /* AFOFMDBForeignInterface.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FC1552CFE4993EF3BD79651B148675EA /* AFOFMDBForeignInterface+SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 032719E487D5D9E1C1D5C4C2CDC144AC /* AFOFMDBForeignInterface+SQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBEFFFE947AE045BB51F88F7EFF9A8AB /* AFODirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E138DF58D4F9EC9DAE9AE961DC9EDDA /* AFODirectoryWatcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FCE050555486CC22D433CBAE5A977722 /* AFORouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2E77B30513DA2293695FD92D95A3E3 /* AFORouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FD44B4C26A8A56883497D3E240508B93 /* AFOVideoFrameRGB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8735C84654CF113775535565E2567D8D /* AFOVideoFrameRGB.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FDA25D5E0CDF08BDB8430CC1EB56CF14 /* AFOAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAE399F00F73668CEE4AD15705E6F3 /* AFOAudioSession.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -382,12 +382,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00C7755A2B2403F52FB6F7B2EE5BF4D5 /* PBXContainerItemProxy */ = {
+		07681B19E521C1B1B05BB68AC3FC4C18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 314D580FEA95EADBAAE8A008B282E18B;
-			remoteInfo = AFOSchedulerCore;
+			remoteGlobalIDString = 1B01D8907470563147F602D1A7088582;
+			remoteInfo = AFOSQLite;
 		};
 		09399A8271D32003D4EA2756D5245945 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -396,19 +396,12 @@
 			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
 			remoteInfo = FMDB;
 		};
-		09479B63822FE83B89BC06FA1B855F05 /* PBXContainerItemProxy */ = {
+		0B1B48282F69A45411F930C02E7121AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA3724611A34A64E270C153CB2F83A3D;
-			remoteInfo = AFORouter;
-		};
-		09C18FAF8BAF428C4439A276ACC50D79 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 973B9A51B49701F13767694DCAF5C37D;
-			remoteInfo = "FMDB-FMDB_Privacy";
+			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
+			remoteInfo = FMDB;
 		};
 		0C289224552BC78F17712D8D946B8187 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -417,26 +410,12 @@
 			remoteGlobalIDString = 5F30D5B3429F477B849285EC87EECDFA;
 			remoteInfo = AFOFFMpegLib;
 		};
-		15A60BC4BFBB25A9AD757989591DC4E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0005CD12092CB524019DEC1413FA609E;
-			remoteInfo = AFOGitHub;
-		};
 		19F3AF0860E7BF25E0D8DE9DA413D975 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 314D580FEA95EADBAAE8A008B282E18B;
 			remoteInfo = AFOSchedulerCore;
-		};
-		22791CD4E2029EABC5F8E4E6710F2D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A6ED1F81EC081CA8059D773C0580E3E3;
-			remoteInfo = AFOUIKIT;
 		};
 		2A9C7D6B7258A416E59CEF34E17DA6CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -459,6 +438,13 @@
 			remoteGlobalIDString = 0005CD12092CB524019DEC1413FA609E;
 			remoteInfo = AFOGitHub;
 		};
+		34957C7351A255BE5416FAE0713EB677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6ED1F81EC081CA8059D773C0580E3E3;
+			remoteInfo = AFOUIKIT;
+		};
 		35033D694BD804C81B151FC89AEA8000 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -472,6 +458,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5F30D5B3429F477B849285EC87EECDFA;
 			remoteInfo = AFOFFMpegLib;
+		};
+		4837C18106CA0F9F47EE9D9C0B945B9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6822B490412B4C83DAF77B7F359535;
+			remoteInfo = AFOFoundation;
 		};
 		4D20D2A4150B0B45584F7A5ACE8AA73D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -508,6 +501,20 @@
 			remoteGlobalIDString = 314D580FEA95EADBAAE8A008B282E18B;
 			remoteInfo = AFOSchedulerCore;
 		};
+		6D482F0F0ADF5704FEDDDD12C540E5B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 314D580FEA95EADBAAE8A008B282E18B;
+			remoteInfo = AFOSchedulerCore;
+		};
+		6DC9C6A9EAB9BB21C826BAF3111A9F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB68549BD94D1689F92071870E64ABD;
+			remoteInfo = AFOFFMpeg;
+		};
 		74ED6BF7E8CE0D0B0D92AF9D454E34E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -530,13 +537,6 @@
 			remoteInfo = AFOGitHub;
 		};
 		7D3D54DBF7D2CDFD88B203E3B951B1CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E6822B490412B4C83DAF77B7F359535;
-			remoteInfo = AFOFoundation;
-		};
-		8273B25F93267AF0BA6CAE5D0B49A1C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -571,6 +571,13 @@
 			remoteGlobalIDString = A6ED1F81EC081CA8059D773C0580E3E3;
 			remoteInfo = AFOUIKIT;
 		};
+		9A3F5E26CDDECD64957FE1169A952685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
+			remoteInfo = FMDB;
+		};
 		A46CA884C79C68C4F55F550177436E97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -584,13 +591,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EA3724611A34A64E270C153CB2F83A3D;
 			remoteInfo = AFORouter;
-		};
-		B00687529420CCB7885861A9955228D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
-			remoteInfo = FMDB;
 		};
 		B56D4D069AD5570C959F6D10ABD0ACCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -613,19 +613,12 @@
 			remoteGlobalIDString = 0E6822B490412B4C83DAF77B7F359535;
 			remoteInfo = AFOFoundation;
 		};
-		CCE8D2FE188886D695B1AD81C8DC1DE1 /* PBXContainerItemProxy */ = {
+		CAE293F35DF2AACA2345B6C915A6044A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B01D8907470563147F602D1A7088582;
-			remoteInfo = AFOSQLite;
-		};
-		D02AF60026DF3CAA97E27F90CABB3D6A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AB68549BD94D1689F92071870E64ABD;
-			remoteInfo = AFOFFMpeg;
+			remoteGlobalIDString = 973B9A51B49701F13767694DCAF5C37D;
+			remoteInfo = "FMDB-FMDB_Privacy";
 		};
 		D2DF682B6B6AE9E9064BC39B6B96B1EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -640,6 +633,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = EB98DCE6B32CFB8D0BFC83B5CA27A0F1;
 			remoteInfo = AFOx264;
+		};
+		EEB09A279FE95C56A923A4C2504BAC6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0005CD12092CB524019DEC1413FA609E;
+			remoteInfo = AFOGitHub;
+		};
+		F6C75FE1876B4F5E91A65254B05B5483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA3724611A34A64E270C153CB2F83A3D;
+			remoteInfo = AFORouter;
 		};
 		FE1F9C0E529DC2CFE9571B3A3220CF7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1221,13 +1228,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D85F4219B7DCEC3708F747D13AE6595 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B68E258A37A790B899B752D8007321B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1242,6 +1242,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57A8AA332940218E0DB4CB72FFE6A319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		675298F5906096492F9B5847BA0BC80A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6802EF30C250960203DBC553C76BFBF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1249,21 +1263,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F034E00C3DDB5E888667A73A9E74AEF /* Frameworks */ = {
+		6862C29919F971C0D219BBCDE487CA28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7136AAB7766DDEFE80518146CCC7579C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0B23AD0FCB121FE5A191133A0B193F0 /* Frameworks */ = {
+		A4DE09B3877B8E512DD1120214AF8E3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2782,35 +2789,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B42D93BE528F79BA74FA9658C618C58 /* Headers */ = {
+		3BD1D1D24624B82CF75F8BAB1EBFE628 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9379DFB7FB5F19441448359D09603B68 /* AFODirectoryWatcher.h in Headers */,
-				263EC4478987D2A58DE0CD86D1FBCEB2 /* AFOPlaylist.h in Headers */,
-				E406E140D9D909EF9DCAD40FAAE5F65F /* AFOPlayListForeign.h in Headers */,
-				2F7B85BD363EED5C161C714AB2DBEAB5 /* AFOPlayListNavigationController.h in Headers */,
-				D7BA4DCAAD17797DC9DF0711EFD263D5 /* AFOPLCorresponding.h in Headers */,
-				CDC8D36EA76ED2F45BCAA2E890E5146C /* AFOPLCorresponding+GCD.h in Headers */,
-				BE65D73783FCDFF01C5400D2A9F7778B /* AFOPLCorresponding+NSArray.h in Headers */,
-				C4C6DBB3CE5752ABFAED7F0BAA70761F /* AFOPLCorresponding+SQLite.h in Headers */,
-				B6F1C9E57411E85428FBDC693BDF3F49 /* AFOPLCorrespondingCategory.h in Headers */,
-				74E3F17FB863021EDAA49C0B688B7A50 /* AFOPLEditMenuView.h in Headers */,
-				38A2A79B744B1793404DF709E29F8F2F /* AFOPLMainCellDefaultLayout.h in Headers */,
-				2FC6E7B1492FAA1B278BC35BCC42CB58 /* AFOPLMainCollectionCell.h in Headers */,
-				7148C0EF77B9350EF4FBB3663A14B2C0 /* AFOPLMainCollectionDataSource.h in Headers */,
-				E4CD8CB2AA338C7A11B1D34674B3A8CF /* AFOPLMainController.h in Headers */,
-				D17E37548061C6D253DCA94592431891 /* AFOPLMainController+AFOPLMainManager.h in Headers */,
-				A71CD1F671B95E30A4F84D7DB77C3EF4 /* AFOPLMainController+Operation.h in Headers */,
-				614802D2FD8D94757F0AC5A2FA01F2ED /* AFOPLMainControllerCategory.h in Headers */,
-				E9188D2678239A8CE59690AFE8866D12 /* AFOPLMainEditorLogic.h in Headers */,
-				8F957A8CD7BFA4F77472B8BA28C3625A /* AFOPLMainFolderManager.h in Headers */,
-				2EF3A4BD7A5DB7B16B6EF29B83BAA317 /* AFOPLMainListViewModel.h in Headers */,
-				10005743B18D6673F92B29F0299F0A2B /* AFOPLMainManager.h in Headers */,
-				184426150C0C27662045F5A838C284A9 /* AFOPLPlaylistRoutingDataSource.h in Headers */,
-				7DFB187C35F980F438B8DDAD692CAD4D /* AFOPLSQLiteManager.h in Headers */,
-				55C220E828CD67BC8E621278DC1C09B5 /* AFOPLThumbnail.h in Headers */,
-				35A2889666D63BE3BDAAE7FB0C42989F /* AFOReadDirectoryFile.h in Headers */,
+				4C8CAC7C79C80D33F791C126BEAA363F /* FMDatabase.h in Headers */,
+				F640B377BEC99CB2574025E9D094631A /* FMDatabaseAdditions.h in Headers */,
+				618C3B2958A9F99EC8D7D963E1110997 /* FMDatabasePool.h in Headers */,
+				A3FD6BB8C566222D01FCAD117F3ADCC3 /* FMDatabaseQueue.h in Headers */,
+				364DFA5EE9CE91716218FA3CA4444875 /* FMDB.h in Headers */,
+				2B7B9F0522B6B8F5D6EF6AD5F69F8CAD /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DCD650FF243B0AB15E12EACB395B74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26ABC7C8E75834F469B4FB48CE146ED6 /* AFOFMDBForeignInterface.h in Headers */,
+				10EE2B4EA36369FF6279D88FBA1F6301 /* AFOFMDBForeignInterface+Dictionary.h in Headers */,
+				568BBC918E8C978007F8B884E508E5B4 /* AFOFMDBForeignInterface+SQLite.h in Headers */,
+				47166ED8D48CAEDB03CD4B2737C1BAA0 /* AFOSQLite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2870,14 +2869,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B77E660D26158E611602358ECE81745 /* Headers */ = {
+		9A9D9B4CBC4175E55CFA036AB0BEB0A2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBCE804CF8519B3928117D356053BBA3 /* AFOFMDBForeignInterface.h in Headers */,
-				8A2EFEFA1A0817611E9BC1F1C45C8C1D /* AFOFMDBForeignInterface+Dictionary.h in Headers */,
-				FC1552CFE4993EF3BD79651B148675EA /* AFOFMDBForeignInterface+SQLite.h in Headers */,
-				2E90F7733DAB25528AC8345827997DED /* AFOSQLite.h in Headers */,
+				8CFEDB34991FBBB3D9DF0F2B0D9289F3 /* AFODirectoryWatcher.h in Headers */,
+				FA0FD01C3AB0AC38350F507EAB17E7FE /* AFOPlaylist.h in Headers */,
+				E9744C750D4CA2817BE610C1B8E24B5E /* AFOPlayListForeign.h in Headers */,
+				A58FD0EBA9362137F6E5635C90DBBC2B /* AFOPlayListNavigationController.h in Headers */,
+				8E0D8958928B4E035FE1243E895A0369 /* AFOPLCorresponding.h in Headers */,
+				0B9845C1D1C163B8A9F663F988D1608B /* AFOPLCorresponding+GCD.h in Headers */,
+				9D974F28E77063C6FF4BD5E8DC30AA74 /* AFOPLCorresponding+NSArray.h in Headers */,
+				414E1C5F7C4E569218A32D9BA173639F /* AFOPLCorresponding+SQLite.h in Headers */,
+				9B8FE7535732B65B11BD6E27C2F80E6E /* AFOPLCorrespondingCategory.h in Headers */,
+				7195C41251C975622CC2123CC9D3FCB0 /* AFOPLEditMenuView.h in Headers */,
+				0F94E6CCC29AD139B7EF559586DD1B62 /* AFOPLMainCellDefaultLayout.h in Headers */,
+				88C031A932E5151A7E915E72FFBB91D3 /* AFOPLMainCollectionCell.h in Headers */,
+				97EC03F0412AC49343C8BF6BC8772937 /* AFOPLMainCollectionDataSource.h in Headers */,
+				BCAB0970DDC52DCB996614177632D6B3 /* AFOPLMainController.h in Headers */,
+				F70D2B2DEDF22A9BE173630469E86513 /* AFOPLMainController+AFOPLMainManager.h in Headers */,
+				A5D9F5FF35925C52A1DFB83329F83D46 /* AFOPLMainController+Operation.h in Headers */,
+				BC43A7A591E3294DA22103920AA872C2 /* AFOPLMainControllerCategory.h in Headers */,
+				F5889FF77CCA72EFDD6A7013BC49FA54 /* AFOPLMainEditorLogic.h in Headers */,
+				C082845CBFDD743BCE29AF7491BB9959 /* AFOPLMainFolderManager.h in Headers */,
+				B4AEAA6BE5AD11BD5311E0264886D15F /* AFOPLMainListViewModel.h in Headers */,
+				A9C701355539E608CBFC3157B352D600 /* AFOPLMainManager.h in Headers */,
+				F7BBE2C293A1EAC76F47B278B14CABCB /* AFOPLPlaylistRoutingDataSource.h in Headers */,
+				15B53C76CCEA4B631E6F087B6823A4AA /* AFOPLSQLiteManager.h in Headers */,
+				529A7AF89EDD0AD29F6ABE8FC3559148 /* AFOPLThumbnail.h in Headers */,
+				3821F47EB490C124C70A8F481CFC9809 /* AFOReadDirectoryFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3030,19 +3050,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFE4994C9E494782955F104F115857A0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDA00F6640EA99A17DA73DFE91709A6B /* FMDatabase.h in Headers */,
-				D412468D05726103514F87F1ED335CBA /* FMDatabaseAdditions.h in Headers */,
-				07E28F62D9E342D019230768DD076446 /* FMDatabasePool.h in Headers */,
-				53D3EF6928C81400706451BB5F95B63A /* FMDatabaseQueue.h in Headers */,
-				EB2A5E79651B69B9B0C1A2B0DB7E78C1 /* FMDB.h in Headers */,
-				2F2AE8487BD83319F364C356CE6BAA6F /* FMResultSet.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8BAD9C389E7CBE616DC944A89F53ABC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3120,16 +3127,16 @@
 		};
 		1B01D8907470563147F602D1A7088582 /* AFOSQLite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E4A18ECB41C3C1DB9900B33B5721186 /* Build configuration list for PBXNativeTarget "AFOSQLite" */;
+			buildConfigurationList = 1BC9F858902DCA2E345DB8C7396C2154 /* Build configuration list for PBXNativeTarget "AFOSQLite" */;
 			buildPhases = (
-				8B77E660D26158E611602358ECE81745 /* Headers */,
-				ADD9DC93FE55164046BBF8B966795CE6 /* Sources */,
-				7136AAB7766DDEFE80518146CCC7579C /* Frameworks */,
+				44DCD650FF243B0AB15E12EACB395B74 /* Headers */,
+				D2BCB89BCEF52FEAC4461B5A4BF04230 /* Sources */,
+				57A8AA332940218E0DB4CB72FFE6A319 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				691474E3E998FD53CE44E391ECF9DBC5 /* PBXTargetDependency */,
+				22F7DF03FC90C88E6F7B417647148EDE /* PBXTargetDependency */,
 			);
 			name = AFOSQLite;
 			productName = AFOSQLite;
@@ -3204,16 +3211,16 @@
 		};
 		8592E0E389D40AC17881400ADC67ABC0 /* FMDB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25FA455299B74CC5E54D5F321B48A5F9 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildConfigurationList = 56738E5B0140E6DF3AFB24E51E2A8FE8 /* Build configuration list for PBXNativeTarget "FMDB" */;
 			buildPhases = (
-				EFE4994C9E494782955F104F115857A0 /* Headers */,
-				0F7127ABFE74FFFB32FCE6F01160DC98 /* Sources */,
-				6F034E00C3DDB5E888667A73A9E74AEF /* Frameworks */,
+				3BD1D1D24624B82CF75F8BAB1EBFE628 /* Headers */,
+				44FC5BDE869A6E879245A98CBD79752D /* Sources */,
+				675298F5906096492F9B5847BA0BC80A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				24537BF766A5C57B2BB773C928FFC245 /* PBXTargetDependency */,
+				987CCB9BD0ACF5BF9100D26CCF472699 /* PBXTargetDependency */,
 			);
 			name = FMDB;
 			productName = FMDB;
@@ -3222,11 +3229,11 @@
 		};
 		973B9A51B49701F13767694DCAF5C37D /* FMDB-FMDB_Privacy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9869547D95202F84B87110E41366C495 /* Build configuration list for PBXNativeTarget "FMDB-FMDB_Privacy" */;
+			buildConfigurationList = D8C58A78496C0E440965898BEC33C1EA /* Build configuration list for PBXNativeTarget "FMDB-FMDB_Privacy" */;
 			buildPhases = (
-				537B2D4E681FFD87106F26BB87D53BB5 /* Sources */,
-				2D85F4219B7DCEC3708F747D13AE6595 /* Frameworks */,
-				3DAAE2B468857A26C8501186A3C567AD /* Resources */,
+				DED407AF7DD6FE8F7EAC4CC90756A975 /* Sources */,
+				A4DE09B3877B8E512DD1120214AF8E3A /* Frameworks */,
+				E2B0E7548DF86777BF3997DD12EB51C4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -3258,22 +3265,23 @@
 		};
 		9DA38C32E4AAB81B69E18BDBC2834B38 /* AFOPlaylist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 264B640771970C66EF9CCD4639BC1524 /* Build configuration list for PBXNativeTarget "AFOPlaylist" */;
+			buildConfigurationList = 0E426F304A40565A8C2FF0EB7F385717 /* Build configuration list for PBXNativeTarget "AFOPlaylist" */;
 			buildPhases = (
-				0B42D93BE528F79BA74FA9658C618C58 /* Headers */,
-				0A8F70F428696921185AA690E8B4DC38 /* Sources */,
-				A0B23AD0FCB121FE5A191133A0B193F0 /* Frameworks */,
+				9A9D9B4CBC4175E55CFA036AB0BEB0A2 /* Headers */,
+				2DF057D12FD0451D95D893395EA5684C /* Sources */,
+				6862C29919F971C0D219BBCDE487CA28 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				386D32C138972A491753A7EADD3F8049 /* PBXTargetDependency */,
-				9BF95DBB28D3BBA22002075B93767B5F /* PBXTargetDependency */,
-				2F4ED4174ECE3738DE9D2B75E5D87CFD /* PBXTargetDependency */,
-				88562EC7719A8B0B6780D4CB646659F6 /* PBXTargetDependency */,
-				EECA594FAF1A71317D336BCA45830E3B /* PBXTargetDependency */,
-				805F69C2B926F5E81559CFBA200DD86C /* PBXTargetDependency */,
-				956A3843343A0F99931E02D27A518018 /* PBXTargetDependency */,
+				8739ECF133A0910F26AF8070651F057A /* PBXTargetDependency */,
+				5A5CDC8568FAFD753C1F5DD0846330BA /* PBXTargetDependency */,
+				2253D756B5360341C0BD96B9E3D5A5E7 /* PBXTargetDependency */,
+				2A90F8AB97E5D79379DB12089BD17B05 /* PBXTargetDependency */,
+				9957FC47AD6C5C6D9612331447591924 /* PBXTargetDependency */,
+				4D73918CC47B7E1C0C4E39AD3A8ECDF2 /* PBXTargetDependency */,
+				4F2C4E4CB99FC9B21D7E98703EC08D09 /* PBXTargetDependency */,
+				FD1849D1FE73185F1D119D1BA59DBBBB /* PBXTargetDependency */,
 			);
 			name = AFOPlaylist;
 			productName = AFOPlaylist;
@@ -3380,18 +3388,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3DAAE2B468857A26C8501186A3C567AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A18B4C32A865090FB21335C52DDFEA /* PrivacyInfo.xcprivacy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF9518EFBEEA1D5FDC9229CBC503BEA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B0E7548DF86777BF3997DD12EB51C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48108342E60A040575A85644458A5A2 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3419,48 +3427,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A8F70F428696921185AA690E8B4DC38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28ECE8E11CE673BDDFD993BFA8552CB4 /* AFODirectoryWatcher.m in Sources */,
-				BB976469EEE5614B83073786BFCB3354 /* AFOPlaylist-dummy.m in Sources */,
-				7BA7AC76FB00ABB27828CB2793604E5F /* AFOPlayListForeign.m in Sources */,
-				B07B5A7C5E3B1FAAAD9310449324F82D /* AFOPlayListNavigationController.m in Sources */,
-				2D0E8442378358F847C4FC355A23FB00 /* AFOPLCorresponding.m in Sources */,
-				1CBA388098FB3598D4984DE6926F11A6 /* AFOPLCorresponding+GCD.m in Sources */,
-				B8B4827470E02CFE2380F207A50F6751 /* AFOPLCorresponding+NSArray.m in Sources */,
-				6B863A3C5816DB3760162D17A354B81F /* AFOPLCorresponding+SQLite.m in Sources */,
-				9AD8E9CFA555C19E542BCCDE86284E36 /* AFOPLEditMenuView.m in Sources */,
-				4F29A1EE61C4FDE5A12247B406CE26A2 /* AFOPLMainCellDefaultLayout.m in Sources */,
-				D8599897A6D8564F16C575806531E098 /* AFOPLMainCollectionCell.m in Sources */,
-				0B067C0914D77455D600201A60CA475A /* AFOPLMainCollectionDataSource.m in Sources */,
-				4150544748321689C22CCAFF943EBFCD /* AFOPLMainController.m in Sources */,
-				3349C052F5D0D8B44F889F67113B648C /* AFOPLMainController+AFOPLMainManager.m in Sources */,
-				BD6C299CA123416CD1FE2F04DD424A3F /* AFOPLMainController+Operation.m in Sources */,
-				353B2073E404230AE86B576AE07ADA3B /* AFOPLMainEditorLogic.m in Sources */,
-				E553FB95771D6B5D3F2F28BF6EEA1C72 /* AFOPLMainFolderManager.m in Sources */,
-				7EAEFA8C5A6D61DBD2BB7434822E4204 /* AFOPLMainListViewModel.m in Sources */,
-				10AB6A3CE1243B5ECB9BB9B350AA954A /* AFOPLMainManager.m in Sources */,
-				08E7C09932C64AC91C81E1359183AB75 /* AFOPLSQLiteManager.m in Sources */,
-				4EAE567DFF99FC0C774541911FE4DA08 /* AFOPLThumbnail.m in Sources */,
-				CEF7916C07F25E03D601ADAF63359727 /* AFOReadDirectoryFile.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F7127ABFE74FFFB32FCE6F01160DC98 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1041A2B166D97280F27F938B54CEFE9D /* FMDatabase.m in Sources */,
-				33143C7B26221413335406981B8B1040 /* FMDatabaseAdditions.m in Sources */,
-				066EA67A89C94170B2D7E301C6AC3B1B /* FMDatabasePool.m in Sources */,
-				795B38DE197B6C33E641C4AA9D1A3165 /* FMDatabaseQueue.m in Sources */,
-				0E120D43B78832779B671ECFD38C1751 /* FMDB-dummy.m in Sources */,
-				97AFAFB6552CFD47830EE9F500DBB026 /* FMResultSet.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		168D727E4BFB43DE75BA5CA68D9261BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3468,6 +3434,35 @@
 				E652137A199FB700EB17A093806A6054 /* AFOProgressSlider.m in Sources */,
 				4737AE60AA2966A32D3146D3BD427358 /* AFOProgressSliderManager.m in Sources */,
 				6484288D253A929103BAFF98B1DAD3F1 /* AFOViews-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF057D12FD0451D95D893395EA5684C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBEFFFE947AE045BB51F88F7EFF9A8AB /* AFODirectoryWatcher.m in Sources */,
+				3B6111F9D50C645B0FB708D108DA4AF0 /* AFOPlaylist-dummy.m in Sources */,
+				C52979E62D9DA097ECFA701423CCAED6 /* AFOPlayListForeign.m in Sources */,
+				6AABB299443C4903FFFEDECF03D907A0 /* AFOPlayListNavigationController.m in Sources */,
+				B31227AE25C02E9F01BB00E2202E5386 /* AFOPLCorresponding.m in Sources */,
+				0AC547665EB39EE56B354A904A3A1525 /* AFOPLCorresponding+GCD.m in Sources */,
+				C88AFA7248571E371501FA9E62215A48 /* AFOPLCorresponding+NSArray.m in Sources */,
+				28D8CDDC5816C3285A2209ABD2AD70D9 /* AFOPLCorresponding+SQLite.m in Sources */,
+				740F0E6D4CC3F2FB70D7185E587D9B74 /* AFOPLEditMenuView.m in Sources */,
+				73A38B804C3C65C6D3FB41C708F7E1CD /* AFOPLMainCellDefaultLayout.m in Sources */,
+				9BE50C88A95CA301A19E19A8E5C2FF61 /* AFOPLMainCollectionCell.m in Sources */,
+				95D31B36505F7177BF6C9A4EB965594D /* AFOPLMainCollectionDataSource.m in Sources */,
+				1BD5FD4F1C74A5FF2E336236251C5322 /* AFOPLMainController.m in Sources */,
+				91E7668B3E731A2B632D39F8879539F2 /* AFOPLMainController+AFOPLMainManager.m in Sources */,
+				E14067701ED7DAA913C7D1C2E27A61D2 /* AFOPLMainController+Operation.m in Sources */,
+				45C6FDAE486F075CA62FBAE4436A8DFF /* AFOPLMainEditorLogic.m in Sources */,
+				193585A86EF8A64B9F9CCD5BA2ACD358 /* AFOPLMainFolderManager.m in Sources */,
+				5292E3A724C180AA0B36F44B43E1CC5F /* AFOPLMainListViewModel.m in Sources */,
+				B4A66AF9EDA8A687DC572EC1EBA89B3D /* AFOPLMainManager.m in Sources */,
+				0D88A673C72E978AB84909F23F1481C4 /* AFOPLSQLiteManager.m in Sources */,
+				0B6F1BD7331DC2A48212A4AAC372A336 /* AFOPLThumbnail.m in Sources */,
+				0D66ADE52846B0E5770D340EDC2701D5 /* AFOReadDirectoryFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3513,10 +3508,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		537B2D4E681FFD87106F26BB87D53BB5 /* Sources */ = {
+		44FC5BDE869A6E879245A98CBD79752D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A423BACB6A09CAB3BF9DC98B47F88DBB /* FMDatabase.m in Sources */,
+				4E6A9B3FFBC4C1051CBE02A8ADCED85E /* FMDatabaseAdditions.m in Sources */,
+				1817E9220990F6B5A5015466227C5159 /* FMDatabasePool.m in Sources */,
+				40F0051BC6463992FFA55E055C02F060 /* FMDatabaseQueue.m in Sources */,
+				772494948DA7703D44D3A685BEAE1FB0 /* FMDB-dummy.m in Sources */,
+				8C5E5BC662346CD5088ECCFC62BA4FFB /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3582,17 +3583,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADD9DC93FE55164046BBF8B966795CE6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB68A308A1DFDAB80EABFD6E3B080460 /* AFOFMDBForeignInterface.m in Sources */,
-				8377AC4A5B04D724FE89996ABA0711E8 /* AFOFMDBForeignInterface+Dictionary.m in Sources */,
-				51F0E75520B0B0834C0E922C6BADC652 /* AFOFMDBForeignInterface+SQLite.m in Sources */,
-				B06E527DA65CD6A59AED525080D8AED0 /* AFOSQLite-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3B14B5F971BB4CCB93C96A5D3562213 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3638,6 +3628,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D71AA39CF7EA0BE59DB2BF59290A5D9 /* AFOPLMainListViewModelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2BCB89BCEF52FEAC4461B5A4BF04230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27787054874916632198E67136ACC5A3 /* AFOFMDBForeignInterface.m in Sources */,
+				0D56D95E41C8F95EE15E8DC15ED2B445 /* AFOFMDBForeignInterface+Dictionary.m in Sources */,
+				884CA01959BE4BDD6B9CB78CEA9C0BA6 /* AFOFMDBForeignInterface+SQLite.m in Sources */,
+				3DDEBEBA847847A655576A1F301C6BB5 /* AFOSQLite-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED407AF7DD6FE8F7EAC4CC90756A975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3694,17 +3702,23 @@
 			target = A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */;
 			targetProxy = 98D457F2F64982DB73010165473B1151 /* PBXContainerItemProxy */;
 		};
-		24537BF766A5C57B2BB773C928FFC245 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "FMDB-FMDB_Privacy";
-			target = 973B9A51B49701F13767694DCAF5C37D /* FMDB-FMDB_Privacy */;
-			targetProxy = 09C18FAF8BAF428C4439A276ACC50D79 /* PBXContainerItemProxy */;
-		};
-		2F4ED4174ECE3738DE9D2B75E5D87CFD /* PBXTargetDependency */ = {
+		2253D756B5360341C0BD96B9E3D5A5E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFOGitHub;
 			target = 0005CD12092CB524019DEC1413FA609E /* AFOGitHub */;
-			targetProxy = 15A60BC4BFBB25A9AD757989591DC4E8 /* PBXContainerItemProxy */;
+			targetProxy = EEB09A279FE95C56A923A4C2504BAC6C /* PBXContainerItemProxy */;
+		};
+		22F7DF03FC90C88E6F7B417647148EDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
+			targetProxy = 9A3F5E26CDDECD64957FE1169A952685 /* PBXContainerItemProxy */;
+		};
+		2A90F8AB97E5D79379DB12089BD17B05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFORouter;
+			target = EA3724611A34A64E270C153CB2F83A3D /* AFORouter */;
+			targetProxy = F6C75FE1876B4F5E91A65254B05B5483 /* PBXContainerItemProxy */;
 		};
 		337FE2899D1D45782528DCD2BE54EBC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3724,17 +3738,23 @@
 			target = 8A645BA55C8E66AF09E2A53751F8B8AB /* AFOlibyuv */;
 			targetProxy = 943BA513EB8149347C54C84DDA5A21A0 /* PBXContainerItemProxy */;
 		};
-		386D32C138972A491753A7EADD3F8049 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFOFFMpeg;
-			target = 0AB68549BD94D1689F92071870E64ABD /* AFOFFMpeg */;
-			targetProxy = D02AF60026DF3CAA97E27F90CABB3D6A /* PBXContainerItemProxy */;
-		};
 		450285341F76F1B84AD848468E23A45F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFORouter;
 			target = EA3724611A34A64E270C153CB2F83A3D /* AFORouter */;
 			targetProxy = 74ED6BF7E8CE0D0B0D92AF9D454E34E5 /* PBXContainerItemProxy */;
+		};
+		4D73918CC47B7E1C0C4E39AD3A8ECDF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOSchedulerCore;
+			target = 314D580FEA95EADBAAE8A008B282E18B /* AFOSchedulerCore */;
+			targetProxy = 6D482F0F0ADF5704FEDDDD12C540E5B2 /* PBXContainerItemProxy */;
+		};
+		4F2C4E4CB99FC9B21D7E98703EC08D09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOUIKIT;
+			target = A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */;
+			targetProxy = 34957C7351A255BE5416FAE0713EB677 /* PBXContainerItemProxy */;
 		};
 		58CC480EFF6099BE62FE58B503B63225 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3742,17 +3762,17 @@
 			target = 0005CD12092CB524019DEC1413FA609E /* AFOGitHub */;
 			targetProxy = 2FE70B2CD2AEF1E7F923EDA976D7E476 /* PBXContainerItemProxy */;
 		};
+		5A5CDC8568FAFD753C1F5DD0846330BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOFoundation;
+			target = 0E6822B490412B4C83DAF77B7F359535 /* AFOFoundation */;
+			targetProxy = 4837C18106CA0F9F47EE9D9C0B945B9B /* PBXContainerItemProxy */;
+		};
 		64B0CAE0B91605335A82D81707C28F0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFOFFMpeg;
 			target = 0AB68549BD94D1689F92071870E64ABD /* AFOFFMpeg */;
 			targetProxy = 35033D694BD804C81B151FC89AEA8000 /* PBXContainerItemProxy */;
-		};
-		691474E3E998FD53CE44E391ECF9DBC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FMDB;
-			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
-			targetProxy = B00687529420CCB7885861A9955228D2 /* PBXContainerItemProxy */;
 		};
 		73178B324B1C9C33EF5905780C1EC5A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3760,35 +3780,29 @@
 			target = 9DA38C32E4AAB81B69E18BDBC2834B38 /* AFOPlaylist */;
 			targetProxy = 4D20D2A4150B0B45584F7A5ACE8AA73D /* PBXContainerItemProxy */;
 		};
-		805F69C2B926F5E81559CFBA200DD86C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFOSchedulerCore;
-			target = 314D580FEA95EADBAAE8A008B282E18B /* AFOSchedulerCore */;
-			targetProxy = 00C7755A2B2403F52FB6F7B2EE5BF4D5 /* PBXContainerItemProxy */;
-		};
 		819127BCC6FDBC24A3D74DC9DF918203 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libxvidcore;
 			target = E418045366D1ADABCBF36CEA0CBBBCEB /* libxvidcore */;
 			targetProxy = B56D4D069AD5570C959F6D10ABD0ACCF /* PBXContainerItemProxy */;
 		};
-		88562EC7719A8B0B6780D4CB646659F6 /* PBXTargetDependency */ = {
+		8739ECF133A0910F26AF8070651F057A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AFORouter;
-			target = EA3724611A34A64E270C153CB2F83A3D /* AFORouter */;
-			targetProxy = 09479B63822FE83B89BC06FA1B855F05 /* PBXContainerItemProxy */;
+			name = AFOFFMpeg;
+			target = 0AB68549BD94D1689F92071870E64ABD /* AFOFFMpeg */;
+			targetProxy = 6DC9C6A9EAB9BB21C826BAF3111A9F07 /* PBXContainerItemProxy */;
 		};
-		956A3843343A0F99931E02D27A518018 /* PBXTargetDependency */ = {
+		987CCB9BD0ACF5BF9100D26CCF472699 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AFOUIKIT;
-			target = A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */;
-			targetProxy = 22791CD4E2029EABC5F8E4E6710F2D8A /* PBXContainerItemProxy */;
+			name = "FMDB-FMDB_Privacy";
+			target = 973B9A51B49701F13767694DCAF5C37D /* FMDB-FMDB_Privacy */;
+			targetProxy = CAE293F35DF2AACA2345B6C915A6044A /* PBXContainerItemProxy */;
 		};
-		9BF95DBB28D3BBA22002075B93767B5F /* PBXTargetDependency */ = {
+		9957FC47AD6C5C6D9612331447591924 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AFOFoundation;
-			target = 0E6822B490412B4C83DAF77B7F359535 /* AFOFoundation */;
-			targetProxy = 8273B25F93267AF0BA6CAE5D0B49A1C4 /* PBXContainerItemProxy */;
+			name = AFOSQLite;
+			target = 1B01D8907470563147F602D1A7088582 /* AFOSQLite */;
+			targetProxy = 07681B19E521C1B1B05BB68AC3FC4C18 /* PBXContainerItemProxy */;
 		};
 		9E361135DC7293EFE2916AC1C82E3F8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3862,12 +3876,6 @@
 			target = 1B01D8907470563147F602D1A7088582 /* AFOSQLite */;
 			targetProxy = 5D2D3F60BC30A27FADB1AE67EB5E8745 /* PBXContainerItemProxy */;
 		};
-		EECA594FAF1A71317D336BCA45830E3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFOSQLite;
-			target = 1B01D8907470563147F602D1A7088582 /* AFOSQLite */;
-			targetProxy = CCE8D2FE188886D695B1AD81C8DC1DE1 /* PBXContainerItemProxy */;
-		};
 		EF2EF4CEC943A1425DA2B900E9ADEB0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFOlibyuv;
@@ -3879,6 +3887,12 @@
 			name = AFORouter;
 			target = EA3724611A34A64E270C153CB2F83A3D /* AFORouter */;
 			targetProxy = AC95FC4838786258921CE1FE818EEA84 /* PBXContainerItemProxy */;
+		};
+		FD1849D1FE73185F1D119D1BA59DBBBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
+			targetProxy = 0B1B48282F69A45411F930C02E7121AB /* PBXContainerItemProxy */;
 		};
 		FD2CD896059B752529B3A9B569169823 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3895,6 +3909,34 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		06E096D758BD5354D8A54C11F1F8DEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9891EA4893EA3F985F5B39E8C6A41BED /* AFOSQLite.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AFOSQLite/AFOSQLite-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOSQLite;
+				PRODUCT_NAME = AFOSQLite;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0E9568A37D06CAD8FBA2EE16377A33E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04AADE49245D620D476D47F26DFADD1E /* AFOFFMpeg.release.xcconfig */;
@@ -3922,34 +3964,32 @@
 			};
 			name = Release;
 		};
-		16F317E85DB19C3F2E8BA7780E3C23FF /* Release */ = {
+		16C08B47292EF367EE16291113EE338D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 095F5189B928C545B6F75653D59869D9 /* FMDB.release.xcconfig */;
+			baseConfigurationReference = 776EFACE8CB7BD91C08FAAD191960582 /* AFOSQLite.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AFOSQLite/AFOSQLite-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FMDB;
-				PRODUCT_NAME = FMDB;
+				PRODUCT_MODULE_NAME = AFOSQLite;
+				PRODUCT_NAME = AFOSQLite;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		1B24492F68CB6830F165201E7499FD28 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4076,33 +4116,6 @@
 			};
 			name = Debug;
 		};
-		3002C59EEF9E17E2D1D165C9C13FB806 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 776EFACE8CB7BD91C08FAAD191960582 /* AFOSQLite.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOSQLite/AFOSQLite-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AFOSQLite;
-				PRODUCT_NAME = AFOSQLite;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		48F88625DDC331954DE2AB64FFC2739B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51F8126E42B90E8382DEF1836946F3C9 /* AFOFFMpeg.debug.xcconfig */;
@@ -4129,6 +4142,23 @@
 			};
 			name = Debug;
 		};
+		51AE70B31299B77DF861D1EC053BE9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095F5189B928C545B6F75653D59869D9 /* FMDB.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FMDB";
+				IBSC_MODULE = FMDB;
+				INFOPLIST_FILE = "Target Support Files/FMDB/ResourceBundle-FMDB_Privacy-FMDB-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = FMDB_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		53F6B05E23ACC36EAD36BCA0045AC437 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D48AB83BBACD7E9130E36AA1FF8415D8 /* AFORouter.release.xcconfig */;
@@ -4147,34 +4177,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = AFORouter;
 				PRODUCT_NAME = AFORouter;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		68716F084971FD31F44D6874E6D87ED9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9A110393B884CFA8F60FE6C3A949EF /* AFOPlaylist.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOPlaylist/AFOPlaylist-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AFOPlaylist;
-				PRODUCT_NAME = AFOPlaylist;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -4267,6 +4269,34 @@
 			};
 			name = Debug;
 		};
+		7B984714A65741B983C5091633C653DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED9A110393B884CFA8F60FE6C3A949EF /* AFOPlaylist.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AFOPlaylist/AFOPlaylist-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOPlaylist;
+				PRODUCT_NAME = AFOPlaylist;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		7E2A3C23BCDCFFAEFB8892F06619A96E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 527FC30098E0B958121E060C887EFEFF /* AFOFFMpegLib.release.xcconfig */;
@@ -4283,9 +4313,24 @@
 			};
 			name = Release;
 		};
-		7F6DEF7D773D171CB65B478471ADB3E1 /* Debug */ = {
+		8AF30A10BE12050BFCF909432C3679C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5111D96E7E05178DF3C000D4BA03C843 /* FMDB.debug.xcconfig */;
+			baseConfigurationReference = 26D8A9BBCFC3FF76569C6E16148B5D9E /* AFOFFMpegLib.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CE947F214CAFB82CFC29A061547AAAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095F5189B928C545B6F75653D59869D9 /* FMDB.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4308,23 +4353,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
-		};
-		8AF30A10BE12050BFCF909432C3679C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26D8A9BBCFC3FF76569C6E16148B5D9E /* AFOFFMpegLib.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4403,50 +4434,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		972388411B8F642BE1397FFD5776F5BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 095F5189B928C545B6F75653D59869D9 /* FMDB.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FMDB";
-				IBSC_MODULE = FMDB;
-				INFOPLIST_FILE = "Target Support Files/FMDB/ResourceBundle-FMDB_Privacy-FMDB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = FMDB_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		98A20405FF1DF566A81B9977F7B68BC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EE310584F405D872215AE4A252E569D /* AFOPlaylist.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOPlaylist/AFOPlaylist-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AFOPlaylist;
-				PRODUCT_NAME = AFOPlaylist;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4627,6 +4614,50 @@
 			};
 			name = Debug;
 		};
+		BBEF8045D3A4D0AEC735461F1F8DE25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5111D96E7E05178DF3C000D4BA03C843 /* FMDB.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FMDB";
+				IBSC_MODULE = FMDB;
+				INFOPLIST_FILE = "Target Support Files/FMDB/ResourceBundle-FMDB_Privacy-FMDB-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = FMDB_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BC75DFDFB43558CB0559DDF8A9888968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE310584F405D872215AE4A252E569D /* AFOPlaylist.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AFOPlaylist/AFOPlaylist-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOPlaylist;
+				PRODUCT_NAME = AFOPlaylist;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		C12DBB318151AB40D2D4C4B8B27C396B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D31E8FF79DAC02C86894EC6BF106D35 /* AFOPlaylist.unit-tests.release.xcconfig */;
@@ -4709,51 +4740,6 @@
 			};
 			name = Release;
 		};
-		CF51A837E02C73E98B34A8ED4A9159E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9891EA4893EA3F985F5B39E8C6A41BED /* AFOSQLite.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOSQLite/AFOSQLite-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AFOSQLite;
-				PRODUCT_NAME = AFOSQLite;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CF6E6E0FDFE88DD9A5F79D99C6497AA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5111D96E7E05178DF3C000D4BA03C843 /* FMDB.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FMDB";
-				IBSC_MODULE = FMDB;
-				INFOPLIST_FILE = "Target Support Files/FMDB/ResourceBundle-FMDB_Privacy-FMDB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = FMDB_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		D1DDA5A5F91242288C469D7662670E65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C310D42BE655AD399A6FB9F6E3AE828 /* AFOFoundation.debug.xcconfig */;
@@ -4801,6 +4787,34 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE94F051B9CC15549AAD27F8BC64FF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5111D96E7E05178DF3C000D4BA03C843 /* FMDB.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FMDB;
+				PRODUCT_NAME = FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4895,6 +4909,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E426F304A40565A8C2FF0EB7F385717 /* Build configuration list for PBXNativeTarget "AFOPlaylist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC75DFDFB43558CB0559DDF8A9888968 /* Debug */,
+				7B984714A65741B983C5091633C653DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		16B2CE79DCF87A3131D0D86A64FDE41B /* Build configuration list for PBXNativeTarget "AFODelegateExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -4904,29 +4927,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1BC9F858902DCA2E345DB8C7396C2154 /* Build configuration list for PBXNativeTarget "AFOSQLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C08B47292EF367EE16291113EE338D /* Debug */,
+				06E096D758BD5354D8A54C11F1F8DEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		220209E84D1ACD9FFB2F01191F182EC6 /* Build configuration list for PBXNativeTarget "Pods-AFOPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE204B3EC8265C3F85F30CC6B72CAC9A /* Debug */,
 				C877D9951A0279BD04EB68230F95F0DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		25FA455299B74CC5E54D5F321B48A5F9 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F6DEF7D773D171CB65B478471ADB3E1 /* Debug */,
-				16F317E85DB19C3F2E8BA7780E3C23FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		264B640771970C66EF9CCD4639BC1524 /* Build configuration list for PBXNativeTarget "AFOPlaylist" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98A20405FF1DF566A81B9977F7B68BC9 /* Debug */,
-				68716F084971FD31F44D6874E6D87ED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4958,20 +4972,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		56738E5B0140E6DF3AFB24E51E2A8FE8 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE94F051B9CC15549AAD27F8BC64FF8F /* Debug */,
+				8CE947F214CAFB82CFC29A061547AAAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72F22AA989B174302DBFDF4081CB02CC /* Build configuration list for PBXNativeTarget "AFOSchedulerCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E87B91C697952C32A2183D2CAE41258 /* Debug */,
 				E00005902587099E59920F4BC772BBD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E4A18ECB41C3C1DB9900B33B5721186 /* Build configuration list for PBXNativeTarget "AFOSQLite" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3002C59EEF9E17E2D1D165C9C13FB806 /* Debug */,
-				CF51A837E02C73E98B34A8ED4A9159E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4990,15 +5004,6 @@
 			buildConfigurations = (
 				B635AE42D6C7845DA1E80E8005113692 /* Debug */,
 				F04AF4A933305C7B130B9E358A983C4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9869547D95202F84B87110E41366C495 /* Build configuration list for PBXNativeTarget "FMDB-FMDB_Privacy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF6E6E0FDFE88DD9A5F79D99C6497AA8 /* Debug */,
-				972388411B8F642BE1397FFD5776F5BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5053,6 +5058,15 @@
 			buildConfigurations = (
 				48F88625DDC331954DE2AB64FFC2739B /* Debug */,
 				0E9568A37D06CAD8FBA2EE16377A33E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8C58A78496C0E440965898BEC33C1EA /* Build configuration list for PBXNativeTarget "FMDB-FMDB_Privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEF8045D3A4D0AEC735461F1F8DE25D /* Debug */,
+				51AE70B31299B77DF861D1EC053BE9A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
