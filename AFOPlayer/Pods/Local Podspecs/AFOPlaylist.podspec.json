@@ -1,6 +1,6 @@
 {
   "name": "AFOPlaylist",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "summary": "play list.",
   "description": "Main features of player, player playlist.",
   "homepage": "https://github.com/PangDuTechnology/AFOPlaylist.git",
@@ -13,9 +13,10 @@
   },
   "source": {
     "git": "https://github.com/PangDuTechnology/AFOPlaylist.git",
-    "tag": "0.0.17"
+    "tag": "0.0.19"
   },
   "source_files": "AFOPlaylist/**/*.{h,m}",
+  "exclude_files": "AFOPlaylist/Tests/**/*",
   "public_header_files": "AFOPlaylist/**/*.h",
   "requires_arc": true,
   "dependencies": {
@@ -26,5 +27,16 @@
     "AFOFFMpeg": [],
     "AFOSQLite": [],
     "AFOGitHub": []
-  }
+  },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "platforms": {
+        "ios": "13.0"
+      },
+      "source_files": "AFOPlaylist/Tests/**/*.{h,m}",
+      "frameworks": "XCTest"
+    }
+  ]
 }

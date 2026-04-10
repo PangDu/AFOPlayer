@@ -144,7 +144,15 @@ PODS:
   - AFOGitHub/SDWebImage/lib (0.0.13)
   - AFOGitHub/UIScrollView (0.0.13)
   - AFOlibyuv (0.0.6)
-  - AFOPlaylist (0.0.17):
+  - AFOPlaylist (0.0.19):
+    - AFOFFMpeg
+    - AFOFoundation
+    - AFOGitHub
+    - AFORouter
+    - AFOSchedulerCore
+    - AFOSQLite
+    - AFOUIKIT
+  - AFOPlaylist/Tests (0.0.19):
     - AFOFFMpeg
     - AFOFoundation
     - AFOGitHub
@@ -201,6 +209,7 @@ DEPENDENCIES:
   - AFOFoundation (from `../../AFOFoundation`)
   - AFOGitHub (from `../../AFOGitHub`)
   - AFOPlaylist (from `../../AFOPlaylist`)
+  - AFOPlaylist/Tests (from `../../AFOPlaylist`)
   - AFORouter (from `../../AFORouter`)
   - AFOSchedulerCore (from `../../AFOSchedulerCore`)
   - AFOUIKIT (from `../../AFOUIKIT`)
@@ -242,7 +251,7 @@ SPEC CHECKSUMS:
   AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: cc0f08eec5c410cfdd83a876d00cec3f59bc0c39
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
-  AFOPlaylist: 5273cf8da3e9e891a0ac16fc4049cc6ff973d436
+  AFOPlaylist: aee474de8a6eabc91b1f9fdfcc42a9e5cc373f1e
   AFORouter: e7ecdd2023d64a99f56b8db96987955a73a363b7
   AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
@@ -252,6 +261,6 @@ SPEC CHECKSUMS:
   FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: c0cabe7ce7c03f5adf9481cd15a7104d66443ad0
+PODFILE CHECKSUM: 4c81f88a65840ec560d9fea34385122d6b302943
 
 COCOAPODS: 1.16.2

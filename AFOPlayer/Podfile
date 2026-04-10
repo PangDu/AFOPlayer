@@ -4,7 +4,7 @@ inhibit_all_warnings!
 target 'AFOPlayer' do
   pod 'AFOGitHub',:path =>'../../AFOGitHub'
   pod 'AFODelegateExtension',:path => '../../AFODelegateExtension'
-  pod 'AFOPlaylist', :path => '../../AFOPlaylist'
+  pod 'AFOPlaylist', :path => '../../AFOPlaylist', :testspecs => ['Tests']
   pod 'AFOFFMpeg', :path => '../../AFOFFMpeg'
   pod 'AFOFoundation', :path => '../../AFOFoundation'
   pod 'AFORouter', :path => '../../AFORouter'
