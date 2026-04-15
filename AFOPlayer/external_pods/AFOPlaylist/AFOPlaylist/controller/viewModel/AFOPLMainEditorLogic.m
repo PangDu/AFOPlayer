@@ -8,6 +8,7 @@
 
 #import "AFOPLMainEditorLogic.h"
 #import "AFOPLMainController.h"
+#import "AFOPLMainController+AFOPLMainManager.h"
 #import "AFOPLEditMenuView.h"
 #import "AFOPLMainManager.h"
 #import "AFOPLMainCollectionCell.h"
@@ -38,8 +39,8 @@
 #pragma mark - Editor Operations
 
 - (void)editorVedioOperation:(id)sender {
-    // TODO: self.mainController.dataArray.count 需要从主控制器获取
-    if (0 < 1) { // 暂时用 0 < 1 代替 dataArray.count
+    NSUInteger count = self.mainController.mainManager ? [self.mainController.mainManager playlistItemCount] : 0;
+    if (count == 0) {
         return;
     }
     [self addMenuView];
@@ -48,8 +49,8 @@
 
 - (void)addMenuView {
     if (!self.editMenuView) {
-        // TODO: self.mainController.view.bounds 需要从主控制器获取
-        self.editMenuView = [[AFOPLEditMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.mainController.view.bounds), CGRectGetWidth(self.mainController.view.bounds), 40) allVedio:0]; // 暂时用 0 代替 dataArray.count
+        NSInteger total = (NSInteger)[self.mainController.mainManager playlistItemCount];
+        self.editMenuView = [[AFOPLEditMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.mainController.view.bounds), CGRectGetWidth(self.mainController.view.bounds), 40) allVedio:total];
         [self.mainController.view addSubview:self.editMenuView];
     }
 
@@ -86,13 +87,15 @@
     __weak typeof(self) weakSelf = self;
     self.editMenuView.allSelectBlock = ^(BOOL isSelected) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        // TODO: self.mainController.collectionView 需要从主控制器获取
-        // TODO: self.mainController.dataArray 需要从主控制器获取
-        [strongSelf showDeleteIconImageIsAll:isSelected isTouch:!self.isTouch];
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf showDeleteIconImageIsAll:isSelected isTouch:!strongSelf.isTouch];
         if (isSelected) {
-            // [self.editMenuView userAllSelectedItems:self.mainController.dataArray]; // TODO: 暂时注释
+            NSArray *items = [strongSelf.mainController.mainManager playlistThumbnailItemsSnapshot] ?: @[];
+            [strongSelf.editMenuView userAllSelectedItems:items];
         } else {
-            [self.editMenuView userAllSelectedItems:[NSArray array]];
+            [strongSelf.editMenuView userAllSelectedItems:@[]];
         }
     };
 }
@@ -101,10 +104,15 @@
     __weak typeof(self) weakSelf = self;
     self.editMenuView.deleteVedioBlock = ^(NSArray * _Nonnull array) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
         [AFOPLMainManager deleteMovieRelatedContentLocally:array block:^(BOOL isSucess) {
             if (isSucess) {
-                self.updateCollectionBlock();
-                [self.editMenuView settingDataCount];
+                if (strongSelf.updateCollectionBlock) {
+                    strongSelf.updateCollectionBlock();
+                }
+                [strongSelf.editMenuView settingDataCount];
             }
         }];
     };
@@ -114,11 +122,13 @@
     __weak typeof(self) weakSelf = self;
     self.editMenuView.defaultBlock = ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [self.mainController.navigationItem.rightBarButtonItem setTitle:@"编辑"];
-        // TODO: self.mainController.collectionView 需要从主控制器获取
-        [self showDeleteIconImageIsAll:!self.isEditor isTouch:self.isTouch];
-        self.isTouch = NO;
-        self.isEditor = NO;
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf.mainController.navigationItem.rightBarButtonItem setTitle:@"编辑"];
+        [strongSelf showDeleteIconImageIsAll:!strongSelf.isEditor isTouch:strongSelf.isTouch];
+        strongSelf.isTouch = NO;
+        strongSelf.isEditor = NO;
     };
 }
 

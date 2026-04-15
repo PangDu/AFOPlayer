@@ -11,7 +11,6 @@
 #import "AFOPLMainManager.h"
 @interface AFOPLMainController ()<AFOPLMainManagerDelegate>
 @property (nonnull, nonatomic, strong, readwrite) AFOPLMainManager  *mainManager;
-@property (nonnull, nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @end
 @implementation AFOPLMainController (AFOPLMainManager)
 #pragma mark ------ 获取数据
@@ -19,13 +18,10 @@
     if (!self.mainManager) {
       self.mainManager = [AFOPLMainManager mainManagerDelegate:self];
     }
-    if (!self.dataArray) {
-        self.dataArray = [[NSMutableArray alloc] init];
-    }
     [self.mainManager getThumbnailData:^(NSArray *array) {
-        [self.dataArray removeAllObjects];
-        [self.dataArray addObjectsFromArray:array];
+        if (block) {
             block(array);
+        }
     }];
 }
 #pragma mark ------ 视频地址
@@ -52,11 +48,5 @@
 }
 - (AFOPLMainManager *)mainManager{
     return objc_getAssociatedObject(self, @selector(setMainManager:));
-}
-- (void)setDataArray:(NSArray *)dataArray{
-    objc_setAssociatedObject(self, @selector(setDataArray:), dataArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (NSArray *)dataArray{
-    return objc_getAssociatedObject(self, @selector(setDataArray:));
 }
 @end

@@ -9,6 +9,5 @@
 #ifndef AFOPLMainControllerCategory_h
 #define AFOPLMainControllerCategory_h
 #import "AFOPLMainController+AFOPLMainManager.h"
-#import "AFOPLMainController+Aspects.h"
 #import "AFOPLMainController+Operation.h"
 #endif /* AFOPLMainControllerCategory_h */

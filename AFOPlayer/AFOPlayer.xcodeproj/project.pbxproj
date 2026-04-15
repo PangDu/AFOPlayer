@@ -31,6 +31,7 @@
 		240B109F2007A5F70007F2F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B109E2007A5F70007F2F3 /* main.m */; };
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
+		C0MP0S1712F9000100490001 /* AFOAppCompositionRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
 		A1B2C3D72F90000100AF0002 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D62F90000100AF0002 /* ImageIO.framework */; };
 		B2AE60309D4F5C383ADD60EB /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */; };
@@ -69,6 +70,8 @@
 		240B109E2007A5F70007F2F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2413253D22432DAC00D51960 /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
 		2413253E22432DAC00D51960 /* AFOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegate.m; sourceTree = "<group>"; };
+		C0MP0S1712F9000100490002 /* AFOAppCompositionRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppCompositionRoot.h; sourceTree = "<group>"; };
+		C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppCompositionRoot.m; sourceTree = "<group>"; };
 		2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppTabBarController+AFOAutoRotate.h"; sourceTree = "<group>"; };
 		2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppTabBarController+AFOAutoRotate.m"; sourceTree = "<group>"; };
 		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		2408BAD9200856870049060F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C0MP0S1712F9000100490002 /* AFOAppCompositionRoot.h */,
+				C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */,
 				2408BADC200856870049060F /* AFOAddControllerModel.h */,
 				2408BADB200856870049060F /* AFOAddControllerModel.m */,
 			);
@@ -347,6 +352,7 @@
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
 				240B109F2007A5F70007F2F3 /* main.m in Sources */,
 				2408BAE4200856870049060F /* AFOAddControllerModel.m in Sources */,
+				C0MP0S1712F9000100490001 /* AFOAppCompositionRoot.m in Sources */,
 				2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */,
 				240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */,
 			);
@@ -498,6 +504,23 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lAFODelegateExtension",
+					"-lAFOLANUpload",
+					"-lAFOFoundation",
+					"-lAFOGitHub",
+					"-lAFOPlaylist",
+					"-lAFORouter",
+					"-lAFOSQLite",
+					"-lAFOSchedulerCore",
+					"-lAFOUIKIT",
+					"-lAFOViews",
+					"-lFMDB",
+					"-liconv",
+					"-lsqlite3",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";
 				SDKROOT = iphoneos;
@@ -529,6 +552,23 @@
 					"-ObjC",
 					"-all_load",
 					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lAFODelegateExtension",
+					"-lAFOLANUpload",
+					"-lAFOFoundation",
+					"-lAFOGitHub",
+					"-lAFOPlaylist",
+					"-lAFORouter",
+					"-lAFOSQLite",
+					"-lAFOSchedulerCore",
+					"-lAFOUIKIT",
+					"-lAFOViews",
+					"-lFMDB",
+					"-liconv",
+					"-lsqlite3",
+					"-lz",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";

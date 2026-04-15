@@ -9,6 +9,23 @@
 #import "AFOReadDirectoryFile.h"
 #import <AFOFoundation/AFOFoundation.h>
 #import "AFODirectoryWatcher.h"
+
+static BOOL AFOPLIsSupportedVideoFileName(NSString *fileName) {
+    if (fileName.length == 0) {
+        return NO;
+    }
+    if ([fileName hasPrefix:@"."] || [fileName containsString:@".nosync"]) {
+        return NO;
+    }
+    static NSSet<NSString *> *extensions;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        extensions = [NSSet setWithArray:@[@"mp4", @"mov", @"m4v", @"avi", @"mkv", @"flv", @"wmv", @"3gp", @"ts", @"m2ts"]];
+    });
+    NSString *ext = fileName.pathExtension.lowercaseString;
+    return [extensions containsObject:ext];
+}
+
 @interface AFOReadDirectoryFile ()<DirectoryWatcherDelegate>
 @property (nonnull, nonatomic, strong) NSMutableArray       *fileArray;
 @property (nonnull, nonatomic, strong) AFODirectoryWatcher  *directoryWatcher;
@@ -43,7 +60,7 @@
             NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
             BOOL isDirectory;
             [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
-            if (!isDirectory){
+            if (!isDirectory && AFOPLIsSupportedVideoFileName(curFileName)){
                 [self.fileArray addObjectAFOAbnormal:curFileName];
             }
         }

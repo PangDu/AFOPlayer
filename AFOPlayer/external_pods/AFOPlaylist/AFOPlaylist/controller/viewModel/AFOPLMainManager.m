@@ -10,6 +10,106 @@
 #import "AFOPLCorrespondingCategory.h"
 #import "AFOReadDirectoryFile.h"
 #import "AFOPLThumbnail.h"
+
+static NSString *AFOPLResolvePlayableVideoPath(NSString *rawValue) {
+    if (rawValue.length == 0) {
+        return @"";
+    }
+
+    NSString *trimmed = [rawValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (trimmed.length == 0) {
+        return @"";
+    }
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    // 支持上传模块可能传回的 file:// 绝对地址。
+    if ([trimmed hasPrefix:@"file://"]) {
+        NSURL *url = [NSURL URLWithString:trimmed];
+        if (url.path.length > 0) {
+            if ([fileManager fileExistsAtPath:url.path]) {
+                return url.path;
+            }
+            return url.path;
+        }
+    }
+
+    // 绝对路径直接使用，避免 Documents 重复拼接导致路径失效。
+    if ([trimmed hasPrefix:@"/"]) {
+        return trimmed;
+    }
+
+    NSString *documents = [NSFileManager documentSandbox];
+    NSString *directPath = [documents stringByAppendingPathComponent:trimmed];
+    if ([fileManager fileExistsAtPath:directPath]) {
+        return directPath;
+    }
+
+    NSString *lastPath = trimmed.lastPathComponent;
+    if (lastPath.length > 0) {
+        NSString *fallbackPath = [documents stringByAppendingPathComponent:lastPath];
+        if ([fileManager fileExistsAtPath:fallbackPath]) {
+            return fallbackPath;
+        }
+    }
+
+    NSArray<NSString *> *candidateRoots = @[
+        [NSFileManager documentSandbox] ?: @"",
+        [NSFileManager cachesDocumentSandbox] ?: @"",
+        NSTemporaryDirectory() ?: @""
+    ];
+
+    // 兜底：在常见沙盒目录递归查找同名文件，兼容上传落盘到子目录的场景。
+    for (NSString *root in candidateRoots) {
+        if (root.length == 0) {
+            continue;
+        }
+        NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:root];
+        NSString *relativePath = nil;
+        while ((relativePath = [enumerator nextObject])) {
+            NSString *candidateName = relativePath.lastPathComponent;
+            if ([candidateName isEqualToString:trimmed] || [candidateName isEqualToString:lastPath]) {
+                return [root stringByAppendingPathComponent:relativePath];
+            }
+        }
+    }
+
+    // 保底返回拼接路径，保持旧行为并便于上层日志定位。
+    return directPath;
+}
+
+static BOOL AFOPLIsSupportedVideoName(NSString *videoName) {
+    if (videoName.length == 0) {
+        return NO;
+    }
+    if ([videoName hasPrefix:@"."] || [videoName containsString:@".nosync"]) {
+        return NO;
+    }
+    static NSSet<NSString *> *extensions;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        extensions = [NSSet setWithArray:@[@"mp4", @"mov", @"m4v", @"avi", @"mkv", @"flv", @"wmv", @"3gp", @"ts", @"m2ts"]];
+    });
+    NSString *ext = videoName.pathExtension.lowercaseString;
+    return [extensions containsObject:ext];
+}
+
+static NSArray<AFOPLThumbnail *> *AFOPLFilterSupportedThumbnails(NSArray *items) {
+    if (items.count == 0) {
+        return @[];
+    }
+    NSMutableArray<AFOPLThumbnail *> *result = [[NSMutableArray alloc] init];
+    for (id obj in items) {
+        if (![obj isKindOfClass:[AFOPLThumbnail class]]) {
+            continue;
+        }
+        AFOPLThumbnail *item = (AFOPLThumbnail *)obj;
+        if (AFOPLIsSupportedVideoName(item.vedio_name)) {
+            [result addObject:item];
+        }
+    }
+    return [result copy];
+}
 #import "AFOPLMainFolderManager.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
 @property (nonnull, nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
@@ -47,8 +147,12 @@
 }
 #pragma mark ------ 视频地址
 - (NSString *)vedioAddressIndexPath:(NSIndexPath *)indexPath{
-    NSString *path = [[NSFileManager documentSandbox] stringByAppendingString:@"/"];
-    return [path stringByAppendingString:[self vedioNameIndexPath:indexPath]];
+    AFOPLThumbnail *detail = [self.dataArray objectAtIndexAFOAbnormal:indexPath.item];
+    NSString *resolvedPath = AFOPLResolvePlayableVideoPath(detail.vedio_name);
+#if DEBUG
+    NSLog(@"AFOPLMainManager: play request raw=%@ resolved=%@", detail.vedio_name, resolvedPath);
+#endif
+    return resolvedPath;
 }
 #pragma mark ------ 视频名
 - (NSString *)vedioNameIndexPath:(NSIndexPath *)indexPath{
@@ -74,11 +178,11 @@
     ///---
     if (addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count == 0) {
         [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
-                [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
+                [self.dataArray addObjectsFromArrayAFOAbnormal:AFOPLFilterSupportedThumbnails(itemArray)];
                 block(self.dataArray);
         }];
     }else if(addArray.count == 0 && [AFOPLCorresponding getAllDataFromDataBase].count > 0){
-        NSArray *databaseArray = [AFOPLCorresponding getAllDataFromDataBase];
+        NSArray *databaseArray = AFOPLFilterSupportedThumbnails([AFOPLCorresponding getAllDataFromDataBase]);
         [self.dataArray addObjectsFromArrayAFOAbnormal:databaseArray];
         // 添加日志打印从数据库加载的图片尺寸
         for (AFOPLThumbnail *thumbnail in databaseArray) {
@@ -86,9 +190,9 @@
         }
         block(self.dataArray);
     }else if(addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count > 0){
-        [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
+        [self.dataArray addObjectsFromArrayAFOAbnormal:AFOPLFilterSupportedThumbnails([AFOPLCorresponding getAllDataFromDataBase])];
         [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
-            [self.dataArray addObjectsFromArrayAFOAbnormal:itemArray];
+            [self.dataArray addObjectsFromArrayAFOAbnormal:AFOPLFilterSupportedThumbnails(itemArray)];
             block(self.dataArray);
         }];
     }else{
@@ -229,4 +333,15 @@
 - (void)dealloc{
     NSLog(@"AFOPLMainManager dealloc");
 }
+
+#pragma mark - AFOPLPlaylistRoutingDataSource (optional)
+
+- (NSUInteger)playlistItemCount {
+    return self.dataArray.count;
+}
+
+- (NSArray *)playlistThumbnailItemsSnapshot {
+    return [self.dataArray copy];
+}
+
 @end

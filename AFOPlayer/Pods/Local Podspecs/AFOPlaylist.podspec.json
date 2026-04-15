@@ -1,6 +1,6 @@
 {
   "name": "AFOPlaylist",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "summary": "play list.",
   "description": "Main features of player, player playlist.",
   "homepage": "https://github.com/PangDuTechnology/AFOPlaylist.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/PangDuTechnology/AFOPlaylist.git",
-    "tag": "0.0.19"
+    "tag": "0.0.20"
   },
   "source_files": "AFOPlaylist/**/*.{h,m}",
   "exclude_files": "AFOPlaylist/Tests/**/*",
@@ -25,6 +25,7 @@
     "AFORouter": [],
     "AFOUIKIT": [],
     "AFOFFMpeg": [],
+    "AFOLANUpload": [],
     "AFOSQLite": [],
     "FMDB": [
       "~> 2.7"

@@ -10,15 +10,45 @@
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOGitHub/AFOGitHub.h>
 #import "AFOPLMainControllerCategory.h"
+#import "AFOPLMainListViewModel.h"
+#import "AFOPLMainManager.h"
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
+#import <TargetConditionals.h>
+#if TARGET_OS_SIMULATOR
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#endif
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
 @property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
+@property (nonatomic, strong, nullable) AFOPLMainListViewModel *playlistListViewModel;
 @end
 @implementation AFOPLMainController
+#if TARGET_OS_SIMULATOR
+- (void)playVideoInSimulatorAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *videoPath = [self vedioPath:indexPath];
+    NSLog(@"AFOPLMainController(sim): try play indexPath=%@ path=%@", indexPath, videoPath);
+    if (videoPath.length == 0) {
+        NSLog(@"AFOPLMainController(sim): empty video path");
+        return;
+    }
+
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:videoPath]) {
+        NSLog(@"AFOPLMainController(sim): file not found at path=%@", videoPath);
+        return;
+    }
+
+    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+    playerVC.player = [AVPlayer playerWithURL:videoURL];
+    playerVC.title = [self vedioName:indexPath];
+    [self.navigationController pushViewController:playerVC animated:YES];
+    [playerVC.player play];
+}
+#endif
 #pragma mark - Lifecycle
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -53,7 +83,6 @@
     self.title = @"播放列表";
     // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
     [self.view addSubview:self.collectionView];
-    [self collectionViewDidSelectRowAtIndexPathExchange];
 }
 #pragma mark - Layout
 - (void)viewDidLayoutSubviews {
@@ -84,6 +113,9 @@
 - (void)initializerInstance {
     [self setupLayoutBlock];
     [self configureCollectionViewData];
+    if (self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
     [self addPullToRefresh]; 
     __weak typeof(self) weakSelf = self;
     self.editorLogic.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
@@ -105,18 +137,29 @@
     __weak typeof(self) weakSelf = self;
     [self addCollectionViewData:^(NSArray *array) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [self.collectionDataSource settingImageData:array];
-        // 确保在主线程更新 UI
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf.collectionDataSource settingImageData:array];
+        [strongSelf.playlistListViewModel syncListStateAfterReload];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
+            [strongSelf.collectionView reloadData];
         });
     }];
 }
 #pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 #if DEBUG
-    NSLog(@"AFOPLMainController: Original collectionView:didSelectItemAtIndexPath: called. Index Path: %@", indexPath);
+    NSLog(@"AFOPLMainController: didSelectItemAtIndexPath: %@", indexPath);
 #endif
+#if TARGET_OS_SIMULATOR
+    [self playVideoInSimulatorAtIndexPath:indexPath];
+    return;
+#endif
+    if (!self.playlistListViewModel && self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
+    [self.playlistListViewModel openPlayerAtIndexPath:indexPath currentControllerClassName:NSStringFromClass([self class])];
 }
 #pragma mark - Accessors
 - (UICollectionView *)collectionView{

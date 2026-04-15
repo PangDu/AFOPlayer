@@ -1,29 +1,15 @@
 #import "AFOAppDelegate.h"
 #import "AFOAppTabBarController.h"
-#import "AFOAddControllerModel.h"
+#import "AFOAppCompositionRoot.h"
 #import "AFORouterManager.h"
-
-@interface AFOAppDelegate ()
-
-@property (nonatomic, strong) AFOAddControllerModel *addModel;
-
-@end
 
 @implementation AFOAppDelegate
 
 #pragma mark - Accessors
 
-- (AFOAddControllerModel *)addModel {
-    if (!_addModel) {
-        _addModel = [[AFOAddControllerModel alloc] init];
-    }
-    return _addModel;
-}
-
 - (AFOAppTabBarController *)tabBarController {
     if (!_tabBarController) {
-        _tabBarController = [[AFOAppTabBarController alloc] init];
-        [self.addModel controllerInitialization:_tabBarController];
+        _tabBarController = [AFOAppCompositionRoot makeRootTabBarController];
     }
     return _tabBarController;
 }
