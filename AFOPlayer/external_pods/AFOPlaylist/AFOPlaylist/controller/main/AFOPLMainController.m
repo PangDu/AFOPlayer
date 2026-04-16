@@ -10,6 +10,7 @@
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOGitHub/AFOGitHub.h>
 #import "AFOPLMainControllerCategory.h"
+#import "AFOPlayListNavigationController.h"
 #import "AFOPLMainListViewModel.h"
 #import "AFOPLMainManager.h"
 #import "AFOPLMainCellDefaultLayout.h"
@@ -61,10 +62,34 @@
 #if DEBUG
         NSLog(@"AFOPLMainController: navigationController exists.");
 #endif
+        UIColor *lightBlue = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
+        if (@available(iOS 11.0, *)) {
+            // 避免 Large Title 状态下标题不可见/不显示 titleView 的情况
+            self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
+            self.navigationController.navigationBar.prefersLargeTitles = NO;
+        }
+        self.title = @"播放列表";
+        self.navigationItem.title = @"播放列表";
+        self.navigationItem.titleView = nil;
+        self.navigationController.navigationBar.topItem.title = @"播放列表";
+        self.navigationController.navigationBar.topItem.titleView = nil;
         // 确保导航栏是可见的，如果其父控制器或相关配置导致隐藏，此处可强制显示
         self.navigationController.navigationBar.hidden = NO;
         self.navigationController.navigationBar.alpha = 1.0;
         self.navigationController.navigationBar.translucent = NO;
+        if (@available(iOS 13.0, *)) {
+            UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+            [appearance configureWithOpaqueBackground];
+            appearance.backgroundColor = lightBlue;
+            appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+            appearance.largeTitleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+            self.navigationController.navigationBar.standardAppearance = appearance;
+            self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+            self.navigationController.navigationBar.compactAppearance = appearance;
+        } else {
+            self.navigationController.navigationBar.barTintColor = lightBlue;
+            self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+        }
         // 标题设置应保持在 viewDidLoad 或初始化时
         // self.navigationItem.title = @"播放列表";
         // 移除诊断性背景色设置
@@ -79,7 +104,8 @@
 #pragma mark - Initialization
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // self.view.backgroundColor = [UIColor redColor]; // 移除诊断用的背景色
+    UIColor *lightBlue = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
+    self.view.backgroundColor = lightBlue;
     self.title = @"播放列表";
     // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
     [self.view addSubview:self.collectionView];
@@ -87,6 +113,22 @@
 #pragma mark - Layout
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    // 兜底：部分导航容器会在 layout 后重置 titleView/title，这里每次布局后再补一次
+    if (self.navigationController) {
+        UINavigationBar *navBar = self.navigationController.navigationBar;
+        UINavigationItem *topItem = navBar.topItem;
+        if (topItem) {
+            topItem.title = @"播放列表";
+            if (!topItem.titleView) {
+                UILabel *label = [[UILabel alloc] init];
+                label.text = @"播放列表";
+                label.textColor = [UIColor blackColor];
+                label.font = [UIFont boldSystemFontOfSize:17.0];
+                [label sizeToFit];
+                topItem.titleView = label;
+            }
+        }
+    }
     if (!self.isInitialized) {
         [self initializerInstance];
         [self.editorLogic setupEditButton];
@@ -166,7 +208,7 @@
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];
         _collectionView.pagingEnabled = YES;
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
         _collectionView.delegate = self;
         _collectionView.dataSource = self.collectionDataSource;
         _collectionView.alwaysBounceVertical=YES;
@@ -243,7 +285,7 @@
 
 #pragma mark - AFOTabRootControllerProviding
 - (UIViewController *)returnController {
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+    AFOPlayListNavigationController *navController = [[AFOPlayListNavigationController alloc] initWithRootViewController:self];
 #if DEBUG
     NSLog(@"AFOPLMainController: returnController called. Returning UINavigationController: %p with root: %p", navController, self);
 #endif

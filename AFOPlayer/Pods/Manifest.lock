@@ -145,6 +145,7 @@ PODS:
   - AFOGitHub/UIScrollView (0.0.13)
   - AFOLANUpload (0.0.1)
   - AFOlibyuv (0.0.6)
+  - AFOOnlinePlay (0.0.1)
   - AFOPlaylist (0.0.20):
     - AFOFFMpeg
     - AFOFoundation
@@ -214,6 +215,7 @@ DEPENDENCIES:
   - AFOFoundation (from `../../AFOFoundation`)
   - AFOGitHub (from `../../AFOGitHub`)
   - AFOLANUpload (from `../../AFOLANUpload`)
+  - AFOOnlinePlay (from `../../AFOOnlinePlay`)
   - AFOPlaylist (from `../../AFOPlaylist`)
   - AFOPlaylist/Tests (from `../../AFOPlaylist`)
   - AFORouter (from `../../AFORouter`)
@@ -241,6 +243,8 @@ EXTERNAL SOURCES:
     :path: "../../AFOGitHub"
   AFOLANUpload:
     :path: "../../AFOLANUpload"
+  AFOOnlinePlay:
+    :path: "../../AFOOnlinePlay"
   AFOPlaylist:
     :path: "../../AFOPlaylist"
   AFORouter:
@@ -254,12 +258,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
-  AFOFFMpeg: 50e3a8368cb93e0e0349ac9f88732ba92043a25b
+  AFOFFMpeg: 408b409bf2bd4b4dc96e8c160119d629f2dc0705
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
   AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: cc0f08eec5c410cfdd83a876d00cec3f59bc0c39
   AFOLANUpload: 4d4a2941a13d7b115e4241bce222d8f3f614356c
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
+  AFOOnlinePlay: a03231b3d68a1cb4b2579eeb45dec33106fa574b
   AFOPlaylist: 24a71d4de8d4666f8e166db51926b32bab8655c4
   AFORouter: e7ecdd2023d64a99f56b8db96987955a73a363b7
   AFOSchedulerCore: 67ac518e0a44ec4b740abe7c61f3a725071c1fae
@@ -270,6 +275,6 @@ SPEC CHECKSUMS:
   FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 3267570c8d2789f5667197f3800b4ed69cbdc3f8
+PODFILE CHECKSUM: 702a8159cd8d44cddbad4d88fedd342616f942b6
 
 COCOAPODS: 1.16.2

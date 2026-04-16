@@ -6,6 +6,7 @@ target 'AFOPlayer' do
   pod 'AFODelegateExtension',:path => '../../AFODelegateExtension'
   pod 'AFOLANUpload', :path => '../../AFOLANUpload'
   pod 'AFOPlaylist', :path => '../../AFOPlaylist', :testspecs => ['Tests']
+  pod 'AFOOnlinePlay', :path => '../../AFOOnlinePlay'
   pod 'AFOFFMpeg', :path => '../../AFOFFMpeg'
   pod 'AFOFoundation', :path => '../../AFOFoundation'
   pod 'AFORouter', :path => '../../AFORouter'
@@ -23,6 +24,7 @@ post_install do |installer|
     '-lAFOFoundation',
     '-lAFOGitHub',
     '-lAFOPlaylist',
+    '-lAFOOnlinePlay',
     '-lAFORouter',
     '-lAFOSQLite',
     '-lAFOSchedulerCore',
@@ -43,6 +45,7 @@ post_install do |installer|
     '-lAFOFoundation',
     '-lAFOGitHub',
     '-lAFOPlaylist',
+    '-lAFOOnlinePlay',
     '-lAFORouter',
     '-lAFOSQLite',
     '-lAFOSchedulerCore',
