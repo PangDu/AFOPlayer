@@ -2,7 +2,7 @@
 //  AFOPlayListPublicController.m
 //  AFOPlaylist
 //
-//  Created by xueguang xian on 2017/12/14.
+//  Created by zhao yun on 2017/12/14.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  AFOPlaylistSQLiteManager.m
 //  AFOPlaylist
 //
-//  Created by xueguang xian on 2018/1/12.
+//  Created by zhao yun on 2018/1/12.
 //  Copyright © 2018年 AFO. All rights reserved.
 //
 

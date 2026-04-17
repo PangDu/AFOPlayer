@@ -2,7 +2,7 @@
 //  AFOPLMainControllerCategory.h
 //  AFOPlaylist
 //
-//  Created by xueguang xian on 2018/12/17.
+//  Created by zhao yun on 2018/12/17.
 //  Copyright © 2018 AFO. All rights reserved.
 //
 
