@@ -1,2 +1,0 @@
-# AFOGitHub
-Integrated tripartite library

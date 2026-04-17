@@ -1,13 +1,18 @@
 //
-//  AFOAppWindowViewModel.h
+//  AFOAddControllerModel.h
 //  AFOPlayer
 //
-//  Created by xueguang xian on 2017/12/13.
+//  Created by zhao yun on 2017/12/13.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @class AFOAppTabBarController;
+
 @interface AFOAddControllerModel : NSObject
+
+/// 根据 `controllerArray` 中的类名实例化 Tab 子控制器并赋值给 `tabBarController`。
 - (void)controllerInitialization:(AFOAppTabBarController *)tabBarController;
+
 @end

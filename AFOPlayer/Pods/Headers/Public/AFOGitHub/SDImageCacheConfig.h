@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDImageCacheConfig.h
+../../../../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDImageCacheConfig.h

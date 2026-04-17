@@ -2,7 +2,7 @@
 //  AFOAppDelegate.h
 //  AFOPlayer
 //
-//  Created by xueguang xian on 2019/3/21.
+//  Created by zhao yun on 2019/3/21.
 //  Copyright © 2019 AFO Science Technology Ltd. All rights reserved.
 //
 

@@ -1,0 +1,295 @@
+//
+//  AFOPLMainController.m
+//  AFOPlaylist
+//
+//  Created by zhao yun on 2017/12/14.
+//  Copyright © 2017年 AFO. All rights reserved.
+//
+
+#import "AFOPLMainController.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import <AFOGitHub/AFOGitHub.h>
+#import "AFOPLMainControllerCategory.h"
+#import "AFOPlayListNavigationController.h"
+#import "AFOPLMainListViewModel.h"
+#import "AFOPLMainManager.h"
+#import "AFOPLMainCellDefaultLayout.h"
+#import "AFOPLMainCollectionDataSource.h"
+#import "AFOPLMainCollectionCell.h"
+#import <TargetConditionals.h>
+#if TARGET_OS_SIMULATOR
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#endif
+@interface AFOPLMainController ()<UICollectionViewDelegate>
+@property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
+@property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
+@property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
+@property (nonatomic, strong, nullable) AFOPLMainListViewModel *playlistListViewModel;
+@end
+@implementation AFOPLMainController
+#if TARGET_OS_SIMULATOR
+- (void)playVideoInSimulatorAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *videoPath = [self vedioPath:indexPath];
+    NSLog(@"AFOPLMainController(sim): try play indexPath=%@ path=%@", indexPath, videoPath);
+    if (videoPath.length == 0) {
+        NSLog(@"AFOPLMainController(sim): empty video path");
+        return;
+    }
+
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:videoPath]) {
+        NSLog(@"AFOPLMainController(sim): file not found at path=%@", videoPath);
+        return;
+    }
+
+    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+    playerVC.player = [AVPlayer playerWithURL:videoURL];
+    playerVC.title = [self vedioName:indexPath];
+    [self.navigationController pushViewController:playerVC animated:YES];
+    [playerVC.player play];
+}
+#endif
+#pragma mark - Lifecycle
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+#if DEBUG
+    NSLog(@"AFOPLMainController: viewWillAppear called. Hiding TabBar.");
+#endif
+    self.tabBarController.tabBar.hidden = YES;
+
+    if (self.navigationController) {
+#if DEBUG
+        NSLog(@"AFOPLMainController: navigationController exists.");
+#endif
+        UIColor *lightBlue = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
+        if (@available(iOS 11.0, *)) {
+            // 避免 Large Title 状态下标题不可见/不显示 titleView 的情况
+            self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
+            self.navigationController.navigationBar.prefersLargeTitles = NO;
+        }
+        self.title = @"播放列表";
+        self.navigationItem.title = @"播放列表";
+        self.navigationItem.titleView = nil;
+        self.navigationController.navigationBar.topItem.title = @"播放列表";
+        self.navigationController.navigationBar.topItem.titleView = nil;
+        // 确保导航栏是可见的，如果其父控制器或相关配置导致隐藏，此处可强制显示
+        self.navigationController.navigationBar.hidden = NO;
+        self.navigationController.navigationBar.alpha = 1.0;
+        self.navigationController.navigationBar.translucent = NO;
+        if (@available(iOS 13.0, *)) {
+            UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+            [appearance configureWithOpaqueBackground];
+            appearance.backgroundColor = lightBlue;
+            appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+            appearance.largeTitleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+            self.navigationController.navigationBar.standardAppearance = appearance;
+            self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+            self.navigationController.navigationBar.compactAppearance = appearance;
+        } else {
+            self.navigationController.navigationBar.barTintColor = lightBlue;
+            self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor blackColor] };
+        }
+        // 标题设置应保持在 viewDidLoad 或初始化时
+        // self.navigationItem.title = @"播放列表";
+        // 移除诊断性背景色设置
+        // self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    } else {
+#if DEBUG
+        NSLog(@"AFOPLMainController: navigationController is NIL. This might be the problem.");
+#endif
+    }
+}
+
+#pragma mark - Initialization
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UIColor *lightBlue = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
+    self.view.backgroundColor = lightBlue;
+    self.title = @"播放列表";
+    // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
+    [self.view addSubview:self.collectionView];
+}
+#pragma mark - Layout
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    // 兜底：部分导航容器会在 layout 后重置 titleView/title，这里每次布局后再补一次
+    if (self.navigationController) {
+        UINavigationBar *navBar = self.navigationController.navigationBar;
+        UINavigationItem *topItem = navBar.topItem;
+        if (topItem) {
+            topItem.title = @"播放列表";
+            if (!topItem.titleView) {
+                UILabel *label = [[UILabel alloc] init];
+                label.text = @"播放列表";
+                label.textColor = [UIColor blackColor];
+                label.font = [UIFont boldSystemFontOfSize:17.0];
+                [label sizeToFit];
+                topItem.titleView = label;
+            }
+        }
+    }
+    if (!self.isInitialized) {
+        [self initializerInstance];
+        [self.editorLogic setupEditButton];
+        self.isInitialized = YES;
+        // 初次布局时强制刷新，避免视图问题
+        [self.collectionView.collectionViewLayout invalidateLayout];
+        [self.collectionView layoutIfNeeded];
+    }
+}
+#pragma mark - Private Methods
+
+- (void)setupLayoutBlock {
+    __weak typeof(self) weakSelf = self;
+    self.defaultLayout.block = ^CGFloat(CGFloat width, NSIndexPath *indexPath) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        return [self vedioItemHeight:indexPath width:width];
+    };
+}
+
+- (void)configureCollectionViewData {
+    [self addCollectionViewData];
+}
+
+- (void)initializerInstance {
+    [self setupLayoutBlock];
+    [self configureCollectionViewData];
+    if (self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
+    [self addPullToRefresh]; 
+    __weak typeof(self) weakSelf = self;
+    self.editorLogic.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [self configureCollectionViewData];
+    };
+}
+#pragma mark ------ 下拉刷新
+- (void)addPullToRefresh{
+     __weak typeof(self) weakSelf = self;
+     [self.collectionView addPullToRefreshWithActionHandler:^{
+         __strong typeof(weakSelf) strongSelf = weakSelf;
+         [self.collectionView.pullToRefreshView stopAnimating];
+     }];
+}
+#pragma mark - Data Handling
+
+- (void)addCollectionViewData {
+    __weak typeof(self) weakSelf = self;
+    [self addCollectionViewData:^(NSArray *array) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf.collectionDataSource settingImageData:array];
+        [strongSelf.playlistListViewModel syncListStateAfterReload];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [strongSelf.collectionView reloadData];
+        });
+    }];
+}
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+#if DEBUG
+    NSLog(@"AFOPLMainController: didSelectItemAtIndexPath: %@", indexPath);
+#endif
+#if TARGET_OS_SIMULATOR
+    [self playVideoInSimulatorAtIndexPath:indexPath];
+    return;
+#endif
+    if (!self.playlistListViewModel && self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
+    [self.playlistListViewModel openPlayerAtIndexPath:indexPath currentControllerClassName:NSStringFromClass([self class])];
+}
+#pragma mark - Accessors
+- (UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];
+        _collectionView.pagingEnabled = YES;
+        _collectionView.backgroundColor = [UIColor colorWithRed:0.90 green:0.95 blue:1.00 alpha:1.0];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self.collectionDataSource;
+        _collectionView.alwaysBounceVertical=YES;
+        [_collectionView registerClass:[AFOPLMainCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass([AFOPLMainCollectionCell class])];
+        NSLog(@"AFOPLMainController: CollectionView created. Delegate: %p, DataSource: %p, UserInteractionEnabled: %d, Frame: %@", _collectionView.delegate, _collectionView.dataSource, _collectionView.userInteractionEnabled, NSStringFromCGRect(_collectionView.frame));
+    }
+    return _collectionView;
+}
+- (AFOPLMainCollectionDataSource *)collectionDataSource{
+    if (!_collectionDataSource) {
+        _collectionDataSource = [[AFOPLMainCollectionDataSource alloc] init];
+    }
+    return _collectionDataSource;
+}
+- (AFOPLMainCellDefaultLayout *)defaultLayout{
+    if (!_defaultLayout) {
+        _defaultLayout = [[AFOPLMainCellDefaultLayout alloc] init];
+    }
+    return _defaultLayout;
+}
+#pragma mark - Orientation
+- (BOOL)shouldAutorotate{
+    return YES;
+}
+#pragma mark ------ 支持的方向
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+#pragma mark - Memory Management
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark - Deallocation
+- (void)dealloc{
+#if DEBUG
+    NSLog(@"AFOPLMainController dealloc");
+#endif
+}
+
+
+#pragma mark ------ viewDidAppear
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+#if DEBUG
+    NSLog(@"AFOPLMainController: viewDidAppear called.");
+#endif
+    if (self.navigationController) {
+#if DEBUG
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationController exists.");
+#endif
+#if DEBUG
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar hidden: %d", self.navigationController.navigationBar.hidden);
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar alpha: %f", self.navigationController.navigationBar.alpha);
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar frame: %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+#endif
+        self.navigationController.navigationBar.hidden = NO; // 确保导航栏没有被隐藏
+        self.navigationController.navigationBar.alpha = 1.0; // 确保导航栏完全可见
+    } else {
+#if DEBUG
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationController is NIL.");
+#endif
+    }
+}
+
+#pragma mark ------ viewDidDisappear
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+#if DEBUG
+    NSLog(@"AFOPLMainController: viewDidDisappear called. Showing TabBar.");
+#endif
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+#pragma mark - AFOTabRootControllerProviding
+- (UIViewController *)returnController {
+    AFOPlayListNavigationController *navController = [[AFOPlayListNavigationController alloc] initWithRootViewController:self];
+#if DEBUG
+    NSLog(@"AFOPLMainController: returnController called. Returning UINavigationController: %p with root: %p", navController, self);
+#endif
+    return navController;
+}
+
+@end

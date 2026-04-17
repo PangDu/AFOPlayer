@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/AFOPlaylist.h
+../../../../../../AFOPlaylist/AFOPlaylist/AFOPlaylist.h

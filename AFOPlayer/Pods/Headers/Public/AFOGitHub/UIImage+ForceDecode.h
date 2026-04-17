@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/UIImage+ForceDecode.h
+../../../../../../AFOGitHub/AFOGitHub/SDWebImage/include/UIImage+ForceDecode.h

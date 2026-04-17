@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageGIFCoder.h
+../../../../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageGIFCoder.h

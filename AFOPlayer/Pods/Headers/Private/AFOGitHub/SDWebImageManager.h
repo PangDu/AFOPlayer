@@ -1,1 +1,1 @@
-../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageManager.h
+../../../../../../AFOGitHub/AFOGitHub/SDWebImage/include/SDWebImageManager.h

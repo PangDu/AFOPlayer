@@ -2,7 +2,7 @@
 //  AFOAppTabBarController+AFOAutoRotate.m
 //  AFOPlayer
 //
-//  Created by xueguang xian on 2018/1/26.
+//  Created by zhao yun on 2018/1/26.
 //  Copyright © 2018年 AFO Science Technology Ltd. All rights reserved.
 //
 

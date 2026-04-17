@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E2AF242F83573200C851BA /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2AF232F83573200C851BA /* libobjc.tbd */; };
+		14F6917B2F83D61B004BD718 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917A2F83D61B004BD718 /* Metal.framework */; };
+		14F6917D2F83D632004BD718 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6917C2F83D632004BD718 /* MetalKit.framework */; };
+		14FA625F2F852AE5006DD680 /* AFOMetalShaders.metal in Resources */ = {isa = PBXBuildFile; fileRef = 14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */; };
 		2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873B20083C0F00D369FB /* AVFoundation.framework */; };
 		2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873D20083C1A00D369FB /* AudioToolbox.framework */; };
 		2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404873F20083C2F00D369FB /* CoreGraphics.framework */; };
@@ -27,11 +31,18 @@
 		240B109F2007A5F70007F2F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B109E2007A5F70007F2F3 /* main.m */; };
 		2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24AF675E201B616500AB5537 /* AFOPlayer.bundle */; };
 		2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413253E22432DAC00D51960 /* AFOAppDelegate.m */; };
+		C0MP0S1712F9000100490001 /* AFOAppCompositionRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */; };
 		2488595D201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */; };
-		897A4093F332FDFB44B76D36 /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */; };
+		A1B2C3D72F90000100AF0002 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D62F90000100AF0002 /* ImageIO.framework */; };
+		B2AE60309D4F5C383ADD60EB /* libPods-AFOPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		028B749F0C0FA031A22A2D06 /* Pods-AFOPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		14E2AF232F83573200C851BA /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
+		14F6917A2F83D61B004BD718 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		14F6917C2F83D632004BD718 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = AFOMetalShaders.metal; sourceTree = "<group>"; };
 		2404873B20083C0F00D369FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2404873D20083C1A00D369FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2404873F20083C2F00D369FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,12 +70,14 @@
 		240B109E2007A5F70007F2F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2413253D22432DAC00D51960 /* AFOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppDelegate.h; sourceTree = "<group>"; };
 		2413253E22432DAC00D51960 /* AFOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppDelegate.m; sourceTree = "<group>"; };
+		C0MP0S1712F9000100490002 /* AFOAppCompositionRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOAppCompositionRoot.h; sourceTree = "<group>"; };
+		C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOAppCompositionRoot.m; sourceTree = "<group>"; };
 		2488595B201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOAppTabBarController+AFOAutoRotate.h"; sourceTree = "<group>"; };
 		2488595C201B126D00623E66 /* AFOAppTabBarController+AFOAutoRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOAppTabBarController+AFOAutoRotate.m"; sourceTree = "<group>"; };
 		24AF675E201B616500AB5537 /* AFOPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFOPlayer.bundle; sourceTree = "<group>"; };
-		47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.release.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFOPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEA26D668BCB205E33B8C39 /* Pods-AFOPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFOPlayer.release.xcconfig"; path = "Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		A1B2C3D62F90000100AF0002 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +85,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B2C3D72F90000100AF0002 /* ImageIO.framework in Frameworks */,
+				14E2AF242F83573200C851BA /* libobjc.tbd in Frameworks */,
 				2404874E20083C7600D369FB /* libiconv.tbd in Frameworks */,
 				2404874C20083C6D00D369FB /* libbz2.tbd in Frameworks */,
 				2404874A20083C6700D369FB /* libz.tbd in Frameworks */,
 				2408BB39200877410049060F /* libsqlite3.tbd in Frameworks */,
+				14F6917D2F83D632004BD718 /* MetalKit.framework in Frameworks */,
+				14F6917B2F83D61B004BD718 /* Metal.framework in Frameworks */,
 				2404874820083C5F00D369FB /* OpenGLES.framework in Frameworks */,
 				2404874620083C4400D369FB /* VideoToolbox.framework in Frameworks */,
 				2404874220083C2F00D369FB /* CoreGraphics.framework in Frameworks */,
@@ -83,7 +100,7 @@
 				2404874420083C2F00D369FB /* CoreImage.framework in Frameworks */,
 				2404873E20083C1A00D369FB /* AudioToolbox.framework in Frameworks */,
 				2404873C20083C0F00D369FB /* AVFoundation.framework in Frameworks */,
-				897A4093F332FDFB44B76D36 /* libPods-AFOPlayer.a in Frameworks */,
+				B2AE60309D4F5C383ADD60EB /* libPods-AFOPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +140,8 @@
 		2408BAD9200856870049060F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C0MP0S1712F9000100490002 /* AFOAppCompositionRoot.h */,
+				C0MP0S1712F9000100490003 /* AFOAppCompositionRoot.m */,
 				2408BADC200856870049060F /* AFOAddControllerModel.h */,
 				2408BADB200856870049060F /* AFOAddControllerModel.m */,
 			);
@@ -165,6 +184,7 @@
 			children = (
 				24AF675E201B616500AB5537 /* AFOPlayer.bundle */,
 				240B10982007A5F70007F2F3 /* Assets.xcassets */,
+				14FA625D2F852AC0006DD680 /* AFOMetalShaders.metal */,
 				240B109A2007A5F70007F2F3 /* LaunchScreen.storyboard */,
 				240B109D2007A5F70007F2F3 /* Info.plist */,
 				240B109E2007A5F70007F2F3 /* main.m */,
@@ -176,6 +196,10 @@
 		24404A5B2007A91300BAC996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1B2C3D62F90000100AF0002 /* ImageIO.framework */,
+				14F6917C2F83D632004BD718 /* MetalKit.framework */,
+				14F6917A2F83D61B004BD718 /* Metal.framework */,
+				14E2AF232F83573200C851BA /* libobjc.tbd */,
 				2404874D20083C7600D369FB /* libiconv.tbd */,
 				2404874B20083C6D00D369FB /* libbz2.tbd */,
 				2404874920083C6700D369FB /* libz.tbd */,
@@ -187,7 +211,7 @@
 				2404874020083C2F00D369FB /* CoreMedia.framework */,
 				2404873D20083C1A00D369FB /* AudioToolbox.framework */,
 				2404873B20083C0F00D369FB /* AVFoundation.framework */,
-				BCDAC7736C661B9C834ED6C1 /* libPods-AFOPlayer.a */,
+				53F92107FFECF69D0DD24E1F /* libPods-AFOPlayer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,8 +219,8 @@
 		9674A06D8A02C8DC5EA24183 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */,
-				47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */,
+				028B749F0C0FA031A22A2D06 /* Pods-AFOPlayer.debug.xcconfig */,
+				9AEA26D668BCB205E33B8C39 /* Pods-AFOPlayer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,11 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 240B10A22007A5F70007F2F3 /* Build configuration list for PBXNativeTarget "AFOPlayer" */;
 			buildPhases = (
-				9BD9E0D2C5514C4CD486DC57 /* [CP] Check Pods Manifest.lock */,
+				FE3A201793231459951A7E74 /* [CP] Check Pods Manifest.lock */,
 				240B10882007A5F70007F2F3 /* Sources */,
 				240B10892007A5F70007F2F3 /* Frameworks */,
 				240B108A2007A5F70007F2F3 /* Resources */,
-				B8B488916B0FD36C25BE79F5 /* [CP] Copy Pods Resources */,
+				F2ED3B9A7802447038C5A172 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FA625F2F852AE5006DD680 /* AFOMetalShaders.metal in Resources */,
 				2413253B22432CD900D51960 /* AFOPlayer.bundle in Resources */,
 				240B109C2007A5F70007F2F3 /* LaunchScreen.storyboard in Resources */,
 				240B10992007A5F70007F2F3 /* Assets.xcassets in Resources */,
@@ -275,7 +300,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9BD9E0D2C5514C4CD486DC57 /* [CP] Check Pods Manifest.lock */ = {
+		F2ED3B9A7802447038C5A172 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB_Privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FMDB_Privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE3A201793231459951A7E74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,24 +340,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8B488916B0FD36C25BE79F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/AFOHomePage/AFOHomePage.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AFOHomePage.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AFOPlayer/Pods-AFOPlayer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,6 +352,7 @@
 				2408BAE2200856870049060F /* AFOAppWindow.m in Sources */,
 				240B109F2007A5F70007F2F3 /* main.m in Sources */,
 				2408BAE4200856870049060F /* AFOAddControllerModel.m in Sources */,
+				C0MP0S1712F9000100490001 /* AFOAppCompositionRoot.m in Sources */,
 				2413253F22432DAC00D51960 /* AFOAppDelegate.m in Sources */,
 				240B10912007A5F70007F2F3 /* AppDelegate.m in Sources */,
 			);
@@ -396,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -456,7 +482,7 @@
 		};
 		240B10A32007A5F70007F2F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F166FBA195136E655B534BFE /* Pods-AFOPlayer.debug.xcconfig */;
+			baseConfigurationReference = 028B749F0C0FA031A22A2D06 /* Pods-AFOPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_DEBUG_INFORMATION_LEVEL = default;
@@ -470,13 +496,30 @@
 				GENERATE_PROFILING_CODE = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AFOPlayer/resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lAFODelegateExtension",
+					"-lAFOLANUpload",
+					"-lAFOFoundation",
+					"-lAFOGitHub",
+					"-lAFOPlaylist",
+					"-lAFORouter",
+					"-lAFOSQLite",
+					"-lAFOSchedulerCore",
+					"-lAFOUIKIT",
+					"-lAFOViews",
+					"-lFMDB",
+					"-liconv",
+					"-lsqlite3",
+					"-lz",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";
@@ -488,7 +531,7 @@
 		};
 		240B10A42007A5F70007F2F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C9680AAF844E3FC41A9D84 /* Pods-AFOPlayer.release.xcconfig */;
+			baseConfigurationReference = 9AEA26D668BCB205E33B8C39 /* Pods-AFOPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_DEBUG_INFORMATION_LEVEL = default;
@@ -502,13 +545,30 @@
 				GENERATE_PROFILING_CODE = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AFOPlayer/resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lAFODelegateExtension",
+					"-lAFOLANUpload",
+					"-lAFOFoundation",
+					"-lAFOGitHub",
+					"-lAFOPlaylist",
+					"-lAFORouter",
+					"-lAFOSQLite",
+					"-lAFOSchedulerCore",
+					"-lAFOUIKIT",
+					"-lAFOViews",
+					"-lFMDB",
+					"-liconv",
+					"-lsqlite3",
+					"-lz",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AFO.AFOPlayer;
 				PRODUCT_NAME = "播放器";

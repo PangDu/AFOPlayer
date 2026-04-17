@@ -1,2 +1,0 @@
-# AFOViews
-public views

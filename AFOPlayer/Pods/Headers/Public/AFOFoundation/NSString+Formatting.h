@@ -1,1 +1,1 @@
-../../../AFOFoundation/AFOFoundation/string/NSString+Formatting.h
+../../../../../../AFOFoundation/AFOFoundation/string/NSString+Formatting.h

@@ -11,6 +11,9 @@ build/
 !default.perspectivev3
 *.xcworkspace
 !default.xcworkspace
+# CocoaPods：主工程需通过 workspace 同时构建 Pods，否则链接阶段找不到 libAFODelegateExtension 等
+!AFOPlayer/AFOPlayer.xcworkspace/
+!AFOPlayer/AFOPlayer.xcworkspace/contents.xcworkspacedata
 xcuserdata
 profile
 *.moved-aside

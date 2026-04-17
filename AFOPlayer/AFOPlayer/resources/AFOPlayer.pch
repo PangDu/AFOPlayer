@@ -2,7 +2,7 @@
 //  AFOPlayer.pch
 //  AFOPlayer
 //
-//  Created by xueguang xian on 2017/12/13.
+//  Created by zhao yun on 2017/12/13.
 //  Copyright © 2017年 AFO. All rights reserved.
 //
 
@@ -15,10 +15,11 @@
 #import <AFOUIKIT/AFOUIKIT.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFORouter/AFORouter.h>
+#import <AFORouter/AFORouting.h>
 #import <AFODelegateExtension/AFODelegateExtension.h>
 /*---------------------------------------------------------*/
 /*------首页------*/
-#import <AFOHomePage/AFOHomePage.h>
+//#import <AFOHomePage/AFOHomePage.h>
 /*----播放源------*/
 #import <AFOPlaylist/AFOPlaylist.h>
 /*---------------------------------------------------------*/

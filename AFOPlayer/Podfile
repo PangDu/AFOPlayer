@@ -1,7 +1,87 @@
-platform :ios, '8.0'
+platform :ios, '13.0'
 inhibit_all_warnings!
+
 target 'AFOPlayer' do
-  pod 'AFODelegateExtension'
-  pod 'AFOHomePage'
-  pod 'AFOPlaylist'
+  pod 'AFOGitHub',:path =>'../../AFOGitHub'
+  pod 'AFODelegateExtension',:path => '../../AFODelegateExtension'
+  pod 'AFOLANUpload', :path => '../../AFOLANUpload'
+  pod 'AFOPlaylist', :path => '../../AFOPlaylist', :testspecs => ['Tests']
+  pod 'AFOOnlinePlay', :path => '../../AFOOnlinePlay'
+  pod 'AFOFFMpeg', :path => '../../AFOFFMpeg'
+  pod 'AFOFoundation', :path => '../../AFOFoundation'
+  pod 'AFORouter', :path => '../../AFORouter'
+  pod 'AFOSchedulerCore', :path => '../../AFOSchedulerCore'
+  pod 'AFOUIKIT',:path => '../../AFOUIKIT'
+  pod 'AFOViews',:path => '../../AFOViews'
+end
+
+post_install do |installer|
+  simulator_ldflags = [
+    '$(inherited)',
+    '-ObjC',
+    '-lAFODelegateExtension',
+    '-lAFOLANUpload',
+    '-lAFOFoundation',
+    '-lAFOGitHub',
+    '-lAFOPlaylist',
+    '-lAFOOnlinePlay',
+    '-lAFORouter',
+    '-lAFOSQLite',
+    '-lAFOSchedulerCore',
+    '-lAFOUIKIT',
+    '-lAFOViews',
+    '-lFMDB',
+    '-liconv',
+    '-lsqlite3',
+    '-lz'
+  ]
+
+  iphoneos_ldflags = [
+    '$(inherited)',
+    '-ObjC',
+    '-lAFODelegateExtension',
+    '-lAFOLANUpload',
+    '-lAFOFFMpeg',
+    '-lAFOFoundation',
+    '-lAFOGitHub',
+    '-lAFOPlaylist',
+    '-lAFOOnlinePlay',
+    '-lAFORouter',
+    '-lAFOSQLite',
+    '-lAFOSchedulerCore',
+    '-lAFOUIKIT',
+    '-lAFOViews',
+    '-lFMDB',
+    '-lSDWebImage',
+    '-lavcodec',
+    '-lavformat',
+    '-lavutil',
+    '-lbz2',
+    '-lc',
+    '-lc++',
+    '-liconv',
+    '-lsqlite3',
+    '-lswresample',
+    '-lswscale',
+    '-lx264',
+    '-lxvidcore',
+    '-lyuv',
+    '-lz',
+    '-framework AVFoundation',
+    '-framework AudioToolbox',
+    '-framework CoreGraphics',
+    '-framework CoreImage',
+    '-framework CoreMedia',
+    '-framework OpenGLES',
+    '-framework VideoToolbox'
+  ]
+
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'Pods-AFOPlayer'
+
+    target.build_configurations.each do |config|
+      config.build_settings['OTHER_LDFLAGS[sdk=iphonesimulator*]'] = simulator_ldflags
+      config.build_settings['OTHER_LDFLAGS[sdk=iphoneos*]'] = iphoneos_ldflags
+    end
+  end
 end

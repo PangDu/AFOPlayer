@@ -1,1 +1,1 @@
-../../../AFOPlaylist/AFOPlaylist/controller/main/AFOPLMainController.h
+../../../../../../AFOPlaylist/AFOPlaylist/controller/main/AFOPLMainController.h
