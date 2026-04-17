@@ -2,17 +2,18 @@ platform :ios, '13.0'
 inhibit_all_warnings!
 
 target 'AFOPlayer' do
-  pod 'AFOGitHub'
   pod 'AFODelegateExtension'
-  pod 'AFOLANUpload', :git => 'https://github.com/PangDuTechnology/AFOLANUpload.git', :tag => '0.0.2'
-  pod 'AFOPlaylist'
-  pod 'AFOOnlinePlay', :git => 'https://github.com/PangDuTechnology/AFOOnlinePlay.git', :tag => '0.0.2'
-  pod 'AFOFFMpeg'
   pod 'AFOFoundation'
+  pod 'AFOGitHub'
+  pod 'AFOLANUpload'
+  pod 'AFOOnlinePlay'
+  pod 'AFOPlaylist'
   pod 'AFORouter'
+  pod 'AFOSQLite'
   pod 'AFOSchedulerCore'
   pod 'AFOUIKIT'
   pod 'AFOViews'
+  pod 'AFOFFMpeg'
 end
 
 post_install do |installer|
