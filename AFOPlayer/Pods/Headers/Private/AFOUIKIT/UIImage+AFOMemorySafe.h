@@ -1,1 +1,0 @@
-../../../../../../AFOUIKIT/AFOUIKIT/uiimage/UIImage+AFOMemorySafe.h

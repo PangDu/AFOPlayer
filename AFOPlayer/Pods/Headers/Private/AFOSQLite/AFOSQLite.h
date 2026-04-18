@@ -1,1 +1,0 @@
-../../../AFOSQLite/AFOSQLite/AFOSQLite.h
