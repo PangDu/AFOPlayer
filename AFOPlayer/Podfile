@@ -7,7 +7,7 @@ target 'AFOPlayer' do
   pod 'AFOGitHub'
   pod 'AFOLANUpload'
   pod 'AFOOnlinePlay'
-  pod 'AFOPlaylist'
+  pod 'AFOPlaylist', '~> 0.1.0'
   pod 'AFORouter'
   pod 'AFOSQLite'
   pod 'AFOSchedulerCore'

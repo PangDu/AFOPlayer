@@ -8,6 +8,8 @@
 
 #import "AFOAppTabBarController.h"
 #import <UIKit/UIKit.h>
+#import <AFOPlaylist/AFOPlayListForeign.h>
+#import <AFOOnlinePlay/AFOOPMainController.h>
 
 @interface AFOAddControllerModel ()
 
@@ -56,9 +58,11 @@
 
 - (NSArray<NSString *> *)controllerArray {
     if (!_controllerArray) {
+        /// Tab 子模块必须用各自对外的「工厂」类：需实现 `-returnController`。
+        /// 播放列表在 `AFOPlayListForeign` 中封装导航栈；`AFOPLMainController` 无该方法，会导致该 Tab 被跳过。
         _controllerArray = @[
-            @"AFOPLMainController",
-            @"AFOOPMainController"
+            NSStringFromClass([AFOPlayListForeign class]),
+            NSStringFromClass([AFOOPMainController class])
         ];
     }
     return _controllerArray;

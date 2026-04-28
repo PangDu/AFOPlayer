@@ -10,6 +10,10 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+@interface UINavigationController (AFOAutoHideTabBarSwizzle)
+- (void)afo_autoHideTabBar_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+@end
+
 @implementation AFOAppTabBarController
 
 + (void)load {
