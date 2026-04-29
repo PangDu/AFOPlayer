@@ -36,8 +36,8 @@
     return [[AFODelegateForeign shareInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation {
-    return [[AFODelegateForeign shareInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [[AFODelegateForeign shareInstance] application:application openURL:url options:options];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

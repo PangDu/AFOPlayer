@@ -12,6 +12,11 @@
 
 static NSString * const kAFOCachedOnlineVideoURLStringKey = @"AFOCachedOnlineVideoURLString";
 
+/// 与 AFOOnlinePlay 内部实现一致，仅消除对 @selector(onPlayTapped:) 的编译器告警。
+@interface AFOOPMainController (AFOAppURLCacheSwizzle)
+- (void)onPlayTapped:(id)sender;
+@end
+
 @implementation AFOOPMainController (AFOAppURLCache)
 
 + (void)load {

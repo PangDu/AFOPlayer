@@ -33,10 +33,7 @@ post_install do |installer|
     '-lAFOSchedulerCore',
     '-lAFOUIKIT',
     '-lAFOViews',
-    '-lFMDB',
-    '-liconv',
-    '-lsqlite3',
-    '-lz'
+    '-lFMDB'
   ]
 
   iphoneos_ldflags = [
@@ -60,17 +57,13 @@ post_install do |installer|
     '-lavcodec',
     '-lavformat',
     '-lavutil',
-    '-lbz2',
     '-lc',
     '-lc++',
-    '-liconv',
-    '-lsqlite3',
     '-lswresample',
     '-lswscale',
     '-lx264',
     '-lxvidcore',
     '-lyuv',
-    '-lz',
     '-framework AVFoundation',
     '-framework AudioToolbox',
     '-framework CoreGraphics',
