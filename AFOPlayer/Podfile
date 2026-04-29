@@ -7,7 +7,8 @@ target 'AFOPlayer' do
   pod 'AFOGitHub'
   pod 'AFOLANUpload'
   pod 'AFOOnlinePlay'
-  pod 'AFOPlaylist', '~> 0.1.0'
+  pod 'AFOWaterfall'
+  pod 'AFOPlaylist'
   pod 'AFORouter'
   pod 'AFOSQLite'
   pod 'AFOSchedulerCore'
@@ -25,6 +26,7 @@ post_install do |installer|
     '-lAFOFoundation',
     '-lAFOGitHub',
     '-lAFOPlaylist',
+    '-lAFOWaterfall',
     '-lAFOOnlinePlay',
     '-lAFORouter',
     '-lAFOSQLite',
@@ -46,6 +48,7 @@ post_install do |installer|
     '-lAFOFoundation',
     '-lAFOGitHub',
     '-lAFOPlaylist',
+    '-lAFOWaterfall',
     '-lAFOOnlinePlay',
     '-lAFORouter',
     '-lAFOSQLite',
@@ -78,9 +81,10 @@ post_install do |installer|
   ]
 
   installer.pods_project.targets.each do |target|
-    next unless target.name == 'Pods-AFOPlayer'
-
     target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      next unless target.name == 'Pods-AFOPlayer'
+
       config.build_settings['OTHER_LDFLAGS[sdk=iphonesimulator*]'] = simulator_ldflags
       config.build_settings['OTHER_LDFLAGS[sdk=iphoneos*]'] = iphoneos_ldflags
     end
