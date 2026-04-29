@@ -1,6 +1,16 @@
-# AFOPlayer 架构报告
+# AFOPlayer
 
-> **GitHub 仓库首页：** 与同内容的 **[README.md](../README.md)** 一起维护；修改架构说明时建议两处同步。
+通过 FFmpeg 解码视频的 **iOS 播放器**，工程采用 **CocoaPods 组件化**。
+
+| 链接 | 说明 |
+|------|------|
+| **仓库** | [github.com/PangDu/AFOPlayer](https://github.com/PangDu/AFOPlayer) |
+| **项目结构** | [docs/项目结构.md](docs/项目结构.md)（目录树） |
+| **架构报告** | 见下文（与 [docs/架构报告.md](docs/架构报告.md) 内容一致，可任一处修改后同步另一处） |
+
+---
+
+# AFOPlayer 架构报告
 
 **范围：** App Shell（`AFOPlayer/AFOPlayer/AFOPlayer/`）与各 **AFO\*** CocoaPods 模块的边界、协作契约与运维风险。解码与路由等实现细节以 Pod 为准，本文依据宿主集成与 `Podfile` 归纳。
 
@@ -249,6 +259,5 @@ _controllerArray = @[
 
 ## 附录：相关文档与仓库
 
-- 目录树说明：`docs/项目结构.md`  
-- 仓库首页（架构报告）：根目录 `README.md`  
-- 远程仓库：`https://github.com/PangDu/AFOPlayer`
+- 目录树说明：[docs/项目结构.md](docs/项目结构.md)  
+- 远程仓库：[github.com/PangDu/AFOPlayer](https://github.com/PangDu/AFOPlayer)
